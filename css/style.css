@@ -1,0 +1,688 @@
+/* ============================================================
+   Eric Naville – Stilblatt
+   Formsprache: Papier und Tinte; oben Licht, unten Erdreich.
+   Farben laufen über Variablen, damit helles und dunkles
+   Erscheinungsbild dieselbe Zeichnung tragen.
+   ============================================================ */
+
+:root{
+  color-scheme:light;
+  --papier:#f6f1e6;
+  --flaeche:#fcf9f1;
+  --tinte:#2b241c;
+  --gedaempft:#7d7160;
+  --linie:#d8cdb8;
+  --horizont:#8a7a62;
+  --himmel:#e9f0f3;
+  --erde:#ecdfc6;
+  --holz:#5d4a35;
+  --wurzelholz:#4a3c2f;
+  --akzent-krone:#a8802c;
+  --akzent-krone-hell:#c49d3f;
+  --zitat:#886318;
+  --referenz:#514738;
+  --akzent-wurzel:#5f5190;
+  --akzent-wurzel-hell:#7e6fb4;
+  /* Tagmodus: die Gattungskreise durchsichtig – Himmel und Erde scheinen durch;
+     Idealismus/Realismus auf dem Horizont zeigen so oben Himmel, unten Erde.
+     Nachtmodus (unten) und Druck behalten ihre eigenen Füllungen. */
+  --kreis-krone-f:transparent;
+  --kreis-wurzel-f:transparent;
+  --akzent-boden:#5f7d52;
+  --kreis-boden-f:transparent;
+}
+
+/* Dunkles Erscheinungsbild. Zwei Wege führen hinein: die Systemvorgabe
+   (prefers-color-scheme) und die ausdrückliche Wahl über den Schalter oben
+   rechts (data-theme="dunkel" am <html>). Ein ausdrückliches „hell" sticht
+   die Systemvorgabe. Beide Blöcke tragen dieselben Farbwerte – sie müssen
+   deshalb Zeile für Zeile gleich bleiben. */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="hell"]){
+    color-scheme:dark;
+    --papier:#141110;
+    --flaeche:#1c1815;
+    --tinte:#eae2d2;
+    --gedaempft:#a49781;
+    --linie:#3b3428;
+    --horizont:#94836a;
+    --himmel:#18242e;
+    --erde:#281f12;
+    --holz:#93785a;
+    --wurzelholz:#77634e;
+    --akzent-krone:#d4aa4e;
+    --akzent-krone-hell:#e7bf63;
+    --zitat:#e2bb62;
+    --referenz:#c6b9a1;
+    --akzent-wurzel:#8d7cc4;
+    --akzent-wurzel-hell:#a695d8;
+    --kreis-krone-f:#201c16;
+    --kreis-wurzel-f:#251e14;
+    --akzent-boden:#8aa878;
+    --kreis-boden-f:#1a1e16;
+  }
+}
+:root[data-theme="dunkel"]{
+  color-scheme:dark;
+  --papier:#141110;
+  --flaeche:#1c1815;
+  --tinte:#eae2d2;
+  --gedaempft:#a49781;
+  --linie:#3b3428;
+  --horizont:#94836a;
+  --himmel:#18242e;
+  --erde:#281f12;
+  --holz:#93785a;
+  --wurzelholz:#77634e;
+  --akzent-krone:#d4aa4e;
+  --akzent-krone-hell:#e7bf63;
+  --zitat:#e2bb62;
+  --referenz:#c6b9a1;
+  --akzent-wurzel:#8d7cc4;
+  --akzent-wurzel-hell:#a695d8;
+  --kreis-krone-f:#201c16;
+  --kreis-wurzel-f:#251e14;
+  --akzent-boden:#8aa878;
+  --kreis-boden-f:#1a1e16;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+
+/* Reduzierte Bewegung: keine Rollfahrten, Übergänge praktisch sofort
+   (js/baum.js ehrt dieselbe Einstellung bei der Zoomfahrt). */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *, *::before, *::after{ transition-duration:.01ms !important; }
+}
+
+body{
+  margin:0;
+  background:var(--papier);
+  color:var(--tinte);
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  font-size:1.0625rem;
+  line-height:1.65;
+}
+
+a{ color:inherit; }
+a:focus-visible{ outline:2px solid var(--akzent-krone); outline-offset:3px; border-radius:2px; }
+::selection{ background:var(--akzent-krone); color:var(--papier); }
+
+/* ---------- Kopf und Fuß ---------- */
+
+.kopf{ position:relative; text-align:center; padding:2.8rem 1rem .4rem; }
+
+/* Schalter für helles/dunkles Erscheinungsbild, oben rechts. Das Sinnbild
+   zeigt den gegenwärtigen Zustand: die Sonne bei Hell, den Mond bei Dunkel. */
+.thema-schalter{
+  position:absolute;
+  top:1rem; right:1rem;
+  display:inline-flex; align-items:center; justify-content:center;
+  width:2.4rem; height:2.4rem;
+  padding:0;
+  color:var(--gedaempft);
+  background:var(--flaeche);
+  border:1px solid var(--linie);
+  border-radius:999px;
+  cursor:pointer;
+  transition:color .15s ease, border-color .15s ease;
+}
+.thema-schalter:hover{ color:var(--tinte); border-color:var(--akzent-krone); }
+.thema-schalter:focus-visible{ outline:2px solid var(--akzent-krone); outline-offset:2px; }
+.thema-schalter svg{ display:block; width:1.25rem; height:1.25rem; }
+.thema-schalter .mond{ display:none; }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="hell"]) .thema-schalter .sonne{ display:none; }
+  :root:not([data-theme="hell"]) .thema-schalter .mond{ display:block; }
+}
+:root[data-theme="dunkel"] .thema-schalter .sonne{ display:none; }
+:root[data-theme="dunkel"] .thema-schalter .mond{ display:block; }
+:root[data-theme="hell"] .thema-schalter .sonne{ display:block; }
+:root[data-theme="hell"] .thema-schalter .mond{ display:none; }
+.wortmarke{
+  margin:0;
+  font-size:1.6rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:600;
+}
+.wortmarke a{ text-decoration:none; }
+.untertitel{
+  margin:.45rem 0 0;
+  color:var(--gedaempft);
+  font-style:italic;
+  font-size:1.02rem;
+}
+
+.fuss{
+  text-align:center;
+  color:var(--gedaempft);
+  font-size:.85rem;
+  border-top:1px solid var(--linie);
+  margin-top:2.5rem;
+  padding:1.8rem 1rem 2.4rem;
+}
+.fuss p{ max-width:640px; margin:0 auto; }
+
+/* ---------- Hauptfläche ---------- */
+
+main{ max-width:1060px; margin:0 auto; padding:0 1.25rem 2rem; }
+
+.einfuehrung{
+  max-width:640px;
+  margin:2.1rem auto 1rem;
+  text-align:center;
+  font-size:1.1rem;
+}
+
+/* ---------- Der Baum ---------- */
+
+.baum-bereich{ margin:1.2rem 0 2.4rem; position:relative; }
+.baum-rollbereich{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.baum-rollbereich svg{
+  display:block;
+  min-width:660px;
+  width:100%;
+  max-width:1000px;
+  height:auto;
+  margin:0 auto;
+}
+.hinweis{
+  text-align:center;
+  color:var(--gedaempft);
+  font-size:.92rem;
+  max-width:560px;
+  margin:.9rem auto 0;
+}
+
+/* Innenleben der SVG-Zeichnung */
+.kugel{ fill:none; stroke:var(--linie); stroke-width:1.6; }
+.horizontlinie{ stroke:var(--horizont); stroke-width:1.2; opacity:.75; }
+.halb-himmel{ fill:var(--himmel); opacity:.55; }
+.halb-erde{ fill:var(--erde); opacity:.55; }
+.holz{ fill:var(--holz); }
+.holz.wurzelholz{ fill:var(--wurzelholz); }
+
+/* ---------- Die zwölf Kreise ---------- */
+
+.kreis{ transition:opacity .3s ease; }
+svg.gezoomt .kreis:not(.aktiv){ opacity:.3; }
+svg.ohne-uebergang, svg.ohne-uebergang *{ transition:none !important; }
+
+.kreisflaeche{ stroke-width:2; transition:stroke-width .2s ease; }
+.kreis-krone .kreisflaeche{ fill:var(--kreis-krone-f); stroke:var(--akzent-krone); }
+.kreis-wurzel .kreisflaeche{ fill:var(--kreis-wurzel-f); stroke:var(--akzent-wurzel); }
+.kreis-boden .kreisflaeche{ fill:var(--kreis-boden-f); stroke:var(--akzent-boden); }
+
+a.kreis-link{ cursor:pointer; outline:none; }
+a.kreis-link:hover .kreisflaeche,
+a.kreis-link:focus-visible .kreisflaeche{ stroke-width:3.5; }
+/* Tastatur-Fokus liegt auf dem Etikett-Link; der Ring erscheint an der
+   Kreisfläche des zugehörigen Kreises. */
+.kreis:has(a.kreis-link:focus-visible) .kreisflaeche{ stroke-width:3.5; }
+.kreis.aktiv a.kreis-link{ pointer-events:none; }
+
+/* visibility nimmt die ausgeblendeten Etikett-Links auch aus der
+   Tab-Reihenfolge und dem Zugriff von Vorleseprogrammen. */
+.kreis-etikett{ transition:opacity .3s ease, visibility 0s; }
+.kreis.aktiv .kreis-etikett{
+  opacity:0; visibility:hidden;
+  transition:opacity .3s ease, visibility 0s linear .3s;
+}
+/* Lokaler Schleier hinter jeder einzelnen Schriftzeile: dämmt genau dort den
+   Untergrund ab, nicht den ganzen Kreis – die Äste bleiben sichtbar. */
+.etikett-schleier{ fill:url(#schleier); }
+.schleier-innen{ stop-color:var(--flaeche); stop-opacity:.82; }
+.schleier-aussen{ stop-color:var(--flaeche); stop-opacity:0; }
+
+/* Die Schriftgrössen 15px/15px/12.5px spiegeln ETIKETT_PX/ZEICHEN_PX in
+   tools/generieren.py (Schleier-Masse der Etiketten) – nur zusammen ändern. */
+.kreis-nummer{
+  font-size:15px; font-weight:600; letter-spacing:.06em;
+  paint-order:stroke; stroke:var(--papier); stroke-width:1.4px; stroke-linejoin:round;
+}
+.kreis-krone .kreis-nummer{ fill:var(--akzent-krone); }
+.kreis-wurzel .kreis-nummer{ fill:var(--akzent-wurzel); }
+.kreis-boden .kreis-nummer{ fill:var(--akzent-boden); }
+.kreis-name{
+  font-size:15px; font-weight:600; fill:var(--tinte);
+  paint-order:stroke; stroke:var(--papier); stroke-width:1.3px; stroke-linejoin:round;
+}
+.kreis-zeichen{
+  font-size:12.5px; fill:var(--gedaempft); letter-spacing:.04em;
+  paint-order:stroke; stroke:var(--papier); stroke-width:1.1px; stroke-linejoin:round;
+}
+a.kreis-link:focus-visible .kreis-name{ text-decoration:underline; }
+
+/* Innenwelt eines Gattungs-Kreises: Fortsatz des Hauptasts, zwölf
+   Zweige, zwölf Art-Kugeln. In der Übersicht blass und für Klicks
+   durchlässig; beim Hereinzoomen voll da. */
+.innenwelt{ opacity:.5; pointer-events:none; transition:opacity .35s ease; }
+.kreis.aktiv .innenwelt{ opacity:1; pointer-events:auto; }
+.innenholz{ fill:var(--holz); }
+.kreis-wurzel .innenholz{ fill:var(--wurzelholz); }
+.kreis-boden .innenholz{ fill:var(--horizont); }
+
+.art{ transition:opacity .3s ease; }
+svg.gezoomt-art .kreis.aktiv .art:not(.aktiv){ opacity:.35; }
+.art-kugel{ stroke-width:1.3; }
+.kreis-krone .art-kugel{ fill:var(--kreis-krone-f); stroke:var(--akzent-krone); }
+.kreis-wurzel .art-kugel{ fill:var(--kreis-wurzel-f); stroke:var(--akzent-wurzel); }
+.kreis-boden .art-kugel{ fill:var(--kreis-boden-f); stroke:var(--akzent-boden); }
+
+a.art-link{ visibility:hidden; cursor:pointer; outline:none; }
+.kreis.aktiv a.art-link{ visibility:visible; }
+.art.aktiv a.art-link{ pointer-events:none; }
+.art-treffer{ fill:transparent; stroke:transparent; stroke-width:1.6; }
+a.art-link:hover .art-treffer,
+a.art-link:focus-visible .art-treffer{ stroke:var(--tinte); opacity:.4; }
+/* Art-Kugel: die Ziffer (I–XII) trägt in jeder Art dieselbe Grösse – ob sie
+   allein und mittig steht oder ob unter ihr ein Begriff sitzt. */
+.art-ziffer{ fill:var(--tinte); font-weight:600; font-size:5.4px;
+  transition:opacity .3s ease; }
+.art.aktiv .art-ziffer{ opacity:0; }
+.art-wort{ fill:var(--tinte); transition:opacity .3s ease; }
+.art.aktiv .art-wort{ opacity:0; }
+
+/* Mitte des Gattungs-Kreises (Zoomstufe 1) */
+.kreis-mitte{
+  visibility:hidden; opacity:0;
+  transition:opacity .35s ease, visibility 0s linear .35s;
+}
+.kreis.aktiv .kreis-mitte{
+  visibility:visible; opacity:1;
+  transition:opacity .4s ease .25s, visibility 0s;
+}
+.mitte-name{
+  font-size:6.5px; font-weight:600; fill:var(--tinte);
+  paint-order:stroke; stroke:var(--papier); stroke-width:.9px; stroke-linejoin:round;
+}
+.mitte-substanz{
+  font-size:3.4px; fill:var(--gedaempft);
+  paint-order:stroke; stroke:var(--papier); stroke-width:.8px; stroke-linejoin:round;
+}
+a.mitte-seite text{
+  font-size:3.2px; fill:var(--gedaempft);
+  paint-order:stroke; stroke:var(--papier); stroke-width:.8px; stroke-linejoin:round;
+}
+a.mitte-seite:hover text, a.mitte-seite:focus-visible text{
+  fill:var(--tinte); text-decoration:underline;
+}
+
+/* Knopf zum Herauszoomen */
+.zoom-zurueck{
+  position:absolute;
+  top:.4rem; left:.6rem;
+  z-index:2;
+  font:inherit;
+  font-size:.92rem;
+  color:var(--tinte);
+  background:var(--flaeche);
+  border:1px solid var(--linie);
+  border-radius:999px;
+  padding:.4rem .95rem;
+  cursor:pointer;
+}
+.zoom-zurueck:hover{ border-color:var(--akzent-krone); }
+
+/* ---------- Hierarchie-Erklärung: die vier Ebenen ---------- */
+
+.hierarchie{ margin:2.2rem 0 1rem; }
+.hierarchie > h2{
+  text-align:center; font-size:1.15rem; font-weight:600;
+  letter-spacing:.01em; margin:0 0 .7rem;
+}
+.hierarchie-text{
+  max-width:680px; margin:0 auto 1.6rem;
+  text-align:center; color:var(--gedaempft); font-size:1rem;
+}
+.hierarchie-text strong{ color:var(--tinte); }
+
+.ebenen-rollbereich{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.ebenen{ min-width:660px; max-width:900px; margin:0 auto; padding:.2rem; }
+.ebenen-buehne, .ebenen-titel-reihe{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 4rem minmax(0,1fr) 4rem minmax(0,1fr) 4rem minmax(0,1fr);
+  column-gap:.4rem;
+}
+.ebenen-buehne{ align-items:stretch; }
+.ebenen-titel-reihe{ align-items:start; margin-top:.55rem; }
+
+/* Ein Trichter je Zwischenraum: schmal am linken (höheren) Bild, zum rechten
+   (tieferen) Bild so hoch wie das Bild. Verstärkt die Lupenwirkung. */
+.eb-verbinder{ position:relative; display:flex; align-items:center; justify-content:center;
+  color:var(--gedaempft); }
+.eb-trichter{ position:absolute; inset:0; width:100%; height:100%; z-index:0; }
+.eb-lupe{ position:relative; z-index:1; display:block; width:1.4rem; height:1.4rem; }
+.trichter-flaeche{ fill:var(--akzent-krone); fill-opacity:.16; }
+.trichter-kante{ fill:none; stroke:var(--akzent-krone); stroke-opacity:.45;
+  stroke-width:1; vector-effect:non-scaling-stroke; }
+
+.eb-bild{
+  border:1px solid var(--linie); border-radius:12px;
+  background:var(--flaeche); padding:.5rem;
+}
+.eb-svg{ display:block; width:100%; height:auto; }
+.eb-titel{ text-align:center; }
+.ebene-name{ display:block; font-weight:600; font-size:.98rem; }
+.ebene-desc{
+  display:block; color:var(--gedaempft); font-size:.82rem;
+  line-height:1.4; margin-top:.15rem;
+}
+
+/* Innenleben der vier Bildchen – Farben wie im grossen Baum */
+.eb-kugel{ fill:none; stroke:var(--linie); stroke-width:1.4; }
+.eb-horizont{ stroke:var(--horizont); stroke-width:1; opacity:.7; }
+.eb-ast{ stroke:var(--holz); stroke-width:1.1; opacity:.5; }
+.eb-knoten{ stroke-width:1.4; }
+.eb-krone{ fill:var(--kreis-krone-f); stroke:var(--akzent-krone); }
+.eb-wurzel{ fill:var(--kreis-wurzel-f); stroke:var(--akzent-wurzel); }
+.eb-boden{ fill:var(--kreis-boden-f); stroke:var(--akzent-boden); }
+.eb-gattung{ stroke-width:2; }
+.eb-zweig{ stroke:var(--wurzelholz); stroke-width:.8; opacity:.5; }
+.eb-artkugel{ stroke-width:1.2; }
+.eb-artkugel.eb-aktiv, .eb-knoten.eb-aktiv{ fill:var(--akzent-krone); }
+.eb-mini-ziffer{ fill:var(--papier); font-size:12px; font-weight:600; }
+.eb-artgross{ stroke-width:2.4; }
+.eb-ziffer{ fill:var(--tinte); font-size:24px; font-weight:600; }
+.eb-wort{ fill:var(--tinte); font-size:14px; }
+.eb-punkt{ fill:var(--akzent-krone); }
+.eb-titel-linie{ fill:var(--gedaempft); opacity:.6; }
+.eb-sub-linie{ fill:var(--linie); }
+
+/* ---------- Übersichtsliste unter dem Baum ---------- */
+
+.uebersicht{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.4rem 2rem;
+  margin-top:2.2rem;
+}
+@media (max-width:760px){
+  .uebersicht{ grid-template-columns:1fr; }
+}
+
+.haelfte h2{
+  font-size:1rem;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--gedaempft);
+  border-bottom:1px solid var(--linie);
+  padding-bottom:.5rem;
+  margin:0 0 .9rem;
+  font-weight:600;
+}
+.haelfte h2::before{
+  content:"";
+  display:inline-block;
+  width:.55em; height:.55em;
+  border-radius:50%;
+  margin-right:.55em;
+  background:var(--akzent-krone);
+}
+.wurzel-liste h2::before{ background:var(--akzent-wurzel); }
+.boden-liste h2::before{ background:var(--akzent-boden); }
+.boden-liste{ grid-column:1 / -1; }
+.boden-liste ul{ grid-template-columns:1fr 1fr; }
+@media (max-width:760px){ .boden-liste ul{ grid-template-columns:1fr; } }
+
+.haelfte ul{ list-style:none; margin:0; padding:0; display:grid; gap:.7rem; }
+.haelfte li a{
+  display:block;
+  padding:.8rem 1rem;
+  background:var(--flaeche);
+  border:1px solid var(--linie);
+  border-radius:10px;
+  text-decoration:none;
+  transition:border-color .15s ease, transform .15s ease;
+}
+.haelfte li a:hover{ border-color:var(--akzent-krone); transform:translateY(-1px); }
+.wurzel-liste li a:hover{ border-color:var(--akzent-wurzel); }
+
+.zeile{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; }
+.zeile strong{ font-size:1.08rem; font-weight:600; }
+.zeichen{ color:var(--gedaempft); font-size:.88rem; white-space:nowrap; }
+.kurz{
+  display:block;
+  color:var(--gedaempft);
+  font-size:.92rem;
+  line-height:1.45;
+  margin-top:.15rem;
+}
+
+/* ---------- Einzelseite einer Weltanschauung ---------- */
+
+.seite{ max-width:680px; }
+
+.wa-kopf .stellung{
+  display:flex;
+  align-items:center;
+  color:var(--gedaempft);
+  font-size:.95rem;
+  letter-spacing:.05em;
+  margin:0 0 .3rem;
+}
+.miniring{ flex:none; margin-right:.6rem; }
+.miniring .ring{ fill:none; stroke:var(--linie); stroke-width:1.4; }
+.miniring line{ stroke:var(--horizont); stroke-width:1; opacity:.75; }
+.miniring .punkt{ fill:var(--linie); }
+.miniring .aktiv-krone{ fill:var(--akzent-krone); }
+.miniring .aktiv-wurzel{ fill:var(--akzent-wurzel); }
+.miniring .aktiv-boden{ fill:var(--akzent-boden); }
+
+.seite h1{
+  font-size:2.3rem;
+  font-weight:600;
+  letter-spacing:.01em;
+  margin:.1rem 0 .6rem;
+}
+.substanz{ margin:.1rem 0 .6rem; font-size:1.02rem; }
+.substanz .etikett{
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:.78rem;
+  color:var(--gedaempft);
+  margin-right:.6rem;
+}
+
+.leitsatz{
+  font-size:1.18rem;
+  font-style:italic;
+  color:var(--gedaempft);
+  line-height:1.55;
+  margin:0 0 1rem;
+}
+
+.arten-hinweis{ color:var(--gedaempft); font-size:.95rem; margin:0 0 1.2rem; }
+.leer{ color:var(--gedaempft); font-style:italic; }
+
+.artikel{ margin:1.1rem 0 1.6rem; }
+/* Der Generator hebt den h4-Titel zum h1 der Artikelseite (h5 → h2);
+   beide Formen tragen dieselbe Gestalt. */
+.artikel h1, .artikel h4{ margin:0 0 .2rem; font-size:1.25rem; font-weight:600; }
+.datum{ margin:0 0 .6rem; color:var(--gedaempft); font-size:.9rem; }
+
+/* Binnenstruktur längerer Artikel */
+.artikel h2, .artikel h5{ margin:1.4rem 0 .3rem; font-size:1.02rem; font-weight:600; }
+.artikel sup a{ text-decoration:none; color:var(--gedaempft); }
+.artikel sup a:hover{ color:var(--tinte); }
+.artikel blockquote{
+  margin:1rem 0 1rem .2rem;
+  padding-left:1.1rem;
+  border-left:3px solid var(--akzent-krone);
+  color:var(--zitat);
+  font-style:italic;
+  font-size:1.05em;
+  -webkit-text-stroke:0.3px currentColor;
+}
+.artikel blockquote .zitat-quelle{
+  margin:.5rem 0 0;
+  font-style:normal;
+  font-size:.82em;
+  letter-spacing:.02em;
+  text-align:right;
+  color:var(--referenz);
+  -webkit-text-stroke:0;
+}
+.quellen{
+  margin:.6rem 0 0;
+  padding-left:1.25rem;
+  font-size:1.02rem;
+  line-height:1.55;
+  color:var(--referenz);
+  -webkit-text-stroke:0.2px currentColor;
+}
+.quellen li{ margin:0 0 .55rem; }
+.quellen a{ overflow-wrap:anywhere; }
+.methodik{
+  margin-top:1.2rem;
+  padding-top:.8rem;
+  border-top:1px dashed var(--linie);
+  font-size:.95rem;
+  color:var(--referenz);
+  -webkit-text-stroke:0.2px currentColor;
+}
+
+.kreis-nav{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  flex-wrap:wrap;
+  margin-top:3rem;
+  border-top:1px solid var(--linie);
+  padding-top:1.2rem;
+  font-size:.98rem;
+}
+.kreis-nav a{ text-decoration:none; color:var(--gedaempft); }
+.kreis-nav a:hover{ color:var(--tinte); }
+.gegenueber{ text-align:center; }
+
+/* ============================================================
+   Skalierbare Navigation: Brotkrume, Art-Karten, Art-Listen,
+   Artikel-Vor/Zurück, Suche. (Farben laufen über die Variablen,
+   tragen also hell und dunkel.)
+   ============================================================ */
+
+/* Suche-Link im Kopf */
+.kopf-suche{ margin:.3rem 0 0; font-size:.9rem; }
+.kopf-suche a{ color:var(--akzent-krone); text-decoration:none; }
+.kopf-suche a:hover{ color:var(--tinte); }
+
+/* Brotkrume */
+.brotkrume{ font-size:.9rem; color:var(--gedaempft); margin:0 0 1.5rem; }
+.brotkrume a{ color:var(--gedaempft); text-decoration:none; }
+.brotkrume a:hover{ color:var(--akzent-krone); }
+.brotkrume span{ color:var(--tinte); }
+.brotkrume > *:not(:first-child)::before{ content:"›"; margin:0 .5em; color:var(--linie); }
+
+/* SVG: Anzahl in der Art-Kugel */
+.art-badge{ font-size:2.6px; font-weight:600; fill:var(--akzent-krone); transition:opacity .3s ease; }
+.art.aktiv .art-badge{ opacity:0; }
+
+/* Gattungs-Übersicht: die zwölf Arten als Karten */
+.arten-uebersicht{ margin-top:2rem; }
+.art-karten{ list-style:none; padding:0; margin:1.2rem 0 0;
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:1rem; }
+.art-karte{ border:1px solid var(--linie); border-radius:7px;
+  padding:.75rem 1rem 1rem; background:var(--flaeche); }
+.art-karte.leer{ opacity:.5; }
+.art-karte-kopf{ display:flex; justify-content:space-between; align-items:baseline;
+  text-decoration:none; color:var(--tinte); border-bottom:1px solid var(--linie);
+  padding-bottom:.4rem; }
+.art-karte-kopf:hover .art-nr{ color:var(--akzent-krone); }
+.art-nr{ font-weight:600; font-size:1.05rem; }
+.art-zahl{ font-size:.85rem; color:var(--akzent-krone);
+  font-variant-numeric:tabular-nums; }
+.art-karte.leer .art-zahl{ color:var(--gedaempft); }
+.art-teaser{ list-style:none; padding:0; margin:.55rem 0 0; font-size:.92rem; }
+.art-teaser li{ margin:.3rem 0; }
+.art-teaser a{ color:var(--tinte); text-decoration:none; }
+.art-teaser a:hover{ color:var(--akzent-krone); }
+.art-teaser .datum{ display:block; font-size:.76rem; color:var(--gedaempft); }
+.mehr{ display:inline-block; margin-top:.5rem; font-size:.85rem;
+  color:var(--akzent-krone); text-decoration:none; }
+.mehr:hover{ text-decoration:underline; }
+
+/* Art-Liste: alle Artikel einer Art */
+.art-kopf{ margin-bottom:.4rem; }
+.art-kopf h1{ margin:0; }
+.art-unter{ color:var(--gedaempft); margin:.2rem 0 0; }
+.art-filter{ margin:1.1rem 0 .4rem; }
+.art-filter input, .such-feld input{ width:100%; max-width:34rem; padding:.5rem .7rem;
+  font:inherit; color:var(--tinte); background:var(--flaeche);
+  border:1px solid var(--linie); border-radius:6px; }
+.art-filter input:focus, .such-feld input:focus{ outline:2px solid var(--akzent-krone);
+  outline-offset:1px; }
+#filter-zahl, .such-zahl{ margin-left:.6rem; color:var(--gedaempft); font-size:.9rem; }
+.artikel-liste{ list-style:none; padding:0; margin:1.2rem 0 0; }
+.artikel-liste > li{ padding:.9rem 0; border-bottom:1px solid var(--linie); }
+.artikel-liste > li > a, .such-treffer > li > a{ display:flex;
+  justify-content:space-between; align-items:baseline; gap:1rem;
+  text-decoration:none; color:var(--tinte); }
+.artikel-liste .titel, .such-treffer .titel{ font-weight:600; font-size:1.1rem; }
+.artikel-liste > li > a:hover .titel, .such-treffer > li > a:hover .titel{ color:var(--akzent-krone); }
+.artikel-liste .datum, .such-treffer .ort{ color:var(--gedaempft);
+  font-size:.85rem; white-space:nowrap; flex:none; }
+.ausz{ margin:.35rem 0 0; color:var(--referenz); font-size:.95rem; }
+
+/* Vor/Zurück am Artikel; Art-Nachbarn */
+.artikel-nav, .art-nav{ display:flex; justify-content:space-between; gap:1rem;
+  margin-top:3rem; border-top:1px solid var(--linie); padding-top:1.1rem;
+  font-size:.95rem; }
+.artikel-nav a, .art-nav a{ text-decoration:none; color:var(--gedaempft);
+  max-width:32%; }
+.artikel-nav a:hover, .art-nav a:hover{ color:var(--tinte); }
+.artikel-nav .nach{ text-align:right; }
+.artikel-nav .zur-art, .art-nav .zur-gattung{ text-align:center; color:var(--akzent-krone); }
+.artikel-nav .vor span, .artikel-nav .nach span{ display:block; font-size:.78rem;
+  color:var(--akzent-krone); }
+
+/* Suche */
+.such-kopf h1{ margin:0; }
+.such-hinweis{ color:var(--gedaempft); margin:.2rem 0 1.1rem; }
+.such-feld{ margin:0 0 1.2rem; }
+.such-treffer{ list-style:none; padding:0; margin:0; }
+.such-treffer > li{ padding:.85rem 0; border-bottom:1px solid var(--linie); }
+
+/* Startseite: Suchleiste + Anzahl je Gattung */
+.such-leiste{ text-align:center; margin:.5rem 0 1.6rem; }
+.such-knopf{ display:inline-block; padding:.55rem 1.15rem;
+  border:1px solid var(--akzent-krone); border-radius:7px;
+  color:var(--akzent-krone); text-decoration:none; font-size:1rem; }
+.such-knopf:hover{ background:var(--akzent-krone); color:var(--papier); }
+.uebersicht .anzahl{ display:block; margin-top:.2rem; font-size:.82rem;
+  color:var(--akzent-krone); font-variant-numeric:tabular-nums; }
+
+/* ============================================================
+   Druck: immer helle Palette auf weissem Grund — auch wenn per
+   Schalter »dunkel« gewählt ist (sonst helle Schrift auf Papier).
+   Navigation und Bedienelemente werden nicht gedruckt.
+   ============================================================ */
+@media print{
+  :root, :root:not([data-theme="hell"]), :root[data-theme="dunkel"]{
+    color-scheme:light;
+    --papier:#fff;
+    --flaeche:#fff;
+    --tinte:#000;
+    --gedaempft:#555;
+    --linie:#c9c9c9;
+    --horizont:#8a7a62;
+    --himmel:#f2f5f7;
+    --erde:#f3ece0;
+    --holz:#5d4a35;
+    --wurzelholz:#4a3c2f;
+    --akzent-krone:#8a6a20;
+    --akzent-krone-hell:#c49d3f;
+    --zitat:#6d500f;
+    --referenz:#3f3830;
+    --akzent-wurzel:#4f4382;
+    --akzent-wurzel-hell:#7e6fb4;
+    --kreis-krone-f:#fff;
+    --kreis-wurzel-f:#fff;
+    --akzent-boden:#4e6a42;
+    --kreis-boden-f:#fff;
+  }
+  .thema-schalter, .zoom-zurueck, .kopf-suche, .brotkrume, .such-leiste,
+  .artikel-nav, .art-nav, .kreis-nav, .art-filter, .such-feld, .hinweis{ display:none; }
+}

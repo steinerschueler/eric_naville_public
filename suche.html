@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suche – Eric Naville</title>
+<meta name="description" content="Alle Artikel durchsuchen.">
+<link rel="canonical" href="https://eric-naville.ch/suche.html">
+<meta property="og:url" content="https://eric-naville.ch/suche.html">
+<meta property="og:title" content="Suche">
+<meta property="og:description" content="Alle Artikel durchsuchen.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23a8802c' stroke-width='6'/%3E%3Cpath d='M8 50h84' stroke='%23a8802c' stroke-width='5'/%3E%3Cpath d='M50 16v68' stroke='%235d4a35' stroke-width='7'/%3E%3C/svg%3E">
+<script>
+(function(){
+  var w=document.documentElement;
+  try{var g=localStorage.getItem("thema"); if(g==="hell"||g==="dunkel") w.setAttribute("data-theme",g);}catch(e){}
+  function eff(){var t=w.getAttribute("data-theme"); if(t) return t;
+    return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dunkel":"hell";}
+  function wire(){
+    var b=document.querySelector(".thema-schalter"); if(!b) return;
+    function zeige(){var d=eff()==="dunkel"; b.setAttribute("aria-pressed",d?"true":"false");
+      var l=d?"Zum hellen Erscheinungsbild wechseln":"Zum dunklen Erscheinungsbild wechseln";
+      b.setAttribute("aria-label",l); b.title=l;}
+    b.addEventListener("click",function(){var n=eff()==="dunkel"?"hell":"dunkel";
+      w.setAttribute("data-theme",n); try{localStorage.setItem("thema",n);}catch(e){} zeige();});
+    zeige();
+  }
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",wire); else wire();
+})();
+</script>
+</head>
+<body>
+
+<header class="kopf">
+  <button type="button" class="thema-schalter" aria-label="Erscheinungsbild wechseln" title="Erscheinungsbild wechseln">
+    <svg class="sonne" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.2v2.6M12 19.2v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.2 12h2.6M19.2 12h2.6M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9"/></svg>
+    <svg class="mond" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.8A8.3 8.3 0 0 1 9.2 3.5a6.6 6.6 0 1 0 11.3 11.3z"/></svg>
+  </button>
+  <p class="wortmarke"><a href="index.html">Eric Naville</a></p>
+  <p class="untertitel">Gedanken im Kreis der zwölf Weltanschauungen</p>
+  <p class="kopf-suche"><a href="suche.html">Suche</a></p>
+</header>
+
+<main class="seite such-seite">
+
+  <nav class="brotkrume" aria-label="Pfad">
+    <a href="index.html">Baum</a>
+    <span>Suche</span>
+  </nav>
+
+  <header class="such-kopf">
+    <h1>Suche</h1>
+    <p class="such-hinweis">Volltextsuche über den ganzen Artikeltext samt Titel, Zusammenfassung, Schlagworten, Gattung und Art.</p>
+  </header>
+
+  <p class="such-feld"><input id="q" type="search" placeholder="Titel, Stichwort, Gattung …" aria-label="Alle Artikel durchsuchen" autocomplete="off"><span id="zahl" class="such-zahl" role="status"></span></p>
+  <noscript><p class="leer">Die Suche braucht JavaScript. Ohne JavaScript führen <a href="index.html">Baum und Verzeichnis der Startseite</a> zu jedem Artikel.</p></noscript>
+  <ol id="treffer" class="such-treffer"></ol>
+
+<script src="js/suche-daten.js"></script>
+<script>
+(function(){
+  var daten=window.SUCH_DATEN||[];
+  var q=document.getElementById("q"), out=document.getElementById("treffer"), zahl=document.getElementById("zahl");
+  function esc(s){return s.replace(/[&<>]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c];});}
+  function render(){
+    var s=q.value.trim().toLowerCase();
+    var tr = s ? daten.filter(function(d){return d.s.indexOf(s)>=0;}) : daten;
+    zahl.textContent = s ? (tr.length+" Treffer") : (daten.length+" Artikel");
+    out.innerHTML = tr.map(function(d){
+      return "<li><a href=\""+d.u+"\"><span class=\"titel\">"+esc(d.t)+"</span>"+
+             "<span class=\"ort\">"+esc(d.g)+" · "+esc(d.a)+"</span></a>"+
+             (d.z?"<p class=\"ausz\">"+esc(d.z)+"</p>":"")+"</li>";
+    }).join("");
+  }
+  var p=new URLSearchParams(location.search).get("q"); if(p){q.value=p;}
+  q.addEventListener("input", render); render(); q.focus();
+})();
+</script>
+
+</main>
+
+<footer class="fuss">
+  <p>© 2026 Eric Naville · nach dem Bild der zwölf Weltanschauungen
+  <span class="quelle">(Rudolf Steiner, „Der menschliche und der kosmische Gedanke“, GA&nbsp;151)</span></p>
+</footer>
+
+</body>
+</html>

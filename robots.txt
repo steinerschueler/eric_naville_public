@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://eric-naville.ch/sitemap.xml

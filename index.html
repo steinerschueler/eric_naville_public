@@ -1,0 +1,1727 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eric Naville – Gedanken im Kreis der zwölf Weltanschauungen</title>
+<meta name="description" content="Persönliche Gedanken, geordnet nach dem Bild der zwölf Weltanschauungen: ein Baum mit sechs Ästen in der Krone und sechs Wurzeln im Erdreich.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23a8802c' stroke-width='6'/%3E%3Cpath d='M8 50h84' stroke='%23a8802c' stroke-width='5'/%3E%3Cpath d='M50 16v68' stroke='%235d4a35' stroke-width='7'/%3E%3C/svg%3E">
+<!-- THEMA:ANFANG -->
+<script>
+(function(){
+  var w=document.documentElement;
+  try{var g=localStorage.getItem("thema"); if(g==="hell"||g==="dunkel") w.setAttribute("data-theme",g);}catch(e){}
+  function eff(){var t=w.getAttribute("data-theme"); if(t) return t;
+    return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dunkel":"hell";}
+  function wire(){
+    var b=document.querySelector(".thema-schalter"); if(!b) return;
+    function zeige(){var d=eff()==="dunkel"; b.setAttribute("aria-pressed",d?"true":"false");
+      var l=d?"Zum hellen Erscheinungsbild wechseln":"Zum dunklen Erscheinungsbild wechseln";
+      b.setAttribute("aria-label",l); b.title=l;}
+    b.addEventListener("click",function(){var n=eff()==="dunkel"?"hell":"dunkel";
+      w.setAttribute("data-theme",n); try{localStorage.setItem("thema",n);}catch(e){} zeige();});
+    zeige();
+  }
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",wire); else wire();
+})();
+</script>
+<!-- THEMA:ENDE -->
+<script src="js/baum.js" defer></script>
+</head>
+<body>
+
+<!-- KOPF:ANFANG -->
+<header class="kopf">
+  <button type="button" class="thema-schalter" aria-label="Erscheinungsbild wechseln" title="Erscheinungsbild wechseln">
+    <svg class="sonne" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.2v2.6M12 19.2v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.2 12h2.6M19.2 12h2.6M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9"/></svg>
+    <svg class="mond" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.8A8.3 8.3 0 0 1 9.2 3.5a6.6 6.6 0 1 0 11.3 11.3z"/></svg>
+  </button>
+  <p class="wortmarke"><a href="index.html">Eric Naville</a></p>
+  <p class="untertitel">Gedanken im Kreis der zwölf Weltanschauungen</p>
+  <p class="kopf-suche"><a href="suche.html">Suche</a></p>
+</header>
+<!-- KOPF:ENDE -->
+
+<main>
+
+  <section class="einfuehrung">
+    <p>Ein Baum, der eine Kugel bildet – die Klasse. Sechs Äste greifen ins Licht,
+    sechs Wurzeln halten im Erdreich – die zwölf Gattungen, die Weltanschauungen.
+    In jeder Gattung verzweigen sich zwölf Arten, und unter den Arten sammeln
+    sich die einzelnen Artikel. So findet jeder Gedanke seine Stelle.</p>
+  </section>
+
+  <section class="baum-bereich" id="baum" aria-label="Der Baum der zwölf Weltanschauungen">
+    <button class="zoom-zurueck" type="button" hidden>← Ganzer Baum</button>
+    <div class="baum-rollbereich">
+<!-- BAUM:ANFANG -->
+<svg viewBox="60 90 980 720" xmlns="http://www.w3.org/2000/svg" aria-label="Der Baum der zwölf Weltanschauungen: sechs Kreise in der Krone, sechs im Erdreich, in jedem Kreis zwölf Arten">
+<defs>
+  <radialGradient id="glanz" cx="50%" cy="40%" r="65%">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".16"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="schleier" cx="50%" cy="50%" r="50%">
+    <stop class="schleier-innen" offset="0"/>
+    <stop class="schleier-innen" offset="0.82"/>
+    <stop class="schleier-aussen" offset="1"/>
+  </radialGradient>
+</defs>
+<path class="halb-himmel" d="M 220 450 A 330 330 0 0 1 880 450 Z"/>
+<path class="halb-erde"   d="M 220 450 A 330 330 0 0 0 880 450 Z"/>
+<circle cx="550" cy="450" r="330" fill="url(#glanz)"/>
+<line class="horizontlinie" x1="70" y1="450" x2="1030" y2="450"/>
+<circle class="kugel" cx="550" cy="450" r="330"/>
+<g>
+<path class="holz" d="M 571 452 L 570.6 448.1 L 570.2 444.2 L 569.8 440.4 L 569.5 436.5 L 569.1 432.6 L 568.7 428.8 L 568.3 425 L 567.9 421.1 L 567.5 417.3 L 567.2 413.5 L 566.8 409.7 L 566.4 405.9 L 566 402.2 L 565.6 398.5 L 565.2 394.8 L 564.8 391.1 L 564.5 387.4 L 564.1 383.8 L 563.7 380.2 L 563.3 376.6 L 562.9 373.1 L 562.5 369.6 L 562.2 366.2 L 561.8 362.7 L 561.4 359.3 L 561 356 L 539 356 L 538.6 359.3 L 538.2 362.7 L 537.8 366.2 L 537.5 369.6 L 537.1 373.1 L 536.7 376.6 L 536.3 380.2 L 535.9 383.8 L 535.5 387.4 L 535.2 391.1 L 534.8 394.8 L 534.4 398.5 L 534 402.2 L 533.6 405.9 L 533.2 409.7 L 532.8 413.5 L 532.5 417.3 L 532.1 421.1 L 531.7 425 L 531.3 428.8 L 530.9 432.6 L 530.5 436.5 L 530.2 440.4 L 529.8 444.2 L 529.4 448.1 L 529 452 Z"/>
+<path class="holz wurzelholz" d="M 529 448 L 529.4 451.9 L 529.8 455.8 L 530.2 459.6 L 530.5 463.5 L 530.9 467.4 L 531.3 471.2 L 531.7 475 L 532.1 478.9 L 532.5 482.7 L 532.8 486.5 L 533.2 490.3 L 533.6 494.1 L 534 497.8 L 534.4 501.5 L 534.8 505.2 L 535.2 508.9 L 535.5 512.6 L 535.9 516.2 L 536.3 519.8 L 536.7 523.4 L 537.1 526.9 L 537.5 530.4 L 537.8 533.8 L 538.2 537.3 L 538.6 540.7 L 539 544 L 561 544 L 561.4 540.7 L 561.8 537.3 L 562.2 533.8 L 562.5 530.4 L 562.9 526.9 L 563.3 523.4 L 563.7 519.8 L 564.1 516.2 L 564.5 512.6 L 564.8 508.9 L 565.2 505.2 L 565.6 501.5 L 566 497.8 L 566.4 494.1 L 566.8 490.3 L 567.2 486.5 L 567.5 482.7 L 567.9 478.9 L 568.3 475 L 568.7 471.2 L 569.1 467.4 L 569.5 463.5 L 569.8 459.6 L 570.2 455.8 L 570.6 451.9 L 571 448 Z"/>
+<path class="holz" d="M 553.2 345.5 L 550.9 344.9 L 548.6 344.3 L 546.4 343.7 L 544.1 343 L 541.9 342.3 L 539.6 341.6 L 537.4 340.8 L 535.2 340 L 533 339.2 L 530.8 338.4 L 528.6 337.5 L 526.4 336.7 L 524.3 335.8 L 522.1 334.9 L 520 333.9 L 517.9 333 L 515.8 332.1 L 513.7 331.1 L 511.6 330.2 L 509.6 329.2 L 507.6 328.3 L 505.6 327.3 L 503.6 326.3 L 501.6 325.4 L 499.6 324.4 L 497.7 323.5 L 490.3 336.5 L 492.1 337.7 L 494 338.9 L 495.8 340.1 L 497.7 341.3 L 499.7 342.6 L 501.6 343.8 L 503.6 345 L 505.6 346.3 L 507.7 347.5 L 509.8 348.7 L 511.9 350 L 514 351.2 L 516.2 352.4 L 518.4 353.6 L 520.6 354.8 L 522.8 356 L 525.1 357.1 L 527.4 358.3 L 529.7 359.4 L 532.1 360.5 L 534.5 361.6 L 536.9 362.6 L 539.3 363.7 L 541.8 364.6 L 544.3 365.6 L 546.8 366.5 Z"/>
+<path class="holz wurzelholz" d="M 546.8 533.5 L 544.3 534.4 L 541.8 535.4 L 539.3 536.3 L 536.9 537.4 L 534.5 538.4 L 532.1 539.5 L 529.7 540.6 L 527.4 541.7 L 525.1 542.9 L 522.8 544 L 520.6 545.2 L 518.4 546.4 L 516.2 547.6 L 514 548.8 L 511.9 550 L 509.8 551.3 L 507.7 552.5 L 505.6 553.7 L 503.6 555 L 501.6 556.2 L 499.7 557.4 L 497.7 558.7 L 495.8 559.9 L 494 561.1 L 492.1 562.3 L 490.3 563.5 L 497.7 576.5 L 499.6 575.6 L 501.6 574.6 L 503.6 573.7 L 505.6 572.7 L 507.6 571.7 L 509.6 570.8 L 511.6 569.8 L 513.7 568.9 L 515.8 567.9 L 517.9 567 L 520 566.1 L 522.1 565.1 L 524.3 564.2 L 526.4 563.3 L 528.6 562.5 L 530.8 561.6 L 533 560.8 L 535.2 560 L 537.4 559.2 L 539.6 558.4 L 541.9 557.7 L 544.1 557 L 546.4 556.3 L 548.6 555.7 L 550.9 555.1 L 553.2 554.5 Z"/>
+<path class="holz" d="M 555.3 366.2 L 557.5 364.9 L 559.7 363.6 L 561.8 362.2 L 563.9 360.8 L 566 359.4 L 568.1 358 L 570.1 356.5 L 572.1 355.1 L 574.1 353.6 L 576 352.1 L 577.9 350.6 L 579.8 349.1 L 581.6 347.6 L 583.5 346 L 585.2 344.5 L 587 343 L 588.7 341.5 L 590.5 340 L 592.1 338.4 L 593.8 336.9 L 595.4 335.4 L 597 333.9 L 598.6 332.5 L 600.1 331 L 601.7 329.6 L 603.2 328.1 L 592.8 315.9 L 591.2 317.1 L 589.5 318.3 L 587.8 319.5 L 586.1 320.8 L 584.4 322 L 582.7 323.3 L 580.9 324.5 L 579.2 325.7 L 577.4 327 L 575.6 328.2 L 573.8 329.4 L 571.9 330.7 L 570.1 331.9 L 568.2 333.1 L 566.3 334.2 L 564.4 335.4 L 562.5 336.5 L 560.6 337.7 L 558.7 338.8 L 556.7 339.9 L 554.8 340.9 L 552.8 341.9 L 550.8 342.9 L 548.8 343.9 L 546.8 344.9 L 544.7 345.8 Z"/>
+<path class="holz wurzelholz" d="M 544.7 554.2 L 546.8 555.1 L 548.8 556.1 L 550.8 557.1 L 552.8 558.1 L 554.8 559.1 L 556.7 560.1 L 558.7 561.2 L 560.6 562.3 L 562.5 563.5 L 564.4 564.6 L 566.3 565.8 L 568.2 566.9 L 570.1 568.1 L 571.9 569.3 L 573.8 570.6 L 575.6 571.8 L 577.4 573 L 579.2 574.3 L 580.9 575.5 L 582.7 576.7 L 584.4 578 L 586.1 579.2 L 587.8 580.5 L 589.5 581.7 L 591.2 582.9 L 592.8 584.1 L 603.2 571.9 L 601.7 570.4 L 600.1 569 L 598.6 567.5 L 597 566.1 L 595.4 564.6 L 593.8 563.1 L 592.1 561.6 L 590.5 560 L 588.7 558.5 L 587 557 L 585.2 555.5 L 583.5 554 L 581.6 552.4 L 579.8 550.9 L 577.9 549.4 L 576 547.9 L 574.1 546.4 L 572.1 544.9 L 570.1 543.5 L 568.1 542 L 566 540.6 L 563.9 539.2 L 561.8 537.8 L 559.7 536.4 L 557.5 535.1 L 555.3 533.8 Z"/>
+<path class="holz" d="M 491.5 324 L 487.4 325.8 L 483.3 327.5 L 479.2 329.2 L 475 330.8 L 470.8 332.3 L 466.6 333.7 L 462.4 335.1 L 458.2 336.4 L 454 337.7 L 449.8 338.9 L 445.5 340 L 441.3 341.1 L 437.1 342.2 L 432.9 343.2 L 428.7 344.1 L 424.5 345 L 420.3 345.9 L 416.2 346.7 L 412.1 347.5 L 408 348.3 L 403.9 349 L 399.9 349.7 L 395.9 350.4 L 391.9 351.1 L 388 351.7 L 384.1 352.4 L 384.3 354.3 L 384.6 356.3 L 388.5 356 L 392.5 355.7 L 396.5 355.4 L 400.6 355 L 404.7 354.7 L 408.8 354.3 L 413 353.9 L 417.2 353.4 L 421.5 352.9 L 425.8 352.4 L 430.1 351.8 L 434.4 351.2 L 438.8 350.5 L 443.1 349.8 L 447.5 349 L 451.9 348.2 L 456.4 347.3 L 460.8 346.3 L 465.3 345.3 L 469.7 344.2 L 474.2 343.1 L 478.6 341.8 L 483.1 340.5 L 487.6 339.1 L 492 337.6 L 496.5 336 Z"/>
+<path class="holz wurzelholz" d="M 496.5 564 L 492 562.4 L 487.6 560.9 L 483.1 559.5 L 478.6 558.2 L 474.2 556.9 L 469.7 555.8 L 465.3 554.7 L 460.8 553.7 L 456.4 552.7 L 451.9 551.8 L 447.5 551 L 443.1 550.2 L 438.8 549.5 L 434.4 548.8 L 430.1 548.2 L 425.8 547.6 L 421.5 547.1 L 417.2 546.6 L 413 546.1 L 408.8 545.7 L 404.7 545.3 L 400.6 545 L 396.5 544.6 L 392.5 544.3 L 388.5 544 L 384.6 543.7 L 384.3 545.7 L 384.1 547.6 L 388 548.3 L 391.9 548.9 L 395.9 549.6 L 399.9 550.3 L 403.9 551 L 408 551.7 L 412.1 552.5 L 416.2 553.3 L 420.3 554.1 L 424.5 555 L 428.7 555.9 L 432.9 556.8 L 437.1 557.8 L 441.3 558.9 L 445.5 560 L 449.8 561.1 L 454 562.3 L 458.2 563.6 L 462.4 564.9 L 466.6 566.3 L 470.8 567.7 L 475 569.2 L 479.2 570.8 L 483.3 572.5 L 487.4 574.2 L 491.5 576 Z"/>
+<path class="holz" d="M 499.5 326.5 L 497.9 324.4 L 496.3 322.4 L 494.7 320.4 L 493.1 318.5 L 491.5 316.6 L 489.8 314.7 L 488.1 312.8 L 486.4 311 L 484.8 309.2 L 483 307.5 L 481.3 305.7 L 479.6 304 L 477.9 302.3 L 476.1 300.7 L 474.4 299.1 L 472.7 297.5 L 470.9 295.9 L 469.2 294.4 L 467.5 292.9 L 465.8 291.4 L 464.1 289.9 L 462.4 288.4 L 460.7 287 L 459 285.6 L 457.4 284.3 L 455.7 282.9 L 454.3 284.3 L 453 285.8 L 454.3 287.4 L 455.7 289 L 457.2 290.6 L 458.6 292.3 L 460 293.9 L 461.5 295.6 L 462.9 297.4 L 464.4 299.1 L 465.8 300.8 L 467.3 302.6 L 468.7 304.4 L 470.1 306.2 L 471.6 308 L 473 309.9 L 474.4 311.8 L 475.8 313.6 L 477.2 315.5 L 478.5 317.5 L 479.9 319.4 L 481.2 321.4 L 482.5 323.4 L 483.7 325.4 L 485 327.4 L 486.2 329.4 L 487.4 331.5 L 488.5 333.5 Z"/>
+<path class="holz wurzelholz" d="M 488.5 566.5 L 487.4 568.5 L 486.2 570.6 L 485 572.6 L 483.7 574.6 L 482.5 576.6 L 481.2 578.6 L 479.9 580.6 L 478.5 582.5 L 477.2 584.5 L 475.8 586.4 L 474.4 588.2 L 473 590.1 L 471.6 592 L 470.1 593.8 L 468.7 595.6 L 467.3 597.4 L 465.8 599.2 L 464.4 600.9 L 462.9 602.6 L 461.5 604.4 L 460 606.1 L 458.6 607.7 L 457.2 609.4 L 455.7 611 L 454.3 612.6 L 453 614.2 L 454.3 615.7 L 455.7 617.1 L 457.4 615.7 L 459 614.4 L 460.7 613 L 462.4 611.6 L 464.1 610.1 L 465.8 608.6 L 467.5 607.1 L 469.2 605.6 L 470.9 604.1 L 472.7 602.5 L 474.4 600.9 L 476.1 599.3 L 477.9 597.7 L 479.6 596 L 481.3 594.3 L 483 592.5 L 484.8 590.8 L 486.4 589 L 488.1 587.2 L 489.8 585.3 L 491.5 583.4 L 493.1 581.5 L 494.7 579.6 L 496.3 577.6 L 497.9 575.6 L 499.5 573.5 Z"/>
+<path class="holz" d="M 602.2 317 L 599.7 315.1 L 597.3 313.2 L 594.9 311.1 L 592.6 309.1 L 590.3 307 L 588.1 304.8 L 585.9 302.6 L 583.7 300.4 L 581.6 298.2 L 579.6 295.9 L 577.6 293.6 L 575.6 291.2 L 573.7 288.9 L 571.8 286.5 L 570 284.1 L 568.2 281.7 L 566.4 279.3 L 564.7 276.8 L 562.9 274.4 L 561.3 272 L 559.6 269.6 L 558 267.2 L 556.4 264.8 L 554.8 262.4 L 553.3 260 L 551.7 257.7 L 550 258.7 L 548.3 259.7 L 549.5 262.2 L 550.7 264.7 L 552 267.3 L 553.3 269.9 L 554.7 272.5 L 556.1 275.1 L 557.5 277.8 L 558.9 280.4 L 560.4 283.1 L 561.9 285.8 L 563.5 288.4 L 565.1 291.1 L 566.8 293.8 L 568.5 296.5 L 570.3 299.1 L 572.1 301.8 L 574 304.4 L 575.9 307 L 577.9 309.6 L 580 312.2 L 582.1 314.7 L 584.3 317.3 L 586.6 319.7 L 588.9 322.2 L 591.3 324.6 L 593.8 327 Z"/>
+<path class="holz wurzelholz" d="M 593.8 573 L 591.3 575.4 L 588.9 577.8 L 586.6 580.3 L 584.3 582.7 L 582.1 585.3 L 580 587.8 L 577.9 590.4 L 575.9 593 L 574 595.6 L 572.1 598.2 L 570.3 600.9 L 568.5 603.5 L 566.8 606.2 L 565.1 608.9 L 563.5 611.6 L 561.9 614.2 L 560.4 616.9 L 558.9 619.6 L 557.5 622.2 L 556.1 624.9 L 554.7 627.5 L 553.3 630.1 L 552 632.7 L 550.7 635.3 L 549.5 637.8 L 548.3 640.3 L 550 641.3 L 551.7 642.3 L 553.3 640 L 554.8 637.6 L 556.4 635.2 L 558 632.8 L 559.6 630.4 L 561.3 628 L 562.9 625.6 L 564.7 623.2 L 566.4 620.7 L 568.2 618.3 L 570 615.9 L 571.8 613.5 L 573.7 611.1 L 575.6 608.8 L 577.6 606.4 L 579.6 604.1 L 581.6 601.8 L 583.7 599.6 L 585.9 597.4 L 588.1 595.2 L 590.3 593 L 592.6 590.9 L 594.9 588.9 L 597.3 586.8 L 599.7 584.9 L 602.2 583 Z"/>
+<path class="holz" d="M 602 327.1 L 603.8 325.4 L 605.7 323.8 L 607.5 322.1 L 609.3 320.5 L 611.1 318.8 L 612.9 317.2 L 614.7 315.5 L 616.5 313.9 L 618.3 312.3 L 620.1 310.6 L 621.8 309 L 623.6 307.4 L 625.4 305.8 L 627.1 304.2 L 628.8 302.6 L 630.5 301 L 632.3 299.5 L 633.9 297.9 L 635.6 296.3 L 637.3 294.8 L 638.9 293.3 L 640.6 291.8 L 642.2 290.3 L 643.8 288.8 L 645.3 287.3 L 646.9 285.9 L 645.7 284.3 L 644.4 282.8 L 642.6 283.9 L 640.9 285.1 L 639 286.3 L 637.2 287.6 L 635.4 288.8 L 633.5 290 L 631.6 291.3 L 629.7 292.6 L 627.8 293.9 L 625.9 295.2 L 624 296.5 L 622 297.8 L 620.1 299.1 L 618.1 300.5 L 616.1 301.8 L 614.2 303.2 L 612.2 304.5 L 610.2 305.9 L 608.1 307.2 L 606.1 308.6 L 604.1 310 L 602.1 311.4 L 600.1 312.7 L 598 314.1 L 596 315.5 L 594 316.9 Z"/>
+<path class="holz wurzelholz" d="M 594 583.1 L 596 584.5 L 598 585.9 L 600.1 587.3 L 602.1 588.6 L 604.1 590 L 606.1 591.4 L 608.1 592.8 L 610.2 594.1 L 612.2 595.5 L 614.2 596.8 L 616.1 598.2 L 618.1 599.5 L 620.1 600.9 L 622 602.2 L 624 603.5 L 625.9 604.8 L 627.8 606.1 L 629.7 607.4 L 631.6 608.7 L 633.5 610 L 635.4 611.2 L 637.2 612.4 L 639 613.7 L 640.9 614.9 L 642.6 616.1 L 644.4 617.2 L 645.7 615.7 L 646.9 614.1 L 645.3 612.7 L 643.8 611.2 L 642.2 609.7 L 640.6 608.2 L 638.9 606.7 L 637.3 605.2 L 635.6 603.7 L 633.9 602.1 L 632.3 600.5 L 630.5 599 L 628.8 597.4 L 627.1 595.8 L 625.4 594.2 L 623.6 592.6 L 621.8 591 L 620.1 589.4 L 618.3 587.7 L 616.5 586.1 L 614.7 584.5 L 612.9 582.8 L 611.1 581.2 L 609.3 579.5 L 607.5 577.9 L 605.7 576.2 L 603.8 574.6 L 602 572.9 Z"/>
+<path class="holz" d="M 594.9 327.7 L 599.6 330 L 604.3 332.1 L 609.1 334.1 L 613.8 336 L 618.6 337.7 L 623.3 339.4 L 628.1 340.9 L 632.8 342.4 L 637.6 343.7 L 642.4 344.9 L 647.1 346.1 L 651.9 347.2 L 656.6 348.2 L 661.3 349.1 L 666 350 L 670.6 350.8 L 675.3 351.6 L 679.9 352.2 L 684.5 352.9 L 689 353.5 L 693.5 354 L 698 354.5 L 702.4 355 L 706.8 355.5 L 711.1 355.9 L 715.4 356.3 L 715.7 354.3 L 715.9 352.4 L 711.7 351.6 L 707.5 350.8 L 703.1 350 L 698.8 349.2 L 694.4 348.4 L 690 347.5 L 685.6 346.6 L 681.1 345.6 L 676.6 344.6 L 672.1 343.5 L 667.6 342.4 L 663.1 341.2 L 658.6 339.9 L 654.1 338.6 L 649.6 337.3 L 645 335.8 L 640.5 334.3 L 636.1 332.6 L 631.6 330.9 L 627.1 329.1 L 622.7 327.2 L 618.3 325.3 L 613.9 323.2 L 609.6 321 L 605.3 318.7 L 601.1 316.3 Z"/>
+<path class="holz wurzelholz" d="M 601.1 583.7 L 605.3 581.3 L 609.6 579 L 613.9 576.8 L 618.3 574.7 L 622.7 572.8 L 627.1 570.9 L 631.6 569.1 L 636.1 567.4 L 640.5 565.7 L 645 564.2 L 649.6 562.7 L 654.1 561.4 L 658.6 560.1 L 663.1 558.8 L 667.6 557.6 L 672.1 556.5 L 676.6 555.4 L 681.1 554.4 L 685.6 553.4 L 690 552.5 L 694.4 551.6 L 698.8 550.8 L 703.1 550 L 707.5 549.2 L 711.7 548.4 L 715.9 547.6 L 715.7 545.7 L 715.4 543.7 L 711.1 544.1 L 706.8 544.5 L 702.4 545 L 698 545.5 L 693.5 546 L 689 546.5 L 684.5 547.1 L 679.9 547.8 L 675.3 548.4 L 670.6 549.2 L 666 550 L 661.3 550.9 L 656.6 551.8 L 651.9 552.8 L 647.1 553.9 L 642.4 555.1 L 637.6 556.3 L 632.8 557.6 L 628.1 559.1 L 623.3 560.6 L 618.6 562.3 L 613.8 564 L 609.1 565.9 L 604.3 567.9 L 599.6 570 L 594.9 572.3 Z"/>
+</g>
+<g class="kreis kreis-krone" data-slug="materialismus" id="materialismus">
+<a href="weltanschauungen/materialismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
+  <title>Materialismus – Die Welt ist Stoff: Alles Wirkliche – auch das Denken – wird aus materiellen Vorgängen begriffen.</title>
+  <circle class="kreisflaeche" cx="550" cy="187.8" r="67.8"/>
+</a>
+<g class="innenwelt">
+<path class="innenholz" d="M 552.1 260 L 552.6 256 L 553 251.9 L 553.1 247.9 L 553.2 243.9 L 553.1 239.9 L 552.9 235.9 L 552.7 231.9 L 552.4 227.9 L 552.1 223.9 L 551.7 219.9 L 551.4 216 L 551.1 212 L 550.9 208 L 550.7 204 L 550.7 200 L 550.7 196 L 550.9 192 L 551.3 188 L 548.7 187.7 L 548.2 191.8 L 548 195.9 L 547.8 200 L 547.8 204.1 L 547.8 208.1 L 548 212.2 L 548.2 216.2 L 548.4 220.2 L 548.7 224.2 L 548.9 228.1 L 549.1 232.1 L 549.3 236 L 549.4 240 L 549.3 243.9 L 549.2 247.8 L 548.9 251.6 L 548.5 255.5 L 547.9 259.3 Z"/>
+<circle class="innenholz" cx="550" cy="187.8" r="2.4"/>
+<path class="innenholz" d="M 551.2 187.5 L 550.2 184.5 L 549.1 181.5 L 547.9 178.6 L 546.6 175.8 L 545.3 173.1 L 543.9 170.6 L 542.4 168.1 L 540.9 165.7 L 539.3 163.4 L 537.6 161.2 L 535.9 159.1 L 534.2 157.1 L 532.5 155.2 L 530.7 153.4 L 530.3 153.8 L 530 154.1 L 531.7 156 L 533.3 157.9 L 534.9 159.9 L 536.5 162 L 538 164.2 L 539.5 166.5 L 540.9 168.9 L 542.3 171.4 L 543.6 174 L 544.8 176.7 L 546 179.4 L 547 182.2 L 548 185.2 L 548.8 188.2 Z"/>
+<path class="innenholz" d="M 550.8 187 L 548.4 184.8 L 546 182.8 L 543.6 180.9 L 541.1 179.1 L 538.6 177.5 L 536.1 175.9 L 533.5 174.5 L 531 173.2 L 528.5 172 L 526 170.9 L 523.4 170 L 521 169.1 L 518.5 168.3 L 516.1 167.7 L 515.9 168.2 L 515.8 168.7 L 518.2 169.4 L 520.6 170.2 L 523 171.2 L 525.4 172.2 L 527.8 173.4 L 530.3 174.6 L 532.7 176 L 535.1 177.5 L 537.5 179.1 L 539.9 180.7 L 542.3 182.6 L 544.6 184.5 L 546.9 186.5 L 549.2 188.7 Z"/>
+<path class="innenholz" d="M 550.3 186.7 L 547.1 186 L 544 185.5 L 540.9 185.1 L 537.9 184.8 L 534.9 184.6 L 532 184.5 L 529.1 184.5 L 526.2 184.7 L 523.4 184.9 L 520.7 185.2 L 518.1 185.6 L 515.5 186.1 L 513 186.7 L 510.5 187.4 L 510.7 187.8 L 510.8 188.3 L 513.2 187.8 L 515.7 187.3 L 518.3 186.9 L 520.9 186.6 L 523.6 186.4 L 526.3 186.3 L 529.1 186.2 L 531.9 186.3 L 534.8 186.5 L 537.7 186.7 L 540.7 187.1 L 543.7 187.6 L 546.7 188.3 L 549.7 189 Z"/>
+<path class="innenholz" d="M 549.7 186.7 L 546.6 187.7 L 543.6 188.8 L 540.8 190 L 538 191.2 L 535.3 192.6 L 532.7 194 L 530.2 195.4 L 527.8 197 L 525.5 198.6 L 523.3 200.2 L 521.2 201.9 L 519.2 203.6 L 517.4 205.4 L 515.6 207.2 L 515.9 207.5 L 516.3 207.9 L 518.1 206.2 L 520 204.5 L 522.1 202.9 L 524.2 201.3 L 526.4 199.8 L 528.7 198.3 L 531.1 196.9 L 533.6 195.5 L 536.1 194.3 L 538.8 193 L 541.6 191.9 L 544.4 190.8 L 547.3 189.9 L 550.3 189 Z"/>
+<path class="innenholz" d="M 549.1 187 L 547 189.4 L 545 191.8 L 543 194.3 L 541.3 196.8 L 539.6 199.3 L 538.1 201.8 L 536.7 204.3 L 535.4 206.9 L 534.2 209.4 L 533.1 211.9 L 532.1 214.4 L 531.3 216.9 L 530.5 219.4 L 529.8 221.8 L 530.3 221.9 L 530.8 222.1 L 531.5 219.7 L 532.4 217.3 L 533.3 214.9 L 534.4 212.4 L 535.5 210 L 536.8 207.6 L 538.1 205.2 L 539.6 202.7 L 541.2 200.3 L 542.9 197.9 L 544.7 195.6 L 546.6 193.2 L 548.7 190.9 L 550.9 188.7 Z"/>
+<path class="innenholz" d="M 548.8 187.6 L 548.2 190.7 L 547.6 193.8 L 547.2 196.9 L 546.9 199.9 L 546.7 202.9 L 546.6 205.9 L 546.7 208.8 L 546.8 211.6 L 547.1 214.4 L 547.4 217.1 L 547.8 219.8 L 548.3 222.4 L 548.9 224.9 L 549.5 227.3 L 550 227.2 L 550.5 227.1 L 549.9 224.6 L 549.5 222.1 L 549.1 219.6 L 548.8 217 L 548.5 214.3 L 548.4 211.6 L 548.4 208.8 L 548.4 205.9 L 548.6 203.1 L 548.9 200.1 L 549.3 197.2 L 549.8 194.2 L 550.4 191.2 L 551.2 188.1 Z"/>
+<path class="innenholz" d="M 548.8 188.2 L 549.8 191.2 L 550.9 194.2 L 552.1 197.1 L 553.4 199.9 L 554.7 202.6 L 556.1 205.1 L 557.6 207.6 L 559.1 210 L 560.7 212.3 L 562.4 214.5 L 564.1 216.6 L 565.8 218.6 L 567.5 220.5 L 569.3 222.3 L 569.7 221.9 L 570 221.6 L 568.3 219.7 L 566.7 217.8 L 565.1 215.8 L 563.5 213.7 L 562 211.5 L 560.5 209.2 L 559.1 206.8 L 557.7 204.3 L 556.4 201.7 L 555.2 199 L 554 196.3 L 553 193.5 L 552 190.5 L 551.2 187.5 Z"/>
+<path class="innenholz" d="M 549.2 188.7 L 551.6 190.9 L 554 192.9 L 556.4 194.8 L 558.9 196.6 L 561.4 198.2 L 563.9 199.8 L 566.5 201.2 L 569 202.5 L 571.5 203.7 L 574 204.8 L 576.6 205.7 L 579 206.6 L 581.5 207.4 L 583.9 208 L 584.1 207.5 L 584.2 207 L 581.8 206.3 L 579.4 205.5 L 577 204.5 L 574.6 203.5 L 572.2 202.3 L 569.7 201.1 L 567.3 199.7 L 564.9 198.2 L 562.5 196.6 L 560.1 194.9 L 557.7 193.1 L 555.4 191.2 L 553.1 189.2 L 550.8 187 Z"/>
+<path class="innenholz" d="M 549.7 189 L 552.9 189.7 L 556 190.2 L 559.1 190.6 L 562.1 190.9 L 565.1 191.1 L 568 191.2 L 570.9 191.2 L 573.8 191 L 576.6 190.8 L 579.3 190.5 L 581.9 190.1 L 584.5 189.6 L 587 189 L 589.5 188.3 L 589.3 187.8 L 589.2 187.4 L 586.8 187.9 L 584.3 188.4 L 581.7 188.8 L 579.1 189.1 L 576.4 189.3 L 573.7 189.4 L 570.9 189.5 L 568.1 189.4 L 565.2 189.2 L 562.3 189 L 559.3 188.6 L 556.3 188.1 L 553.3 187.4 L 550.3 186.7 Z"/>
+<path class="innenholz" d="M 550.3 189 L 553.4 188 L 556.4 186.9 L 559.2 185.7 L 562 184.5 L 564.7 183.1 L 567.3 181.7 L 569.8 180.3 L 572.2 178.7 L 574.5 177.1 L 576.7 175.5 L 578.8 173.8 L 580.8 172.1 L 582.6 170.3 L 584.4 168.5 L 584.1 168.2 L 583.7 167.8 L 581.9 169.5 L 580 171.2 L 577.9 172.8 L 575.8 174.4 L 573.6 175.9 L 571.3 177.4 L 568.9 178.8 L 566.4 180.2 L 563.9 181.4 L 561.2 182.7 L 558.4 183.8 L 555.6 184.9 L 552.7 185.8 L 549.7 186.7 Z"/>
+<path class="innenholz" d="M 550.9 188.7 L 553 186.3 L 555 183.9 L 557 181.4 L 558.7 178.9 L 560.4 176.4 L 561.9 173.9 L 563.3 171.4 L 564.6 168.8 L 565.8 166.3 L 566.9 163.8 L 567.9 161.3 L 568.7 158.8 L 569.5 156.3 L 570.2 153.9 L 569.7 153.8 L 569.2 153.6 L 568.5 156 L 567.6 158.4 L 566.7 160.8 L 565.6 163.2 L 564.5 165.7 L 563.2 168.1 L 561.9 170.5 L 560.4 173 L 558.8 175.4 L 557.1 177.8 L 555.3 180.1 L 553.4 182.5 L 551.3 184.8 L 549.1 187 Z"/>
+<path class="innenholz" d="M 551.2 188.1 L 551.8 185 L 552.4 181.9 L 552.8 178.8 L 553.1 175.8 L 553.3 172.8 L 553.4 169.8 L 553.3 166.9 L 553.2 164.1 L 552.9 161.3 L 552.6 158.6 L 552.2 155.9 L 551.7 153.3 L 551.1 150.8 L 550.5 148.4 L 550 148.5 L 549.5 148.6 L 550.1 151.1 L 550.5 153.5 L 550.9 156.1 L 551.2 158.7 L 551.5 161.4 L 551.6 164.1 L 551.6 166.9 L 551.6 169.8 L 551.4 172.6 L 551.1 175.6 L 550.7 178.5 L 550.2 181.5 L 549.6 184.5 L 548.8 187.6 Z"/>
+<g class="art" data-art="1">
+<circle class="art-kugel" cx="523.1" cy="141.2" r="14"/>
+<a href="weltanschauungen/materialismus/art-1.html" class="art-link" aria-label="Art I Gaede im Materialismus · 8 Artikel">
+  <title>Art I Gaede im Materialismus · 8 Artikel</title>
+  <circle class="art-treffer" cx="523.1" cy="141.2" r="14"/>
+  <text class="art-ziffer" x="523.1" y="137.4" text-anchor="middle">I</text>
+  <text class="art-wort" x="523.1" y="144.2" text-anchor="middle" style="font-size:5.0px">Gaede</text>
+  <text class="art-badge" x="523.1" y="149" text-anchor="middle">8</text>
+</a>
+</g>
+<g class="art" data-art="2">
+<circle class="art-kugel" cx="503.3" cy="160.9" r="14"/>
+<a href="weltanschauungen/materialismus/art-2.html" class="art-link" aria-label="Art II im Materialismus · 0 Artikel">
+  <title>Art II im Materialismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="503.3" cy="160.9" r="14"/>
+  <text class="art-ziffer" x="503.3" y="162.7" text-anchor="middle">II</text>
+</a>
+</g>
+<g class="art" data-art="3">
+<circle class="art-kugel" cx="496.1" cy="187.8" r="14"/>
+<a href="weltanschauungen/materialismus/art-3.html" class="art-link" aria-label="Art III im Materialismus · 0 Artikel">
+  <title>Art III im Materialismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="496.1" cy="187.8" r="14"/>
+  <text class="art-ziffer" x="496.1" y="189.6" text-anchor="middle">III</text>
+</a>
+</g>
+<g class="art" data-art="4">
+<circle class="art-kugel" cx="503.3" cy="214.8" r="14"/>
+<a href="weltanschauungen/materialismus/art-4.html" class="art-link" aria-label="Art IV im Materialismus · 0 Artikel">
+  <title>Art IV im Materialismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="503.3" cy="214.8" r="14"/>
+  <text class="art-ziffer" x="503.3" y="216.6" text-anchor="middle">IV</text>
+</a>
+</g>
+<g class="art" data-art="5">
+<circle class="art-kugel" cx="523.1" cy="234.5" r="14"/>
+<a href="weltanschauungen/materialismus/art-5.html" class="art-link" aria-label="Art V im Materialismus · 0 Artikel">
+  <title>Art V im Materialismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="523.1" cy="234.5" r="14"/>
+  <text class="art-ziffer" x="523.1" y="236.3" text-anchor="middle">V</text>
+</a>
+</g>
+<g class="art" data-art="6">
+<circle class="art-kugel" cx="550" cy="241.7" r="14"/>
+<a href="weltanschauungen/materialismus/art-6.html" class="art-link" aria-label="Art VI im Materialismus · 0 Artikel">
+  <title>Art VI im Materialismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="550" cy="241.7" r="14"/>
+  <text class="art-ziffer" x="550" y="243.5" text-anchor="middle">VI</text>
+</a>
+</g>
+<g class="art" data-art="7">
+<circle class="art-kugel" cx="576.9" cy="234.5" r="14"/>
+<a href="weltanschauungen/materialismus/art-7.html" class="art-link" aria-label="Art VII im Materialismus · 0 Artikel">
+  <title>Art VII im Materialismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="576.9" cy="234.5" r="14"/>
+  <text class="art-ziffer" x="576.9" y="236.3" text-anchor="middle">VII</text>
+</a>
+</g>
+<g class="art" data-art="8">
+<circle class="art-kugel" cx="596.7" cy="214.8" r="14"/>
+<a href="weltanschauungen/materialismus/art-8.html" class="art-link" aria-label="Art VIII im Materialismus · 0 Artikel">
+  <title>Art VIII im Materialismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="596.7" cy="214.8" r="14"/>
+  <text class="art-ziffer" x="596.7" y="216.6" text-anchor="middle">VIII</text>
+</a>
+</g>
+<g class="art" data-art="9">
+<circle class="art-kugel" cx="603.9" cy="187.8" r="14"/>
+<a href="weltanschauungen/materialismus/art-9.html" class="art-link" aria-label="Art IX im Materialismus · 0 Artikel">
+  <title>Art IX im Materialismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="603.9" cy="187.8" r="14"/>
+  <text class="art-ziffer" x="603.9" y="189.6" text-anchor="middle">IX</text>
+</a>
+</g>
+<g class="art" data-art="10">
+<circle class="art-kugel" cx="596.7" cy="160.9" r="14"/>
+<a href="weltanschauungen/materialismus/art-10.html" class="art-link" aria-label="Art X im Materialismus · 0 Artikel">
+  <title>Art X im Materialismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="596.7" cy="160.9" r="14"/>
+  <text class="art-ziffer" x="596.7" y="162.7" text-anchor="middle">X</text>
+</a>
+</g>
+<g class="art" data-art="11">
+<circle class="art-kugel" cx="576.9" cy="141.2" r="14"/>
+<a href="weltanschauungen/materialismus/art-11.html" class="art-link" aria-label="Art XI im Materialismus · 0 Artikel">
+  <title>Art XI im Materialismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="576.9" cy="141.2" r="14"/>
+  <text class="art-ziffer" x="576.9" y="143" text-anchor="middle">XI</text>
+</a>
+</g>
+<g class="art" data-art="12">
+<circle class="art-kugel" cx="550" cy="134" r="14"/>
+<a href="weltanschauungen/materialismus/art-12.html" class="art-link" aria-label="Art XII Christus im Materialismus · 0 Artikel">
+  <title>Art XII Christus im Materialismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="550" cy="134" r="14"/>
+  <text class="art-ziffer" x="550" y="130.2" text-anchor="middle">XII</text>
+  <text class="art-wort" x="550" y="137" text-anchor="middle" style="font-size:4.2px">Christus</text>
+</a>
+</g>
+<g class="kreis-mitte"><text class="mitte-name" x="550" y="180.8" text-anchor="middle">Materialismus</text><text class="mitte-substanz" x="550" y="194.3" text-anchor="middle">die Materie (der Körper)</text><a href="weltanschauungen/materialismus.html" class="mitte-seite"><text x="550" y="202.3" text-anchor="middle">8 Artikel →</text></a></g>
+</g>
+<a href="weltanschauungen/materialismus.html" class="kreis-link" aria-label="Materialismus – hineinzoomen">
+  <title>Materialismus – Die Welt ist Stoff: Alles Wirkliche – auch das Denken – wird aus materiellen Vorgängen begriffen.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="550" cy="164.9" rx="18.1" ry="10.8"/><ellipse class="etikett-schleier" cx="550" cy="181.9" rx="58.7" ry="10.8"/><ellipse class="etikett-schleier" cx="550" cy="200.7" rx="33" ry="9"/><text class="kreis-nummer" x="550" y="169.8" text-anchor="middle">XII</text><text class="kreis-name" x="550" y="186.8" text-anchor="middle">Materialismus</text><text class="kreis-zeichen" x="550" y="204.8" text-anchor="middle">♋︎ Krebs</text></g>
+</a>
+</g>
+<g class="kreis kreis-krone" data-slug="sensualismus" id="sensualismus">
+<a href="weltanschauungen/sensualismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
+  <title>Sensualismus – Wirklich ist, was die Sinne bezeugen; die Empfindung gilt als Grund der Wirklichkeit.</title>
+  <circle class="kreisflaeche" cx="681.1" cy="223" r="67.8"/>
+</a>
+<g class="innenwelt">
+<path class="innenholz" d="M 646.8 286.5 L 649.3 283.3 L 651.6 280 L 653.8 276.6 L 655.8 273.1 L 657.8 269.6 L 659.6 266 L 661.4 262.5 L 663.1 258.9 L 664.8 255.2 L 666.5 251.6 L 668.2 248 L 670 244.4 L 671.8 240.9 L 673.6 237.3 L 675.6 233.8 L 677.6 230.4 L 679.8 227 L 682.1 223.8 L 680 222.2 L 677.6 225.5 L 675.3 228.9 L 673.1 232.4 L 671 235.9 L 669.1 239.4 L 667.2 243 L 665.3 246.6 L 663.6 250.2 L 661.8 253.8 L 660 257.3 L 658.2 260.9 L 656.4 264.3 L 654.5 267.8 L 652.5 271.2 L 650.4 274.5 L 648.3 277.7 L 646 280.8 L 643.5 283.9 Z"/>
+<circle class="innenholz" cx="681.1" cy="223" r="2.4"/>
+<path class="innenholz" d="M 682.2 222.6 L 681.2 219.6 L 680.1 216.6 L 679 213.7 L 677.7 210.9 L 676.4 208.3 L 675 205.7 L 673.5 203.2 L 671.9 200.8 L 670.3 198.5 L 668.7 196.3 L 667 194.2 L 665.3 192.2 L 663.5 190.3 L 661.8 188.5 L 661.4 188.9 L 661 189.2 L 662.7 191.1 L 664.4 193 L 666 195 L 667.6 197.1 L 669.1 199.3 L 670.6 201.7 L 672 204 L 673.4 206.5 L 674.7 209.1 L 675.9 211.8 L 677 214.5 L 678.1 217.4 L 679 220.3 L 679.9 223.3 Z"/>
+<path class="innenholz" d="M 681.9 222.1 L 679.5 220 L 677.1 217.9 L 674.6 216 L 672.1 214.2 L 669.6 212.6 L 667.1 211 L 664.6 209.6 L 662.1 208.3 L 659.5 207.1 L 657 206.1 L 654.5 205.1 L 652 204.2 L 649.6 203.5 L 647.1 202.8 L 647 203.3 L 646.9 203.8 L 649.2 204.5 L 651.6 205.4 L 654.1 206.3 L 656.5 207.3 L 658.9 208.5 L 661.3 209.7 L 663.8 211.1 L 666.2 212.6 L 668.6 214.2 L 671 215.9 L 673.3 217.7 L 675.7 219.6 L 678 221.7 L 680.2 223.8 Z"/>
+<path class="innenholz" d="M 681.4 221.8 L 678.2 221.1 L 675.1 220.6 L 672 220.2 L 669 219.9 L 666 219.7 L 663 219.6 L 660.1 219.7 L 657.3 219.8 L 654.5 220 L 651.8 220.3 L 649.1 220.8 L 646.5 221.3 L 644 221.8 L 641.6 222.5 L 641.7 223 L 641.9 223.5 L 644.3 222.9 L 646.8 222.4 L 649.3 222 L 652 221.7 L 654.6 221.5 L 657.4 221.4 L 660.2 221.4 L 663 221.4 L 665.9 221.6 L 668.8 221.9 L 671.7 222.3 L 674.7 222.8 L 677.7 223.4 L 680.8 224.1 Z"/>
+<path class="innenholz" d="M 680.7 221.8 L 677.7 222.8 L 674.7 223.9 L 671.8 225.1 L 669.1 226.3 L 666.4 227.7 L 663.8 229.1 L 661.3 230.6 L 658.9 232.1 L 656.6 233.7 L 654.4 235.3 L 652.3 237 L 650.3 238.8 L 648.4 240.5 L 646.6 242.3 L 647 242.6 L 647.4 243 L 649.2 241.3 L 651.1 239.7 L 653.1 238 L 655.2 236.5 L 657.5 234.9 L 659.8 233.5 L 662.2 232 L 664.6 230.7 L 667.2 229.4 L 669.9 228.2 L 672.6 227 L 675.5 226 L 678.4 225 L 681.4 224.1 Z"/>
+<path class="innenholz" d="M 680.2 222.1 L 678.1 224.5 L 676 227 L 674.1 229.4 L 672.3 231.9 L 670.7 234.4 L 669.2 236.9 L 667.7 239.4 L 666.4 242 L 665.2 244.5 L 664.2 247 L 663.2 249.5 L 662.3 252 L 661.6 254.5 L 660.9 256.9 L 661.4 257 L 661.9 257.2 L 662.6 254.8 L 663.5 252.4 L 664.4 250 L 665.4 247.6 L 666.6 245.1 L 667.9 242.7 L 669.2 240.3 L 670.7 237.9 L 672.3 235.4 L 674 233.1 L 675.8 230.7 L 677.7 228.4 L 679.8 226.1 L 681.9 223.8 Z"/>
+<path class="innenholz" d="M 679.9 222.7 L 679.2 225.8 L 678.7 228.9 L 678.3 232 L 678 235.1 L 677.8 238.1 L 677.7 241 L 677.8 243.9 L 677.9 246.7 L 678.1 249.5 L 678.5 252.3 L 678.9 254.9 L 679.4 257.5 L 679.9 260 L 680.6 262.4 L 681.1 262.3 L 681.6 262.2 L 681 259.8 L 680.5 257.3 L 680.2 254.7 L 679.8 252.1 L 679.6 249.4 L 679.5 246.7 L 679.5 243.9 L 679.5 241.1 L 679.7 238.2 L 680 235.3 L 680.4 232.3 L 680.9 229.3 L 681.5 226.3 L 682.2 223.3 Z"/>
+<path class="innenholz" d="M 679.9 223.3 L 680.9 226.4 L 682 229.3 L 683.2 232.2 L 684.4 235 L 685.8 237.7 L 687.2 240.3 L 688.7 242.8 L 690.2 245.2 L 691.8 247.4 L 693.4 249.6 L 695.1 251.7 L 696.9 253.7 L 698.6 255.6 L 700.4 257.4 L 700.7 257 L 701.1 256.7 L 699.4 254.9 L 697.8 252.9 L 696.1 250.9 L 694.6 248.8 L 693 246.6 L 691.6 244.3 L 690.1 241.9 L 688.8 239.4 L 687.5 236.8 L 686.3 234.2 L 685.1 231.4 L 684.1 228.6 L 683.1 225.6 L 682.2 222.6 Z"/>
+<path class="innenholz" d="M 680.2 223.8 L 682.6 226 L 685.1 228 L 687.5 229.9 L 690 231.7 L 692.5 233.4 L 695 234.9 L 697.5 236.3 L 700.1 237.6 L 702.6 238.8 L 705.1 239.9 L 707.6 240.9 L 710.1 241.7 L 712.6 242.5 L 715 243.1 L 715.2 242.6 L 715.3 242.2 L 712.9 241.4 L 710.5 240.6 L 708.1 239.6 L 705.7 238.6 L 703.2 237.4 L 700.8 236.2 L 698.4 234.8 L 696 233.4 L 693.6 231.8 L 691.2 230.1 L 688.8 228.3 L 686.5 226.3 L 684.2 224.3 L 681.9 222.1 Z"/>
+<path class="innenholz" d="M 680.8 224.1 L 683.9 224.8 L 687.1 225.3 L 690.1 225.8 L 693.2 226.1 L 696.2 226.2 L 699.1 226.3 L 702 226.3 L 704.9 226.2 L 707.6 225.9 L 710.4 225.6 L 713 225.2 L 715.6 224.7 L 718.1 224.1 L 720.6 223.5 L 720.4 223 L 720.3 222.5 L 717.9 223 L 715.4 223.5 L 712.8 223.9 L 710.2 224.2 L 707.5 224.4 L 704.8 224.6 L 702 224.6 L 699.2 224.5 L 696.3 224.4 L 693.4 224.1 L 690.4 223.7 L 687.4 223.2 L 684.4 222.6 L 681.4 221.8 Z"/>
+<path class="innenholz" d="M 681.4 224.1 L 684.5 223.1 L 687.4 222 L 690.3 220.9 L 693.1 219.6 L 695.8 218.3 L 698.4 216.9 L 700.9 215.4 L 703.3 213.8 L 705.6 212.2 L 707.7 210.6 L 709.8 208.9 L 711.8 207.2 L 713.7 205.4 L 715.5 203.7 L 715.2 203.3 L 714.8 202.9 L 713 204.6 L 711 206.3 L 709 207.9 L 706.9 209.5 L 704.7 211 L 702.4 212.5 L 700 213.9 L 697.5 215.3 L 694.9 216.6 L 692.3 217.8 L 689.5 218.9 L 686.7 220 L 683.8 220.9 L 680.7 221.8 Z"/>
+<path class="innenholz" d="M 681.9 223.8 L 684.1 221.4 L 686.1 219 L 688 216.5 L 689.8 214 L 691.5 211.5 L 693 209 L 694.4 206.5 L 695.7 204 L 696.9 201.4 L 698 198.9 L 699 196.4 L 699.8 193.9 L 700.6 191.5 L 701.2 189 L 700.7 188.9 L 700.3 188.8 L 699.5 191.1 L 698.7 193.5 L 697.7 195.9 L 696.7 198.4 L 695.6 200.8 L 694.3 203.2 L 692.9 205.7 L 691.5 208.1 L 689.9 210.5 L 688.2 212.9 L 686.4 215.2 L 684.4 217.6 L 682.4 219.9 L 680.2 222.1 Z"/>
+<path class="innenholz" d="M 682.2 223.3 L 682.9 220.1 L 683.5 217 L 683.9 213.9 L 684.2 210.9 L 684.4 207.9 L 684.4 204.9 L 684.4 202 L 684.3 199.2 L 684 196.4 L 683.7 193.7 L 683.3 191 L 682.8 188.4 L 682.2 185.9 L 681.6 183.5 L 681.1 183.6 L 680.6 183.7 L 681.1 186.2 L 681.6 188.7 L 682 191.2 L 682.3 193.9 L 682.5 196.5 L 682.7 199.3 L 682.7 202.1 L 682.6 204.9 L 682.5 207.8 L 682.2 210.7 L 681.8 213.6 L 681.3 216.6 L 680.7 219.6 L 679.9 222.7 Z"/>
+<g class="art" data-art="1">
+<circle class="art-kugel" cx="654.1" cy="176.3" r="14"/>
+<a href="weltanschauungen/sensualismus/art-1.html" class="art-link" aria-label="Art I im Sensualismus · 0 Artikel">
+  <title>Art I im Sensualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="654.1" cy="176.3" r="14"/>
+  <text class="art-ziffer" x="654.1" y="178.1" text-anchor="middle">I</text>
+</a>
+</g>
+<g class="art" data-art="2">
+<circle class="art-kugel" cx="634.4" cy="196" r="14"/>
+<a href="weltanschauungen/sensualismus/art-2.html" class="art-link" aria-label="Art II im Sensualismus · 0 Artikel">
+  <title>Art II im Sensualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="634.4" cy="196" r="14"/>
+  <text class="art-ziffer" x="634.4" y="197.8" text-anchor="middle">II</text>
+</a>
+</g>
+<g class="art" data-art="3">
+<circle class="art-kugel" cx="627.2" cy="223" r="14"/>
+<a href="weltanschauungen/sensualismus/art-3.html" class="art-link" aria-label="Art III im Sensualismus · 0 Artikel">
+  <title>Art III im Sensualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="627.2" cy="223" r="14"/>
+  <text class="art-ziffer" x="627.2" y="224.8" text-anchor="middle">III</text>
+</a>
+</g>
+<g class="art" data-art="4">
+<circle class="art-kugel" cx="634.4" cy="249.9" r="14"/>
+<a href="weltanschauungen/sensualismus/art-4.html" class="art-link" aria-label="Art IV im Sensualismus · 0 Artikel">
+  <title>Art IV im Sensualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="634.4" cy="249.9" r="14"/>
+  <text class="art-ziffer" x="634.4" y="251.7" text-anchor="middle">IV</text>
+</a>
+</g>
+<g class="art" data-art="5">
+<circle class="art-kugel" cx="654.1" cy="269.6" r="14"/>
+<a href="weltanschauungen/sensualismus/art-5.html" class="art-link" aria-label="Art V im Sensualismus · 0 Artikel">
+  <title>Art V im Sensualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="654.1" cy="269.6" r="14"/>
+  <text class="art-ziffer" x="654.1" y="271.4" text-anchor="middle">V</text>
+</a>
+</g>
+<g class="art" data-art="6">
+<circle class="art-kugel" cx="681.1" cy="276.9" r="14"/>
+<a href="weltanschauungen/sensualismus/art-6.html" class="art-link" aria-label="Art VI im Sensualismus · 0 Artikel">
+  <title>Art VI im Sensualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="681.1" cy="276.9" r="14"/>
+  <text class="art-ziffer" x="681.1" y="278.7" text-anchor="middle">VI</text>
+</a>
+</g>
+<g class="art" data-art="7">
+<circle class="art-kugel" cx="708" cy="269.6" r="14"/>
+<a href="weltanschauungen/sensualismus/art-7.html" class="art-link" aria-label="Art VII im Sensualismus · 0 Artikel">
+  <title>Art VII im Sensualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="708" cy="269.6" r="14"/>
+  <text class="art-ziffer" x="708" y="271.4" text-anchor="middle">VII</text>
+</a>
+</g>
+<g class="art" data-art="8">
+<circle class="art-kugel" cx="727.8" cy="249.9" r="14"/>
+<a href="weltanschauungen/sensualismus/art-8.html" class="art-link" aria-label="Art VIII im Sensualismus · 0 Artikel">
+  <title>Art VIII im Sensualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="727.8" cy="249.9" r="14"/>
+  <text class="art-ziffer" x="727.8" y="251.7" text-anchor="middle">VIII</text>
+</a>
+</g>
+<g class="art" data-art="9">
+<circle class="art-kugel" cx="735" cy="223" r="14"/>
+<a href="weltanschauungen/sensualismus/art-9.html" class="art-link" aria-label="Art IX im Sensualismus · 0 Artikel">
+  <title>Art IX im Sensualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="735" cy="223" r="14"/>
+  <text class="art-ziffer" x="735" y="224.8" text-anchor="middle">IX</text>
+</a>
+</g>
+<g class="art" data-art="10">
+<circle class="art-kugel" cx="727.8" cy="196" r="14"/>
+<a href="weltanschauungen/sensualismus/art-10.html" class="art-link" aria-label="Art X im Sensualismus · 0 Artikel">
+  <title>Art X im Sensualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="727.8" cy="196" r="14"/>
+  <text class="art-ziffer" x="727.8" y="197.8" text-anchor="middle">X</text>
+</a>
+</g>
+<g class="art" data-art="11">
+<circle class="art-kugel" cx="708" cy="176.3" r="14"/>
+<a href="weltanschauungen/sensualismus/art-11.html" class="art-link" aria-label="Art XI im Sensualismus · 0 Artikel">
+  <title>Art XI im Sensualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="708" cy="176.3" r="14"/>
+  <text class="art-ziffer" x="708" y="178.1" text-anchor="middle">XI</text>
+</a>
+</g>
+<g class="art" data-art="12">
+<circle class="art-kugel" cx="681.1" cy="169.1" r="14"/>
+<a href="weltanschauungen/sensualismus/art-12.html" class="art-link" aria-label="Art XII Christus im Sensualismus · 0 Artikel">
+  <title>Art XII Christus im Sensualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="681.1" cy="169.1" r="14"/>
+  <text class="art-ziffer" x="681.1" y="165.3" text-anchor="middle">XII</text>
+  <text class="art-wort" x="681.1" y="172.1" text-anchor="middle" style="font-size:4.2px">Christus</text>
+</a>
+</g>
+<g class="kreis-mitte"><text class="mitte-name" x="681.1" y="216" text-anchor="middle">Sensualismus</text><text class="mitte-substanz" x="681.1" y="229.5" text-anchor="middle">der physische Sinn (der Leib)</text><a href="weltanschauungen/sensualismus.html" class="mitte-seite"><text x="681.1" y="237.5" text-anchor="middle">0 Artikel →</text></a></g>
+</g>
+<a href="weltanschauungen/sensualismus.html" class="kreis-link" aria-label="Sensualismus – hineinzoomen">
+  <title>Sensualismus – Wirklich ist, was die Sinne bezeugen; die Empfindung gilt als Grund der Wirklichkeit.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="681.1" cy="200" rx="14.1" ry="10.8"/><ellipse class="etikett-schleier" cx="681.1" cy="217" rx="54.6" ry="10.8"/><ellipse class="etikett-schleier" cx="681.1" cy="235.8" rx="29.6" ry="9"/><text class="kreis-nummer" x="681.1" y="205" text-anchor="middle">XI</text><text class="kreis-name" x="681.1" y="222" text-anchor="middle">Sensualismus</text><text class="kreis-zeichen" x="681.1" y="240" text-anchor="middle">♌︎ Löwe</text></g>
+</a>
+</g>
+<g class="kreis kreis-krone" data-slug="phaenomenalismus" id="phaenomenalismus">
+<a href="weltanschauungen/phaenomenalismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
+  <title>Phänomenalismus – Die Welt ist uns Erscheinung: Erkannt werden die Phänomene, nicht das Ding an sich.</title>
+  <circle class="kreisflaeche" cx="777" cy="318.9" r="67.8"/>
+</a>
+<g class="innenwelt">
+<path class="innenholz" d="M 715.5 356.8 L 719.3 355.3 L 723 353.5 L 726.6 351.7 L 730.1 349.7 L 733.5 347.6 L 736.9 345.5 L 740.2 343.3 L 743.5 341 L 746.8 338.8 L 750.1 336.5 L 753.4 334.2 L 756.7 332 L 760 329.8 L 763.4 327.6 L 766.8 325.6 L 770.3 323.6 L 773.9 321.8 L 777.5 320.1 L 776.5 317.7 L 772.7 319.4 L 769 321.2 L 765.4 323.1 L 761.9 325.1 L 758.4 327.2 L 755 329.3 L 751.6 331.5 L 748.2 333.7 L 744.9 335.9 L 741.6 338.1 L 738.3 340.3 L 734.9 342.4 L 731.6 344.4 L 728.2 346.4 L 724.7 348.2 L 721.3 349.9 L 717.7 351.5 L 714.1 352.9 Z"/>
+<circle class="innenholz" cx="777" cy="318.9" r="2.4"/>
+<path class="innenholz" d="M 778.2 318.6 L 777.2 315.5 L 776.1 312.6 L 774.9 309.7 L 773.7 306.9 L 772.3 304.2 L 770.9 301.6 L 769.4 299.1 L 767.9 296.7 L 766.3 294.4 L 764.7 292.3 L 763 290.2 L 761.2 288.2 L 759.5 286.3 L 757.7 284.5 L 757.4 284.8 L 757 285.2 L 758.7 287 L 760.3 289 L 762 291 L 763.5 293.1 L 765.1 295.3 L 766.5 297.6 L 768 300 L 769.3 302.5 L 770.6 305.1 L 771.8 307.7 L 773 310.5 L 774 313.3 L 775 316.2 L 775.9 319.3 Z"/>
+<path class="innenholz" d="M 777.9 318.1 L 775.5 315.9 L 773 313.9 L 770.6 312 L 768.1 310.2 L 765.6 308.5 L 763.1 307 L 760.6 305.6 L 758 304.3 L 755.5 303.1 L 753 302 L 750.5 301 L 748 300.2 L 745.5 299.4 L 743.1 298.8 L 743 299.3 L 742.8 299.7 L 745.2 300.5 L 747.6 301.3 L 750 302.3 L 752.4 303.3 L 754.9 304.4 L 757.3 305.7 L 759.7 307.1 L 762.1 308.5 L 764.6 310.1 L 766.9 311.8 L 769.3 313.6 L 771.6 315.6 L 773.9 317.6 L 776.2 319.8 Z"/>
+<path class="innenholz" d="M 777.3 317.8 L 774.2 317.1 L 771.1 316.5 L 768 316.1 L 764.9 315.8 L 761.9 315.6 L 759 315.6 L 756.1 315.6 L 753.3 315.7 L 750.5 316 L 747.7 316.3 L 745.1 316.7 L 742.5 317.2 L 740 317.8 L 737.6 318.4 L 737.7 318.9 L 737.8 319.4 L 740.2 318.9 L 742.7 318.4 L 745.3 318 L 747.9 317.7 L 750.6 317.5 L 753.3 317.3 L 756.1 317.3 L 758.9 317.4 L 761.8 317.5 L 764.7 317.8 L 767.7 318.2 L 770.7 318.7 L 773.7 319.3 L 776.7 320.1 Z"/>
+<path class="innenholz" d="M 776.7 317.8 L 773.6 318.8 L 770.7 319.9 L 767.8 321 L 765 322.3 L 762.3 323.6 L 759.7 325 L 757.2 326.5 L 754.8 328.1 L 752.6 329.7 L 750.4 331.3 L 748.3 333 L 746.3 334.7 L 744.4 336.5 L 742.6 338.2 L 743 338.6 L 743.3 339 L 745.1 337.3 L 747.1 335.6 L 749.1 334 L 751.2 332.4 L 753.4 330.9 L 755.7 329.4 L 758.1 328 L 760.6 326.6 L 763.2 325.3 L 765.8 324.1 L 768.6 323 L 771.4 321.9 L 774.4 321 L 777.4 320.1 Z"/>
+<path class="innenholz" d="M 776.2 318.1 L 774 320.5 L 772 322.9 L 770.1 325.4 L 768.3 327.9 L 766.6 330.4 L 765.1 332.9 L 763.7 335.4 L 762.4 337.9 L 761.2 340.5 L 760.1 343 L 759.1 345.5 L 758.3 348 L 757.5 350.4 L 756.9 352.9 L 757.4 353 L 757.8 353.1 L 758.6 350.8 L 759.4 348.4 L 760.4 345.9 L 761.4 343.5 L 762.6 341.1 L 763.8 338.7 L 765.2 336.2 L 766.6 333.8 L 768.2 331.4 L 769.9 329 L 771.7 326.7 L 773.7 324.3 L 775.7 322 L 777.9 319.8 Z"/>
+<path class="innenholz" d="M 775.9 318.6 L 775.2 321.8 L 774.7 324.9 L 774.2 328 L 773.9 331 L 773.8 334 L 773.7 337 L 773.7 339.9 L 773.8 342.7 L 774.1 345.5 L 774.4 348.2 L 774.8 350.9 L 775.3 353.5 L 775.9 356 L 776.5 358.4 L 777 358.3 L 777.5 358.1 L 777 355.7 L 776.5 353.2 L 776.1 350.7 L 775.8 348 L 775.6 345.4 L 775.4 342.6 L 775.4 339.8 L 775.5 337 L 775.6 334.1 L 775.9 331.2 L 776.3 328.3 L 776.8 325.3 L 777.4 322.3 L 778.2 319.2 Z"/>
+<path class="innenholz" d="M 775.9 319.3 L 776.9 322.3 L 778 325.3 L 779.1 328.2 L 780.4 330.9 L 781.7 333.6 L 783.1 336.2 L 784.6 338.7 L 786.2 341.1 L 787.8 343.4 L 789.4 345.6 L 791.1 347.7 L 792.8 349.7 L 794.6 351.6 L 796.3 353.4 L 796.7 353 L 797.1 352.6 L 795.4 350.8 L 793.7 348.9 L 792.1 346.9 L 790.5 344.8 L 789 342.5 L 787.5 340.2 L 786.1 337.8 L 784.7 335.4 L 783.4 332.8 L 782.2 330.1 L 781.1 327.4 L 780 324.5 L 779.1 321.6 L 778.2 318.6 Z"/>
+<path class="innenholz" d="M 776.2 319.8 L 778.6 321.9 L 781 324 L 783.5 325.9 L 786 327.7 L 788.5 329.3 L 791 330.8 L 793.5 332.3 L 796 333.6 L 798.6 334.8 L 801.1 335.8 L 803.6 336.8 L 806.1 337.7 L 808.5 338.4 L 811 339.1 L 811.1 338.6 L 811.2 338.1 L 808.9 337.4 L 806.5 336.5 L 804.1 335.6 L 801.6 334.6 L 799.2 333.4 L 796.8 332.1 L 794.3 330.8 L 791.9 329.3 L 789.5 327.7 L 787.1 326 L 784.8 324.2 L 782.4 322.3 L 780.1 320.2 L 777.9 318.1 Z"/>
+<path class="innenholz" d="M 776.7 320.1 L 779.9 320.8 L 783 321.3 L 786.1 321.7 L 789.1 322 L 792.1 322.2 L 795.1 322.3 L 798 322.2 L 800.8 322.1 L 803.6 321.9 L 806.3 321.5 L 809 321.1 L 811.6 320.6 L 814.1 320.1 L 816.5 319.4 L 816.4 318.9 L 816.3 318.4 L 813.8 319 L 811.3 319.5 L 808.8 319.8 L 806.1 320.2 L 803.5 320.4 L 800.7 320.5 L 797.9 320.5 L 795.1 320.5 L 792.2 320.3 L 789.3 320 L 786.4 319.6 L 783.4 319.1 L 780.4 318.5 L 777.3 317.8 Z"/>
+<path class="innenholz" d="M 777.4 320.1 L 780.4 319.1 L 783.4 318 L 786.3 316.8 L 789.1 315.6 L 791.7 314.2 L 794.3 312.8 L 796.8 311.3 L 799.2 309.8 L 801.5 308.2 L 803.7 306.6 L 805.8 304.9 L 807.8 303.1 L 809.7 301.4 L 811.5 299.6 L 811.1 299.3 L 810.8 298.9 L 808.9 300.6 L 807 302.2 L 805 303.9 L 802.9 305.4 L 800.7 307 L 798.3 308.4 L 796 309.9 L 793.5 311.2 L 790.9 312.5 L 788.2 313.7 L 785.5 314.9 L 782.6 315.9 L 779.7 316.9 L 776.7 317.8 Z"/>
+<path class="innenholz" d="M 777.9 319.8 L 780 317.4 L 782.1 314.9 L 784 312.5 L 785.8 310 L 787.4 307.5 L 789 305 L 790.4 302.5 L 791.7 299.9 L 792.9 297.4 L 793.9 294.9 L 794.9 292.4 L 795.8 289.9 L 796.5 287.4 L 797.2 285 L 796.7 284.8 L 796.2 284.7 L 795.5 287.1 L 794.6 289.5 L 793.7 291.9 L 792.7 294.3 L 791.5 296.8 L 790.3 299.2 L 788.9 301.6 L 787.4 304 L 785.8 306.4 L 784.1 308.8 L 782.3 311.2 L 780.4 313.5 L 778.3 315.8 L 776.2 318.1 Z"/>
+<path class="innenholz" d="M 778.2 319.2 L 778.9 316.1 L 779.4 312.9 L 779.8 309.9 L 780.1 306.8 L 780.3 303.8 L 780.4 300.9 L 780.3 298 L 780.2 295.1 L 780 292.4 L 779.7 289.6 L 779.2 287 L 778.7 284.4 L 778.2 281.9 L 777.5 279.4 L 777 279.6 L 776.5 279.7 L 777.1 282.1 L 777.6 284.6 L 778 287.2 L 778.3 289.8 L 778.5 292.5 L 778.6 295.2 L 778.6 298 L 778.6 300.8 L 778.4 303.7 L 778.1 306.6 L 777.7 309.6 L 777.2 312.6 L 776.6 315.6 L 775.9 318.6 Z"/>
+<g class="art" data-art="1">
+<circle class="art-kugel" cx="750.1" cy="272.2" r="14"/>
+<a href="weltanschauungen/phaenomenalismus/art-1.html" class="art-link" aria-label="Art I Gegenwart im Phänomenalismus · 0 Artikel">
+  <title>Art I Gegenwart im Phänomenalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="750.1" cy="272.2" r="14"/>
+  <text class="art-ziffer" x="750.1" y="268.4" text-anchor="middle">I</text>
+  <text class="art-wort" x="750.1" y="275.2" text-anchor="middle" style="font-size:4.2px">Gegenwart</text>
+</a>
+</g>
+<g class="art" data-art="2">
+<circle class="art-kugel" cx="730.4" cy="292" r="14"/>
+<a href="weltanschauungen/phaenomenalismus/art-2.html" class="art-link" aria-label="Art II im Phänomenalismus · 0 Artikel">
+  <title>Art II im Phänomenalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="730.4" cy="292" r="14"/>
+  <text class="art-ziffer" x="730.4" y="293.8" text-anchor="middle">II</text>
+</a>
+</g>
+<g class="art" data-art="3">
+<circle class="art-kugel" cx="723.1" cy="318.9" r="14"/>
+<a href="weltanschauungen/phaenomenalismus/art-3.html" class="art-link" aria-label="Art III im Phänomenalismus · 0 Artikel">
+  <title>Art III im Phänomenalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="723.1" cy="318.9" r="14"/>
+  <text class="art-ziffer" x="723.1" y="320.7" text-anchor="middle">III</text>
+</a>
+</g>
+<g class="art" data-art="4">
+<circle class="art-kugel" cx="730.4" cy="345.9" r="14"/>
+<a href="weltanschauungen/phaenomenalismus/art-4.html" class="art-link" aria-label="Art IV im Phänomenalismus · 0 Artikel">
+  <title>Art IV im Phänomenalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="730.4" cy="345.9" r="14"/>
+  <text class="art-ziffer" x="730.4" y="347.7" text-anchor="middle">IV</text>
+</a>
+</g>
+<g class="art" data-art="5">
+<circle class="art-kugel" cx="750.1" cy="365.6" r="14"/>
+<a href="weltanschauungen/phaenomenalismus/art-5.html" class="art-link" aria-label="Art V im Phänomenalismus · 0 Artikel">
+  <title>Art V im Phänomenalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="750.1" cy="365.6" r="14"/>
+  <text class="art-ziffer" x="750.1" y="367.4" text-anchor="middle">V</text>
+</a>
+</g>
+<g class="art" data-art="6">
+<circle class="art-kugel" cx="777" cy="372.8" r="14"/>
+<a href="weltanschauungen/phaenomenalismus/art-6.html" class="art-link" aria-label="Art VI im Phänomenalismus · 0 Artikel">
+  <title>Art VI im Phänomenalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="777" cy="372.8" r="14"/>
+  <text class="art-ziffer" x="777" y="374.6" text-anchor="middle">VI</text>
+</a>
+</g>
+<g class="art" data-art="7">
+<circle class="art-kugel" cx="804" cy="365.6" r="14"/>
+<a href="weltanschauungen/phaenomenalismus/art-7.html" class="art-link" aria-label="Art VII im Phänomenalismus · 0 Artikel">
+  <title>Art VII im Phänomenalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="804" cy="365.6" r="14"/>
+  <text class="art-ziffer" x="804" y="367.4" text-anchor="middle">VII</text>
+</a>
+</g>
+<g class="art" data-art="8">
+<circle class="art-kugel" cx="823.7" cy="345.9" r="14"/>
+<a href="weltanschauungen/phaenomenalismus/art-8.html" class="art-link" aria-label="Art VIII im Phänomenalismus · 0 Artikel">
+  <title>Art VIII im Phänomenalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="823.7" cy="345.9" r="14"/>
+  <text class="art-ziffer" x="823.7" y="347.7" text-anchor="middle">VIII</text>
+</a>
+</g>
+<g class="art" data-art="9">
+<circle class="art-kugel" cx="830.9" cy="318.9" r="14"/>
+<a href="weltanschauungen/phaenomenalismus/art-9.html" class="art-link" aria-label="Art IX im Phänomenalismus · 0 Artikel">
+  <title>Art IX im Phänomenalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="830.9" cy="318.9" r="14"/>
+  <text class="art-ziffer" x="830.9" y="320.7" text-anchor="middle">IX</text>
+</a>
+</g>
+<g class="art" data-art="10">
+<circle class="art-kugel" cx="823.7" cy="292" r="14"/>
+<a href="weltanschauungen/phaenomenalismus/art-10.html" class="art-link" aria-label="Art X im Phänomenalismus · 0 Artikel">
+  <title>Art X im Phänomenalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="823.7" cy="292" r="14"/>
+  <text class="art-ziffer" x="823.7" y="293.8" text-anchor="middle">X</text>
+</a>
+</g>
+<g class="art" data-art="11">
+<circle class="art-kugel" cx="804" cy="272.2" r="14"/>
+<a href="weltanschauungen/phaenomenalismus/art-11.html" class="art-link" aria-label="Art XI WAP im Phänomenalismus · 0 Artikel">
+  <title>Art XI WAP im Phänomenalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="804" cy="272.2" r="14"/>
+  <text class="art-ziffer" x="804" y="268.4" text-anchor="middle">XI</text>
+  <text class="art-wort" x="804" y="275.2" text-anchor="middle" style="font-size:5.0px">WAP</text>
+</a>
+</g>
+<g class="art" data-art="12">
+<circle class="art-kugel" cx="777" cy="265" r="14"/>
+<a href="weltanschauungen/phaenomenalismus/art-12.html" class="art-link" aria-label="Art XII Christus im Phänomenalismus · 0 Artikel">
+  <title>Art XII Christus im Phänomenalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="777" cy="265" r="14"/>
+  <text class="art-ziffer" x="777" y="261.2" text-anchor="middle">XII</text>
+  <text class="art-wort" x="777" y="268" text-anchor="middle" style="font-size:4.2px">Christus</text>
+</a>
+</g>
+<g class="kreis-mitte"><text class="mitte-name" x="777" y="311.9" text-anchor="middle">Phänomenalismus</text><text class="mitte-substanz" x="777" y="325.4" text-anchor="middle">das Phänomen (die Gestalt)</text><a href="weltanschauungen/phaenomenalismus.html" class="mitte-seite"><text x="777" y="333.4" text-anchor="middle">0 Artikel →</text></a></g>
+</g>
+<a href="weltanschauungen/phaenomenalismus.html" class="kreis-link" aria-label="Phänomenalismus – hineinzoomen">
+  <title>Phänomenalismus – Die Welt ist uns Erscheinung: Erkannt werden die Phänomene, nicht das Ding an sich.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="777" cy="296" rx="10.1" ry="10.8"/><ellipse class="etikett-schleier" cx="777" cy="313" rx="62" ry="10.8"/><ellipse class="etikett-schleier" cx="777" cy="331.8" rx="43.1" ry="9"/><text class="kreis-nummer" x="777" y="300.9" text-anchor="middle">X</text><text class="kreis-name" x="777" y="317.9" text-anchor="middle">Phänomenalismus</text><text class="kreis-zeichen" x="777" y="335.9" text-anchor="middle">♍︎ Jungfrau</text></g>
+</a>
+</g>
+<g class="kreis kreis-boden" data-slug="realismus" id="realismus">
+<a href="weltanschauungen/realismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
+  <title>Realismus – Die äussere Welt ist wirklich, so wie sie sich dem wachen Blick zeigt – unabhängig von uns.</title>
+  <circle class="kreisflaeche" cx="812.2" cy="450" r="67.8"/>
+</a>
+<g class="innenwelt">
+<path class="innenholz" d="M 739.9 452.2 L 744 452.7 L 748 453.1 L 752.1 453.2 L 756.1 453.3 L 760.1 453.2 L 764.1 453 L 768.1 452.8 L 772.1 452.5 L 776.1 452.2 L 780.1 451.8 L 784 451.5 L 788 451.2 L 792 451 L 796 450.8 L 800 450.8 L 804 450.8 L 808 451 L 812 451.4 L 812.3 448.6 L 808.2 448.1 L 804.1 447.9 L 800 447.7 L 795.9 447.7 L 791.9 447.7 L 787.8 447.9 L 783.8 448.1 L 779.8 448.3 L 775.8 448.6 L 771.9 448.8 L 767.9 449 L 764 449.2 L 760 449.3 L 756.1 449.2 L 752.2 449.1 L 748.4 448.8 L 744.5 448.4 L 740.7 447.8 Z"/>
+<circle class="innenholz" cx="812.2" cy="450" r="2.4"/>
+<path class="innenholz" d="M 813.3 449.7 L 812.3 446.6 L 811.2 443.6 L 810 440.8 L 808.8 438 L 807.4 435.3 L 806 432.7 L 804.6 430.2 L 803 427.8 L 801.4 425.5 L 799.8 423.3 L 798.1 421.2 L 796.4 419.2 L 794.6 417.4 L 792.8 415.6 L 792.5 415.9 L 792.1 416.3 L 793.8 418.1 L 795.5 420 L 797.1 422.1 L 798.7 424.2 L 800.2 426.4 L 801.7 428.7 L 803.1 431.1 L 804.5 433.6 L 805.7 436.1 L 807 438.8 L 808.1 441.6 L 809.2 444.4 L 810.1 447.3 L 811 450.3 Z"/>
+<path class="innenholz" d="M 813 449.1 L 810.6 447 L 808.2 445 L 805.7 443 L 803.2 441.3 L 800.7 439.6 L 798.2 438.1 L 795.7 436.7 L 793.1 435.4 L 790.6 434.2 L 788.1 433.1 L 785.6 432.1 L 783.1 431.3 L 780.6 430.5 L 778.2 429.8 L 778.1 430.3 L 777.9 430.8 L 780.3 431.5 L 782.7 432.4 L 785.1 433.3 L 787.6 434.4 L 790 435.5 L 792.4 436.8 L 794.8 438.1 L 797.3 439.6 L 799.7 441.2 L 802.1 442.9 L 804.4 444.7 L 806.8 446.6 L 809.1 448.7 L 811.3 450.9 Z"/>
+<path class="innenholz" d="M 812.4 448.8 L 809.3 448.2 L 806.2 447.6 L 803.1 447.2 L 800.1 446.9 L 797.1 446.7 L 794.1 446.6 L 791.2 446.7 L 788.4 446.8 L 785.6 447.1 L 782.9 447.4 L 780.2 447.8 L 777.6 448.3 L 775.1 448.9 L 772.7 449.5 L 772.8 450 L 772.9 450.5 L 775.4 449.9 L 777.9 449.5 L 780.4 449.1 L 783 448.8 L 785.7 448.5 L 788.4 448.4 L 791.2 448.4 L 794.1 448.4 L 796.9 448.6 L 799.9 448.9 L 802.8 449.3 L 805.8 449.8 L 808.8 450.4 L 811.9 451.2 Z"/>
+<path class="innenholz" d="M 811.8 448.8 L 808.8 449.8 L 805.8 450.9 L 802.9 452.1 L 800.1 453.4 L 797.4 454.7 L 794.9 456.1 L 792.4 457.6 L 790 459.1 L 787.7 460.7 L 785.5 462.4 L 783.4 464.1 L 781.4 465.8 L 779.5 467.5 L 777.7 469.3 L 778.1 469.7 L 778.4 470 L 780.3 468.3 L 782.2 466.7 L 784.2 465.1 L 786.3 463.5 L 788.5 462 L 790.8 460.5 L 793.2 459.1 L 795.7 457.7 L 798.3 456.4 L 801 455.2 L 803.7 454 L 806.5 453 L 809.5 452 L 812.5 451.2 Z"/>
+<path class="innenholz" d="M 811.3 449.2 L 809.1 451.6 L 807.1 454 L 805.2 456.4 L 803.4 458.9 L 801.8 461.4 L 800.2 463.9 L 798.8 466.5 L 797.5 469 L 796.3 471.5 L 795.2 474 L 794.3 476.6 L 793.4 479 L 792.6 481.5 L 792 483.9 L 792.5 484.1 L 793 484.2 L 793.7 481.8 L 794.5 479.4 L 795.5 477 L 796.5 474.6 L 797.7 472.2 L 798.9 469.7 L 800.3 467.3 L 801.8 464.9 L 803.4 462.5 L 805.1 460.1 L 806.9 457.7 L 808.8 455.4 L 810.8 453.1 L 813 450.8 Z"/>
+<path class="innenholz" d="M 811 449.7 L 810.3 452.9 L 809.8 456 L 809.4 459.1 L 809.1 462.1 L 808.9 465.1 L 808.8 468 L 808.8 470.9 L 809 473.8 L 809.2 476.6 L 809.5 479.3 L 809.9 481.9 L 810.4 484.5 L 811 487 L 811.7 489.5 L 812.2 489.3 L 812.6 489.2 L 812.1 486.8 L 811.6 484.3 L 811.2 481.7 L 810.9 479.1 L 810.7 476.4 L 810.6 473.7 L 810.5 470.9 L 810.6 468.1 L 810.8 465.2 L 811 462.3 L 811.4 459.3 L 811.9 456.3 L 812.6 453.3 L 813.3 450.3 Z"/>
+<path class="innenholz" d="M 811 450.3 L 812 453.4 L 813.1 456.4 L 814.3 459.2 L 815.5 462 L 816.9 464.7 L 818.3 467.3 L 819.7 469.8 L 821.3 472.2 L 822.9 474.5 L 824.5 476.7 L 826.2 478.8 L 827.9 480.8 L 829.7 482.6 L 831.5 484.4 L 831.8 484.1 L 832.2 483.7 L 830.5 481.9 L 828.8 480 L 827.2 477.9 L 825.6 475.8 L 824.1 473.6 L 822.6 471.3 L 821.2 468.9 L 819.8 466.4 L 818.6 463.9 L 817.3 461.2 L 816.2 458.4 L 815.1 455.6 L 814.2 452.7 L 813.3 449.7 Z"/>
+<path class="innenholz" d="M 811.3 450.9 L 813.7 453 L 816.1 455 L 818.6 457 L 821.1 458.7 L 823.6 460.4 L 826.1 461.9 L 828.6 463.3 L 831.2 464.6 L 833.7 465.8 L 836.2 466.9 L 838.7 467.9 L 841.2 468.7 L 843.7 469.5 L 846.1 470.2 L 846.2 469.7 L 846.4 469.2 L 844 468.5 L 841.6 467.6 L 839.2 466.7 L 836.8 465.6 L 834.3 464.5 L 831.9 463.2 L 829.5 461.9 L 827 460.4 L 824.6 458.8 L 822.2 457.1 L 819.9 455.3 L 817.5 453.4 L 815.2 451.3 L 813 449.1 Z"/>
+<path class="innenholz" d="M 811.9 451.2 L 815 451.8 L 818.1 452.4 L 821.2 452.8 L 824.2 453.1 L 827.2 453.3 L 830.2 453.4 L 833.1 453.3 L 835.9 453.2 L 838.7 452.9 L 841.4 452.6 L 844.1 452.2 L 846.7 451.7 L 849.2 451.1 L 851.6 450.5 L 851.5 450 L 851.4 449.5 L 848.9 450.1 L 846.5 450.5 L 843.9 450.9 L 841.3 451.2 L 838.6 451.5 L 835.9 451.6 L 833.1 451.6 L 830.2 451.6 L 827.4 451.4 L 824.4 451.1 L 821.5 450.7 L 818.5 450.2 L 815.5 449.6 L 812.4 448.8 Z"/>
+<path class="innenholz" d="M 812.5 451.2 L 815.5 450.2 L 818.5 449.1 L 821.4 447.9 L 824.2 446.6 L 826.9 445.3 L 829.4 443.9 L 831.9 442.4 L 834.3 440.9 L 836.6 439.3 L 838.8 437.6 L 840.9 435.9 L 842.9 434.2 L 844.8 432.5 L 846.6 430.7 L 846.2 430.3 L 845.9 430 L 844 431.7 L 842.1 433.3 L 840.1 434.9 L 838 436.5 L 835.8 438 L 833.5 439.5 L 831.1 440.9 L 828.6 442.3 L 826 443.6 L 823.3 444.8 L 820.6 446 L 817.8 447 L 814.8 448 L 811.8 448.8 Z"/>
+<path class="innenholz" d="M 813 450.8 L 815.2 448.4 L 817.2 446 L 819.1 443.6 L 820.9 441.1 L 822.5 438.6 L 824.1 436.1 L 825.5 433.5 L 826.8 431 L 828 428.5 L 829.1 426 L 830 423.4 L 830.9 421 L 831.7 418.5 L 832.3 416.1 L 831.8 415.9 L 831.3 415.8 L 830.6 418.2 L 829.8 420.6 L 828.8 423 L 827.8 425.4 L 826.6 427.8 L 825.4 430.3 L 824 432.7 L 822.5 435.1 L 820.9 437.5 L 819.3 439.9 L 817.4 442.3 L 815.5 444.6 L 813.5 446.9 L 811.3 449.2 Z"/>
+<path class="innenholz" d="M 813.3 450.3 L 814 447.1 L 814.5 444 L 814.9 440.9 L 815.2 437.9 L 815.4 434.9 L 815.5 432 L 815.5 429.1 L 815.3 426.2 L 815.1 423.4 L 814.8 420.7 L 814.4 418.1 L 813.9 415.5 L 813.3 413 L 812.6 410.5 L 812.2 410.7 L 811.7 410.8 L 812.2 413.2 L 812.7 415.7 L 813.1 418.3 L 813.4 420.9 L 813.6 423.6 L 813.7 426.3 L 813.8 429.1 L 813.7 431.9 L 813.5 434.8 L 813.3 437.7 L 812.9 440.7 L 812.4 443.7 L 811.7 446.7 L 811 449.7 Z"/>
+<g class="art" data-art="1">
+<circle class="art-kugel" cx="785.2" cy="403.3" r="14"/>
+<a href="weltanschauungen/realismus/art-1.html" class="art-link" aria-label="Art I im Realismus · 0 Artikel">
+  <title>Art I im Realismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="785.2" cy="403.3" r="14"/>
+  <text class="art-ziffer" x="785.2" y="405.1" text-anchor="middle">I</text>
+</a>
+</g>
+<g class="art" data-art="2">
+<circle class="art-kugel" cx="765.5" cy="423.1" r="14"/>
+<a href="weltanschauungen/realismus/art-2.html" class="art-link" aria-label="Art II im Realismus · 0 Artikel">
+  <title>Art II im Realismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="765.5" cy="423.1" r="14"/>
+  <text class="art-ziffer" x="765.5" y="424.9" text-anchor="middle">II</text>
+</a>
+</g>
+<g class="art" data-art="3">
+<circle class="art-kugel" cx="758.3" cy="450" r="14"/>
+<a href="weltanschauungen/realismus/art-3.html" class="art-link" aria-label="Art III im Realismus · 0 Artikel">
+  <title>Art III im Realismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="758.3" cy="450" r="14"/>
+  <text class="art-ziffer" x="758.3" y="451.8" text-anchor="middle">III</text>
+</a>
+</g>
+<g class="art" data-art="4">
+<circle class="art-kugel" cx="765.5" cy="476.9" r="14"/>
+<a href="weltanschauungen/realismus/art-4.html" class="art-link" aria-label="Art IV im Realismus · 0 Artikel">
+  <title>Art IV im Realismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="765.5" cy="476.9" r="14"/>
+  <text class="art-ziffer" x="765.5" y="478.7" text-anchor="middle">IV</text>
+</a>
+</g>
+<g class="art" data-art="5">
+<circle class="art-kugel" cx="785.2" cy="496.7" r="14"/>
+<a href="weltanschauungen/realismus/art-5.html" class="art-link" aria-label="Art V im Realismus · 0 Artikel">
+  <title>Art V im Realismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="785.2" cy="496.7" r="14"/>
+  <text class="art-ziffer" x="785.2" y="498.5" text-anchor="middle">V</text>
+</a>
+</g>
+<g class="art" data-art="6">
+<circle class="art-kugel" cx="812.2" cy="503.9" r="14"/>
+<a href="weltanschauungen/realismus/art-6.html" class="art-link" aria-label="Art VI im Realismus · 0 Artikel">
+  <title>Art VI im Realismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="812.2" cy="503.9" r="14"/>
+  <text class="art-ziffer" x="812.2" y="505.7" text-anchor="middle">VI</text>
+</a>
+</g>
+<g class="art" data-art="7">
+<circle class="art-kugel" cx="839.1" cy="496.7" r="14"/>
+<a href="weltanschauungen/realismus/art-7.html" class="art-link" aria-label="Art VII im Realismus · 0 Artikel">
+  <title>Art VII im Realismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="839.1" cy="496.7" r="14"/>
+  <text class="art-ziffer" x="839.1" y="498.5" text-anchor="middle">VII</text>
+</a>
+</g>
+<g class="art" data-art="8">
+<circle class="art-kugel" cx="858.8" cy="476.9" r="14"/>
+<a href="weltanschauungen/realismus/art-8.html" class="art-link" aria-label="Art VIII im Realismus · 0 Artikel">
+  <title>Art VIII im Realismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="858.8" cy="476.9" r="14"/>
+  <text class="art-ziffer" x="858.8" y="478.7" text-anchor="middle">VIII</text>
+</a>
+</g>
+<g class="art" data-art="9">
+<circle class="art-kugel" cx="866" cy="450" r="14"/>
+<a href="weltanschauungen/realismus/art-9.html" class="art-link" aria-label="Art IX im Realismus · 0 Artikel">
+  <title>Art IX im Realismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="866" cy="450" r="14"/>
+  <text class="art-ziffer" x="866" y="451.8" text-anchor="middle">IX</text>
+</a>
+</g>
+<g class="art" data-art="10">
+<circle class="art-kugel" cx="858.8" cy="423.1" r="14"/>
+<a href="weltanschauungen/realismus/art-10.html" class="art-link" aria-label="Art X im Realismus · 0 Artikel">
+  <title>Art X im Realismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="858.8" cy="423.1" r="14"/>
+  <text class="art-ziffer" x="858.8" y="424.9" text-anchor="middle">X</text>
+</a>
+</g>
+<g class="art" data-art="11">
+<circle class="art-kugel" cx="839.1" cy="403.3" r="14"/>
+<a href="weltanschauungen/realismus/art-11.html" class="art-link" aria-label="Art XI im Realismus · 0 Artikel">
+  <title>Art XI im Realismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="839.1" cy="403.3" r="14"/>
+  <text class="art-ziffer" x="839.1" y="405.1" text-anchor="middle">XI</text>
+</a>
+</g>
+<g class="art" data-art="12">
+<circle class="art-kugel" cx="812.2" cy="396.1" r="14"/>
+<a href="weltanschauungen/realismus/art-12.html" class="art-link" aria-label="Art XII Christus im Realismus · 0 Artikel">
+  <title>Art XII Christus im Realismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="812.2" cy="396.1" r="14"/>
+  <text class="art-ziffer" x="812.2" y="392.3" text-anchor="middle">XII</text>
+  <text class="art-wort" x="812.2" y="399.1" text-anchor="middle" style="font-size:4.2px">Christus</text>
+</a>
+</g>
+<g class="kreis-mitte"><text class="mitte-name" x="812.2" y="443" text-anchor="middle">Realismus</text><text class="mitte-substanz" x="812.2" y="456.5" text-anchor="middle">das Reale (das Sein)</text><a href="weltanschauungen/realismus.html" class="mitte-seite"><text x="812.2" y="464.5" text-anchor="middle">0 Artikel →</text></a></g>
+</g>
+<a href="weltanschauungen/realismus.html" class="kreis-link" aria-label="Realismus – hineinzoomen">
+  <title>Realismus – Die äussere Welt ist wirklich, so wie sie sich dem wachen Blick zeigt – unabhängig von uns.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="812.2" cy="427.1" rx="14.1" ry="10.8"/><ellipse class="etikett-schleier" cx="812.2" cy="444.1" rx="42.5" ry="10.8"/><ellipse class="etikett-schleier" cx="812.2" cy="462.9" rx="33" ry="9"/><text class="kreis-nummer" x="812.2" y="432" text-anchor="middle">IX</text><text class="kreis-name" x="812.2" y="449" text-anchor="middle">Realismus</text><text class="kreis-zeichen" x="812.2" y="467" text-anchor="middle">♎︎ Waage</text></g>
+</a>
+</g>
+<g class="kreis kreis-wurzel" data-slug="dynamismus" id="dynamismus">
+<a href="weltanschauungen/dynamismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
+  <title>Dynamismus – Hinter allem Stofflichen wirken Kräfte; Kraft ist das eigentlich Wirkende in der Welt.</title>
+  <circle class="kreisflaeche" cx="777" cy="581.1" r="67.8"/>
+</a>
+<g class="innenwelt">
+<path class="innenholz" d="M 713.4 546.8 L 716.7 549.3 L 720 551.7 L 723.4 553.9 L 726.8 555.9 L 730.4 557.8 L 733.9 559.7 L 737.5 561.5 L 741.1 563.2 L 744.7 564.9 L 748.3 566.6 L 751.9 568.3 L 755.5 570.1 L 759.1 571.9 L 762.6 573.7 L 766.1 575.7 L 769.5 577.7 L 772.9 579.9 L 776.2 582.2 L 777.9 580 L 774.5 577.5 L 771.1 575.2 L 767.7 573 L 764.2 571 L 760.6 569 L 757 567.1 L 753.4 565.3 L 749.9 563.5 L 746.3 561.7 L 742.7 559.9 L 739.2 558.1 L 735.7 556.3 L 732.3 554.4 L 728.9 552.4 L 725.6 550.4 L 722.4 548.2 L 719.2 545.9 L 716.2 543.5 Z"/>
+<circle class="innenholz" cx="777" cy="581.1" r="2.4"/>
+<path class="innenholz" d="M 778.2 580.7 L 777.2 577.7 L 776.1 574.7 L 774.9 571.8 L 773.7 569.1 L 772.3 566.4 L 770.9 563.8 L 769.4 561.3 L 767.9 558.9 L 766.3 556.6 L 764.7 554.4 L 763 552.3 L 761.2 550.3 L 759.5 548.4 L 757.7 546.6 L 757.4 547 L 757 547.4 L 758.7 549.2 L 760.3 551.1 L 762 553.1 L 763.5 555.2 L 765.1 557.5 L 766.5 559.8 L 768 562.2 L 769.3 564.6 L 770.6 567.2 L 771.8 569.9 L 773 572.6 L 774 575.5 L 775 578.4 L 775.9 581.4 Z"/>
+<path class="innenholz" d="M 777.9 580.2 L 775.5 578.1 L 773 576 L 770.6 574.1 L 768.1 572.3 L 765.6 570.7 L 763.1 569.2 L 760.6 567.7 L 758 566.4 L 755.5 565.2 L 753 564.2 L 750.5 563.2 L 748 562.3 L 745.5 561.6 L 743.1 560.9 L 743 561.4 L 742.8 561.9 L 745.2 562.6 L 747.6 563.5 L 750 564.4 L 752.4 565.4 L 754.9 566.6 L 757.3 567.9 L 759.7 569.2 L 762.1 570.7 L 764.6 572.3 L 766.9 574 L 769.3 575.8 L 771.6 577.7 L 773.9 579.8 L 776.2 581.9 Z"/>
+<path class="innenholz" d="M 777.3 579.9 L 774.2 579.2 L 771.1 578.7 L 768 578.3 L 764.9 578 L 761.9 577.8 L 759 577.7 L 756.1 577.8 L 753.3 577.9 L 750.5 578.1 L 747.7 578.5 L 745.1 578.9 L 742.5 579.4 L 740 579.9 L 737.6 580.6 L 737.7 581.1 L 737.8 581.6 L 740.2 581 L 742.7 580.5 L 745.3 580.2 L 747.9 579.8 L 750.6 579.6 L 753.3 579.5 L 756.1 579.5 L 758.9 579.5 L 761.8 579.7 L 764.7 580 L 767.7 580.4 L 770.7 580.9 L 773.7 581.5 L 776.7 582.2 Z"/>
+<path class="innenholz" d="M 776.7 579.9 L 773.6 580.9 L 770.7 582 L 767.8 583.2 L 765 584.4 L 762.3 585.8 L 759.7 587.2 L 757.2 588.7 L 754.8 590.2 L 752.6 591.8 L 750.4 593.4 L 748.3 595.1 L 746.3 596.9 L 744.4 598.6 L 742.6 600.4 L 743 600.7 L 743.3 601.1 L 745.1 599.4 L 747.1 597.8 L 749.1 596.1 L 751.2 594.6 L 753.4 593 L 755.7 591.6 L 758.1 590.1 L 760.6 588.8 L 763.2 587.5 L 765.8 586.3 L 768.6 585.1 L 771.4 584.1 L 774.4 583.1 L 777.4 582.2 Z"/>
+<path class="innenholz" d="M 776.2 580.2 L 774 582.6 L 772 585.1 L 770.1 587.5 L 768.3 590 L 766.6 592.5 L 765.1 595 L 763.7 597.5 L 762.4 600.1 L 761.2 602.6 L 760.1 605.1 L 759.1 607.6 L 758.3 610.1 L 757.5 612.6 L 756.9 615 L 757.4 615.2 L 757.8 615.3 L 758.6 612.9 L 759.4 610.5 L 760.4 608.1 L 761.4 605.7 L 762.6 603.2 L 763.8 600.8 L 765.2 598.4 L 766.6 596 L 768.2 593.6 L 769.9 591.2 L 771.7 588.8 L 773.7 586.5 L 775.7 584.2 L 777.9 581.9 Z"/>
+<path class="innenholz" d="M 775.9 580.8 L 775.2 583.9 L 774.7 587.1 L 774.2 590.1 L 773.9 593.2 L 773.8 596.2 L 773.7 599.1 L 773.7 602 L 773.8 604.9 L 774.1 607.6 L 774.4 610.4 L 774.8 613 L 775.3 615.6 L 775.9 618.1 L 776.5 620.6 L 777 620.4 L 777.5 620.3 L 777 617.9 L 776.5 615.4 L 776.1 612.8 L 775.8 610.2 L 775.6 607.5 L 775.4 604.8 L 775.4 602 L 775.5 599.2 L 775.6 596.3 L 775.9 593.4 L 776.3 590.4 L 776.8 587.4 L 777.4 584.4 L 778.2 581.4 Z"/>
+<path class="innenholz" d="M 775.9 581.4 L 776.9 584.5 L 778 587.4 L 779.1 590.3 L 780.4 593.1 L 781.7 595.8 L 783.1 598.4 L 784.6 600.9 L 786.2 603.3 L 787.8 605.6 L 789.4 607.7 L 791.1 609.8 L 792.8 611.8 L 794.6 613.7 L 796.3 615.5 L 796.7 615.2 L 797.1 614.8 L 795.4 613 L 793.7 611 L 792.1 609 L 790.5 606.9 L 789 604.7 L 787.5 602.4 L 786.1 600 L 784.7 597.5 L 783.4 594.9 L 782.2 592.3 L 781.1 589.5 L 780 586.7 L 779.1 583.8 L 778.2 580.7 Z"/>
+<path class="innenholz" d="M 776.2 581.9 L 778.6 584.1 L 781 586.1 L 783.5 588 L 786 589.8 L 788.5 591.5 L 791 593 L 793.5 594.4 L 796 595.7 L 798.6 596.9 L 801.1 598 L 803.6 599 L 806.1 599.8 L 808.5 600.6 L 811 601.2 L 811.1 600.7 L 811.2 600.3 L 808.9 599.5 L 806.5 598.7 L 804.1 597.7 L 801.6 596.7 L 799.2 595.6 L 796.8 594.3 L 794.3 592.9 L 791.9 591.5 L 789.5 589.9 L 787.1 588.2 L 784.8 586.4 L 782.4 584.4 L 780.1 582.4 L 777.9 580.2 Z"/>
+<path class="innenholz" d="M 776.7 582.2 L 779.9 582.9 L 783 583.5 L 786.1 583.9 L 789.1 584.2 L 792.1 584.4 L 795.1 584.4 L 798 584.4 L 800.8 584.3 L 803.6 584 L 806.3 583.7 L 809 583.3 L 811.6 582.8 L 814.1 582.2 L 816.5 581.6 L 816.4 581.1 L 816.3 580.6 L 813.8 581.1 L 811.3 581.6 L 808.8 582 L 806.1 582.3 L 803.5 582.5 L 800.7 582.7 L 797.9 582.7 L 795.1 582.6 L 792.2 582.5 L 789.3 582.2 L 786.4 581.8 L 783.4 581.3 L 780.4 580.7 L 777.3 579.9 Z"/>
+<path class="innenholz" d="M 777.4 582.2 L 780.4 581.2 L 783.4 580.1 L 786.3 579 L 789.1 577.7 L 791.7 576.4 L 794.3 575 L 796.8 573.5 L 799.2 571.9 L 801.5 570.3 L 803.7 568.7 L 805.8 567 L 807.8 565.3 L 809.7 563.5 L 811.5 561.8 L 811.1 561.4 L 810.8 561 L 808.9 562.7 L 807 564.4 L 805 566 L 802.9 567.6 L 800.7 569.1 L 798.3 570.6 L 796 572 L 793.5 573.4 L 790.9 574.7 L 788.2 575.9 L 785.5 577 L 782.6 578.1 L 779.7 579 L 776.7 579.9 Z"/>
+<path class="innenholz" d="M 777.9 581.9 L 780 579.5 L 782.1 577.1 L 784 574.6 L 785.8 572.1 L 787.4 569.6 L 789 567.1 L 790.4 564.6 L 791.7 562.1 L 792.9 559.5 L 793.9 557 L 794.9 554.5 L 795.8 552 L 796.5 549.6 L 797.2 547.1 L 796.7 547 L 796.2 546.9 L 795.5 549.2 L 794.6 551.6 L 793.7 554.1 L 792.7 556.5 L 791.5 558.9 L 790.3 561.3 L 788.9 563.8 L 787.4 566.2 L 785.8 568.6 L 784.1 571 L 782.3 573.3 L 780.4 575.7 L 778.3 578 L 776.2 580.2 Z"/>
+<path class="innenholz" d="M 778.2 581.4 L 778.9 578.2 L 779.4 575.1 L 779.8 572 L 780.1 569 L 780.3 566 L 780.4 563 L 780.3 560.1 L 780.2 557.3 L 780 554.5 L 779.7 551.8 L 779.2 549.1 L 778.7 546.5 L 778.2 544 L 777.5 541.6 L 777 541.7 L 776.5 541.9 L 777.1 544.3 L 777.6 546.8 L 778 549.3 L 778.3 552 L 778.5 554.6 L 778.6 557.4 L 778.6 560.2 L 778.6 563 L 778.4 565.9 L 778.1 568.8 L 777.7 571.7 L 777.2 574.7 L 776.6 577.7 L 775.9 580.8 Z"/>
+<g class="art" data-art="1">
+<circle class="art-kugel" cx="750.1" cy="534.4" r="14"/>
+<a href="weltanschauungen/dynamismus/art-1.html" class="art-link" aria-label="Art I Zionismus im Dynamismus · 0 Artikel">
+  <title>Art I Zionismus im Dynamismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="750.1" cy="534.4" r="14"/>
+  <text class="art-ziffer" x="750.1" y="530.6" text-anchor="middle">I</text>
+  <text class="art-wort" x="750.1" y="537.4" text-anchor="middle" style="font-size:4.2px">Zionismus</text>
+</a>
+</g>
+<g class="art" data-art="2">
+<circle class="art-kugel" cx="730.4" cy="554.1" r="14"/>
+<a href="weltanschauungen/dynamismus/art-2.html" class="art-link" aria-label="Art II im Dynamismus · 0 Artikel">
+  <title>Art II im Dynamismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="730.4" cy="554.1" r="14"/>
+  <text class="art-ziffer" x="730.4" y="555.9" text-anchor="middle">II</text>
+</a>
+</g>
+<g class="art" data-art="3">
+<circle class="art-kugel" cx="723.1" cy="581.1" r="14"/>
+<a href="weltanschauungen/dynamismus/art-3.html" class="art-link" aria-label="Art III im Dynamismus · 0 Artikel">
+  <title>Art III im Dynamismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="723.1" cy="581.1" r="14"/>
+  <text class="art-ziffer" x="723.1" y="582.9" text-anchor="middle">III</text>
+</a>
+</g>
+<g class="art" data-art="4">
+<circle class="art-kugel" cx="730.4" cy="608" r="14"/>
+<a href="weltanschauungen/dynamismus/art-4.html" class="art-link" aria-label="Art IV im Dynamismus · 0 Artikel">
+  <title>Art IV im Dynamismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="730.4" cy="608" r="14"/>
+  <text class="art-ziffer" x="730.4" y="609.8" text-anchor="middle">IV</text>
+</a>
+</g>
+<g class="art" data-art="5">
+<circle class="art-kugel" cx="750.1" cy="627.8" r="14"/>
+<a href="weltanschauungen/dynamismus/art-5.html" class="art-link" aria-label="Art V im Dynamismus · 0 Artikel">
+  <title>Art V im Dynamismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="750.1" cy="627.8" r="14"/>
+  <text class="art-ziffer" x="750.1" y="629.6" text-anchor="middle">V</text>
+</a>
+</g>
+<g class="art" data-art="6">
+<circle class="art-kugel" cx="777" cy="635" r="14"/>
+<a href="weltanschauungen/dynamismus/art-6.html" class="art-link" aria-label="Art VI im Dynamismus · 0 Artikel">
+  <title>Art VI im Dynamismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="777" cy="635" r="14"/>
+  <text class="art-ziffer" x="777" y="636.8" text-anchor="middle">VI</text>
+</a>
+</g>
+<g class="art" data-art="7">
+<circle class="art-kugel" cx="804" cy="627.8" r="14"/>
+<a href="weltanschauungen/dynamismus/art-7.html" class="art-link" aria-label="Art VII im Dynamismus · 0 Artikel">
+  <title>Art VII im Dynamismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="804" cy="627.8" r="14"/>
+  <text class="art-ziffer" x="804" y="629.6" text-anchor="middle">VII</text>
+</a>
+</g>
+<g class="art" data-art="8">
+<circle class="art-kugel" cx="823.7" cy="608" r="14"/>
+<a href="weltanschauungen/dynamismus/art-8.html" class="art-link" aria-label="Art VIII im Dynamismus · 0 Artikel">
+  <title>Art VIII im Dynamismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="823.7" cy="608" r="14"/>
+  <text class="art-ziffer" x="823.7" y="609.8" text-anchor="middle">VIII</text>
+</a>
+</g>
+<g class="art" data-art="9">
+<circle class="art-kugel" cx="830.9" cy="581.1" r="14"/>
+<a href="weltanschauungen/dynamismus/art-9.html" class="art-link" aria-label="Art IX im Dynamismus · 0 Artikel">
+  <title>Art IX im Dynamismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="830.9" cy="581.1" r="14"/>
+  <text class="art-ziffer" x="830.9" y="582.9" text-anchor="middle">IX</text>
+</a>
+</g>
+<g class="art" data-art="10">
+<circle class="art-kugel" cx="823.7" cy="554.1" r="14"/>
+<a href="weltanschauungen/dynamismus/art-10.html" class="art-link" aria-label="Art X im Dynamismus · 0 Artikel">
+  <title>Art X im Dynamismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="823.7" cy="554.1" r="14"/>
+  <text class="art-ziffer" x="823.7" y="555.9" text-anchor="middle">X</text>
+</a>
+</g>
+<g class="art" data-art="11">
+<circle class="art-kugel" cx="804" cy="534.4" r="14"/>
+<a href="weltanschauungen/dynamismus/art-11.html" class="art-link" aria-label="Art XI im Dynamismus · 0 Artikel">
+  <title>Art XI im Dynamismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="804" cy="534.4" r="14"/>
+  <text class="art-ziffer" x="804" y="536.2" text-anchor="middle">XI</text>
+</a>
+</g>
+<g class="art" data-art="12">
+<circle class="art-kugel" cx="777" cy="527.2" r="14"/>
+<a href="weltanschauungen/dynamismus/art-12.html" class="art-link" aria-label="Art XII Christus im Dynamismus · 0 Artikel">
+  <title>Art XII Christus im Dynamismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="777" cy="527.2" r="14"/>
+  <text class="art-ziffer" x="777" y="523.4" text-anchor="middle">XII</text>
+  <text class="art-wort" x="777" y="530.2" text-anchor="middle" style="font-size:4.2px">Christus</text>
+</a>
+</g>
+<g class="kreis-mitte"><text class="mitte-name" x="777" y="574.1" text-anchor="middle">Dynamismus</text><text class="mitte-substanz" x="777" y="587.6" text-anchor="middle">die Dynamis (die Seele)</text><a href="weltanschauungen/dynamismus.html" class="mitte-seite"><text x="777" y="595.6" text-anchor="middle">0 Artikel →</text></a></g>
+</g>
+<a href="weltanschauungen/dynamismus.html" class="kreis-link" aria-label="Dynamismus – hineinzoomen">
+  <title>Dynamismus – Hinter allem Stofflichen wirken Kräfte; Kraft ist das eigentlich Wirkende in der Welt.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="777" cy="558.1" rx="22.2" ry="10.8"/><ellipse class="etikett-schleier" cx="777" cy="575.1" rx="46.5" ry="10.8"/><ellipse class="etikett-schleier" cx="777" cy="594" rx="43.1" ry="9"/><text class="kreis-nummer" x="777" y="563.1" text-anchor="middle">VIII</text><text class="kreis-name" x="777" y="580.1" text-anchor="middle">Dynamismus</text><text class="kreis-zeichen" x="777" y="598.1" text-anchor="middle">♏︎ Skorpion</text></g>
+</a>
+</g>
+<g class="kreis kreis-wurzel" data-slug="monadismus" id="monadismus">
+<a href="weltanschauungen/monadismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
+  <title>Monadismus – Die Welt besteht aus einer Vielheit in sich geschlossener Wesenseinheiten, die von innen heraus wirken.</title>
+  <circle class="kreisflaeche" cx="681.1" cy="677" r="67.8"/>
+</a>
+<g class="innenwelt">
+<path class="innenholz" d="M 643.1 615.6 L 644.7 619.4 L 646.4 623 L 648.2 626.6 L 650.2 630.1 L 652.3 633.6 L 654.4 637 L 656.6 640.3 L 658.9 643.6 L 661.2 646.9 L 663.4 650.2 L 665.7 653.4 L 668 656.7 L 670.1 660.1 L 672.3 663.4 L 674.3 666.9 L 676.3 670.4 L 678.1 673.9 L 679.8 677.6 L 682.4 676.5 L 680.7 672.7 L 678.9 669 L 677 665.4 L 675 661.8 L 672.9 658.3 L 670.7 654.9 L 668.6 651.5 L 666.4 648.2 L 664.1 644.9 L 661.9 641.5 L 659.8 638.2 L 657.7 634.9 L 655.7 631.5 L 653.7 628.1 L 651.9 624.7 L 650.2 621.2 L 648.6 617.7 L 647.2 614 Z"/>
+<circle class="innenholz" cx="681.1" cy="677" r="2.4"/>
+<path class="innenholz" d="M 682.2 676.7 L 681.2 673.6 L 680.1 670.7 L 679 667.8 L 677.7 665 L 676.4 662.3 L 675 659.7 L 673.5 657.2 L 671.9 654.8 L 670.3 652.6 L 668.7 650.4 L 667 648.3 L 665.3 646.3 L 663.5 644.4 L 661.8 642.6 L 661.4 643 L 661 643.3 L 662.7 645.1 L 664.4 647.1 L 666 649.1 L 667.6 651.2 L 669.1 653.4 L 670.6 655.7 L 672 658.1 L 673.4 660.6 L 674.7 663.2 L 675.9 665.8 L 677 668.6 L 678.1 671.4 L 679 674.4 L 679.9 677.4 Z"/>
+<path class="innenholz" d="M 681.9 676.2 L 679.5 674 L 677.1 672 L 674.6 670.1 L 672.1 668.3 L 669.6 666.6 L 667.1 665.1 L 664.6 663.7 L 662.1 662.4 L 659.5 661.2 L 657 660.1 L 654.5 659.1 L 652 658.3 L 649.6 657.5 L 647.1 656.9 L 647 657.4 L 646.9 657.8 L 649.2 658.6 L 651.6 659.4 L 654.1 660.4 L 656.5 661.4 L 658.9 662.6 L 661.3 663.8 L 663.8 665.2 L 666.2 666.6 L 668.6 668.2 L 671 669.9 L 673.3 671.7 L 675.7 673.7 L 678 675.7 L 680.2 677.9 Z"/>
+<path class="innenholz" d="M 681.4 675.9 L 678.2 675.2 L 675.1 674.7 L 672 674.2 L 669 673.9 L 666 673.8 L 663 673.7 L 660.1 673.7 L 657.3 673.8 L 654.5 674.1 L 651.8 674.4 L 649.1 674.8 L 646.5 675.3 L 644 675.9 L 641.6 676.5 L 641.7 677 L 641.9 677.5 L 644.3 677 L 646.8 676.5 L 649.3 676.1 L 652 675.8 L 654.6 675.6 L 657.4 675.4 L 660.2 675.4 L 663 675.5 L 665.9 675.6 L 668.8 675.9 L 671.7 676.3 L 674.7 676.8 L 677.7 677.4 L 680.8 678.2 Z"/>
+<path class="innenholz" d="M 680.7 675.9 L 677.7 676.9 L 674.7 678 L 671.8 679.1 L 669.1 680.4 L 666.4 681.7 L 663.8 683.1 L 661.3 684.6 L 658.9 686.2 L 656.6 687.8 L 654.4 689.4 L 652.3 691.1 L 650.3 692.8 L 648.4 694.6 L 646.6 696.3 L 647 696.7 L 647.4 697.1 L 649.2 695.4 L 651.1 693.7 L 653.1 692.1 L 655.2 690.5 L 657.5 689 L 659.8 687.5 L 662.2 686.1 L 664.6 684.7 L 667.2 683.4 L 669.9 682.2 L 672.6 681.1 L 675.5 680 L 678.4 679.1 L 681.4 678.2 Z"/>
+<path class="innenholz" d="M 680.2 676.2 L 678.1 678.6 L 676 681 L 674.1 683.5 L 672.3 686 L 670.7 688.5 L 669.2 691 L 667.7 693.5 L 666.4 696 L 665.2 698.6 L 664.2 701.1 L 663.2 703.6 L 662.3 706.1 L 661.6 708.5 L 660.9 711 L 661.4 711.1 L 661.9 711.2 L 662.6 708.9 L 663.5 706.5 L 664.4 704.1 L 665.4 701.6 L 666.6 699.2 L 667.9 696.8 L 669.2 694.3 L 670.7 691.9 L 672.3 689.5 L 674 687.1 L 675.8 684.8 L 677.7 682.4 L 679.8 680.1 L 681.9 677.9 Z"/>
+<path class="innenholz" d="M 679.9 676.7 L 679.2 679.9 L 678.7 683 L 678.3 686.1 L 678 689.1 L 677.8 692.1 L 677.7 695.1 L 677.8 698 L 677.9 700.8 L 678.1 703.6 L 678.5 706.3 L 678.9 709 L 679.4 711.6 L 679.9 714.1 L 680.6 716.5 L 681.1 716.4 L 681.6 716.3 L 681 713.8 L 680.5 711.3 L 680.2 708.8 L 679.8 706.1 L 679.6 703.5 L 679.5 700.7 L 679.5 697.9 L 679.5 695.1 L 679.7 692.2 L 680 689.3 L 680.4 686.4 L 680.9 683.4 L 681.5 680.4 L 682.2 677.3 Z"/>
+<path class="innenholz" d="M 679.9 677.4 L 680.9 680.4 L 682 683.4 L 683.2 686.3 L 684.4 689.1 L 685.8 691.7 L 687.2 694.3 L 688.7 696.8 L 690.2 699.2 L 691.8 701.5 L 693.4 703.7 L 695.1 705.8 L 696.9 707.8 L 698.6 709.7 L 700.4 711.5 L 700.7 711.1 L 701.1 710.8 L 699.4 708.9 L 697.8 707 L 696.1 705 L 694.6 702.9 L 693 700.7 L 691.6 698.3 L 690.1 696 L 688.8 693.5 L 687.5 690.9 L 686.3 688.2 L 685.1 685.5 L 684.1 682.6 L 683.1 679.7 L 682.2 676.7 Z"/>
+<path class="innenholz" d="M 680.2 677.9 L 682.6 680 L 685.1 682.1 L 687.5 684 L 690 685.8 L 692.5 687.4 L 695 689 L 697.5 690.4 L 700.1 691.7 L 702.6 692.9 L 705.1 693.9 L 707.6 694.9 L 710.1 695.8 L 712.6 696.5 L 715 697.2 L 715.2 696.7 L 715.3 696.2 L 712.9 695.5 L 710.5 694.6 L 708.1 693.7 L 705.7 692.7 L 703.2 691.5 L 700.8 690.3 L 698.4 688.9 L 696 687.4 L 693.6 685.8 L 691.2 684.1 L 688.8 682.3 L 686.5 680.4 L 684.2 678.3 L 681.9 676.2 Z"/>
+<path class="innenholz" d="M 680.8 678.2 L 683.9 678.9 L 687.1 679.4 L 690.1 679.8 L 693.2 680.1 L 696.2 680.3 L 699.1 680.4 L 702 680.3 L 704.9 680.2 L 707.6 680 L 710.4 679.7 L 713 679.2 L 715.6 678.7 L 718.1 678.2 L 720.6 677.5 L 720.4 677 L 720.3 676.5 L 717.9 677.1 L 715.4 677.6 L 712.8 678 L 710.2 678.3 L 707.5 678.5 L 704.8 678.6 L 702 678.6 L 699.2 678.6 L 696.3 678.4 L 693.4 678.1 L 690.4 677.7 L 687.4 677.2 L 684.4 676.6 L 681.4 675.9 Z"/>
+<path class="innenholz" d="M 681.4 678.2 L 684.5 677.2 L 687.4 676.1 L 690.3 674.9 L 693.1 673.7 L 695.8 672.3 L 698.4 670.9 L 700.9 669.4 L 703.3 667.9 L 705.6 666.3 L 707.7 664.7 L 709.8 663 L 711.8 661.2 L 713.7 659.5 L 715.5 657.7 L 715.2 657.4 L 714.8 657 L 713 658.7 L 711 660.3 L 709 662 L 706.9 663.5 L 704.7 665.1 L 702.4 666.5 L 700 668 L 697.5 669.3 L 694.9 670.6 L 692.3 671.8 L 689.5 673 L 686.7 674 L 683.8 675 L 680.7 675.9 Z"/>
+<path class="innenholz" d="M 681.9 677.9 L 684.1 675.5 L 686.1 673 L 688 670.6 L 689.8 668.1 L 691.5 665.6 L 693 663.1 L 694.4 660.6 L 695.7 658 L 696.9 655.5 L 698 653 L 699 650.5 L 699.8 648 L 700.6 645.5 L 701.2 643.1 L 700.7 643 L 700.3 642.8 L 699.5 645.2 L 698.7 647.6 L 697.7 650 L 696.7 652.4 L 695.6 654.9 L 694.3 657.3 L 692.9 659.7 L 691.5 662.1 L 689.9 664.6 L 688.2 666.9 L 686.4 669.3 L 684.4 671.6 L 682.4 673.9 L 680.2 676.2 Z"/>
+<path class="innenholz" d="M 682.2 677.3 L 682.9 674.2 L 683.5 671.1 L 683.9 668 L 684.2 664.9 L 684.4 661.9 L 684.4 659 L 684.4 656.1 L 684.3 653.3 L 684 650.5 L 683.7 647.7 L 683.3 645.1 L 682.8 642.5 L 682.2 640 L 681.6 637.6 L 681.1 637.7 L 680.6 637.8 L 681.1 640.2 L 681.6 642.7 L 682 645.3 L 682.3 647.9 L 682.5 650.6 L 682.7 653.3 L 682.7 656.1 L 682.6 658.9 L 682.5 661.8 L 682.2 664.7 L 681.8 667.7 L 681.3 670.7 L 680.7 673.7 L 679.9 676.7 Z"/>
+<g class="art" data-art="1">
+<circle class="art-kugel" cx="654.1" cy="630.4" r="14"/>
+<a href="weltanschauungen/monadismus/art-1.html" class="art-link" aria-label="Art I im Monadismus · 0 Artikel">
+  <title>Art I im Monadismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="654.1" cy="630.4" r="14"/>
+  <text class="art-ziffer" x="654.1" y="632.2" text-anchor="middle">I</text>
+</a>
+</g>
+<g class="art" data-art="2">
+<circle class="art-kugel" cx="634.4" cy="650.1" r="14"/>
+<a href="weltanschauungen/monadismus/art-2.html" class="art-link" aria-label="Art II im Monadismus · 0 Artikel">
+  <title>Art II im Monadismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="634.4" cy="650.1" r="14"/>
+  <text class="art-ziffer" x="634.4" y="651.9" text-anchor="middle">II</text>
+</a>
+</g>
+<g class="art" data-art="3">
+<circle class="art-kugel" cx="627.2" cy="677" r="14"/>
+<a href="weltanschauungen/monadismus/art-3.html" class="art-link" aria-label="Art III im Monadismus · 0 Artikel">
+  <title>Art III im Monadismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="627.2" cy="677" r="14"/>
+  <text class="art-ziffer" x="627.2" y="678.8" text-anchor="middle">III</text>
+</a>
+</g>
+<g class="art" data-art="4">
+<circle class="art-kugel" cx="634.4" cy="704" r="14"/>
+<a href="weltanschauungen/monadismus/art-4.html" class="art-link" aria-label="Art IV im Monadismus · 0 Artikel">
+  <title>Art IV im Monadismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="634.4" cy="704" r="14"/>
+  <text class="art-ziffer" x="634.4" y="705.8" text-anchor="middle">IV</text>
+</a>
+</g>
+<g class="art" data-art="5">
+<circle class="art-kugel" cx="654.1" cy="723.7" r="14"/>
+<a href="weltanschauungen/monadismus/art-5.html" class="art-link" aria-label="Art V im Monadismus · 0 Artikel">
+  <title>Art V im Monadismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="654.1" cy="723.7" r="14"/>
+  <text class="art-ziffer" x="654.1" y="725.5" text-anchor="middle">V</text>
+</a>
+</g>
+<g class="art" data-art="6">
+<circle class="art-kugel" cx="681.1" cy="730.9" r="14"/>
+<a href="weltanschauungen/monadismus/art-6.html" class="art-link" aria-label="Art VI im Monadismus · 0 Artikel">
+  <title>Art VI im Monadismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="681.1" cy="730.9" r="14"/>
+  <text class="art-ziffer" x="681.1" y="732.7" text-anchor="middle">VI</text>
+</a>
+</g>
+<g class="art" data-art="7">
+<circle class="art-kugel" cx="708" cy="723.7" r="14"/>
+<a href="weltanschauungen/monadismus/art-7.html" class="art-link" aria-label="Art VII im Monadismus · 0 Artikel">
+  <title>Art VII im Monadismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="708" cy="723.7" r="14"/>
+  <text class="art-ziffer" x="708" y="725.5" text-anchor="middle">VII</text>
+</a>
+</g>
+<g class="art" data-art="8">
+<circle class="art-kugel" cx="727.8" cy="704" r="14"/>
+<a href="weltanschauungen/monadismus/art-8.html" class="art-link" aria-label="Art VIII im Monadismus · 0 Artikel">
+  <title>Art VIII im Monadismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="727.8" cy="704" r="14"/>
+  <text class="art-ziffer" x="727.8" y="705.8" text-anchor="middle">VIII</text>
+</a>
+</g>
+<g class="art" data-art="9">
+<circle class="art-kugel" cx="735" cy="677" r="14"/>
+<a href="weltanschauungen/monadismus/art-9.html" class="art-link" aria-label="Art IX im Monadismus · 0 Artikel">
+  <title>Art IX im Monadismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="735" cy="677" r="14"/>
+  <text class="art-ziffer" x="735" y="678.8" text-anchor="middle">IX</text>
+</a>
+</g>
+<g class="art" data-art="10">
+<circle class="art-kugel" cx="727.8" cy="650.1" r="14"/>
+<a href="weltanschauungen/monadismus/art-10.html" class="art-link" aria-label="Art X im Monadismus · 0 Artikel">
+  <title>Art X im Monadismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="727.8" cy="650.1" r="14"/>
+  <text class="art-ziffer" x="727.8" y="651.9" text-anchor="middle">X</text>
+</a>
+</g>
+<g class="art" data-art="11">
+<circle class="art-kugel" cx="708" cy="630.4" r="14"/>
+<a href="weltanschauungen/monadismus/art-11.html" class="art-link" aria-label="Art XI im Monadismus · 0 Artikel">
+  <title>Art XI im Monadismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="708" cy="630.4" r="14"/>
+  <text class="art-ziffer" x="708" y="632.2" text-anchor="middle">XI</text>
+</a>
+</g>
+<g class="art" data-art="12">
+<circle class="art-kugel" cx="681.1" cy="623.1" r="14"/>
+<a href="weltanschauungen/monadismus/art-12.html" class="art-link" aria-label="Art XII Christus im Monadismus · 0 Artikel">
+  <title>Art XII Christus im Monadismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="681.1" cy="623.1" r="14"/>
+  <text class="art-ziffer" x="681.1" y="619.3" text-anchor="middle">XII</text>
+  <text class="art-wort" x="681.1" y="626.1" text-anchor="middle" style="font-size:4.2px">Christus</text>
+</a>
+</g>
+<g class="kreis-mitte"><text class="mitte-name" x="681.1" y="670" text-anchor="middle">Monadismus</text><text class="mitte-substanz" x="681.1" y="683.5" text-anchor="middle">die Monade (das Wesen)</text><a href="weltanschauungen/monadismus.html" class="mitte-seite"><text x="681.1" y="691.5" text-anchor="middle">0 Artikel →</text></a></g>
+</g>
+<a href="weltanschauungen/monadismus.html" class="kreis-link" aria-label="Monadismus – hineinzoomen">
+  <title>Monadismus – Die Welt besteht aus einer Vielheit in sich geschlossener Wesenseinheiten, die von innen heraus wirken.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="681.1" cy="654.1" rx="18.1" ry="10.8"/><ellipse class="etikett-schleier" cx="681.1" cy="671.1" rx="46.5" ry="10.8"/><ellipse class="etikett-schleier" cx="681.1" cy="689.9" rx="39.8" ry="9"/><text class="kreis-nummer" x="681.1" y="659" text-anchor="middle">VII</text><text class="kreis-name" x="681.1" y="676" text-anchor="middle">Monadismus</text><text class="kreis-zeichen" x="681.1" y="694" text-anchor="middle">♐︎ Schütze</text></g>
+</a>
+</g>
+<g class="kreis kreis-wurzel" data-slug="spiritualismus" id="spiritualismus">
+<a href="weltanschauungen/spiritualismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
+  <title>Spiritualismus – Das Geistige ist die eigentliche Wirklichkeit; das Stoffliche ist seine Offenbarung.</title>
+  <circle class="kreisflaeche" cx="550" cy="712.2" r="67.8"/>
+</a>
+<g class="innenwelt">
+<path class="innenholz" d="M 547.8 639.9 L 547.3 644 L 546.9 648 L 546.8 652.1 L 546.7 656.1 L 546.8 660.1 L 547 664.1 L 547.2 668.1 L 547.5 672.1 L 547.8 676.1 L 548.2 680.1 L 548.5 684 L 548.8 688 L 549 692 L 549.2 696 L 549.2 700 L 549.2 704 L 549 708 L 548.6 712 L 551.4 712.3 L 551.9 708.2 L 552.1 704.1 L 552.3 700 L 552.3 695.9 L 552.3 691.9 L 552.1 687.8 L 551.9 683.8 L 551.7 679.8 L 551.4 675.8 L 551.2 671.9 L 551 667.9 L 550.8 664 L 550.7 660 L 550.8 656.1 L 550.9 652.2 L 551.2 648.4 L 551.6 644.5 L 552.2 640.7 Z"/>
+<circle class="innenholz" cx="550" cy="712.2" r="2.4"/>
+<path class="innenholz" d="M 551.2 711.8 L 550.2 708.8 L 549.1 705.8 L 547.9 702.9 L 546.6 700.1 L 545.3 697.4 L 543.9 694.9 L 542.4 692.4 L 540.9 690 L 539.3 687.7 L 537.6 685.5 L 535.9 683.4 L 534.2 681.4 L 532.5 679.5 L 530.7 677.7 L 530.3 678.1 L 530 678.4 L 531.7 680.3 L 533.3 682.2 L 534.9 684.2 L 536.5 686.3 L 538 688.5 L 539.5 690.8 L 540.9 693.2 L 542.3 695.7 L 543.6 698.3 L 544.8 701 L 546 703.7 L 547 706.5 L 548 709.5 L 548.8 712.5 Z"/>
+<path class="innenholz" d="M 550.8 711.3 L 548.4 709.1 L 546 707.1 L 543.6 705.2 L 541.1 703.4 L 538.6 701.8 L 536.1 700.2 L 533.5 698.8 L 531 697.5 L 528.5 696.3 L 526 695.2 L 523.4 694.3 L 521 693.4 L 518.5 692.6 L 516.1 692 L 515.9 692.5 L 515.8 693 L 518.2 693.7 L 520.6 694.5 L 523 695.5 L 525.4 696.5 L 527.8 697.7 L 530.3 698.9 L 532.7 700.3 L 535.1 701.8 L 537.5 703.4 L 539.9 705.1 L 542.3 706.9 L 544.6 708.8 L 546.9 710.8 L 549.2 713 Z"/>
+<path class="innenholz" d="M 550.3 711 L 547.1 710.3 L 544 709.8 L 540.9 709.4 L 537.9 709.1 L 534.9 708.9 L 532 708.8 L 529.1 708.8 L 526.2 709 L 523.4 709.2 L 520.7 709.5 L 518.1 709.9 L 515.5 710.4 L 513 711 L 510.5 711.7 L 510.7 712.2 L 510.8 712.6 L 513.2 712.1 L 515.7 711.6 L 518.3 711.2 L 520.9 710.9 L 523.6 710.7 L 526.3 710.6 L 529.1 710.5 L 531.9 710.6 L 534.8 710.8 L 537.7 711 L 540.7 711.4 L 543.7 711.9 L 546.7 712.6 L 549.7 713.3 Z"/>
+<path class="innenholz" d="M 549.7 711 L 546.6 712 L 543.6 713.1 L 540.8 714.3 L 538 715.5 L 535.3 716.9 L 532.7 718.3 L 530.2 719.7 L 527.8 721.3 L 525.5 722.9 L 523.3 724.5 L 521.2 726.2 L 519.2 727.9 L 517.4 729.7 L 515.6 731.5 L 515.9 731.8 L 516.3 732.2 L 518.1 730.5 L 520 728.8 L 522.1 727.2 L 524.2 725.6 L 526.4 724.1 L 528.7 722.6 L 531.1 721.2 L 533.6 719.8 L 536.1 718.6 L 538.8 717.3 L 541.6 716.2 L 544.4 715.1 L 547.3 714.2 L 550.3 713.3 Z"/>
+<path class="innenholz" d="M 549.1 711.3 L 547 713.7 L 545 716.1 L 543 718.6 L 541.3 721.1 L 539.6 723.6 L 538.1 726.1 L 536.7 728.6 L 535.4 731.2 L 534.2 733.7 L 533.1 736.2 L 532.1 738.7 L 531.3 741.2 L 530.5 743.7 L 529.8 746.1 L 530.3 746.2 L 530.8 746.4 L 531.5 744 L 532.4 741.6 L 533.3 739.2 L 534.4 736.8 L 535.5 734.3 L 536.8 731.9 L 538.1 729.5 L 539.6 727 L 541.2 724.6 L 542.9 722.2 L 544.7 719.9 L 546.6 717.5 L 548.7 715.2 L 550.9 713 Z"/>
+<path class="innenholz" d="M 548.8 711.9 L 548.2 715 L 547.6 718.1 L 547.2 721.2 L 546.9 724.2 L 546.7 727.2 L 546.6 730.2 L 546.7 733.1 L 546.8 735.9 L 547.1 738.7 L 547.4 741.4 L 547.8 744.1 L 548.3 746.7 L 548.9 749.2 L 549.5 751.6 L 550 751.5 L 550.5 751.4 L 549.9 748.9 L 549.5 746.5 L 549.1 743.9 L 548.8 741.3 L 548.5 738.6 L 548.4 735.9 L 548.4 733.1 L 548.4 730.2 L 548.6 727.4 L 548.9 724.4 L 549.3 721.5 L 549.8 718.5 L 550.4 715.5 L 551.2 712.4 Z"/>
+<path class="innenholz" d="M 548.8 712.5 L 549.8 715.5 L 550.9 718.5 L 552.1 721.4 L 553.4 724.2 L 554.7 726.9 L 556.1 729.4 L 557.6 731.9 L 559.1 734.3 L 560.7 736.6 L 562.4 738.8 L 564.1 740.9 L 565.8 742.9 L 567.5 744.8 L 569.3 746.6 L 569.7 746.2 L 570 745.9 L 568.3 744 L 566.7 742.1 L 565.1 740.1 L 563.5 738 L 562 735.8 L 560.5 733.5 L 559.1 731.1 L 557.7 728.6 L 556.4 726 L 555.2 723.3 L 554 720.6 L 553 717.8 L 552 714.8 L 551.2 711.8 Z"/>
+<path class="innenholz" d="M 549.2 713 L 551.6 715.2 L 554 717.2 L 556.4 719.1 L 558.9 720.9 L 561.4 722.5 L 563.9 724.1 L 566.5 725.5 L 569 726.8 L 571.5 728 L 574 729.1 L 576.6 730 L 579 730.9 L 581.5 731.7 L 583.9 732.3 L 584.1 731.8 L 584.2 731.3 L 581.8 730.6 L 579.4 729.8 L 577 728.8 L 574.6 727.8 L 572.2 726.6 L 569.7 725.4 L 567.3 724 L 564.9 722.5 L 562.5 720.9 L 560.1 719.3 L 557.7 717.4 L 555.4 715.5 L 553.1 713.5 L 550.8 711.3 Z"/>
+<path class="innenholz" d="M 549.7 713.3 L 552.9 714 L 556 714.5 L 559.1 714.9 L 562.1 715.2 L 565.1 715.4 L 568 715.5 L 570.9 715.5 L 573.8 715.3 L 576.6 715.1 L 579.3 714.8 L 581.9 714.4 L 584.5 713.9 L 587 713.3 L 589.5 712.6 L 589.3 712.2 L 589.2 711.7 L 586.8 712.2 L 584.3 712.7 L 581.7 713.1 L 579.1 713.4 L 576.4 713.6 L 573.7 713.7 L 570.9 713.8 L 568.1 713.7 L 565.2 713.5 L 562.3 713.3 L 559.3 712.9 L 556.3 712.4 L 553.3 711.7 L 550.3 711 Z"/>
+<path class="innenholz" d="M 550.3 713.3 L 553.4 712.3 L 556.4 711.2 L 559.2 710 L 562 708.8 L 564.7 707.4 L 567.3 706 L 569.8 704.6 L 572.2 703 L 574.5 701.4 L 576.7 699.8 L 578.8 698.1 L 580.8 696.4 L 582.6 694.6 L 584.4 692.8 L 584.1 692.5 L 583.7 692.1 L 581.9 693.8 L 580 695.5 L 577.9 697.1 L 575.8 698.7 L 573.6 700.2 L 571.3 701.7 L 568.9 703.1 L 566.4 704.5 L 563.9 705.7 L 561.2 707 L 558.4 708.1 L 555.6 709.2 L 552.7 710.1 L 549.7 711 Z"/>
+<path class="innenholz" d="M 550.9 713 L 553 710.6 L 555 708.2 L 557 705.7 L 558.7 703.2 L 560.4 700.7 L 561.9 698.2 L 563.3 695.7 L 564.6 693.1 L 565.8 690.6 L 566.9 688.1 L 567.9 685.6 L 568.7 683.1 L 569.5 680.6 L 570.2 678.2 L 569.7 678.1 L 569.2 677.9 L 568.5 680.3 L 567.6 682.7 L 566.7 685.1 L 565.6 687.6 L 564.5 690 L 563.2 692.4 L 561.9 694.8 L 560.4 697.3 L 558.8 699.7 L 557.1 702.1 L 555.3 704.4 L 553.4 706.8 L 551.3 709.1 L 549.1 711.3 Z"/>
+<path class="innenholz" d="M 551.2 712.4 L 551.8 709.3 L 552.4 706.2 L 552.8 703.1 L 553.1 700.1 L 553.3 697.1 L 553.4 694.1 L 553.3 691.2 L 553.2 688.4 L 552.9 685.6 L 552.6 682.9 L 552.2 680.2 L 551.7 677.6 L 551.1 675.1 L 550.5 672.7 L 550 672.8 L 549.5 672.9 L 550.1 675.4 L 550.5 677.9 L 550.9 680.4 L 551.2 683 L 551.5 685.7 L 551.6 688.4 L 551.6 691.2 L 551.6 694.1 L 551.4 696.9 L 551.1 699.9 L 550.7 702.8 L 550.2 705.8 L 549.6 708.8 L 548.8 711.9 Z"/>
+<g class="art" data-art="1">
+<circle class="art-kugel" cx="523.1" cy="665.5" r="14"/>
+<a href="weltanschauungen/spiritualismus/art-1.html" class="art-link" aria-label="Art I Zufall im Spiritualismus · 0 Artikel">
+  <title>Art I Zufall im Spiritualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="523.1" cy="665.5" r="14"/>
+  <text class="art-ziffer" x="523.1" y="661.7" text-anchor="middle">I</text>
+  <text class="art-wort" x="523.1" y="668.5" text-anchor="middle" style="font-size:5.0px">Zufall</text>
+</a>
+</g>
+<g class="art" data-art="2">
+<circle class="art-kugel" cx="503.3" cy="685.2" r="14"/>
+<a href="weltanschauungen/spiritualismus/art-2.html" class="art-link" aria-label="Art II im Spiritualismus · 0 Artikel">
+  <title>Art II im Spiritualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="503.3" cy="685.2" r="14"/>
+  <text class="art-ziffer" x="503.3" y="687" text-anchor="middle">II</text>
+</a>
+</g>
+<g class="art" data-art="3">
+<circle class="art-kugel" cx="496.1" cy="712.2" r="14"/>
+<a href="weltanschauungen/spiritualismus/art-3.html" class="art-link" aria-label="Art III im Spiritualismus · 0 Artikel">
+  <title>Art III im Spiritualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="496.1" cy="712.2" r="14"/>
+  <text class="art-ziffer" x="496.1" y="714" text-anchor="middle">III</text>
+</a>
+</g>
+<g class="art" data-art="4">
+<circle class="art-kugel" cx="503.3" cy="739.1" r="14"/>
+<a href="weltanschauungen/spiritualismus/art-4.html" class="art-link" aria-label="Art IV im Spiritualismus · 0 Artikel">
+  <title>Art IV im Spiritualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="503.3" cy="739.1" r="14"/>
+  <text class="art-ziffer" x="503.3" y="740.9" text-anchor="middle">IV</text>
+</a>
+</g>
+<g class="art" data-art="5">
+<circle class="art-kugel" cx="523.1" cy="758.8" r="14"/>
+<a href="weltanschauungen/spiritualismus/art-5.html" class="art-link" aria-label="Art V im Spiritualismus · 0 Artikel">
+  <title>Art V im Spiritualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="523.1" cy="758.8" r="14"/>
+  <text class="art-ziffer" x="523.1" y="760.6" text-anchor="middle">V</text>
+</a>
+</g>
+<g class="art" data-art="6">
+<circle class="art-kugel" cx="550" cy="766" r="14"/>
+<a href="weltanschauungen/spiritualismus/art-6.html" class="art-link" aria-label="Art VI im Spiritualismus · 0 Artikel">
+  <title>Art VI im Spiritualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="550" cy="766" r="14"/>
+  <text class="art-ziffer" x="550" y="767.8" text-anchor="middle">VI</text>
+</a>
+</g>
+<g class="art" data-art="7">
+<circle class="art-kugel" cx="576.9" cy="758.8" r="14"/>
+<a href="weltanschauungen/spiritualismus/art-7.html" class="art-link" aria-label="Art VII im Spiritualismus · 0 Artikel">
+  <title>Art VII im Spiritualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="576.9" cy="758.8" r="14"/>
+  <text class="art-ziffer" x="576.9" y="760.6" text-anchor="middle">VII</text>
+</a>
+</g>
+<g class="art" data-art="8">
+<circle class="art-kugel" cx="596.7" cy="739.1" r="14"/>
+<a href="weltanschauungen/spiritualismus/art-8.html" class="art-link" aria-label="Art VIII im Spiritualismus · 0 Artikel">
+  <title>Art VIII im Spiritualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="596.7" cy="739.1" r="14"/>
+  <text class="art-ziffer" x="596.7" y="740.9" text-anchor="middle">VIII</text>
+</a>
+</g>
+<g class="art" data-art="9">
+<circle class="art-kugel" cx="603.9" cy="712.2" r="14"/>
+<a href="weltanschauungen/spiritualismus/art-9.html" class="art-link" aria-label="Art IX im Spiritualismus · 0 Artikel">
+  <title>Art IX im Spiritualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="603.9" cy="712.2" r="14"/>
+  <text class="art-ziffer" x="603.9" y="714" text-anchor="middle">IX</text>
+</a>
+</g>
+<g class="art" data-art="10">
+<circle class="art-kugel" cx="596.7" cy="685.2" r="14"/>
+<a href="weltanschauungen/spiritualismus/art-10.html" class="art-link" aria-label="Art X im Spiritualismus · 0 Artikel">
+  <title>Art X im Spiritualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="596.7" cy="685.2" r="14"/>
+  <text class="art-ziffer" x="596.7" y="687" text-anchor="middle">X</text>
+</a>
+</g>
+<g class="art" data-art="11">
+<circle class="art-kugel" cx="576.9" cy="665.5" r="14"/>
+<a href="weltanschauungen/spiritualismus/art-11.html" class="art-link" aria-label="Art XI im Spiritualismus · 0 Artikel">
+  <title>Art XI im Spiritualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="576.9" cy="665.5" r="14"/>
+  <text class="art-ziffer" x="576.9" y="667.3" text-anchor="middle">XI</text>
+</a>
+</g>
+<g class="art" data-art="12">
+<circle class="art-kugel" cx="550" cy="658.3" r="14"/>
+<a href="weltanschauungen/spiritualismus/art-12.html" class="art-link" aria-label="Art XII Christus im Spiritualismus · 0 Artikel">
+  <title>Art XII Christus im Spiritualismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="550" cy="658.3" r="14"/>
+  <text class="art-ziffer" x="550" y="654.5" text-anchor="middle">XII</text>
+  <text class="art-wort" x="550" y="661.3" text-anchor="middle" style="font-size:4.2px">Christus</text>
+</a>
+</g>
+<g class="kreis-mitte"><text class="mitte-name" x="550" y="705.2" text-anchor="middle">Spiritualismus</text><text class="mitte-substanz" x="550" y="718.7" text-anchor="middle">der Spirit (das Bewusstsein)</text><a href="weltanschauungen/spiritualismus.html" class="mitte-seite"><text x="550" y="726.7" text-anchor="middle">0 Artikel →</text></a></g>
+</g>
+<a href="weltanschauungen/spiritualismus.html" class="kreis-link" aria-label="Spiritualismus – hineinzoomen">
+  <title>Spiritualismus – Das Geistige ist die eigentliche Wirklichkeit; das Stoffliche ist seine Offenbarung.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="550" cy="689.2" rx="14.1" ry="10.8"/><ellipse class="etikett-schleier" cx="550" cy="706.2" rx="62" ry="10.8"/><ellipse class="etikett-schleier" cx="550" cy="725" rx="46.5" ry="9"/><text class="kreis-nummer" x="550" y="694.2" text-anchor="middle">VI</text><text class="kreis-name" x="550" y="711.2" text-anchor="middle">Spiritualismus</text><text class="kreis-zeichen" x="550" y="729.2" text-anchor="middle">♑︎ Steinbock</text></g>
+</a>
+</g>
+<g class="kreis kreis-wurzel" data-slug="pneumatismus" id="pneumatismus">
+<a href="weltanschauungen/pneumatismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
+  <title>Pneumatismus – Ein einheitlicher, schaffender Weltengeist durchwaltet das All.</title>
+  <circle class="kreisflaeche" cx="418.9" cy="677" r="67.8"/>
+</a>
+<g class="innenwelt">
+<path class="innenholz" d="M 453.2 613.4 L 450.7 616.7 L 448.3 620 L 446.1 623.4 L 444.1 626.8 L 442.2 630.4 L 440.3 633.9 L 438.5 637.5 L 436.8 641.1 L 435.1 644.7 L 433.4 648.3 L 431.7 651.9 L 429.9 655.5 L 428.1 659.1 L 426.3 662.6 L 424.3 666.1 L 422.3 669.5 L 420.1 672.9 L 417.8 676.2 L 420 677.9 L 422.5 674.5 L 424.8 671.1 L 427 667.7 L 429 664.2 L 431 660.6 L 432.9 657 L 434.7 653.4 L 436.5 649.9 L 438.3 646.3 L 440.1 642.7 L 441.9 639.2 L 443.7 635.7 L 445.6 632.3 L 447.6 628.9 L 449.6 625.6 L 451.8 622.4 L 454.1 619.2 L 456.5 616.2 Z"/>
+<circle class="innenholz" cx="418.9" cy="677" r="2.4"/>
+<path class="innenholz" d="M 420.1 676.7 L 419.1 673.6 L 418 670.7 L 416.8 667.8 L 415.6 665 L 414.2 662.3 L 412.8 659.7 L 411.3 657.2 L 409.8 654.8 L 408.2 652.6 L 406.6 650.4 L 404.9 648.3 L 403.1 646.3 L 401.4 644.4 L 399.6 642.6 L 399.3 643 L 398.9 643.3 L 400.6 645.1 L 402.2 647.1 L 403.9 649.1 L 405.4 651.2 L 407 653.4 L 408.4 655.7 L 409.9 658.1 L 411.2 660.6 L 412.5 663.2 L 413.7 665.8 L 414.9 668.6 L 415.9 671.4 L 416.9 674.4 L 417.8 677.4 Z"/>
+<path class="innenholz" d="M 419.8 676.2 L 417.4 674 L 414.9 672 L 412.5 670.1 L 410 668.3 L 407.5 666.6 L 405 665.1 L 402.5 663.7 L 399.9 662.4 L 397.4 661.2 L 394.9 660.1 L 392.4 659.1 L 389.9 658.3 L 387.4 657.5 L 385 656.9 L 384.8 657.4 L 384.7 657.8 L 387.1 658.6 L 389.5 659.4 L 391.9 660.4 L 394.3 661.4 L 396.8 662.6 L 399.2 663.8 L 401.6 665.2 L 404 666.6 L 406.4 668.2 L 408.8 669.9 L 411.2 671.7 L 413.5 673.7 L 415.8 675.7 L 418.1 677.9 Z"/>
+<path class="innenholz" d="M 419.2 675.9 L 416.1 675.2 L 412.9 674.7 L 409.9 674.2 L 406.8 673.9 L 403.8 673.8 L 400.9 673.7 L 398 673.7 L 395.1 673.8 L 392.4 674.1 L 389.6 674.4 L 387 674.8 L 384.4 675.3 L 381.9 675.9 L 379.4 676.5 L 379.6 677 L 379.7 677.5 L 382.1 677 L 384.6 676.5 L 387.2 676.1 L 389.8 675.8 L 392.5 675.6 L 395.2 675.4 L 398 675.4 L 400.8 675.5 L 403.7 675.6 L 406.6 675.9 L 409.6 676.3 L 412.6 676.8 L 415.6 677.4 L 418.6 678.2 Z"/>
+<path class="innenholz" d="M 418.6 675.9 L 415.5 676.9 L 412.6 678 L 409.7 679.1 L 406.9 680.4 L 404.2 681.7 L 401.6 683.1 L 399.1 684.6 L 396.7 686.2 L 394.4 687.8 L 392.3 689.4 L 390.2 691.1 L 388.2 692.8 L 386.3 694.6 L 384.5 696.3 L 384.8 696.7 L 385.2 697.1 L 387 695.4 L 389 693.7 L 391 692.1 L 393.1 690.5 L 395.3 689 L 397.6 687.5 L 400 686.1 L 402.5 684.7 L 405.1 683.4 L 407.7 682.2 L 410.5 681.1 L 413.3 680 L 416.2 679.1 L 419.3 678.2 Z"/>
+<path class="innenholz" d="M 418.1 676.2 L 415.9 678.6 L 413.9 681 L 412 683.5 L 410.2 686 L 408.5 688.5 L 407 691 L 405.6 693.5 L 404.3 696 L 403.1 698.6 L 402 701.1 L 401 703.6 L 400.2 706.1 L 399.4 708.5 L 398.8 711 L 399.3 711.1 L 399.7 711.2 L 400.5 708.9 L 401.3 706.5 L 402.3 704.1 L 403.3 701.6 L 404.4 699.2 L 405.7 696.8 L 407.1 694.3 L 408.5 691.9 L 410.1 689.5 L 411.8 687.1 L 413.6 684.8 L 415.6 682.4 L 417.6 680.1 L 419.8 677.9 Z"/>
+<path class="innenholz" d="M 417.8 676.7 L 417.1 679.9 L 416.5 683 L 416.1 686.1 L 415.8 689.1 L 415.6 692.1 L 415.6 695.1 L 415.6 698 L 415.7 700.8 L 416 703.6 L 416.3 706.3 L 416.7 709 L 417.2 711.6 L 417.8 714.1 L 418.4 716.5 L 418.9 716.4 L 419.4 716.3 L 418.9 713.8 L 418.4 711.3 L 418 708.8 L 417.7 706.1 L 417.5 703.5 L 417.3 700.7 L 417.3 697.9 L 417.4 695.1 L 417.5 692.2 L 417.8 689.3 L 418.2 686.4 L 418.7 683.4 L 419.3 680.4 L 420.1 677.3 Z"/>
+<path class="innenholz" d="M 417.8 677.4 L 418.8 680.4 L 419.9 683.4 L 421 686.3 L 422.3 689.1 L 423.6 691.7 L 425 694.3 L 426.5 696.8 L 428.1 699.2 L 429.7 701.5 L 431.3 703.7 L 433 705.8 L 434.7 707.8 L 436.5 709.7 L 438.2 711.5 L 438.6 711.1 L 439 710.8 L 437.3 708.9 L 435.6 707 L 434 705 L 432.4 702.9 L 430.9 700.7 L 429.4 698.3 L 428 696 L 426.6 693.5 L 425.3 690.9 L 424.1 688.2 L 423 685.5 L 421.9 682.6 L 421 679.7 L 420.1 676.7 Z"/>
+<path class="innenholz" d="M 418.1 677.9 L 420.5 680 L 422.9 682.1 L 425.4 684 L 427.9 685.8 L 430.4 687.4 L 432.9 689 L 435.4 690.4 L 437.9 691.7 L 440.5 692.9 L 443 693.9 L 445.5 694.9 L 448 695.8 L 450.4 696.5 L 452.9 697.2 L 453 696.7 L 453.1 696.2 L 450.8 695.5 L 448.4 694.6 L 445.9 693.7 L 443.5 692.7 L 441.1 691.5 L 438.7 690.3 L 436.2 688.9 L 433.8 687.4 L 431.4 685.8 L 429 684.1 L 426.7 682.3 L 424.3 680.4 L 422 678.3 L 419.8 676.2 Z"/>
+<path class="innenholz" d="M 418.6 678.2 L 421.8 678.9 L 424.9 679.4 L 428 679.8 L 431 680.1 L 434 680.3 L 437 680.4 L 439.9 680.3 L 442.7 680.2 L 445.5 680 L 448.2 679.7 L 450.9 679.2 L 453.5 678.7 L 456 678.2 L 458.4 677.5 L 458.3 677 L 458.1 676.5 L 455.7 677.1 L 453.2 677.6 L 450.7 678 L 448 678.3 L 445.4 678.5 L 442.6 678.6 L 439.8 678.6 L 437 678.6 L 434.1 678.4 L 431.2 678.1 L 428.3 677.7 L 425.3 677.2 L 422.3 676.6 L 419.2 675.9 Z"/>
+<path class="innenholz" d="M 419.3 678.2 L 422.3 677.2 L 425.3 676.1 L 428.2 674.9 L 430.9 673.7 L 433.6 672.3 L 436.2 670.9 L 438.7 669.4 L 441.1 667.9 L 443.4 666.3 L 445.6 664.7 L 447.7 663 L 449.7 661.2 L 451.6 659.5 L 453.4 657.7 L 453 657.4 L 452.6 657 L 450.8 658.7 L 448.9 660.3 L 446.9 662 L 444.8 663.5 L 442.5 665.1 L 440.2 666.5 L 437.8 668 L 435.4 669.3 L 432.8 670.6 L 430.1 671.8 L 427.4 673 L 424.5 674 L 421.6 675 L 418.6 675.9 Z"/>
+<path class="innenholz" d="M 419.8 677.9 L 421.9 675.5 L 424 673 L 425.9 670.6 L 427.7 668.1 L 429.3 665.6 L 430.8 663.1 L 432.3 660.6 L 433.6 658 L 434.8 655.5 L 435.8 653 L 436.8 650.5 L 437.7 648 L 438.4 645.5 L 439.1 643.1 L 438.6 643 L 438.1 642.8 L 437.4 645.2 L 436.5 647.6 L 435.6 650 L 434.6 652.4 L 433.4 654.9 L 432.1 657.3 L 430.8 659.7 L 429.3 662.1 L 427.7 664.6 L 426 666.9 L 424.2 669.3 L 422.3 671.6 L 420.2 673.9 L 418.1 676.2 Z"/>
+<path class="innenholz" d="M 420.1 677.3 L 420.8 674.2 L 421.3 671.1 L 421.7 668 L 422 664.9 L 422.2 661.9 L 422.3 659 L 422.2 656.1 L 422.1 653.3 L 421.9 650.5 L 421.5 647.7 L 421.1 645.1 L 420.6 642.5 L 420.1 640 L 419.4 637.6 L 418.9 637.7 L 418.4 637.8 L 419 640.2 L 419.5 642.7 L 419.8 645.3 L 420.2 647.9 L 420.4 650.6 L 420.5 653.3 L 420.5 656.1 L 420.5 658.9 L 420.3 661.8 L 420 664.7 L 419.6 667.7 L 419.1 670.7 L 418.5 673.7 L 417.8 676.7 Z"/>
+<g class="art" data-art="1">
+<circle class="art-kugel" cx="392" cy="630.4" r="14"/>
+<a href="weltanschauungen/pneumatismus/art-1.html" class="art-link" aria-label="Art I Sinnkrise im Pneumatismus · 0 Artikel">
+  <title>Art I Sinnkrise im Pneumatismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="392" cy="630.4" r="14"/>
+  <text class="art-ziffer" x="392" y="626.6" text-anchor="middle">I</text>
+  <text class="art-wort" x="392" y="633.4" text-anchor="middle" style="font-size:4.2px">Sinnkrise</text>
+</a>
+</g>
+<g class="art" data-art="2">
+<circle class="art-kugel" cx="372.2" cy="650.1" r="14"/>
+<a href="weltanschauungen/pneumatismus/art-2.html" class="art-link" aria-label="Art II im Pneumatismus · 0 Artikel">
+  <title>Art II im Pneumatismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="372.2" cy="650.1" r="14"/>
+  <text class="art-ziffer" x="372.2" y="651.9" text-anchor="middle">II</text>
+</a>
+</g>
+<g class="art" data-art="3">
+<circle class="art-kugel" cx="365" cy="677" r="14"/>
+<a href="weltanschauungen/pneumatismus/art-3.html" class="art-link" aria-label="Art III im Pneumatismus · 0 Artikel">
+  <title>Art III im Pneumatismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="365" cy="677" r="14"/>
+  <text class="art-ziffer" x="365" y="678.8" text-anchor="middle">III</text>
+</a>
+</g>
+<g class="art" data-art="4">
+<circle class="art-kugel" cx="372.2" cy="704" r="14"/>
+<a href="weltanschauungen/pneumatismus/art-4.html" class="art-link" aria-label="Art IV im Pneumatismus · 0 Artikel">
+  <title>Art IV im Pneumatismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="372.2" cy="704" r="14"/>
+  <text class="art-ziffer" x="372.2" y="705.8" text-anchor="middle">IV</text>
+</a>
+</g>
+<g class="art" data-art="5">
+<circle class="art-kugel" cx="392" cy="723.7" r="14"/>
+<a href="weltanschauungen/pneumatismus/art-5.html" class="art-link" aria-label="Art V im Pneumatismus · 0 Artikel">
+  <title>Art V im Pneumatismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="392" cy="723.7" r="14"/>
+  <text class="art-ziffer" x="392" y="725.5" text-anchor="middle">V</text>
+</a>
+</g>
+<g class="art" data-art="6">
+<circle class="art-kugel" cx="418.9" cy="730.9" r="14"/>
+<a href="weltanschauungen/pneumatismus/art-6.html" class="art-link" aria-label="Art VI im Pneumatismus · 0 Artikel">
+  <title>Art VI im Pneumatismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="418.9" cy="730.9" r="14"/>
+  <text class="art-ziffer" x="418.9" y="732.7" text-anchor="middle">VI</text>
+</a>
+</g>
+<g class="art" data-art="7">
+<circle class="art-kugel" cx="445.9" cy="723.7" r="14"/>
+<a href="weltanschauungen/pneumatismus/art-7.html" class="art-link" aria-label="Art VII im Pneumatismus · 0 Artikel">
+  <title>Art VII im Pneumatismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="445.9" cy="723.7" r="14"/>
+  <text class="art-ziffer" x="445.9" y="725.5" text-anchor="middle">VII</text>
+</a>
+</g>
+<g class="art" data-art="8">
+<circle class="art-kugel" cx="465.6" cy="704" r="14"/>
+<a href="weltanschauungen/pneumatismus/art-8.html" class="art-link" aria-label="Art VIII im Pneumatismus · 0 Artikel">
+  <title>Art VIII im Pneumatismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="465.6" cy="704" r="14"/>
+  <text class="art-ziffer" x="465.6" y="705.8" text-anchor="middle">VIII</text>
+</a>
+</g>
+<g class="art" data-art="9">
+<circle class="art-kugel" cx="472.8" cy="677" r="14"/>
+<a href="weltanschauungen/pneumatismus/art-9.html" class="art-link" aria-label="Art IX im Pneumatismus · 0 Artikel">
+  <title>Art IX im Pneumatismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="472.8" cy="677" r="14"/>
+  <text class="art-ziffer" x="472.8" y="678.8" text-anchor="middle">IX</text>
+</a>
+</g>
+<g class="art" data-art="10">
+<circle class="art-kugel" cx="465.6" cy="650.1" r="14"/>
+<a href="weltanschauungen/pneumatismus/art-10.html" class="art-link" aria-label="Art X im Pneumatismus · 0 Artikel">
+  <title>Art X im Pneumatismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="465.6" cy="650.1" r="14"/>
+  <text class="art-ziffer" x="465.6" y="651.9" text-anchor="middle">X</text>
+</a>
+</g>
+<g class="art" data-art="11">
+<circle class="art-kugel" cx="445.9" cy="630.4" r="14"/>
+<a href="weltanschauungen/pneumatismus/art-11.html" class="art-link" aria-label="Art XI im Pneumatismus · 0 Artikel">
+  <title>Art XI im Pneumatismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="445.9" cy="630.4" r="14"/>
+  <text class="art-ziffer" x="445.9" y="632.2" text-anchor="middle">XI</text>
+</a>
+</g>
+<g class="art" data-art="12">
+<circle class="art-kugel" cx="418.9" cy="623.1" r="14"/>
+<a href="weltanschauungen/pneumatismus/art-12.html" class="art-link" aria-label="Art XII Christus im Pneumatismus · 0 Artikel">
+  <title>Art XII Christus im Pneumatismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="418.9" cy="623.1" r="14"/>
+  <text class="art-ziffer" x="418.9" y="619.3" text-anchor="middle">XII</text>
+  <text class="art-wort" x="418.9" y="626.1" text-anchor="middle" style="font-size:4.2px">Christus</text>
+</a>
+</g>
+<g class="kreis-mitte"><text class="mitte-name" x="418.9" y="670" text-anchor="middle">Pneumatismus</text><text class="mitte-substanz" x="418.9" y="683.5" text-anchor="middle">das Pneuma (der bestimmende Sinn)</text><a href="weltanschauungen/pneumatismus.html" class="mitte-seite"><text x="418.9" y="691.5" text-anchor="middle">0 Artikel →</text></a></g>
+</g>
+<a href="weltanschauungen/pneumatismus.html" class="kreis-link" aria-label="Pneumatismus – hineinzoomen">
+  <title>Pneumatismus – Ein einheitlicher, schaffender Weltengeist durchwaltet das All.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="418.9" cy="654.1" rx="10.1" ry="10.8"/><ellipse class="etikett-schleier" cx="418.9" cy="671.1" rx="54.6" ry="10.8"/><ellipse class="etikett-schleier" cx="418.9" cy="689.9" rx="49.9" ry="9"/><text class="kreis-nummer" x="418.9" y="659" text-anchor="middle">V</text><text class="kreis-name" x="418.9" y="676" text-anchor="middle">Pneumatismus</text><text class="kreis-zeichen" x="418.9" y="694" text-anchor="middle">♒︎ Wassermann</text></g>
+</a>
+</g>
+<g class="kreis kreis-wurzel" data-slug="psychismus" id="psychismus">
+<a href="weltanschauungen/psychismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
+  <title>Psychismus – Das Weltprinzip wird seelisch erfahren: Die Welt ist beseelt.</title>
+  <circle class="kreisflaeche" cx="323" cy="581.1" r="67.8"/>
+</a>
+<g class="innenwelt">
+<path class="innenholz" d="M 384.4 543.1 L 380.6 544.7 L 377 546.4 L 373.4 548.2 L 369.9 550.2 L 366.4 552.3 L 363 554.4 L 359.7 556.6 L 356.4 558.9 L 353.1 561.2 L 349.8 563.4 L 346.6 565.7 L 343.3 568 L 339.9 570.1 L 336.6 572.3 L 333.1 574.3 L 329.6 576.3 L 326.1 578.1 L 322.4 579.8 L 323.5 582.4 L 327.3 580.7 L 331 578.9 L 334.6 577 L 338.2 575 L 341.7 572.9 L 345.1 570.7 L 348.5 568.6 L 351.8 566.4 L 355.1 564.1 L 358.5 561.9 L 361.8 559.8 L 365.1 557.7 L 368.5 555.7 L 371.9 553.7 L 375.3 551.9 L 378.8 550.2 L 382.3 548.6 L 386 547.2 Z"/>
+<circle class="innenholz" cx="323" cy="581.1" r="2.4"/>
+<path class="innenholz" d="M 324.1 580.7 L 323.1 577.7 L 322 574.7 L 320.9 571.8 L 319.6 569.1 L 318.3 566.4 L 316.9 563.8 L 315.4 561.3 L 313.8 558.9 L 312.2 556.6 L 310.6 554.4 L 308.9 552.3 L 307.2 550.3 L 305.4 548.4 L 303.7 546.6 L 303.3 547 L 302.9 547.4 L 304.6 549.2 L 306.3 551.1 L 307.9 553.1 L 309.5 555.2 L 311 557.5 L 312.5 559.8 L 313.9 562.2 L 315.3 564.6 L 316.6 567.2 L 317.8 569.9 L 318.9 572.6 L 320 575.5 L 320.9 578.4 L 321.8 581.4 Z"/>
+<path class="innenholz" d="M 323.8 580.2 L 321.4 578.1 L 319 576 L 316.5 574.1 L 314 572.3 L 311.5 570.7 L 309 569.2 L 306.5 567.7 L 304 566.4 L 301.4 565.2 L 298.9 564.2 L 296.4 563.2 L 293.9 562.3 L 291.5 561.6 L 289 560.9 L 288.9 561.4 L 288.8 561.9 L 291.1 562.6 L 293.5 563.5 L 295.9 564.4 L 298.4 565.4 L 300.8 566.6 L 303.2 567.9 L 305.7 569.2 L 308.1 570.7 L 310.5 572.3 L 312.9 574 L 315.2 575.8 L 317.6 577.7 L 319.9 579.8 L 322.1 581.9 Z"/>
+<path class="innenholz" d="M 323.3 579.9 L 320.1 579.2 L 317 578.7 L 313.9 578.3 L 310.9 578 L 307.9 577.8 L 304.9 577.7 L 302 577.8 L 299.2 577.9 L 296.4 578.1 L 293.7 578.5 L 291 578.9 L 288.4 579.4 L 285.9 579.9 L 283.5 580.6 L 283.6 581.1 L 283.7 581.6 L 286.2 581 L 288.7 580.5 L 291.2 580.2 L 293.9 579.8 L 296.5 579.6 L 299.3 579.5 L 302.1 579.5 L 304.9 579.5 L 307.8 579.7 L 310.7 580 L 313.6 580.4 L 316.6 580.9 L 319.6 581.5 L 322.7 582.2 Z"/>
+<path class="innenholz" d="M 322.6 579.9 L 319.6 580.9 L 316.6 582 L 313.7 583.2 L 310.9 584.4 L 308.3 585.8 L 305.7 587.2 L 303.2 588.7 L 300.8 590.2 L 298.5 591.8 L 296.3 593.4 L 294.2 595.1 L 292.2 596.9 L 290.3 598.6 L 288.5 600.4 L 288.9 600.7 L 289.2 601.1 L 291.1 599.4 L 293 597.8 L 295 596.1 L 297.1 594.6 L 299.3 593 L 301.7 591.6 L 304 590.1 L 306.5 588.8 L 309.1 587.5 L 311.8 586.3 L 314.5 585.1 L 317.4 584.1 L 320.3 583.1 L 323.3 582.2 Z"/>
+<path class="innenholz" d="M 322.1 580.2 L 320 582.6 L 317.9 585.1 L 316 587.5 L 314.2 590 L 312.6 592.5 L 311 595 L 309.6 597.5 L 308.3 600.1 L 307.1 602.6 L 306.1 605.1 L 305.1 607.6 L 304.2 610.1 L 303.5 612.6 L 302.8 615 L 303.3 615.2 L 303.8 615.3 L 304.5 612.9 L 305.4 610.5 L 306.3 608.1 L 307.3 605.7 L 308.5 603.2 L 309.7 600.8 L 311.1 598.4 L 312.6 596 L 314.2 593.6 L 315.9 591.2 L 317.7 588.8 L 319.6 586.5 L 321.7 584.2 L 323.8 581.9 Z"/>
+<path class="innenholz" d="M 321.8 580.8 L 321.1 583.9 L 320.6 587.1 L 320.2 590.1 L 319.9 593.2 L 319.7 596.2 L 319.6 599.1 L 319.7 602 L 319.8 604.9 L 320 607.6 L 320.3 610.4 L 320.8 613 L 321.3 615.6 L 321.8 618.1 L 322.5 620.6 L 323 620.4 L 323.5 620.3 L 322.9 617.9 L 322.4 615.4 L 322 612.8 L 321.7 610.2 L 321.5 607.5 L 321.4 604.8 L 321.4 602 L 321.4 599.2 L 321.6 596.3 L 321.9 593.4 L 322.3 590.4 L 322.8 587.4 L 323.4 584.4 L 324.1 581.4 Z"/>
+<path class="innenholz" d="M 321.8 581.4 L 322.8 584.5 L 323.9 587.4 L 325.1 590.3 L 326.3 593.1 L 327.7 595.8 L 329.1 598.4 L 330.6 600.9 L 332.1 603.3 L 333.7 605.6 L 335.3 607.7 L 337 609.8 L 338.8 611.8 L 340.5 613.7 L 342.3 615.5 L 342.6 615.2 L 343 614.8 L 341.3 613 L 339.7 611 L 338 609 L 336.5 606.9 L 334.9 604.7 L 333.5 602.4 L 332 600 L 330.7 597.5 L 329.4 594.9 L 328.2 592.3 L 327 589.5 L 326 586.7 L 325 583.8 L 324.1 580.7 Z"/>
+<path class="innenholz" d="M 322.1 581.9 L 324.5 584.1 L 327 586.1 L 329.4 588 L 331.9 589.8 L 334.4 591.5 L 336.9 593 L 339.4 594.4 L 342 595.7 L 344.5 596.9 L 347 598 L 349.5 599 L 352 599.8 L 354.5 600.6 L 356.9 601.2 L 357 600.7 L 357.2 600.3 L 354.8 599.5 L 352.4 598.7 L 350 597.7 L 347.6 596.7 L 345.1 595.6 L 342.7 594.3 L 340.3 592.9 L 337.9 591.5 L 335.4 589.9 L 333.1 588.2 L 330.7 586.4 L 328.4 584.4 L 326.1 582.4 L 323.8 580.2 Z"/>
+<path class="innenholz" d="M 322.7 582.2 L 325.8 582.9 L 328.9 583.5 L 332 583.9 L 335.1 584.2 L 338.1 584.4 L 341 584.4 L 343.9 584.4 L 346.7 584.3 L 349.5 584 L 352.3 583.7 L 354.9 583.3 L 357.5 582.8 L 360 582.2 L 362.4 581.6 L 362.3 581.1 L 362.2 580.6 L 359.8 581.1 L 357.3 581.6 L 354.7 582 L 352.1 582.3 L 349.4 582.5 L 346.7 582.7 L 343.9 582.7 L 341.1 582.6 L 338.2 582.5 L 335.3 582.2 L 332.3 581.8 L 329.3 581.3 L 326.3 580.7 L 323.3 579.9 Z"/>
+<path class="innenholz" d="M 323.3 582.2 L 326.4 581.2 L 329.3 580.1 L 332.2 579 L 335 577.7 L 337.7 576.4 L 340.3 575 L 342.8 573.5 L 345.2 571.9 L 347.4 570.3 L 349.6 568.7 L 351.7 567 L 353.7 565.3 L 355.6 563.5 L 357.4 561.8 L 357 561.4 L 356.7 561 L 354.9 562.7 L 352.9 564.4 L 350.9 566 L 348.8 567.6 L 346.6 569.1 L 344.3 570.6 L 341.9 572 L 339.4 573.4 L 336.8 574.7 L 334.2 575.9 L 331.4 577 L 328.6 578.1 L 325.6 579 L 322.6 579.9 Z"/>
+<path class="innenholz" d="M 323.8 581.9 L 326 579.5 L 328 577.1 L 329.9 574.6 L 331.7 572.1 L 333.4 569.6 L 334.9 567.1 L 336.3 564.6 L 337.6 562.1 L 338.8 559.5 L 339.9 557 L 340.9 554.5 L 341.7 552 L 342.5 549.6 L 343.1 547.1 L 342.6 547 L 342.2 546.9 L 341.4 549.2 L 340.6 551.6 L 339.6 554.1 L 338.6 556.5 L 337.4 558.9 L 336.2 561.3 L 334.8 563.8 L 333.4 566.2 L 331.8 568.6 L 330.1 571 L 328.3 573.3 L 326.3 575.7 L 324.3 578 L 322.1 580.2 Z"/>
+<path class="innenholz" d="M 324.1 581.4 L 324.8 578.2 L 325.3 575.1 L 325.8 572 L 326.1 569 L 326.2 566 L 326.3 563 L 326.3 560.1 L 326.2 557.3 L 325.9 554.5 L 325.6 551.8 L 325.2 549.1 L 324.7 546.5 L 324.1 544 L 323.5 541.6 L 323 541.7 L 322.5 541.9 L 323 544.3 L 323.5 546.8 L 323.9 549.3 L 324.2 552 L 324.4 554.6 L 324.6 557.4 L 324.6 560.2 L 324.5 563 L 324.4 565.9 L 324.1 568.8 L 323.7 571.7 L 323.2 574.7 L 322.6 577.7 L 321.8 580.8 Z"/>
+<g class="art" data-art="1">
+<circle class="art-kugel" cx="296" cy="534.4" r="14"/>
+<a href="weltanschauungen/psychismus/art-1.html" class="art-link" aria-label="Art I Der Osten im Psychismus · 0 Artikel">
+  <title>Art I Der Osten im Psychismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="296" cy="534.4" r="14"/>
+  <text class="art-ziffer" x="296" y="530.6" text-anchor="middle">I</text>
+  <text class="art-wort" x="296" y="537.4" text-anchor="middle" style="font-size:4.2px">Der Osten</text>
+</a>
+</g>
+<g class="art" data-art="2">
+<circle class="art-kugel" cx="276.3" cy="554.1" r="14"/>
+<a href="weltanschauungen/psychismus/art-2.html" class="art-link" aria-label="Art II Langan im Psychismus · 0 Artikel">
+  <title>Art II Langan im Psychismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="276.3" cy="554.1" r="14"/>
+  <text class="art-ziffer" x="276.3" y="550.3" text-anchor="middle">II</text>
+  <text class="art-wort" x="276.3" y="557.1" text-anchor="middle" style="font-size:5.0px">Langan</text>
+</a>
+</g>
+<g class="art" data-art="3">
+<circle class="art-kugel" cx="269.1" cy="581.1" r="14"/>
+<a href="weltanschauungen/psychismus/art-3.html" class="art-link" aria-label="Art III im Psychismus · 0 Artikel">
+  <title>Art III im Psychismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="269.1" cy="581.1" r="14"/>
+  <text class="art-ziffer" x="269.1" y="582.9" text-anchor="middle">III</text>
+</a>
+</g>
+<g class="art" data-art="4">
+<circle class="art-kugel" cx="276.3" cy="608" r="14"/>
+<a href="weltanschauungen/psychismus/art-4.html" class="art-link" aria-label="Art IV im Psychismus · 0 Artikel">
+  <title>Art IV im Psychismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="276.3" cy="608" r="14"/>
+  <text class="art-ziffer" x="276.3" y="609.8" text-anchor="middle">IV</text>
+</a>
+</g>
+<g class="art" data-art="5">
+<circle class="art-kugel" cx="296" cy="627.8" r="14"/>
+<a href="weltanschauungen/psychismus/art-5.html" class="art-link" aria-label="Art V im Psychismus · 0 Artikel">
+  <title>Art V im Psychismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="296" cy="627.8" r="14"/>
+  <text class="art-ziffer" x="296" y="629.6" text-anchor="middle">V</text>
+</a>
+</g>
+<g class="art" data-art="6">
+<circle class="art-kugel" cx="323" cy="635" r="14"/>
+<a href="weltanschauungen/psychismus/art-6.html" class="art-link" aria-label="Art VI im Psychismus · 0 Artikel">
+  <title>Art VI im Psychismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="323" cy="635" r="14"/>
+  <text class="art-ziffer" x="323" y="636.8" text-anchor="middle">VI</text>
+</a>
+</g>
+<g class="art" data-art="7">
+<circle class="art-kugel" cx="349.9" cy="627.8" r="14"/>
+<a href="weltanschauungen/psychismus/art-7.html" class="art-link" aria-label="Art VII im Psychismus · 0 Artikel">
+  <title>Art VII im Psychismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="349.9" cy="627.8" r="14"/>
+  <text class="art-ziffer" x="349.9" y="629.6" text-anchor="middle">VII</text>
+</a>
+</g>
+<g class="art" data-art="8">
+<circle class="art-kugel" cx="369.6" cy="608" r="14"/>
+<a href="weltanschauungen/psychismus/art-8.html" class="art-link" aria-label="Art VIII im Psychismus · 0 Artikel">
+  <title>Art VIII im Psychismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="369.6" cy="608" r="14"/>
+  <text class="art-ziffer" x="369.6" y="609.8" text-anchor="middle">VIII</text>
+</a>
+</g>
+<g class="art" data-art="9">
+<circle class="art-kugel" cx="376.9" cy="581.1" r="14"/>
+<a href="weltanschauungen/psychismus/art-9.html" class="art-link" aria-label="Art IX im Psychismus · 0 Artikel">
+  <title>Art IX im Psychismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="376.9" cy="581.1" r="14"/>
+  <text class="art-ziffer" x="376.9" y="582.9" text-anchor="middle">IX</text>
+</a>
+</g>
+<g class="art" data-art="10">
+<circle class="art-kugel" cx="369.6" cy="554.1" r="14"/>
+<a href="weltanschauungen/psychismus/art-10.html" class="art-link" aria-label="Art X im Psychismus · 0 Artikel">
+  <title>Art X im Psychismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="369.6" cy="554.1" r="14"/>
+  <text class="art-ziffer" x="369.6" y="555.9" text-anchor="middle">X</text>
+</a>
+</g>
+<g class="art" data-art="11">
+<circle class="art-kugel" cx="349.9" cy="534.4" r="14"/>
+<a href="weltanschauungen/psychismus/art-11.html" class="art-link" aria-label="Art XI im Psychismus · 0 Artikel">
+  <title>Art XI im Psychismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="349.9" cy="534.4" r="14"/>
+  <text class="art-ziffer" x="349.9" y="536.2" text-anchor="middle">XI</text>
+</a>
+</g>
+<g class="art" data-art="12">
+<circle class="art-kugel" cx="323" cy="527.2" r="14"/>
+<a href="weltanschauungen/psychismus/art-12.html" class="art-link" aria-label="Art XII Christus im Psychismus · 0 Artikel">
+  <title>Art XII Christus im Psychismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="323" cy="527.2" r="14"/>
+  <text class="art-ziffer" x="323" y="523.4" text-anchor="middle">XII</text>
+  <text class="art-wort" x="323" y="530.2" text-anchor="middle" style="font-size:4.2px">Christus</text>
+</a>
+</g>
+<g class="kreis-mitte"><text class="mitte-name" x="323" y="574.1" text-anchor="middle">Psychismus</text><text class="mitte-substanz" x="323" y="587.6" text-anchor="middle">die Psyche (das Selbst)</text><a href="weltanschauungen/psychismus.html" class="mitte-seite"><text x="323" y="595.6" text-anchor="middle">0 Artikel →</text></a></g>
+</g>
+<a href="weltanschauungen/psychismus.html" class="kreis-link" aria-label="Psychismus – hineinzoomen">
+  <title>Psychismus – Das Weltprinzip wird seelisch erfahren: Die Welt ist beseelt.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="323" cy="558.1" rx="14.1" ry="10.8"/><ellipse class="etikett-schleier" cx="323" cy="575.1" rx="46.5" ry="10.8"/><ellipse class="etikett-schleier" cx="323" cy="594" rx="36.4" ry="9"/><text class="kreis-nummer" x="323" y="563.1" text-anchor="middle">IV</text><text class="kreis-name" x="323" y="580.1" text-anchor="middle">Psychismus</text><text class="kreis-zeichen" x="323" y="598.1" text-anchor="middle">♓︎ Fische</text></g>
+</a>
+</g>
+<g class="kreis kreis-boden" data-slug="idealismus" id="idealismus">
+<a href="weltanschauungen/idealismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
+  <title>Idealismus – Ideen tragen die Welt; im Ideellen liegen ihr Sinn und ihre Ordnung.</title>
+  <circle class="kreisflaeche" cx="287.8" cy="450" r="67.8"/>
+</a>
+<g class="innenwelt">
+<path class="innenholz" d="M 360.1 447.8 L 356 447.3 L 352 446.9 L 347.9 446.8 L 343.9 446.7 L 339.9 446.8 L 335.9 447 L 331.9 447.2 L 327.9 447.5 L 323.9 447.8 L 319.9 448.2 L 316 448.5 L 312 448.8 L 308 449 L 304 449.2 L 300 449.2 L 296 449.2 L 292 449 L 288 448.6 L 287.7 451.4 L 291.8 451.9 L 295.9 452.1 L 300 452.3 L 304.1 452.3 L 308.1 452.3 L 312.2 452.1 L 316.2 451.9 L 320.2 451.7 L 324.2 451.4 L 328.1 451.2 L 332.1 451 L 336 450.8 L 340 450.7 L 343.9 450.8 L 347.8 450.9 L 351.6 451.2 L 355.5 451.6 L 359.3 452.2 Z"/>
+<circle class="innenholz" cx="287.8" cy="450" r="2.4"/>
+<path class="innenholz" d="M 289 449.7 L 288 446.6 L 286.9 443.6 L 285.7 440.8 L 284.5 438 L 283.1 435.3 L 281.7 432.7 L 280.3 430.2 L 278.7 427.8 L 277.1 425.5 L 275.5 423.3 L 273.8 421.2 L 272.1 419.2 L 270.3 417.4 L 268.5 415.6 L 268.2 415.9 L 267.8 416.3 L 269.5 418.1 L 271.2 420 L 272.8 422.1 L 274.4 424.2 L 275.9 426.4 L 277.4 428.7 L 278.8 431.1 L 280.2 433.6 L 281.4 436.1 L 282.7 438.8 L 283.8 441.6 L 284.9 444.4 L 285.8 447.3 L 286.7 450.3 Z"/>
+<path class="innenholz" d="M 288.7 449.1 L 286.3 447 L 283.9 445 L 281.4 443 L 278.9 441.3 L 276.4 439.6 L 273.9 438.1 L 271.4 436.7 L 268.8 435.4 L 266.3 434.2 L 263.8 433.1 L 261.3 432.1 L 258.8 431.3 L 256.3 430.5 L 253.9 429.8 L 253.8 430.3 L 253.6 430.8 L 256 431.5 L 258.4 432.4 L 260.8 433.3 L 263.2 434.4 L 265.7 435.5 L 268.1 436.8 L 270.5 438.1 L 273 439.6 L 275.4 441.2 L 277.8 442.9 L 280.1 444.7 L 282.5 446.6 L 284.8 448.7 L 287 450.9 Z"/>
+<path class="innenholz" d="M 288.1 448.8 L 285 448.2 L 281.9 447.6 L 278.8 447.2 L 275.8 446.9 L 272.8 446.7 L 269.8 446.6 L 266.9 446.7 L 264.1 446.8 L 261.3 447.1 L 258.6 447.4 L 255.9 447.8 L 253.3 448.3 L 250.8 448.9 L 248.4 449.5 L 248.5 450 L 248.6 450.5 L 251.1 449.9 L 253.5 449.5 L 256.1 449.1 L 258.7 448.8 L 261.4 448.5 L 264.1 448.4 L 266.9 448.4 L 269.8 448.4 L 272.6 448.6 L 275.6 448.9 L 278.5 449.3 L 281.5 449.8 L 284.5 450.4 L 287.6 451.2 Z"/>
+<path class="innenholz" d="M 287.5 448.8 L 284.5 449.8 L 281.5 450.9 L 278.6 452.1 L 275.8 453.4 L 273.1 454.7 L 270.6 456.1 L 268.1 457.6 L 265.7 459.1 L 263.4 460.7 L 261.2 462.4 L 259.1 464.1 L 257.1 465.8 L 255.2 467.5 L 253.4 469.3 L 253.8 469.7 L 254.1 470 L 256 468.3 L 257.9 466.7 L 259.9 465.1 L 262 463.5 L 264.2 462 L 266.5 460.5 L 268.9 459.1 L 271.4 457.7 L 274 456.4 L 276.7 455.2 L 279.4 454 L 282.2 453 L 285.2 452 L 288.2 451.2 Z"/>
+<path class="innenholz" d="M 287 449.2 L 284.8 451.6 L 282.8 454 L 280.9 456.4 L 279.1 458.9 L 277.5 461.4 L 275.9 463.9 L 274.5 466.5 L 273.2 469 L 272 471.5 L 270.9 474 L 270 476.6 L 269.1 479 L 268.3 481.5 L 267.7 483.9 L 268.2 484.1 L 268.7 484.2 L 269.4 481.8 L 270.2 479.4 L 271.2 477 L 272.2 474.6 L 273.4 472.2 L 274.6 469.7 L 276 467.3 L 277.5 464.9 L 279.1 462.5 L 280.7 460.1 L 282.6 457.7 L 284.5 455.4 L 286.5 453.1 L 288.7 450.8 Z"/>
+<path class="innenholz" d="M 286.7 449.7 L 286 452.9 L 285.5 456 L 285.1 459.1 L 284.8 462.1 L 284.6 465.1 L 284.5 468 L 284.5 470.9 L 284.7 473.8 L 284.9 476.6 L 285.2 479.3 L 285.6 481.9 L 286.1 484.5 L 286.7 487 L 287.4 489.5 L 287.8 489.3 L 288.3 489.2 L 287.8 486.8 L 287.3 484.3 L 286.9 481.7 L 286.6 479.1 L 286.4 476.4 L 286.3 473.7 L 286.2 470.9 L 286.3 468.1 L 286.5 465.2 L 286.7 462.3 L 287.1 459.3 L 287.6 456.3 L 288.3 453.3 L 289 450.3 Z"/>
+<path class="innenholz" d="M 286.7 450.3 L 287.7 453.4 L 288.8 456.4 L 290 459.2 L 291.2 462 L 292.6 464.7 L 294 467.3 L 295.4 469.8 L 297 472.2 L 298.6 474.5 L 300.2 476.7 L 301.9 478.8 L 303.6 480.8 L 305.4 482.6 L 307.2 484.4 L 307.5 484.1 L 307.9 483.7 L 306.2 481.9 L 304.5 480 L 302.9 477.9 L 301.3 475.8 L 299.8 473.6 L 298.3 471.3 L 296.9 468.9 L 295.5 466.4 L 294.3 463.9 L 293 461.2 L 291.9 458.4 L 290.8 455.6 L 289.9 452.7 L 289 449.7 Z"/>
+<path class="innenholz" d="M 287 450.9 L 289.4 453 L 291.8 455 L 294.3 457 L 296.8 458.7 L 299.3 460.4 L 301.8 461.9 L 304.3 463.3 L 306.9 464.6 L 309.4 465.8 L 311.9 466.9 L 314.4 467.9 L 316.9 468.7 L 319.4 469.5 L 321.8 470.2 L 321.9 469.7 L 322.1 469.2 L 319.7 468.5 L 317.3 467.6 L 314.9 466.7 L 312.4 465.6 L 310 464.5 L 307.6 463.2 L 305.2 461.9 L 302.7 460.4 L 300.3 458.8 L 297.9 457.1 L 295.6 455.3 L 293.2 453.4 L 290.9 451.3 L 288.7 449.1 Z"/>
+<path class="innenholz" d="M 287.6 451.2 L 290.7 451.8 L 293.8 452.4 L 296.9 452.8 L 299.9 453.1 L 302.9 453.3 L 305.9 453.4 L 308.8 453.3 L 311.6 453.2 L 314.4 452.9 L 317.1 452.6 L 319.8 452.2 L 322.4 451.7 L 324.9 451.1 L 327.3 450.5 L 327.2 450 L 327.1 449.5 L 324.6 450.1 L 322.1 450.5 L 319.6 450.9 L 317 451.2 L 314.3 451.5 L 311.6 451.6 L 308.8 451.6 L 305.9 451.6 L 303.1 451.4 L 300.1 451.1 L 297.2 450.7 L 294.2 450.2 L 291.2 449.6 L 288.1 448.8 Z"/>
+<path class="innenholz" d="M 288.2 451.2 L 291.2 450.2 L 294.2 449.1 L 297.1 447.9 L 299.9 446.6 L 302.6 445.3 L 305.1 443.9 L 307.6 442.4 L 310 440.9 L 312.3 439.3 L 314.5 437.6 L 316.6 435.9 L 318.6 434.2 L 320.5 432.5 L 322.3 430.7 L 321.9 430.3 L 321.6 430 L 319.7 431.7 L 317.8 433.3 L 315.8 434.9 L 313.7 436.5 L 311.5 438 L 309.2 439.5 L 306.8 440.9 L 304.3 442.3 L 301.7 443.6 L 299 444.8 L 296.3 446 L 293.5 447 L 290.5 448 L 287.5 448.8 Z"/>
+<path class="innenholz" d="M 288.7 450.8 L 290.9 448.4 L 292.9 446 L 294.8 443.6 L 296.6 441.1 L 298.2 438.6 L 299.8 436.1 L 301.2 433.5 L 302.5 431 L 303.7 428.5 L 304.8 426 L 305.7 423.4 L 306.6 421 L 307.4 418.5 L 308 416.1 L 307.5 415.9 L 307 415.8 L 306.3 418.2 L 305.5 420.6 L 304.5 423 L 303.5 425.4 L 302.3 427.8 L 301.1 430.3 L 299.7 432.7 L 298.2 435.1 L 296.6 437.5 L 294.9 439.9 L 293.1 442.3 L 291.2 444.6 L 289.2 446.9 L 287 449.2 Z"/>
+<path class="innenholz" d="M 289 450.3 L 289.7 447.1 L 290.2 444 L 290.6 440.9 L 290.9 437.9 L 291.1 434.9 L 291.2 432 L 291.2 429.1 L 291 426.2 L 290.8 423.4 L 290.5 420.7 L 290.1 418.1 L 289.6 415.5 L 289 413 L 288.3 410.5 L 287.8 410.7 L 287.4 410.8 L 287.9 413.2 L 288.4 415.7 L 288.8 418.3 L 289.1 420.9 L 289.3 423.6 L 289.4 426.3 L 289.5 429.1 L 289.4 431.9 L 289.2 434.8 L 289 437.7 L 288.6 440.7 L 288.1 443.7 L 287.4 446.7 L 286.7 449.7 Z"/>
+<g class="art" data-art="1">
+<circle class="art-kugel" cx="260.9" cy="403.3" r="14"/>
+<a href="weltanschauungen/idealismus/art-1.html" class="art-link" aria-label="Art I Goppold im Idealismus · 0 Artikel">
+  <title>Art I Goppold im Idealismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="260.9" cy="403.3" r="14"/>
+  <text class="art-ziffer" x="260.9" y="399.5" text-anchor="middle">I</text>
+  <text class="art-wort" x="260.9" y="406.3" text-anchor="middle" style="font-size:4.2px">Goppold</text>
+</a>
+</g>
+<g class="art" data-art="2">
+<circle class="art-kugel" cx="241.2" cy="423.1" r="14"/>
+<a href="weltanschauungen/idealismus/art-2.html" class="art-link" aria-label="Art II Freiheit im Idealismus · 0 Artikel">
+  <title>Art II Freiheit im Idealismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="241.2" cy="423.1" r="14"/>
+  <text class="art-ziffer" x="241.2" y="419.3" text-anchor="middle">II</text>
+  <text class="art-wort" x="241.2" y="426.1" text-anchor="middle" style="font-size:4.2px">Freiheit</text>
+</a>
+</g>
+<g class="art" data-art="3">
+<circle class="art-kugel" cx="234" cy="450" r="14"/>
+<a href="weltanschauungen/idealismus/art-3.html" class="art-link" aria-label="Art III Stahlmann im Idealismus · 0 Artikel">
+  <title>Art III Stahlmann im Idealismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="234" cy="450" r="14"/>
+  <text class="art-ziffer" x="234" y="446.2" text-anchor="middle">III</text>
+  <text class="art-wort" x="234" y="453" text-anchor="middle" style="font-size:4.2px">Stahlmann</text>
+</a>
+</g>
+<g class="art" data-art="4">
+<circle class="art-kugel" cx="241.2" cy="476.9" r="14"/>
+<a href="weltanschauungen/idealismus/art-4.html" class="art-link" aria-label="Art IV im Idealismus · 0 Artikel">
+  <title>Art IV im Idealismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="241.2" cy="476.9" r="14"/>
+  <text class="art-ziffer" x="241.2" y="478.7" text-anchor="middle">IV</text>
+</a>
+</g>
+<g class="art" data-art="5">
+<circle class="art-kugel" cx="260.9" cy="496.7" r="14"/>
+<a href="weltanschauungen/idealismus/art-5.html" class="art-link" aria-label="Art V im Idealismus · 0 Artikel">
+  <title>Art V im Idealismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="260.9" cy="496.7" r="14"/>
+  <text class="art-ziffer" x="260.9" y="498.5" text-anchor="middle">V</text>
+</a>
+</g>
+<g class="art" data-art="6">
+<circle class="art-kugel" cx="287.8" cy="503.9" r="14"/>
+<a href="weltanschauungen/idealismus/art-6.html" class="art-link" aria-label="Art VI im Idealismus · 0 Artikel">
+  <title>Art VI im Idealismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="287.8" cy="503.9" r="14"/>
+  <text class="art-ziffer" x="287.8" y="505.7" text-anchor="middle">VI</text>
+</a>
+</g>
+<g class="art" data-art="7">
+<circle class="art-kugel" cx="314.8" cy="496.7" r="14"/>
+<a href="weltanschauungen/idealismus/art-7.html" class="art-link" aria-label="Art VII im Idealismus · 0 Artikel">
+  <title>Art VII im Idealismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="314.8" cy="496.7" r="14"/>
+  <text class="art-ziffer" x="314.8" y="498.5" text-anchor="middle">VII</text>
+</a>
+</g>
+<g class="art" data-art="8">
+<circle class="art-kugel" cx="334.5" cy="476.9" r="14"/>
+<a href="weltanschauungen/idealismus/art-8.html" class="art-link" aria-label="Art VIII im Idealismus · 0 Artikel">
+  <title>Art VIII im Idealismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="334.5" cy="476.9" r="14"/>
+  <text class="art-ziffer" x="334.5" y="478.7" text-anchor="middle">VIII</text>
+</a>
+</g>
+<g class="art" data-art="9">
+<circle class="art-kugel" cx="341.7" cy="450" r="14"/>
+<a href="weltanschauungen/idealismus/art-9.html" class="art-link" aria-label="Art IX im Idealismus · 0 Artikel">
+  <title>Art IX im Idealismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="341.7" cy="450" r="14"/>
+  <text class="art-ziffer" x="341.7" y="451.8" text-anchor="middle">IX</text>
+</a>
+</g>
+<g class="art" data-art="10">
+<circle class="art-kugel" cx="334.5" cy="423.1" r="14"/>
+<a href="weltanschauungen/idealismus/art-10.html" class="art-link" aria-label="Art X im Idealismus · 0 Artikel">
+  <title>Art X im Idealismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="334.5" cy="423.1" r="14"/>
+  <text class="art-ziffer" x="334.5" y="424.9" text-anchor="middle">X</text>
+</a>
+</g>
+<g class="art" data-art="11">
+<circle class="art-kugel" cx="314.8" cy="403.3" r="14"/>
+<a href="weltanschauungen/idealismus/art-11.html" class="art-link" aria-label="Art XI im Idealismus · 0 Artikel">
+  <title>Art XI im Idealismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="314.8" cy="403.3" r="14"/>
+  <text class="art-ziffer" x="314.8" y="405.1" text-anchor="middle">XI</text>
+</a>
+</g>
+<g class="art" data-art="12">
+<circle class="art-kugel" cx="287.8" cy="396.1" r="14"/>
+<a href="weltanschauungen/idealismus/art-12.html" class="art-link" aria-label="Art XII Christus im Idealismus · 0 Artikel">
+  <title>Art XII Christus im Idealismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="287.8" cy="396.1" r="14"/>
+  <text class="art-ziffer" x="287.8" y="392.3" text-anchor="middle">XII</text>
+  <text class="art-wort" x="287.8" y="399.1" text-anchor="middle" style="font-size:4.2px">Christus</text>
+</a>
+</g>
+<g class="kreis-mitte"><text class="mitte-name" x="287.8" y="443" text-anchor="middle">Idealismus</text><text class="mitte-substanz" x="287.8" y="456.5" text-anchor="middle">das Ideelle (die Idee)</text><a href="weltanschauungen/idealismus.html" class="mitte-seite"><text x="287.8" y="464.5" text-anchor="middle">0 Artikel →</text></a></g>
+</g>
+<a href="weltanschauungen/idealismus.html" class="kreis-link" aria-label="Idealismus – hineinzoomen">
+  <title>Idealismus – Ideen tragen die Welt; im Ideellen liegen ihr Sinn und ihre Ordnung.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="287.8" cy="427" rx="18.1" ry="10.8"/><ellipse class="etikett-schleier" cx="287.8" cy="444" rx="46.5" ry="10.8"/><ellipse class="etikett-schleier" cx="287.8" cy="462.9" rx="36.4" ry="9"/><text class="kreis-nummer" x="287.8" y="432" text-anchor="middle">III</text><text class="kreis-name" x="287.8" y="449" text-anchor="middle">Idealismus</text><text class="kreis-zeichen" x="287.8" y="467" text-anchor="middle">♈︎ Widder</text></g>
+</a>
+</g>
+<g class="kreis kreis-krone" data-slug="rationalismus" id="rationalismus">
+<a href="weltanschauungen/rationalismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
+  <title>Rationalismus – Die Vernunft findet die Ideen in der Wirklichkeit, soweit sie sich an der Erfahrung ausweisen.</title>
+  <circle class="kreisflaeche" cx="323" cy="318.9" r="67.8"/>
+</a>
+<g class="innenwelt">
+<path class="innenholz" d="M 386.5 353.2 L 383.3 350.7 L 380 348.4 L 376.6 346.2 L 373.1 344.2 L 369.6 342.2 L 366 340.4 L 362.5 338.6 L 358.9 336.9 L 355.2 335.2 L 351.6 333.5 L 348 331.8 L 344.4 330 L 340.9 328.2 L 337.3 326.4 L 333.8 324.4 L 330.4 322.4 L 327 320.2 L 323.8 317.9 L 322.2 320 L 325.5 322.4 L 328.9 324.7 L 332.4 326.9 L 335.9 329 L 339.4 330.9 L 343 332.8 L 346.6 334.7 L 350.2 336.4 L 353.8 338.2 L 357.3 340 L 360.9 341.8 L 364.3 343.6 L 367.8 345.5 L 371.2 347.5 L 374.5 349.6 L 377.7 351.7 L 380.8 354 L 383.9 356.5 Z"/>
+<circle class="innenholz" cx="323" cy="318.9" r="2.4"/>
+<path class="innenholz" d="M 324.1 318.6 L 323.1 315.5 L 322 312.6 L 320.9 309.7 L 319.6 306.9 L 318.3 304.2 L 316.9 301.6 L 315.4 299.1 L 313.8 296.7 L 312.2 294.4 L 310.6 292.3 L 308.9 290.2 L 307.2 288.2 L 305.4 286.3 L 303.7 284.5 L 303.3 284.8 L 302.9 285.2 L 304.6 287 L 306.3 289 L 307.9 291 L 309.5 293.1 L 311 295.3 L 312.5 297.6 L 313.9 300 L 315.3 302.5 L 316.6 305.1 L 317.8 307.7 L 318.9 310.5 L 320 313.3 L 320.9 316.2 L 321.8 319.3 Z"/>
+<path class="innenholz" d="M 323.8 318.1 L 321.4 315.9 L 319 313.9 L 316.5 312 L 314 310.2 L 311.5 308.5 L 309 307 L 306.5 305.6 L 304 304.3 L 301.4 303.1 L 298.9 302 L 296.4 301 L 293.9 300.2 L 291.5 299.4 L 289 298.8 L 288.9 299.3 L 288.8 299.7 L 291.1 300.5 L 293.5 301.3 L 295.9 302.3 L 298.4 303.3 L 300.8 304.4 L 303.2 305.7 L 305.7 307.1 L 308.1 308.5 L 310.5 310.1 L 312.9 311.8 L 315.2 313.6 L 317.6 315.6 L 319.9 317.6 L 322.1 319.8 Z"/>
+<path class="innenholz" d="M 323.3 317.8 L 320.1 317.1 L 317 316.5 L 313.9 316.1 L 310.9 315.8 L 307.9 315.6 L 304.9 315.6 L 302 315.6 L 299.2 315.7 L 296.4 316 L 293.7 316.3 L 291 316.7 L 288.4 317.2 L 285.9 317.8 L 283.5 318.4 L 283.6 318.9 L 283.7 319.4 L 286.2 318.9 L 288.7 318.4 L 291.2 318 L 293.9 317.7 L 296.5 317.5 L 299.3 317.3 L 302.1 317.3 L 304.9 317.4 L 307.8 317.5 L 310.7 317.8 L 313.6 318.2 L 316.6 318.7 L 319.6 319.3 L 322.7 320.1 Z"/>
+<path class="innenholz" d="M 322.6 317.8 L 319.6 318.8 L 316.6 319.9 L 313.7 321 L 310.9 322.3 L 308.3 323.6 L 305.7 325 L 303.2 326.5 L 300.8 328.1 L 298.5 329.7 L 296.3 331.3 L 294.2 333 L 292.2 334.7 L 290.3 336.5 L 288.5 338.2 L 288.9 338.6 L 289.2 339 L 291.1 337.3 L 293 335.6 L 295 334 L 297.1 332.4 L 299.3 330.9 L 301.7 329.4 L 304 328 L 306.5 326.6 L 309.1 325.3 L 311.8 324.1 L 314.5 323 L 317.4 321.9 L 320.3 321 L 323.3 320.1 Z"/>
+<path class="innenholz" d="M 322.1 318.1 L 320 320.5 L 317.9 322.9 L 316 325.4 L 314.2 327.9 L 312.6 330.4 L 311 332.9 L 309.6 335.4 L 308.3 337.9 L 307.1 340.5 L 306.1 343 L 305.1 345.5 L 304.2 348 L 303.5 350.4 L 302.8 352.9 L 303.3 353 L 303.8 353.1 L 304.5 350.8 L 305.4 348.4 L 306.3 345.9 L 307.3 343.5 L 308.5 341.1 L 309.7 338.7 L 311.1 336.2 L 312.6 333.8 L 314.2 331.4 L 315.9 329 L 317.7 326.7 L 319.6 324.3 L 321.7 322 L 323.8 319.8 Z"/>
+<path class="innenholz" d="M 321.8 318.6 L 321.1 321.8 L 320.6 324.9 L 320.2 328 L 319.9 331 L 319.7 334 L 319.6 337 L 319.7 339.9 L 319.8 342.7 L 320 345.5 L 320.3 348.2 L 320.8 350.9 L 321.3 353.5 L 321.8 356 L 322.5 358.4 L 323 358.3 L 323.5 358.1 L 322.9 355.7 L 322.4 353.2 L 322 350.7 L 321.7 348 L 321.5 345.4 L 321.4 342.6 L 321.4 339.8 L 321.4 337 L 321.6 334.1 L 321.9 331.2 L 322.3 328.3 L 322.8 325.3 L 323.4 322.3 L 324.1 319.2 Z"/>
+<path class="innenholz" d="M 321.8 319.3 L 322.8 322.3 L 323.9 325.3 L 325.1 328.2 L 326.3 330.9 L 327.7 333.6 L 329.1 336.2 L 330.6 338.7 L 332.1 341.1 L 333.7 343.4 L 335.3 345.6 L 337 347.7 L 338.8 349.7 L 340.5 351.6 L 342.3 353.4 L 342.6 353 L 343 352.6 L 341.3 350.8 L 339.7 348.9 L 338 346.9 L 336.5 344.8 L 334.9 342.5 L 333.5 340.2 L 332 337.8 L 330.7 335.4 L 329.4 332.8 L 328.2 330.1 L 327 327.4 L 326 324.5 L 325 321.6 L 324.1 318.6 Z"/>
+<path class="innenholz" d="M 322.1 319.8 L 324.5 321.9 L 327 324 L 329.4 325.9 L 331.9 327.7 L 334.4 329.3 L 336.9 330.8 L 339.4 332.3 L 342 333.6 L 344.5 334.8 L 347 335.8 L 349.5 336.8 L 352 337.7 L 354.5 338.4 L 356.9 339.1 L 357 338.6 L 357.2 338.1 L 354.8 337.4 L 352.4 336.5 L 350 335.6 L 347.6 334.6 L 345.1 333.4 L 342.7 332.1 L 340.3 330.8 L 337.9 329.3 L 335.4 327.7 L 333.1 326 L 330.7 324.2 L 328.4 322.3 L 326.1 320.2 L 323.8 318.1 Z"/>
+<path class="innenholz" d="M 322.7 320.1 L 325.8 320.8 L 328.9 321.3 L 332 321.7 L 335.1 322 L 338.1 322.2 L 341 322.3 L 343.9 322.2 L 346.7 322.1 L 349.5 321.9 L 352.3 321.5 L 354.9 321.1 L 357.5 320.6 L 360 320.1 L 362.4 319.4 L 362.3 318.9 L 362.2 318.4 L 359.8 319 L 357.3 319.5 L 354.7 319.8 L 352.1 320.2 L 349.4 320.4 L 346.7 320.5 L 343.9 320.5 L 341.1 320.5 L 338.2 320.3 L 335.3 320 L 332.3 319.6 L 329.3 319.1 L 326.3 318.5 L 323.3 317.8 Z"/>
+<path class="innenholz" d="M 323.3 320.1 L 326.4 319.1 L 329.3 318 L 332.2 316.8 L 335 315.6 L 337.7 314.2 L 340.3 312.8 L 342.8 311.3 L 345.2 309.8 L 347.4 308.2 L 349.6 306.6 L 351.7 304.9 L 353.7 303.1 L 355.6 301.4 L 357.4 299.6 L 357 299.3 L 356.7 298.9 L 354.9 300.6 L 352.9 302.2 L 350.9 303.9 L 348.8 305.4 L 346.6 307 L 344.3 308.4 L 341.9 309.9 L 339.4 311.2 L 336.8 312.5 L 334.2 313.7 L 331.4 314.9 L 328.6 315.9 L 325.6 316.9 L 322.6 317.8 Z"/>
+<path class="innenholz" d="M 323.8 319.8 L 326 317.4 L 328 314.9 L 329.9 312.5 L 331.7 310 L 333.4 307.5 L 334.9 305 L 336.3 302.5 L 337.6 299.9 L 338.8 297.4 L 339.9 294.9 L 340.9 292.4 L 341.7 289.9 L 342.5 287.4 L 343.1 285 L 342.6 284.8 L 342.2 284.7 L 341.4 287.1 L 340.6 289.5 L 339.6 291.9 L 338.6 294.3 L 337.4 296.8 L 336.2 299.2 L 334.8 301.6 L 333.4 304 L 331.8 306.4 L 330.1 308.8 L 328.3 311.2 L 326.3 313.5 L 324.3 315.8 L 322.1 318.1 Z"/>
+<path class="innenholz" d="M 324.1 319.2 L 324.8 316.1 L 325.3 312.9 L 325.8 309.9 L 326.1 306.8 L 326.2 303.8 L 326.3 300.9 L 326.3 298 L 326.2 295.1 L 325.9 292.4 L 325.6 289.6 L 325.2 287 L 324.7 284.4 L 324.1 281.9 L 323.5 279.4 L 323 279.6 L 322.5 279.7 L 323 282.1 L 323.5 284.6 L 323.9 287.2 L 324.2 289.8 L 324.4 292.5 L 324.6 295.2 L 324.6 298 L 324.5 300.8 L 324.4 303.7 L 324.1 306.6 L 323.7 309.6 L 323.2 312.6 L 322.6 315.6 L 321.8 318.6 Z"/>
+<g class="art" data-art="1">
+<circle class="art-kugel" cx="296" cy="272.2" r="14"/>
+<a href="weltanschauungen/rationalismus/art-1.html" class="art-link" aria-label="Art I Philosophie im Rationalismus · 0 Artikel">
+  <title>Art I Philosophie im Rationalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="296" cy="272.2" r="14"/>
+  <text class="art-ziffer" x="296" y="268.4" text-anchor="middle">I</text>
+  <text class="art-wort" x="296" y="275.2" text-anchor="middle" style="font-size:3.6px">Philosophie</text>
+</a>
+</g>
+<g class="art" data-art="2">
+<circle class="art-kugel" cx="276.3" cy="292" r="14"/>
+<a href="weltanschauungen/rationalismus/art-2.html" class="art-link" aria-label="Art II Dialog im Rationalismus · 0 Artikel">
+  <title>Art II Dialog im Rationalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="276.3" cy="292" r="14"/>
+  <text class="art-ziffer" x="276.3" y="288.2" text-anchor="middle">II</text>
+  <text class="art-wort" x="276.3" y="295" text-anchor="middle" style="font-size:5.0px">Dialog</text>
+</a>
+</g>
+<g class="art" data-art="3">
+<circle class="art-kugel" cx="269.1" cy="318.9" r="14"/>
+<a href="weltanschauungen/rationalismus/art-3.html" class="art-link" aria-label="Art III Methode im Rationalismus · 0 Artikel">
+  <title>Art III Methode im Rationalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="269.1" cy="318.9" r="14"/>
+  <text class="art-ziffer" x="269.1" y="315.1" text-anchor="middle">III</text>
+  <text class="art-wort" x="269.1" y="321.9" text-anchor="middle" style="font-size:4.2px">Methode</text>
+</a>
+</g>
+<g class="art" data-art="4">
+<circle class="art-kugel" cx="276.3" cy="345.9" r="14"/>
+<a href="weltanschauungen/rationalismus/art-4.html" class="art-link" aria-label="Art IV im Rationalismus · 0 Artikel">
+  <title>Art IV im Rationalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="276.3" cy="345.9" r="14"/>
+  <text class="art-ziffer" x="276.3" y="347.7" text-anchor="middle">IV</text>
+</a>
+</g>
+<g class="art" data-art="5">
+<circle class="art-kugel" cx="296" cy="365.6" r="14"/>
+<a href="weltanschauungen/rationalismus/art-5.html" class="art-link" aria-label="Art V im Rationalismus · 0 Artikel">
+  <title>Art V im Rationalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="296" cy="365.6" r="14"/>
+  <text class="art-ziffer" x="296" y="367.4" text-anchor="middle">V</text>
+</a>
+</g>
+<g class="art" data-art="6">
+<circle class="art-kugel" cx="323" cy="372.8" r="14"/>
+<a href="weltanschauungen/rationalismus/art-6.html" class="art-link" aria-label="Art VI im Rationalismus · 0 Artikel">
+  <title>Art VI im Rationalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="323" cy="372.8" r="14"/>
+  <text class="art-ziffer" x="323" y="374.6" text-anchor="middle">VI</text>
+</a>
+</g>
+<g class="art" data-art="7">
+<circle class="art-kugel" cx="349.9" cy="365.6" r="14"/>
+<a href="weltanschauungen/rationalismus/art-7.html" class="art-link" aria-label="Art VII im Rationalismus · 0 Artikel">
+  <title>Art VII im Rationalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="349.9" cy="365.6" r="14"/>
+  <text class="art-ziffer" x="349.9" y="367.4" text-anchor="middle">VII</text>
+</a>
+</g>
+<g class="art" data-art="8">
+<circle class="art-kugel" cx="369.6" cy="345.9" r="14"/>
+<a href="weltanschauungen/rationalismus/art-8.html" class="art-link" aria-label="Art VIII im Rationalismus · 0 Artikel">
+  <title>Art VIII im Rationalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="369.6" cy="345.9" r="14"/>
+  <text class="art-ziffer" x="369.6" y="347.7" text-anchor="middle">VIII</text>
+</a>
+</g>
+<g class="art" data-art="9">
+<circle class="art-kugel" cx="376.9" cy="318.9" r="14"/>
+<a href="weltanschauungen/rationalismus/art-9.html" class="art-link" aria-label="Art IX im Rationalismus · 0 Artikel">
+  <title>Art IX im Rationalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="376.9" cy="318.9" r="14"/>
+  <text class="art-ziffer" x="376.9" y="320.7" text-anchor="middle">IX</text>
+</a>
+</g>
+<g class="art" data-art="10">
+<circle class="art-kugel" cx="369.6" cy="292" r="14"/>
+<a href="weltanschauungen/rationalismus/art-10.html" class="art-link" aria-label="Art X im Rationalismus · 0 Artikel">
+  <title>Art X im Rationalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="369.6" cy="292" r="14"/>
+  <text class="art-ziffer" x="369.6" y="293.8" text-anchor="middle">X</text>
+</a>
+</g>
+<g class="art" data-art="11">
+<circle class="art-kugel" cx="349.9" cy="272.2" r="14"/>
+<a href="weltanschauungen/rationalismus/art-11.html" class="art-link" aria-label="Art XI im Rationalismus · 0 Artikel">
+  <title>Art XI im Rationalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="349.9" cy="272.2" r="14"/>
+  <text class="art-ziffer" x="349.9" y="274" text-anchor="middle">XI</text>
+</a>
+</g>
+<g class="art" data-art="12">
+<circle class="art-kugel" cx="323" cy="265" r="14"/>
+<a href="weltanschauungen/rationalismus/art-12.html" class="art-link" aria-label="Art XII Christus im Rationalismus · 0 Artikel">
+  <title>Art XII Christus im Rationalismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="323" cy="265" r="14"/>
+  <text class="art-ziffer" x="323" y="261.2" text-anchor="middle">XII</text>
+  <text class="art-wort" x="323" y="268" text-anchor="middle" style="font-size:4.2px">Christus</text>
+</a>
+</g>
+<g class="kreis-mitte"><text class="mitte-name" x="323" y="311.9" text-anchor="middle">Rationalismus</text><text class="mitte-substanz" x="323" y="325.4" text-anchor="middle">die Ratio (der Verstand)</text><a href="weltanschauungen/rationalismus.html" class="mitte-seite"><text x="323" y="333.4" text-anchor="middle">0 Artikel →</text></a></g>
+</g>
+<a href="weltanschauungen/rationalismus.html" class="kreis-link" aria-label="Rationalismus – hineinzoomen">
+  <title>Rationalismus – Die Vernunft findet die Ideen in der Wirklichkeit, soweit sie sich an der Erfahrung ausweisen.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="323" cy="296" rx="14.1" ry="10.8"/><ellipse class="etikett-schleier" cx="323" cy="313" rx="58.7" ry="10.8"/><ellipse class="etikett-schleier" cx="323" cy="331.8" rx="33" ry="9"/><text class="kreis-nummer" x="323" y="300.9" text-anchor="middle">II</text><text class="kreis-name" x="323" y="317.9" text-anchor="middle">Rationalismus</text><text class="kreis-zeichen" x="323" y="335.9" text-anchor="middle">♉︎ Stier</text></g>
+</a>
+</g>
+<g class="kreis kreis-krone" data-slug="mathematismus" id="mathematismus">
+<a href="weltanschauungen/mathematismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
+  <title>Mathematismus – Die Welt ist ein grosses Rechenwerk: Wirklich ist, was sich in Zahl und Mass fassen lässt.</title>
+  <circle class="kreisflaeche" cx="418.9" cy="223" r="67.8"/>
+</a>
+<g class="innenwelt">
+<path class="innenholz" d="M 456.8 284.5 L 455.3 280.7 L 453.5 277 L 451.7 273.4 L 449.7 269.9 L 447.6 266.5 L 445.5 263.1 L 443.3 259.8 L 441 256.5 L 438.8 253.2 L 436.5 249.9 L 434.2 246.6 L 432 243.3 L 429.8 240 L 427.6 236.6 L 425.6 233.2 L 423.6 229.7 L 421.8 226.1 L 420.1 222.5 L 417.7 223.5 L 419.4 227.3 L 421.2 231 L 423.1 234.6 L 425.1 238.1 L 427.2 241.6 L 429.3 245 L 431.5 248.4 L 433.7 251.8 L 435.9 255.1 L 438.1 258.4 L 440.3 261.7 L 442.4 265.1 L 444.4 268.4 L 446.4 271.8 L 448.2 275.3 L 449.9 278.7 L 451.5 282.3 L 452.9 285.9 Z"/>
+<circle class="innenholz" cx="418.9" cy="223" r="2.4"/>
+<path class="innenholz" d="M 420.1 222.6 L 419.1 219.6 L 418 216.6 L 416.8 213.7 L 415.6 210.9 L 414.2 208.3 L 412.8 205.7 L 411.3 203.2 L 409.8 200.8 L 408.2 198.5 L 406.6 196.3 L 404.9 194.2 L 403.1 192.2 L 401.4 190.3 L 399.6 188.5 L 399.3 188.9 L 398.9 189.2 L 400.6 191.1 L 402.2 193 L 403.9 195 L 405.4 197.1 L 407 199.3 L 408.4 201.7 L 409.9 204 L 411.2 206.5 L 412.5 209.1 L 413.7 211.8 L 414.9 214.5 L 415.9 217.4 L 416.9 220.3 L 417.8 223.3 Z"/>
+<path class="innenholz" d="M 419.8 222.1 L 417.4 220 L 414.9 217.9 L 412.5 216 L 410 214.2 L 407.5 212.6 L 405 211 L 402.5 209.6 L 399.9 208.3 L 397.4 207.1 L 394.9 206.1 L 392.4 205.1 L 389.9 204.2 L 387.4 203.5 L 385 202.8 L 384.8 203.3 L 384.7 203.8 L 387.1 204.5 L 389.5 205.4 L 391.9 206.3 L 394.3 207.3 L 396.8 208.5 L 399.2 209.7 L 401.6 211.1 L 404 212.6 L 406.4 214.2 L 408.8 215.9 L 411.2 217.7 L 413.5 219.6 L 415.8 221.7 L 418.1 223.8 Z"/>
+<path class="innenholz" d="M 419.2 221.8 L 416.1 221.1 L 412.9 220.6 L 409.9 220.2 L 406.8 219.9 L 403.8 219.7 L 400.9 219.6 L 398 219.7 L 395.1 219.8 L 392.4 220 L 389.6 220.3 L 387 220.8 L 384.4 221.3 L 381.9 221.8 L 379.4 222.5 L 379.6 223 L 379.7 223.5 L 382.1 222.9 L 384.6 222.4 L 387.2 222 L 389.8 221.7 L 392.5 221.5 L 395.2 221.4 L 398 221.4 L 400.8 221.4 L 403.7 221.6 L 406.6 221.9 L 409.6 222.3 L 412.6 222.8 L 415.6 223.4 L 418.6 224.1 Z"/>
+<path class="innenholz" d="M 418.6 221.8 L 415.5 222.8 L 412.6 223.9 L 409.7 225.1 L 406.9 226.3 L 404.2 227.7 L 401.6 229.1 L 399.1 230.6 L 396.7 232.1 L 394.4 233.7 L 392.3 235.3 L 390.2 237 L 388.2 238.8 L 386.3 240.5 L 384.5 242.3 L 384.8 242.6 L 385.2 243 L 387 241.3 L 389 239.7 L 391 238 L 393.1 236.5 L 395.3 234.9 L 397.6 233.5 L 400 232 L 402.5 230.7 L 405.1 229.4 L 407.7 228.2 L 410.5 227 L 413.3 226 L 416.2 225 L 419.3 224.1 Z"/>
+<path class="innenholz" d="M 418.1 222.1 L 415.9 224.5 L 413.9 227 L 412 229.4 L 410.2 231.9 L 408.5 234.4 L 407 236.9 L 405.6 239.4 L 404.3 242 L 403.1 244.5 L 402 247 L 401 249.5 L 400.2 252 L 399.4 254.5 L 398.8 256.9 L 399.3 257 L 399.7 257.2 L 400.5 254.8 L 401.3 252.4 L 402.3 250 L 403.3 247.6 L 404.4 245.1 L 405.7 242.7 L 407.1 240.3 L 408.5 237.9 L 410.1 235.4 L 411.8 233.1 L 413.6 230.7 L 415.6 228.4 L 417.6 226.1 L 419.8 223.8 Z"/>
+<path class="innenholz" d="M 417.8 222.7 L 417.1 225.8 L 416.5 228.9 L 416.1 232 L 415.8 235.1 L 415.6 238.1 L 415.6 241 L 415.6 243.9 L 415.7 246.7 L 416 249.5 L 416.3 252.3 L 416.7 254.9 L 417.2 257.5 L 417.8 260 L 418.4 262.4 L 418.9 262.3 L 419.4 262.2 L 418.9 259.8 L 418.4 257.3 L 418 254.7 L 417.7 252.1 L 417.5 249.4 L 417.3 246.7 L 417.3 243.9 L 417.4 241.1 L 417.5 238.2 L 417.8 235.3 L 418.2 232.3 L 418.7 229.3 L 419.3 226.3 L 420.1 223.3 Z"/>
+<path class="innenholz" d="M 417.8 223.3 L 418.8 226.4 L 419.9 229.3 L 421 232.2 L 422.3 235 L 423.6 237.7 L 425 240.3 L 426.5 242.8 L 428.1 245.2 L 429.7 247.4 L 431.3 249.6 L 433 251.7 L 434.7 253.7 L 436.5 255.6 L 438.2 257.4 L 438.6 257 L 439 256.7 L 437.3 254.9 L 435.6 252.9 L 434 250.9 L 432.4 248.8 L 430.9 246.6 L 429.4 244.3 L 428 241.9 L 426.6 239.4 L 425.3 236.8 L 424.1 234.2 L 423 231.4 L 421.9 228.6 L 421 225.6 L 420.1 222.6 Z"/>
+<path class="innenholz" d="M 418.1 223.8 L 420.5 226 L 422.9 228 L 425.4 229.9 L 427.9 231.7 L 430.4 233.4 L 432.9 234.9 L 435.4 236.3 L 437.9 237.6 L 440.5 238.8 L 443 239.9 L 445.5 240.9 L 448 241.7 L 450.4 242.5 L 452.9 243.1 L 453 242.6 L 453.1 242.2 L 450.8 241.4 L 448.4 240.6 L 445.9 239.6 L 443.5 238.6 L 441.1 237.4 L 438.7 236.2 L 436.2 234.8 L 433.8 233.4 L 431.4 231.8 L 429 230.1 L 426.7 228.3 L 424.3 226.3 L 422 224.3 L 419.8 222.1 Z"/>
+<path class="innenholz" d="M 418.6 224.1 L 421.8 224.8 L 424.9 225.3 L 428 225.8 L 431 226.1 L 434 226.2 L 437 226.3 L 439.9 226.3 L 442.7 226.2 L 445.5 225.9 L 448.2 225.6 L 450.9 225.2 L 453.5 224.7 L 456 224.1 L 458.4 223.5 L 458.3 223 L 458.1 222.5 L 455.7 223 L 453.2 223.5 L 450.7 223.9 L 448 224.2 L 445.4 224.4 L 442.6 224.6 L 439.8 224.6 L 437 224.5 L 434.1 224.4 L 431.2 224.1 L 428.3 223.7 L 425.3 223.2 L 422.3 222.6 L 419.2 221.8 Z"/>
+<path class="innenholz" d="M 419.3 224.1 L 422.3 223.1 L 425.3 222 L 428.2 220.9 L 430.9 219.6 L 433.6 218.3 L 436.2 216.9 L 438.7 215.4 L 441.1 213.8 L 443.4 212.2 L 445.6 210.6 L 447.7 208.9 L 449.7 207.2 L 451.6 205.4 L 453.4 203.7 L 453 203.3 L 452.6 202.9 L 450.8 204.6 L 448.9 206.3 L 446.9 207.9 L 444.8 209.5 L 442.5 211 L 440.2 212.5 L 437.8 213.9 L 435.4 215.3 L 432.8 216.6 L 430.1 217.8 L 427.4 218.9 L 424.5 220 L 421.6 220.9 L 418.6 221.8 Z"/>
+<path class="innenholz" d="M 419.8 223.8 L 421.9 221.4 L 424 219 L 425.9 216.5 L 427.7 214 L 429.3 211.5 L 430.8 209 L 432.3 206.5 L 433.6 204 L 434.8 201.4 L 435.8 198.9 L 436.8 196.4 L 437.7 193.9 L 438.4 191.5 L 439.1 189 L 438.6 188.9 L 438.1 188.8 L 437.4 191.1 L 436.5 193.5 L 435.6 195.9 L 434.6 198.4 L 433.4 200.8 L 432.1 203.2 L 430.8 205.7 L 429.3 208.1 L 427.7 210.5 L 426 212.9 L 424.2 215.2 L 422.3 217.6 L 420.2 219.9 L 418.1 222.1 Z"/>
+<path class="innenholz" d="M 420.1 223.3 L 420.8 220.1 L 421.3 217 L 421.7 213.9 L 422 210.9 L 422.2 207.9 L 422.3 204.9 L 422.2 202 L 422.1 199.2 L 421.9 196.4 L 421.5 193.7 L 421.1 191 L 420.6 188.4 L 420.1 185.9 L 419.4 183.5 L 418.9 183.6 L 418.4 183.7 L 419 186.2 L 419.5 188.7 L 419.8 191.2 L 420.2 193.9 L 420.4 196.5 L 420.5 199.3 L 420.5 202.1 L 420.5 204.9 L 420.3 207.8 L 420 210.7 L 419.6 213.6 L 419.1 216.6 L 418.5 219.6 L 417.8 222.7 Z"/>
+<g class="art" data-art="1">
+<circle class="art-kugel" cx="392" cy="176.3" r="14"/>
+<a href="weltanschauungen/mathematismus/art-1.html" class="art-link" aria-label="Art I Kategorien im Mathematismus · 0 Artikel">
+  <title>Art I Kategorien im Mathematismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="392" cy="176.3" r="14"/>
+  <text class="art-ziffer" x="392" y="172.5" text-anchor="middle">I</text>
+  <text class="art-wort" x="392" y="179.3" text-anchor="middle" style="font-size:3.6px">Kategorien</text>
+</a>
+</g>
+<g class="art" data-art="2">
+<circle class="art-kugel" cx="372.2" cy="196" r="14"/>
+<a href="weltanschauungen/mathematismus/art-2.html" class="art-link" aria-label="Art II im Mathematismus · 0 Artikel">
+  <title>Art II im Mathematismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="372.2" cy="196" r="14"/>
+  <text class="art-ziffer" x="372.2" y="197.8" text-anchor="middle">II</text>
+</a>
+</g>
+<g class="art" data-art="3">
+<circle class="art-kugel" cx="365" cy="223" r="14"/>
+<a href="weltanschauungen/mathematismus/art-3.html" class="art-link" aria-label="Art III im Mathematismus · 0 Artikel">
+  <title>Art III im Mathematismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="365" cy="223" r="14"/>
+  <text class="art-ziffer" x="365" y="224.8" text-anchor="middle">III</text>
+</a>
+</g>
+<g class="art" data-art="4">
+<circle class="art-kugel" cx="372.2" cy="249.9" r="14"/>
+<a href="weltanschauungen/mathematismus/art-4.html" class="art-link" aria-label="Art IV im Mathematismus · 0 Artikel">
+  <title>Art IV im Mathematismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="372.2" cy="249.9" r="14"/>
+  <text class="art-ziffer" x="372.2" y="251.7" text-anchor="middle">IV</text>
+</a>
+</g>
+<g class="art" data-art="5">
+<circle class="art-kugel" cx="392" cy="269.6" r="14"/>
+<a href="weltanschauungen/mathematismus/art-5.html" class="art-link" aria-label="Art V im Mathematismus · 0 Artikel">
+  <title>Art V im Mathematismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="392" cy="269.6" r="14"/>
+  <text class="art-ziffer" x="392" y="271.4" text-anchor="middle">V</text>
+</a>
+</g>
+<g class="art" data-art="6">
+<circle class="art-kugel" cx="418.9" cy="276.9" r="14"/>
+<a href="weltanschauungen/mathematismus/art-6.html" class="art-link" aria-label="Art VI im Mathematismus · 0 Artikel">
+  <title>Art VI im Mathematismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="418.9" cy="276.9" r="14"/>
+  <text class="art-ziffer" x="418.9" y="278.7" text-anchor="middle">VI</text>
+</a>
+</g>
+<g class="art" data-art="7">
+<circle class="art-kugel" cx="445.9" cy="269.6" r="14"/>
+<a href="weltanschauungen/mathematismus/art-7.html" class="art-link" aria-label="Art VII im Mathematismus · 0 Artikel">
+  <title>Art VII im Mathematismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="445.9" cy="269.6" r="14"/>
+  <text class="art-ziffer" x="445.9" y="271.4" text-anchor="middle">VII</text>
+</a>
+</g>
+<g class="art" data-art="8">
+<circle class="art-kugel" cx="465.6" cy="249.9" r="14"/>
+<a href="weltanschauungen/mathematismus/art-8.html" class="art-link" aria-label="Art VIII im Mathematismus · 0 Artikel">
+  <title>Art VIII im Mathematismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="465.6" cy="249.9" r="14"/>
+  <text class="art-ziffer" x="465.6" y="251.7" text-anchor="middle">VIII</text>
+</a>
+</g>
+<g class="art" data-art="9">
+<circle class="art-kugel" cx="472.8" cy="223" r="14"/>
+<a href="weltanschauungen/mathematismus/art-9.html" class="art-link" aria-label="Art IX im Mathematismus · 0 Artikel">
+  <title>Art IX im Mathematismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="472.8" cy="223" r="14"/>
+  <text class="art-ziffer" x="472.8" y="224.8" text-anchor="middle">IX</text>
+</a>
+</g>
+<g class="art" data-art="10">
+<circle class="art-kugel" cx="465.6" cy="196" r="14"/>
+<a href="weltanschauungen/mathematismus/art-10.html" class="art-link" aria-label="Art X im Mathematismus · 0 Artikel">
+  <title>Art X im Mathematismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="465.6" cy="196" r="14"/>
+  <text class="art-ziffer" x="465.6" y="197.8" text-anchor="middle">X</text>
+</a>
+</g>
+<g class="art" data-art="11">
+<circle class="art-kugel" cx="445.9" cy="176.3" r="14"/>
+<a href="weltanschauungen/mathematismus/art-11.html" class="art-link" aria-label="Art XI im Mathematismus · 0 Artikel">
+  <title>Art XI im Mathematismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="445.9" cy="176.3" r="14"/>
+  <text class="art-ziffer" x="445.9" y="178.1" text-anchor="middle">XI</text>
+</a>
+</g>
+<g class="art" data-art="12">
+<circle class="art-kugel" cx="418.9" cy="169.1" r="14"/>
+<a href="weltanschauungen/mathematismus/art-12.html" class="art-link" aria-label="Art XII Christus im Mathematismus · 0 Artikel">
+  <title>Art XII Christus im Mathematismus · 0 Artikel</title>
+  <circle class="art-treffer" cx="418.9" cy="169.1" r="14"/>
+  <text class="art-ziffer" x="418.9" y="165.3" text-anchor="middle">XII</text>
+  <text class="art-wort" x="418.9" y="172.1" text-anchor="middle" style="font-size:4.2px">Christus</text>
+</a>
+</g>
+<g class="kreis-mitte"><text class="mitte-name" x="418.9" y="216" text-anchor="middle">Mathematismus</text><text class="mitte-substanz" x="418.9" y="229.5" text-anchor="middle">das Mathema (die Form)</text><a href="weltanschauungen/mathematismus.html" class="mitte-seite"><text x="418.9" y="237.5" text-anchor="middle">0 Artikel →</text></a></g>
+</g>
+<a href="weltanschauungen/mathematismus.html" class="kreis-link" aria-label="Mathematismus – hineinzoomen">
+  <title>Mathematismus – Die Welt ist ein grosses Rechenwerk: Wirklich ist, was sich in Zahl und Mass fassen lässt.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="418.9" cy="200" rx="10.1" ry="10.8"/><ellipse class="etikett-schleier" cx="418.9" cy="217" rx="58.7" ry="10.8"/><ellipse class="etikett-schleier" cx="418.9" cy="235.8" rx="46.5" ry="9"/><text class="kreis-nummer" x="418.9" y="205" text-anchor="middle">I</text><text class="kreis-name" x="418.9" y="222" text-anchor="middle">Mathematismus</text><text class="kreis-zeichen" x="418.9" y="240" text-anchor="middle">♊︎ Zwillinge</text></g>
+</a>
+</g>
+</svg>
+<!-- BAUM:ENDE -->
+    </div>
+    <p class="hinweis">Ein Klick auf einen Kreis zoomt zur Gattung, ein Klick auf
+    eine der zwölf Kugeln darin führt zur Liste ihrer Art (ohne JavaScript führen
+    die Klicks direkt zur Seite). Escape oder ein Klick ins Leere geht eine Stufe
+    zurück, „← Ganzer Baum“ ganz hinaus. Darunter stehen die zwölf auch als Liste.</p>
+  </section>
+
+<!-- HIERARCHIE:ANFANG -->
+<section class="hierarchie" aria-label="Die vier Ebenen des Baums">
+  <h2>Ein Baum unter zwölfen – und seine vier Ebenen</h2>
+  <p class="hierarchie-text">Dieser Baum ist nicht <em>der</em> Baum, sondern <em>ein</em> Baum: eine Klasse unter zwölfen. Er ist <strong>Klasse&nbsp;III, der Idealismus-Baum</strong> – darum geht es hier vorwiegend um Ideen; elf weitere Bäume stehen daneben, jeder mit eigenem Grundzug, doch auf diesen Seiten findet sich allein dieser eine. Von links nach rechts, vom Grössten zum Kleinsten, führt der Weg hinein: von der Klasse zur Gattung, zur Art, zum einzelnen Artikel.</p>
+  <div class="ebenen-rollbereich">
+    <div class="ebenen">
+      <div class="ebenen-buehne">
+        <div class="eb-bild"><svg class="eb-svg" viewBox="0 0 150 150" role="img" aria-label="Der ganze Baum – eine Klasse mit zwölf Gattungen"><circle class="eb-kugel" cx="75.0" cy="75.0" r="60.0"/><line class="eb-horizont" x1="17.0" y1="75.0" x2="133.0" y2="75.0"/><line class="eb-ast" x1="75.0" y1="75.0" x2="75.0" y2="26.5"/><line class="eb-ast" x1="75.0" y1="75.0" x2="99.2" y2="33.0"/><line class="eb-ast" x1="75.0" y1="75.0" x2="117.0" y2="50.8"/><line class="eb-ast" x1="75.0" y1="75.0" x2="117.0" y2="99.3"/><line class="eb-ast" x1="75.0" y1="75.0" x2="99.2" y2="117.0"/><line class="eb-ast" x1="75.0" y1="75.0" x2="75.0" y2="123.5"/><line class="eb-ast" x1="75.0" y1="75.0" x2="50.7" y2="117.0"/><line class="eb-ast" x1="75.0" y1="75.0" x2="33.0" y2="99.2"/><line class="eb-ast" x1="75.0" y1="75.0" x2="33.0" y2="50.8"/><line class="eb-ast" x1="75.0" y1="75.0" x2="50.8" y2="33.0"/><circle class="eb-knoten eb-krone" cx="75.0" cy="26.5" r="11.5"/><circle class="eb-knoten eb-krone" cx="99.2" cy="33.0" r="11.5"/><circle class="eb-knoten eb-krone" cx="117.0" cy="50.8" r="11.5"/><circle class="eb-knoten eb-boden" cx="123.5" cy="75.0" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="117.0" cy="99.3" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="99.2" cy="117.0" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="75.0" cy="123.5" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="50.7" cy="117.0" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="33.0" cy="99.2" r="11.5"/><circle class="eb-knoten eb-boden" cx="26.5" cy="75.0" r="11.5"/><circle class="eb-knoten eb-krone eb-aktiv" cx="33.0" cy="50.8" r="11.5"/><circle class="eb-knoten eb-krone" cx="50.8" cy="33.0" r="11.5"/><text class="eb-mini-ziffer" x="33.0" y="54.1" text-anchor="middle">II</text></svg></div>
+        <span class="eb-verbinder" aria-hidden="true"><svg class="eb-trichter" viewBox="0 0 40 100" preserveAspectRatio="none"><path class="trichter-flaeche" d="M 0 40 L 40 3 L 40 97 L 0 60 Z"/><path class="trichter-kante" d="M 0 40 L 40 3 M 0 60 L 40 97"/></svg><svg class="eb-lupe" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><line x1="14.7" y1="14.7" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <div class="eb-bild"><svg class="eb-svg" viewBox="0 0 150 150" role="img" aria-label="Eine Gattung mit ihren zwölf Arten"><circle class="eb-gattung eb-krone" cx="75.0" cy="75.0" r="63.0"/><line class="eb-zweig" x1="75.0" y1="75.0" x2="50.0" y2="31.7"/><line class="eb-zweig" x1="75.0" y1="75.0" x2="31.7" y2="50.0"/><line class="eb-zweig" x1="75.0" y1="75.0" x2="25.0" y2="75.0"/><line class="eb-zweig" x1="75.0" y1="75.0" x2="31.7" y2="100.0"/><line class="eb-zweig" x1="75.0" y1="75.0" x2="50.0" y2="118.3"/><line class="eb-zweig" x1="75.0" y1="75.0" x2="75.0" y2="125.0"/><line class="eb-zweig" x1="75.0" y1="75.0" x2="100.0" y2="118.3"/><line class="eb-zweig" x1="75.0" y1="75.0" x2="118.3" y2="100.0"/><line class="eb-zweig" x1="75.0" y1="75.0" x2="125.0" y2="75.0"/><line class="eb-zweig" x1="75.0" y1="75.0" x2="118.3" y2="50.0"/><line class="eb-zweig" x1="75.0" y1="75.0" x2="100.0" y2="31.7"/><line class="eb-zweig" x1="75.0" y1="75.0" x2="75.0" y2="25.0"/><circle class="eb-artkugel eb-krone eb-aktiv" cx="50.0" cy="31.7" r="13.0"/><circle class="eb-artkugel eb-krone" cx="31.7" cy="50.0" r="13.0"/><circle class="eb-artkugel eb-krone" cx="25.0" cy="75.0" r="13.0"/><circle class="eb-artkugel eb-krone" cx="31.7" cy="100.0" r="13.0"/><circle class="eb-artkugel eb-krone" cx="50.0" cy="118.3" r="13.0"/><circle class="eb-artkugel eb-krone" cx="75.0" cy="125.0" r="13.0"/><circle class="eb-artkugel eb-krone" cx="100.0" cy="118.3" r="13.0"/><circle class="eb-artkugel eb-krone" cx="118.3" cy="100.0" r="13.0"/><circle class="eb-artkugel eb-krone" cx="125.0" cy="75.0" r="13.0"/><circle class="eb-artkugel eb-krone" cx="118.3" cy="50.0" r="13.0"/><circle class="eb-artkugel eb-krone" cx="100.0" cy="31.7" r="13.0"/><circle class="eb-artkugel eb-krone" cx="75.0" cy="25.0" r="13.0"/><text class="eb-mini-ziffer" x="50.0" y="34.1" text-anchor="middle">I</text></svg></div>
+        <span class="eb-verbinder" aria-hidden="true"><svg class="eb-trichter" viewBox="0 0 40 100" preserveAspectRatio="none"><path class="trichter-flaeche" d="M 0 40 L 40 3 L 40 97 L 0 60 Z"/><path class="trichter-kante" d="M 0 40 L 40 3 M 0 60 L 40 97"/></svg><svg class="eb-lupe" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><line x1="14.7" y1="14.7" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <div class="eb-bild"><svg class="eb-svg" viewBox="0 0 150 150" role="img" aria-label="Eine Art – hier Rationalismus I, Philosophie"><circle class="eb-artgross eb-krone" cx="75.0" cy="75.0" r="47.0"/><text class="eb-ziffer" x="75.0" y="68.0" text-anchor="middle">I</text><text class="eb-wort" x="75.0" y="93.0" text-anchor="middle">Philosophie</text></svg></div>
+        <span class="eb-verbinder" aria-hidden="true"><svg class="eb-trichter" viewBox="0 0 40 100" preserveAspectRatio="none"><path class="trichter-flaeche" d="M 0 40 L 40 3 L 40 97 L 0 60 Z"/><path class="trichter-kante" d="M 0 40 L 40 3 M 0 60 L 40 97"/></svg><svg class="eb-lupe" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><line x1="14.7" y1="14.7" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <div class="eb-bild"><svg class="eb-svg" viewBox="0 0 150 150" role="img" aria-label="Die Artikel, die sich in einer Art sammeln"><circle class="eb-punkt" cx="27" cy="40" r="4.6"/><rect class="eb-titel-linie" x="43" y="34" width="82" height="6" rx="3"/><rect class="eb-sub-linie" x="43" y="44" width="52" height="4" rx="2"/><circle class="eb-punkt" cx="27" cy="77" r="4.6"/><rect class="eb-titel-linie" x="43" y="71" width="82" height="6" rx="3"/><rect class="eb-sub-linie" x="43" y="81" width="52" height="4" rx="2"/><circle class="eb-punkt" cx="27" cy="114" r="4.6"/><rect class="eb-titel-linie" x="43" y="108" width="82" height="6" rx="3"/><rect class="eb-sub-linie" x="43" y="118" width="52" height="4" rx="2"/></svg></div>
+      </div>
+      <div class="ebenen-titel-reihe">
+        <div class="eb-titel"><span class="ebene-name">Klasse</span><span class="ebene-desc">Der ganze Baum. Hier: Klasse&nbsp;III – der Idealismus-Baum, in dem es vorwiegend um Ideen geht.</span></div>
+        <span class="eb-luecke" aria-hidden="true"></span>
+        <div class="eb-titel"><span class="ebene-name">Gattung</span><span class="ebene-desc">Eine Weltanschauung im Baum, in zwölf Arten gegliedert.</span></div>
+        <span class="eb-luecke" aria-hidden="true"></span>
+        <div class="eb-titel"><span class="ebene-name">Art</span><span class="ebene-desc">Eine Art in der Gattung – hier Rationalismus&nbsp;I, „Philosophie“.</span></div>
+        <span class="eb-luecke" aria-hidden="true"></span>
+        <div class="eb-titel"><span class="ebene-name">Artikel</span><span class="ebene-desc">Die einzelnen Artikel, die sich in einer Art sammeln.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- HIERARCHIE:ENDE -->
+
+<!-- LISTE:ANFANG -->
+<p class="such-leiste"><a class="such-knopf" href="suche.html">Alle 8 Artikel durchsuchen →</a></p>
+<nav class="uebersicht" aria-label="Die zwölf Gattungen als Liste">
+  <section class="haelfte krone-liste">
+    <h2>In der Krone</h2>
+    <ul>
+      <li><a href="weltanschauungen/rationalismus.html">
+        <span class="zeile"><strong>Rationalismus</strong><span class="zeichen">♉︎ Stier</span></span>
+        <span class="kurz">Die Vernunft findet die Ideen in der Wirklichkeit, soweit sie sich an der Erfahrung ausweisen.</span>
+        <span class="anzahl">0 Artikel</span>
+      </a></li>
+      <li><a href="weltanschauungen/mathematismus.html">
+        <span class="zeile"><strong>Mathematismus</strong><span class="zeichen">♊︎ Zwillinge</span></span>
+        <span class="kurz">Die Welt ist ein grosses Rechenwerk: Wirklich ist, was sich in Zahl und Mass fassen lässt.</span>
+        <span class="anzahl">0 Artikel</span>
+      </a></li>
+      <li><a href="weltanschauungen/materialismus.html">
+        <span class="zeile"><strong>Materialismus</strong><span class="zeichen">♋︎ Krebs</span></span>
+        <span class="kurz">Die Welt ist Stoff: Alles Wirkliche – auch das Denken – wird aus materiellen Vorgängen begriffen.</span>
+        <span class="anzahl">8 Artikel</span>
+      </a></li>
+      <li><a href="weltanschauungen/sensualismus.html">
+        <span class="zeile"><strong>Sensualismus</strong><span class="zeichen">♌︎ Löwe</span></span>
+        <span class="kurz">Wirklich ist, was die Sinne bezeugen; die Empfindung gilt als Grund der Wirklichkeit.</span>
+        <span class="anzahl">0 Artikel</span>
+      </a></li>
+      <li><a href="weltanschauungen/phaenomenalismus.html">
+        <span class="zeile"><strong>Phänomenalismus</strong><span class="zeichen">♍︎ Jungfrau</span></span>
+        <span class="kurz">Die Welt ist uns Erscheinung: Erkannt werden die Phänomene, nicht das Ding an sich.</span>
+        <span class="anzahl">0 Artikel</span>
+      </a></li>
+    </ul>
+  </section>
+  <section class="haelfte wurzel-liste">
+    <h2>Im Wurzelwerk</h2>
+    <ul>
+      <li><a href="weltanschauungen/psychismus.html">
+        <span class="zeile"><strong>Psychismus</strong><span class="zeichen">♓︎ Fische</span></span>
+        <span class="kurz">Das Weltprinzip wird seelisch erfahren: Die Welt ist beseelt.</span>
+        <span class="anzahl">0 Artikel</span>
+      </a></li>
+      <li><a href="weltanschauungen/pneumatismus.html">
+        <span class="zeile"><strong>Pneumatismus</strong><span class="zeichen">♒︎ Wassermann</span></span>
+        <span class="kurz">Ein einheitlicher, schaffender Weltengeist durchwaltet das All.</span>
+        <span class="anzahl">0 Artikel</span>
+      </a></li>
+      <li><a href="weltanschauungen/spiritualismus.html">
+        <span class="zeile"><strong>Spiritualismus</strong><span class="zeichen">♑︎ Steinbock</span></span>
+        <span class="kurz">Das Geistige ist die eigentliche Wirklichkeit; das Stoffliche ist seine Offenbarung.</span>
+        <span class="anzahl">0 Artikel</span>
+      </a></li>
+      <li><a href="weltanschauungen/monadismus.html">
+        <span class="zeile"><strong>Monadismus</strong><span class="zeichen">♐︎ Schütze</span></span>
+        <span class="kurz">Die Welt besteht aus einer Vielheit in sich geschlossener Wesenseinheiten, die von innen heraus wirken.</span>
+        <span class="anzahl">0 Artikel</span>
+      </a></li>
+      <li><a href="weltanschauungen/dynamismus.html">
+        <span class="zeile"><strong>Dynamismus</strong><span class="zeichen">♏︎ Skorpion</span></span>
+        <span class="kurz">Hinter allem Stofflichen wirken Kräfte; Kraft ist das eigentlich Wirkende in der Welt.</span>
+        <span class="anzahl">0 Artikel</span>
+      </a></li>
+    </ul>
+  </section>
+  <section class="haelfte boden-liste">
+    <h2>Zwischen Körper und Geist</h2>
+    <ul>
+      <li><a href="weltanschauungen/realismus.html">
+        <span class="zeile"><strong>Realismus</strong><span class="zeichen">♎︎ Waage</span></span>
+        <span class="kurz">Die äussere Welt ist wirklich, so wie sie sich dem wachen Blick zeigt – unabhängig von uns.</span>
+        <span class="anzahl">0 Artikel</span>
+      </a></li>
+      <li><a href="weltanschauungen/idealismus.html">
+        <span class="zeile"><strong>Idealismus</strong><span class="zeichen">♈︎ Widder</span></span>
+        <span class="kurz">Ideen tragen die Welt; im Ideellen liegen ihr Sinn und ihre Ordnung.</span>
+        <span class="anzahl">0 Artikel</span>
+      </a></li>
+    </ul>
+  </section>
+</nav>
+<!-- LISTE:ENDE -->
+
+</main>
+
+<!-- FUSS:ANFANG -->
+<footer class="fuss">
+  <p>© 2026 Eric Naville · nach dem Bild der zwölf Weltanschauungen
+  <span class="quelle">(Rudolf Steiner, „Der menschliche und der kosmische Gedanke“, GA&nbsp;151)</span></p>
+</footer>
+<!-- FUSS:ENDE -->
+
+</body>
+</html>
