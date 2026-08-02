@@ -617,6 +617,11 @@ a.mitte-seite:hover text, a.mitte-seite:focus-visible text{
 #filter-zahl, .such-zahl{ margin-left:.6rem; color:var(--gedaempft); font-size:.9rem; }
 .artikel-liste{ list-style:none; padding:0; margin:1.2rem 0 0; }
 .artikel-liste > li{ padding:.9rem 0; border-bottom:1px solid var(--linie); }
+/* Gruppenkopf einer Art-Liste (META-Feld gruppe:) – Kapitel, keine Kategorie */
+.artikel-liste > li.gruppe-kopf{ border-bottom:none; padding:1.7rem 0 .1rem;
+  color:var(--gedaempft); font-size:.8rem; letter-spacing:.09em;
+  text-transform:uppercase; }
+.artikel-liste > li.gruppe-kopf:first-child{ padding-top:.3rem; }
 .artikel-liste > li > a, .such-treffer > li > a{ display:flex;
   justify-content:space-between; align-items:baseline; gap:1rem;
   text-decoration:none; color:var(--tinte); }
