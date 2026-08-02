@@ -10,14 +10,14 @@
   --papier:#f6f1e6;
   --flaeche:#fcf9f1;
   --tinte:#2b241c;
-  --gedaempft:#7d7160;
-  --linie:#d8cdb8;
-  --horizont:#8a7a62;
+  --gedaempft:#685c4b;
+  --linie:#b5a07d;
+  --horizont:#7a6a52;
   --himmel:#e9f0f3;
   --erde:#ecdfc6;
   --holz:#5d4a35;
   --wurzelholz:#4a3c2f;
-  --akzent-krone:#a8802c;
+  --akzent-krone:#856418;
   --akzent-krone-hell:#c49d3f;
   --zitat:#886318;
   --referenz:#514738;
@@ -28,7 +28,7 @@
      Nachtmodus (unten) und Druck behalten ihre eigenen Füllungen. */
   --kreis-krone-f:transparent;
   --kreis-wurzel-f:transparent;
-  --akzent-boden:#5f7d52;
+  --akzent-boden:#4e6a42;
   --kreis-boden-f:transparent;
 }
 
@@ -44,7 +44,7 @@
     --flaeche:#1c1815;
     --tinte:#eae2d2;
     --gedaempft:#a49781;
-    --linie:#3b3428;
+    --linie:#544a38;
     --horizont:#94836a;
     --himmel:#18242e;
     --erde:#281f12;
@@ -68,7 +68,7 @@
   --flaeche:#1c1815;
   --tinte:#eae2d2;
   --gedaempft:#a49781;
-  --linie:#3b3428;
+  --linie:#544a38;
   --horizont:#94836a;
   --himmel:#18242e;
   --erde:#281f12;
@@ -326,6 +326,40 @@ a.mitte-seite:hover text, a.mitte-seite:focus-visible text{
 }
 .zoom-zurueck:hover{ border-color:var(--akzent-krone); }
 
+/* ---------- Der Baum auf schmalen Schirmen ----------
+   Bis 700px passt der Baum als Ganzes in die Breite, statt zur Hälfte
+   ausserhalb eines Rollbereichs zu liegen, von dem nichts erzählt. Bei
+   dieser Grösse schrumpfen die Etiketten (15px im viewBox-Mass) auf rund
+   6px und sind ohnehin nicht mehr zu lesen: in der Übersicht steht darum
+   allein die Ziffer, gross und in der Kreismitte. Den Namen bringt das
+   Hereintippen über .kreis-mitte, und darunter stehen die zwölf als Liste.
+
+   .kreis-name und .kreis-zeichen bleiben mit opacity:0 stehen und nicht
+   mit display:none, damit die Kreis-Verweise ihren Namen für
+   Vorleseprogramme behalten. Die Schleier-Ellipsen sind für die kleinen
+   Etiketten bemessen und gehen mit ihnen.
+
+   Die Grössen hier stehen nur in diesem Medienblock; die Kopplung von
+   .kreis-nummer an ETIKETT_PX/ZEICHEN_PX in tools/generieren.py gilt
+   unverändert für die Darstellung ab 700px. .art-wort trägt eine je
+   Kugel berechnete Grösse als style-Attribut und bleibt unberührt. */
+@media (max-width:700px){
+  .baum-rollbereich{ overflow-x:visible; }
+  .baum-rollbereich svg{ min-width:0; }
+
+  .kreis-etikett .etikett-schleier,
+  .kreis-name, .kreis-zeichen{ opacity:0; }
+  .kreis-nummer{ font-size:30px; transform:translateY(28px); }
+
+  /* Hereingezoomt vergrössert die Zoomfahrt nur rund anderthalbfach –
+     6.5px blieben dann immer noch klein. */
+  .mitte-name{ font-size:9px; }
+  .mitte-substanz{ font-size:4.6px; }
+  a.mitte-seite text{ font-size:4.4px; }
+  .art-ziffer{ font-size:7.4px; }
+  .art-badge{ font-size:3.6px; }
+}
+
 /* ---------- Hierarchie-Erklärung: die vier Ebenen ---------- */
 
 .hierarchie{ margin:2.2rem 0 1rem; }
@@ -339,15 +373,33 @@ a.mitte-seite:hover text, a.mitte-seite:focus-visible text{
 }
 .hierarchie-text strong{ color:var(--tinte); }
 
-.ebenen-rollbereich{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
-.ebenen{ min-width:660px; max-width:900px; margin:0 auto; padding:.2rem; }
-.ebenen-buehne, .ebenen-titel-reihe{
+/* Vier Stufen nebeneinander, dazwischen die Trichter. Zwei Zeilen: oben die
+   Bilder, unten die Titel. Jede .eb-stufe reicht ihre beiden Zeilen über
+   subgrid an das Aussenraster durch – so stehen die Bilder auf einer Höhe,
+   und der Trichter, der nur in Zeile 1 sitzt, wird genau so hoch wie sie.
+   Unter 700px fällt dasselbe Gerüst in eine Spalte (siehe unten). */
+.ebenen{ max-width:900px; margin:0 auto; padding:.2rem; }
+.ebenen-buehne{
   display:grid;
   grid-template-columns:minmax(0,1fr) 4rem minmax(0,1fr) 4rem minmax(0,1fr) 4rem minmax(0,1fr);
+  grid-template-rows:auto auto;
   column-gap:.4rem;
 }
-.ebenen-buehne{ align-items:stretch; }
-.ebenen-titel-reihe{ align-items:start; margin-top:.55rem; }
+/* Spalten ausdrücklich zuweisen. Die selbsttätige Platzierung kommt sonst
+   durcheinander, weil hier zweierlei Kinder stehen: Stufen über beide Zeilen
+   und Verbinder nur in der ersten. Sie schob dann alle Trichter nach links
+   und die vier Stufen zusammen an den rechten Rand. Reihenfolge im HTML:
+   Stufe, Verbinder, Stufe, Verbinder, Stufe, Verbinder, Stufe. */
+.ebenen-buehne > :nth-child(1){ grid-column:1; }
+.ebenen-buehne > :nth-child(2){ grid-column:2; }
+.ebenen-buehne > :nth-child(3){ grid-column:3; }
+.ebenen-buehne > :nth-child(4){ grid-column:4; }
+.ebenen-buehne > :nth-child(5){ grid-column:5; }
+.ebenen-buehne > :nth-child(6){ grid-column:6; }
+.ebenen-buehne > :nth-child(7){ grid-column:7; }
+.eb-stufe{ display:grid; grid-row:1 / span 2; grid-template-rows:subgrid; }
+.eb-verbinder{ grid-row:1; }
+.eb-titel{ align-self:start; margin-top:.55rem; }
 
 /* Ein Trichter je Zwischenraum: schmal am linken (höheren) Bild, zum rechten
    (tieferen) Bild so hoch wie das Bild. Verstärkt die Lupenwirkung. */
@@ -390,6 +442,47 @@ a.mitte-seite:hover text, a.mitte-seite:focus-visible text{
 .eb-punkt{ fill:var(--akzent-krone); }
 .eb-titel-linie{ fill:var(--gedaempft); opacity:.6; }
 .eb-sub-linie{ fill:var(--linie); }
+
+/* Die vier Ebenen auf schmalen Schirmen: untereinander statt nebeneinander.
+   Vorher lagen sie wie der Baum unter einem min-width:660px und damit zur
+   Hälfte ausserhalb. Der Trichter läuft nach rechts und ergäbe gestapelt
+   keinen Sinn – er entfällt, die Lupe zwischen den Stufen bleibt als
+   Zeichen fürs Tiefergehen. Die Bilder sind quadratisch und bekämen sonst
+   die volle Breite als Höhe, viermal hintereinander. */
+@media (max-width:700px){
+  .ebenen-buehne{ grid-template-columns:1fr; grid-template-rows:none; }
+  /* :nth-child(n) statt * – die Spaltenzuweisung oben wiegt als
+     Klasse+Pseudoklasse schwerer als ein blosser Stern und bliebe sonst
+     stehen, ganz gleich, was später im Blatt steht. */
+  .ebenen-buehne > :nth-child(n){ grid-column:1; }
+  .eb-stufe{ grid-row:auto; grid-template-rows:none; }
+  .eb-verbinder{ grid-row:auto; }
+  .eb-trichter{ display:none; }
+  .eb-bild{ max-width:14rem; margin:0 auto; }
+  .eb-titel{ margin-top:.4rem; }
+}
+
+/* ---------- Zuletzt geschrieben ----------
+   Der kurze Weg zu den Texten, gleich unter dem Baum: der Baum ordnet, nennt
+   aber keinen Titel. Der Abschnittskopf trägt dasselbe Zeichen wie die
+   Übersichtsliste darunter (versal, gesperrt, unterstrichen), die Einträge
+   dieselbe Gestalt wie die Art-Listen – die Startseite soll dabei nicht
+   aussehen wie eine dritte Erfindung. */
+.neueste{ max-width:680px; margin:2.6rem auto 1rem; }
+.neueste > h2{
+  font-size:1rem;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--gedaempft);
+  border-bottom:1px solid var(--linie);
+  padding-bottom:.5rem;
+  margin:0 0 .3rem;
+  font-weight:600;
+}
+.neueste .artikel-liste{ margin-top:0; }
+.neu-ort{ margin:.35rem 0 0; font-size:.85rem; }
+.neu-ort a{ color:var(--akzent-krone); text-decoration:none; }
+.neu-ort a:hover{ text-decoration:underline; }
 
 /* ---------- Übersichtsliste unter dem Baum ---------- */
 
@@ -500,11 +593,28 @@ a.mitte-seite:hover text, a.mitte-seite:focus-visible text{
 .artikel{ margin:1.1rem 0 1.6rem; }
 /* Der Generator hebt den h4-Titel zum h1 der Artikelseite (h5 → h2);
    beide Formen tragen dieselbe Gestalt. */
-.artikel h1, .artikel h4{ margin:0 0 .2rem; font-size:1.25rem; font-weight:600; }
-.datum{ margin:0 0 .6rem; color:var(--gedaempft); font-size:.9rem; }
+/* Die Stufen der Artikelseite: Titel, Zwischentitel, Fliesstext.
+   Vorher lagen sie bei 1.25 / 1.02 / 1.0625rem – der Zwischentitel war
+   also kleiner als der Text, den er überschrieb, und nur der Fettschnitt
+   unterschied ihn noch. Jetzt trägt jede Stufe ihren eigenen Grad.
+   Der Titel wächst mit der Breite mit: lange Titel („Die zwei Träume vom
+   Ende der Freiheit") sollen auf dem Handy nicht über vier Zeilen laufen. */
+.artikel h1, .artikel h4{
+  margin:0 0 .25rem;
+  font-size:clamp(1.75rem, 1.25rem + 2.1vw, 2.3rem);
+  line-height:1.18;
+  font-weight:600;
+  letter-spacing:.005em;
+}
+.datum{ margin:0 0 1rem; color:var(--gedaempft); font-size:.9rem; }
 
 /* Binnenstruktur längerer Artikel */
-.artikel h2, .artikel h5{ margin:1.4rem 0 .3rem; font-size:1.02rem; font-weight:600; }
+.artikel h2, .artikel h5{
+  margin:2.2rem 0 .5rem;
+  font-size:1.32rem;
+  line-height:1.3;
+  font-weight:600;
+}
 .artikel sup a{ text-decoration:none; color:var(--gedaempft); }
 .artikel sup a:hover{ color:var(--tinte); }
 .artikel blockquote{

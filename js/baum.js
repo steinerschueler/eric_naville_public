@@ -17,6 +17,10 @@
   var animation = null;
   var zurueckKnopf = document.querySelector(".zoom-zurueck");
   var ruhig = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Schlüssel des zuletzt angewandten Zustands ("" = ganzer Baum). Hält die
+  // Zoomfahrt davon ab, zweimal zu starten, wenn popstate und hashchange
+  // beide feuern.
+  var angewandt = "";
 
   function kreisVon(slug) {
     return slug ? svg.querySelector('.kreis[data-slug="' + slug + '"]') : null;
@@ -98,15 +102,34 @@
       animation = null;
       setzeKasten(kasten);
     }
+    angewandt = schluessel(zustand);
   }
 
+  function schluessel(zustand) {
+    return zustand ? zustand.gattung + (zustand.art ? "/" + zustand.art : "") : "";
+  }
+
+  // Der Zoomzustand steht im Verlauf, aber über history.pushState statt über
+  // location.hash: ein gesetzter Hash lässt den Browser zum gleichnamigen
+  // Element springen, und das war der Sprung bei jedem Klick. pushState ändert
+  // die Adresse lautlos, scrollt nicht und löst kein hashchange aus; angewandt
+  // wird von Hand. Die id="<slug>" an den Kreisgruppen ist zusätzlich entfallen
+  // (tools/generieren.py), damit auch das Ankommen über die Brotkrume nicht
+  // mehr springt; gesucht werden die Kreise ohnehin über data-slug.
   function hashSetzen(wert) {
-    if (wert) {
-      if (location.hash !== "#" + wert) location.hash = wert;
-    } else {
-      history.pushState("", document.title, location.pathname + location.search);
-      anwenden(null, true);
+    var neu = wert ? "#" + wert : "";
+    if (location.hash !== neu) {
+      history.pushState(null, document.title,
+                        wert ? neu : location.pathname + location.search);
     }
+    ausVerlauf();
+  }
+
+  // Vor/Zurück im Browser, und ein von Hand geänderter Hash: je nach Browser
+  // feuert das eine oder beide Ereignisse. Der Vergleich fängt das Doppelte ab.
+  function ausVerlauf() {
+    var z = zustandAusHash();
+    if (schluessel(z) !== angewandt) anwenden(z, true);
   }
 
   function eineStufeZurueck() {
@@ -152,9 +175,8 @@
     if (ereignis.key === "Escape" && svg.classList.contains("gezoomt")) eineStufeZurueck();
   });
 
-  window.addEventListener("hashchange", function () {
-    anwenden(zustandAusHash(), true);
-  });
+  window.addEventListener("popstate", ausVerlauf);
+  window.addEventListener("hashchange", ausVerlauf);
 
   // Anfangszustand: ein Hash wie #realismus oder #realismus/1 zoomt
   // sofort hinein – ohne Überblendung, damit die Seite fertig dasteht.
