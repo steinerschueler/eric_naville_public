@@ -21,30 +21,40 @@
 :root,
 :root[data-theme="terminal"]{
   color-scheme:dark;
-  /* Ubuntu-Terminal: #300a24 als Grund, reines Weiss darauf. Die Linien
-     nehmen Ubuntus mittleres Aubergine, die Akzente Ubuntus Orange -
+  /* Ubuntu-Terminal, ins Rötliche gezogen: der Grund stand auf Farbton
+     319° und las sich violett; die ganze Aubergine-Familie - Grund,
+     Fläche, Linie, Himmel, Kreisfüllungen und die beiden gedämpften Töne
+     - ist darum um 21° auf rund 338° gedreht, bei gleicher Helligkeit
+     und Sättigung. Das ist Wein statt Magenta. `--erde` lag mit 341°
+     schon dort und blieb unangetastet.
+
+     Die Akzente bleiben, wie sie waren: Ubuntus Orange für die Krone -
      eine Spur aufgehellt (#e95420 -> #f26a35), damit auch die kleinen
-     Schriftgrade darin die Kontrastschwelle nehmen. */
-  --papier:#300a24;
-  --flaeche:#3d1430;
+     Schriftgrade die Kontrastschwelle nehmen - und das Violett für die
+     Wurzeln, das als Gegenpol dazu gebraucht wird.
+
+     `--referenz` trägt Urheberzeile, Quellenliste und Methodik. Es stand
+     auf einem blassen Rosa und ist jetzt reines Weiss. */
+  --papier:#300a17;
+  --flaeche:#3d1422;
   --tinte:#ffffff;
-  --gedaempft:#c3a6bb;
-  --linie:#5e2750;
-  --horizont:#a8809c;
-  --himmel:#2a1030;
+  --gedaempft:#c3a6b1;
+  --linie:#5e273d;
+  --horizont:#a8808e;
+  --himmel:#30102b;
   --erde:#3a1420;
   --holz:#b98a72;
   --wurzelholz:#9c7060;
   --akzent-krone:#f26a35;
   --akzent-krone-hell:#ff8f5e;
   --zitat:#f0b27a;
-  --referenz:#dcc4d4;
+  --referenz:#ffffff;
   --akzent-wurzel:#c191bd;
   --akzent-wurzel-hell:#d6aed2;
-  --kreis-krone-f:#3a1028;
-  --kreis-wurzel-f:#361430;
+  --kreis-krone-f:#3a1019;
+  --kreis-wurzel-f:#361424;
   --akzent-boden:#9ddc6e;
-  --kreis-boden-f:#2a1526;
+  --kreis-boden-f:#2a151f;
   /* Eine klare Grotesk im Zuschnitt des Ubuntu-Terminals. Nichts wird
      nachgeladen: liegt Ubuntu auf dem Rechner, kommt Ubuntu; sonst die
      nächstbeste Systemschrift. */
