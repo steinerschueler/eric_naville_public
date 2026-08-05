@@ -3,27 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Random Topics – Eric Naville</title>
-<meta name="description" content="Vermischtes: praktische Einzelstücke abseits des Weltanschauungs-Baums — gründlich recherchiert und mit offen ausgewiesener Methode.">
+<title>Random Topics - Eric Naville</title>
+<meta name="description" content="Vermischtes: praktische Einzelstücke abseits des Weltanschauungs-Baums - gründlich recherchiert und mit offen ausgewiesener Methode.">
 <link rel="canonical" href="https://eric-naville.ch/random/index.html">
 <meta property="og:url" content="https://eric-naville.ch/random/index.html">
 <meta property="og:title" content="Random Topics">
-<meta property="og:description" content="Vermischtes: praktische Einzelstücke abseits des Weltanschauungs-Baums — gründlich recherchiert und mit offen ausgewiesener Methode.">
+<meta property="og:description" content="Vermischtes: praktische Einzelstücke abseits des Weltanschauungs-Baums - gründlich recherchiert und mit offen ausgewiesener Methode.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23a8802c' stroke-width='6'/%3E%3Cpath d='M8 50h84' stroke='%23a8802c' stroke-width='5'/%3E%3Cpath d='M50 16v68' stroke='%235d4a35' stroke-width='7'/%3E%3C/svg%3E">
 <script>
 (function(){
   var w=document.documentElement;
-  try{var g=localStorage.getItem("thema"); if(g==="hell"||g==="dunkel") w.setAttribute("data-theme",g);}catch(e){}
-  function eff(){var t=w.getAttribute("data-theme"); if(t) return t;
-    return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dunkel":"hell";}
+  var B=["terminal","hell","dunkel"], N={terminal:"Terminal",hell:"Hell",dunkel:"Nacht"};
+  try{var g=localStorage.getItem("thema"); if(B.indexOf(g)>=0) w.setAttribute("data-theme",g);}catch(e){}
+  function eff(){var t=w.getAttribute("data-theme"); return B.indexOf(t)>=0?t:"terminal";}
+  function naechst(){ return B[(B.indexOf(eff())+1)%B.length]; }
   function wire(){
     var b=document.querySelector(".thema-schalter"); if(!b) return;
-    function zeige(){var d=eff()==="dunkel"; b.setAttribute("aria-pressed",d?"true":"false");
-      var l=d?"Zum hellen Erscheinungsbild wechseln":"Zum dunklen Erscheinungsbild wechseln";
+    function zeige(){var l="Erscheinungsbild: "+N[eff()]+" - weiter zu "+N[naechst()];
       b.setAttribute("aria-label",l); b.title=l;}
-    b.addEventListener("click",function(){var n=eff()==="dunkel"?"hell":"dunkel";
+    b.addEventListener("click",function(){var n=naechst();
       w.setAttribute("data-theme",n); try{localStorage.setItem("thema",n);}catch(e){} zeige();});
     zeige();
   }
@@ -35,6 +35,7 @@
 
 <header class="kopf">
   <button type="button" class="thema-schalter" aria-label="Erscheinungsbild wechseln" title="Erscheinungsbild wechseln">
+    <svg class="terminal" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.2" width="18.8" height="15.6" rx="2.2"/><path d="M7 9.4l2.8 2.6L7 14.6M12.8 15h4.2"/></svg>
     <svg class="sonne" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.2v2.6M12 19.2v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.2 12h2.6M19.2 12h2.6M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9"/></svg>
     <svg class="mond" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.8A8.3 8.3 0 0 1 9.2 3.5a6.6 6.6 0 1 0 11.3 11.3z"/></svg>
   </button>
@@ -58,7 +59,7 @@
   <p>Nicht alles, was einen beschäftigt, fügt sich in den Kreis der zwölf
   Weltanschauungen. Diese Rubrik sammelt die Einzelstücke, die daneben liegen:
   praktische Fragen, an denen ein gründlicher Blick trotzdem lohnt. Zweierlei
-  unterscheidet sie vom übrigen Haus. Sie sind <em>nützlich</em> gemeint — jemandem
+  unterscheidet sie vom übrigen Haus. Sie sind <em>nützlich</em> gemeint - jemandem
   auf seiner Suche eine lange eigene Recherche ersparen. Und sie legen ihre
   <em>Methode offen</em>: Wo künstliche Intelligenz mitrecherchiert hat und wie streng
   geprüft wurde, steht im Text selbst, nicht im Kleingedruckten.</p>
@@ -66,11 +67,11 @@
   <ol id="liste" class="artikel-liste">
       <li>
         <a href="diaet.html"><span class="titel">Keto, Fasten und die ehrliche Bilanz</span><span class="datum">16. Juli 2026</span></a>
-        <p class="ausz">Eine Lieblingsthese — Keto plus Intervallfasten sei die effektivste und am wenigsten qualvolle Diät — im adversarialen Test: Sie wirkt, aber nicht einzigartig und nicht aus dem behaupteten Grund; die LDL-Kehrseite ist real (die Pro-Keto-Entwarnung wurde 2026 zurückgezogen); und der Kern „am wenigsten qualvoll" hält als Allgemeinsatz nicht — Adhärenz schlägt Diätart, und wie leicht eine Diät fällt, ist individuell.</p>
+        <p class="ausz">Eine Lieblingsthese - Keto plus Intervallfasten sei die effektivste und am wenigsten qualvolle Diät - im adversarialen Test: Sie wirkt, aber nicht einzigartig und nicht aus dem behaupteten Grund; die LDL-Kehrseite ist real (die Pro-Keto-Entwarnung wurde 2026 zurückgezogen); und der Kern "am wenigsten qualvoll" hält als Allgemeinsatz nicht - Adhärenz schlägt Diätart, und wie leicht eine Diät fällt, ist individuell.</p>
       </li>
       <li>
         <a href="drucker.html"><span class="titel">Der Drucker, der bleibt</span><span class="datum">15. Juli 2026</span></a>
-        <p class="ausz">Warum für seltenes Farbdrucken ein Laser die robustere Wahl ist, warum HP der klarste Obsoleszenz-Sünder bleibt und was sich im Juli 2026 empfehlen lässt — samt offener Rechenschaft über die KI-Recherche dahinter (103 Agenten, adversariale Prüfung, 20 von 25 Behauptungen bestätigt).</p>
+        <p class="ausz">Warum für seltenes Farbdrucken ein Laser die robustere Wahl ist, warum HP der klarste Obsoleszenz-Sünder bleibt und was sich im Juli 2026 empfehlen lässt - samt offener Rechenschaft über die KI-Recherche dahinter (103 Agenten, adversariale Prüfung, 20 von 25 Behauptungen bestätigt).</p>
       </li>
   </ol>
 
@@ -82,7 +83,7 @@
 
 <footer class="fuss">
   <p>© 2026 Eric Naville · nach dem Bild der zwölf Weltanschauungen
-  <span class="quelle">(Rudolf Steiner, „Der menschliche und der kosmische Gedanke“, GA&nbsp;151)</span></p>
+  <span class="quelle">(Rudolf Steiner, "Der menschliche und der kosmische Gedanke", GA&nbsp;151)</span></p>
 </footer>
 
 </body>

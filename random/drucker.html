@@ -3,27 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Der Drucker, der bleibt – Eric Naville</title>
-<meta name="description" content="Warum für seltenes Farbdrucken ein Laser die robustere Wahl ist, warum HP der klarste Obsoleszenz-Sünder bleibt und was sich im Juli 2026 empfehlen lässt — samt offener Rechenschaft über die KI-Recherche dahinter.">
+<title>Der Drucker, der bleibt - Eric Naville</title>
+<meta name="description" content="Warum für seltenes Farbdrucken ein Laser die robustere Wahl ist, warum HP der klarste Obsoleszenz-Sünder bleibt und was sich im Juli 2026 empfehlen lässt - samt offener Rechenschaft über die KI-Recherche dahinter.">
 <link rel="canonical" href="https://eric-naville.ch/random/drucker.html">
 <meta property="og:url" content="https://eric-naville.ch/random/drucker.html">
 <meta property="og:title" content="Der Drucker, der bleibt">
-<meta property="og:description" content="Warum für seltenes Farbdrucken ein Laser die robustere Wahl ist, warum HP der klarste Obsoleszenz-Sünder bleibt und was sich im Juli 2026 empfehlen lässt — samt offener Rechenschaft über die KI-Recherche dahinter.">
+<meta property="og:description" content="Warum für seltenes Farbdrucken ein Laser die robustere Wahl ist, warum HP der klarste Obsoleszenz-Sünder bleibt und was sich im Juli 2026 empfehlen lässt - samt offener Rechenschaft über die KI-Recherche dahinter.">
 <meta property="og:type" content="article">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23a8802c' stroke-width='6'/%3E%3Cpath d='M8 50h84' stroke='%23a8802c' stroke-width='5'/%3E%3Cpath d='M50 16v68' stroke='%235d4a35' stroke-width='7'/%3E%3C/svg%3E">
 <script>
 (function(){
   var w=document.documentElement;
-  try{var g=localStorage.getItem("thema"); if(g==="hell"||g==="dunkel") w.setAttribute("data-theme",g);}catch(e){}
-  function eff(){var t=w.getAttribute("data-theme"); if(t) return t;
-    return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dunkel":"hell";}
+  var B=["terminal","hell","dunkel"], N={terminal:"Terminal",hell:"Hell",dunkel:"Nacht"};
+  try{var g=localStorage.getItem("thema"); if(B.indexOf(g)>=0) w.setAttribute("data-theme",g);}catch(e){}
+  function eff(){var t=w.getAttribute("data-theme"); return B.indexOf(t)>=0?t:"terminal";}
+  function naechst(){ return B[(B.indexOf(eff())+1)%B.length]; }
   function wire(){
     var b=document.querySelector(".thema-schalter"); if(!b) return;
-    function zeige(){var d=eff()==="dunkel"; b.setAttribute("aria-pressed",d?"true":"false");
-      var l=d?"Zum hellen Erscheinungsbild wechseln":"Zum dunklen Erscheinungsbild wechseln";
+    function zeige(){var l="Erscheinungsbild: "+N[eff()]+" - weiter zu "+N[naechst()];
       b.setAttribute("aria-label",l); b.title=l;}
-    b.addEventListener("click",function(){var n=eff()==="dunkel"?"hell":"dunkel";
+    b.addEventListener("click",function(){var n=naechst();
       w.setAttribute("data-theme",n); try{localStorage.setItem("thema",n);}catch(e){} zeige();});
     zeige();
   }
@@ -35,6 +35,7 @@
 
 <header class="kopf">
   <button type="button" class="thema-schalter" aria-label="Erscheinungsbild wechseln" title="Erscheinungsbild wechseln">
+    <svg class="terminal" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.2" width="18.8" height="15.6" rx="2.2"/><path d="M7 9.4l2.8 2.6L7 14.6M12.8 15h4.2"/></svg>
     <svg class="sonne" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.2v2.6M12 19.2v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.2 12h2.6M19.2 12h2.6M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9"/></svg>
     <svg class="mond" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.8A8.3 8.3 0 0 1 9.2 3.5a6.6 6.6 0 1 0 11.3 11.3z"/></svg>
   </button>
@@ -62,22 +63,22 @@ werden können, und mancher gibt kurz nach der Garantie den Geist auf. Wer selte
 in Farbe, und ein Gerät sucht, das <em>bleibt</em>, steht vor einer unübersichtlichen
 Lage. Darum die kurze Antwort vorweg, damit niemand bis zum Schluss warten muss: ein
 Farb-Laser, kein Tintenstrahler; von der Marke HP die Finger lassen; und das ehrliche
-Ergebnis heisst nicht „der perfekte Drucker", sondern „das geringste Übel" — am ehesten
+Ergebnis heisst nicht "der perfekte Drucker", sondern "das geringste Übel" - am ehesten
 ein Farblaser von Brother oder Kyocera, offline gehalten. Warum das so ist, und wie
 sicher man es wissen kann, steht unten. Das Zweite zuerst.</p>
 
-<h2>Wie dieser Text zustande kam — und warum das hier steht</h2>
+<h2>Wie dieser Text zustande kam - und warum das hier steht</h2>
 
 <p>Dieser Artikel beruht nicht auf einem Menschen, der über Jahre Drucker verschlissen
-hat. Er beruht auf einer Recherche durch künstliche Intelligenz — und anders als die
+hat. Er beruht auf einer Recherche durch künstliche Intelligenz - und anders als die
 meisten solchen Texte legt dieser den Apparat offen. Wer mitliest, soll wägen können, was
 das Verfahren taugt; und andere Maschinen sollen das Ergebnis wiederverwenden können,
 statt denselben Aufwand noch einmal zu verbrennen. Also der Reihe nach.</p>
 
 <p>Das <strong>Modell</strong> war durchgängig Claude Opus 4.8 (interne Kennung
-<em>claude-opus-4-8</em>) mit grossem Kontextfenster — jeder einzelne Agent auf demselben
+<em>claude-opus-4-8</em>) mit grossem Kontextfenster - jeder einzelne Agent auf demselben
 Modell, kein Herunterschalten auf ein kleineres, billigeres. Der Reasoning-Aufwand
-(„Effort") wurde von der Sitzung geerbt und pro Agent nicht eigens festgehalten; das sei
+("Effort") wurde von der Sitzung geerbt und pro Agent nicht eigens festgehalten; das sei
 ehrlich so gesagt, statt eine Zahl zu erfinden. Entscheidend ist ohnehin nicht das eine
 Modell, sondern die <strong>Struktur</strong>: kein einzelnes Netz, das aus dem Gedächtnis
 eine Antwort ausspuckt, sondern ein Schwarm von 103 spezialisierten Agenten in fünf
@@ -87,14 +88,14 @@ Phasen.<sup><a href="#q1">1</a></sup></p>
 den Ruf in der Fachgemeinde, die Technik (Laser gegen Tinte), das Patronen-DRM, die
 Toner-Erfahrung und den deutschen Markt samt Preisen. Die zweite (fünf Agenten
 gleichzeitig) durchsuchte je einen Winkel das offene Netz. Die dritte (21 Agenten) lud
-jede gefundene Quelle, bewertete ihre Güte — Primärquelle, Fachpresse, Blog, Forum — und
+jede gefundene Quelle, bewertete ihre Güte - Primärquelle, Fachpresse, Blog, Forum - und
 zog je zwei bis fünf <em>falsifizierbare</em> Behauptungen mitsamt wörtlichem Beleg heraus;
 so entstanden 101 einzelne Behauptungen.</p>
 
 <p>Die vierte Phase ist die eigentliche Härte des Verfahrens und der Grund, warum man
 dem Ergebnis mehr trauen darf als einem gewöhnlichen KI-Text. Die 25 gewichtigsten
-Behauptungen wurden je drei unabhängigen, bewusst skeptischen „Widerleger"-Agenten
-vorgelegt. Ihr Auftrag lautete nicht „bestätige", sondern „<em>widerlege</em>" — suche
+Behauptungen wurden je drei unabhängigen, bewusst skeptischen "Widerleger"-Agenten
+vorgelegt. Ihr Auftrag lautete nicht "bestätige", sondern "<em>widerlege</em>" - suche
 Gegenbelege, prüfe, ob das Zitat die Behauptung wirklich trägt, ob die Quelle stark genug
 ist, ob die Sache veraltet ist; und im Zweifel stimme gegen die Behauptung. Zwei
 Gegenstimmen von dreien genügten, um eine Behauptung zu töten. Von den 25 überlebten 20
@@ -105,16 +106,16 @@ zusammen und wies jedem Befund eine Konfidenz zu.</p>
 22 Minuten Laufzeit. Selbst geschrieben (Ausgabe) wurden rund 387'000 Token; die
 Abrechnung des Systems nennt etwa 2,45 Millionen Token als Agenten-Verbrauch; zählt man
 jeden erneut eingelesenen, zwischengespeicherten Kontext mit, wurden über 23 Millionen
-Token bewegt. Das ist der „grosse Aufwand", von dem die Rede war — und der Sinn, ihn hier
+Token bewegt. Das ist der "grosse Aufwand", von dem die Rede war - und der Sinn, ihn hier
 festzuhalten, ist doppelt: Ein Mensch soll sehen, was investiert wurde; eine Maschine soll
 es nicht wiederholen müssen (für sie steht am Ende eine maschinenlesbare Zusammenfassung).
-Zwei weitere, eng gefasste Prüfrunden kamen später hinzu — zusammen noch einmal gut 200
+Zwei weitere, eng gefasste Prüfrunden kamen später hinzu - zusammen noch einmal gut 200
 Agenten und rund 5,3 Millionen Token, gezielt auf den empfohlenen Brother DCP-L3560CDW; ihre
 Ergebnisse stehen in den Nachträgen weiter unten.</p>
 
-<p>Was das leistet, und was nicht. Es ersetzt keinen Langzeittest — niemand hat hier
-einen Drucker drei Jahre lang benutzt. Es bündelt öffentlich verfügbares Wissen — Foren,
-Fachpresse, Herstelleraussagen — und wendet es gegen sich selbst; Marketing und
+<p>Was das leistet, und was nicht. Es ersetzt keinen Langzeittest - niemand hat hier
+einen Drucker drei Jahre lang benutzt. Es bündelt öffentlich verfügbares Wissen - Foren,
+Fachpresse, Herstelleraussagen - und wendet es gegen sich selbst; Marketing und
 Einzelmeinung fallen im Sieb. Fünf Behauptungen, die plausibel klangen, wurden gerade
 darum verworfen, weil sie der Prüfung nicht standhielten; sie stehen am Schluss namentlich
 da. Und wo dieser Text sich auf allgemeines Ingenieurswissen stützt, das <em>diese</em>
@@ -129,16 +130,16 @@ Monate des Nichtstuns klaglos. Tinte ist eine Flüssigkeit in feinsten Düsen; b
 wochenlangen Pausen trocknet sie an, die Düsen verstopfen, das Gerät verschwendet bei
 jedem Start Tinte an Reinigungszyklen, und der Ausdruck wird blass oder streifig. Dazu
 kommt bei vielen Tintenstrahlern eine eingebaute Falle: ein interner Zähler für das
-Tinten-Auffangkissen, der das Gerät irgendwann „aus Prinzip" stilllegt, auch wenn
+Tinten-Auffangkissen, der das Gerät irgendwann "aus Prinzip" stilllegt, auch wenn
 mechanisch nichts fehlt. Für ein Nutzungsprofil aus Farbe, seltenem Gebrauch und dem
 Wunsch nach Langlebigkeit ist das die denkbar schlechteste Kombination.</p>
 
-<p>Hier die angekündigte Ehrlichkeit: Dieser Punkt — Laser schlägt Tinte beim seltenen
-Drucken — ist der breite Konsens von Technikern und Fachgemeinde, aber er gehört <em>nicht</em>
+<p>Hier die angekündigte Ehrlichkeit: Dieser Punkt - Laser schlägt Tinte beim seltenen
+Drucken - ist der breite Konsens von Technikern und Fachgemeinde, aber er gehört <em>nicht</em>
 zu den in dieser Runde adversarial geprüften Befunden. Er ruht auf allgemeinem Wissen, nicht
 auf einer eigens gegengecheckten Quelle. Ich halte ihn für richtig und stelle ihn als das
 dar, was er ist: solide Faustregel, nicht hier bewiesener Satz. Dasselbe gilt für die
-naheliegende Gegenfrage — die Nachfülltank-Tintenstrahler, Epson EcoTank und Canon MegaTank,
+naheliegende Gegenfrage - die Nachfülltank-Tintenstrahler, Epson EcoTank und Canon MegaTank,
 mit ihrer sehr billigen Tinte pro Seite. Sie lösen das Kostenproblem, aber nicht das
 Trocknungsproblem: Wer selten druckt, kämpft auch bei ihnen mit eintrocknenden Düsen, und
 die Auffangkissen-Frage bleibt. Für <em>häufigen</em> Farbdruck können sie die bessere Wahl
@@ -148,91 +149,91 @@ allgemeine Einordnung, nicht als hier verifizierter Befund.</p>
 <h2>HP: die Obsoleszenz mit Ansage</h2>
 
 <p>Nun das Geprüfte, und es ist eindeutig. Der klarste Sünder im ganzen Feld heisst HP.
-Seine Firmware-Funktion „Dynamic Security" ist seit 2016 ausdrücklich dafür gebaut,
+Seine Firmware-Funktion "Dynamic Security" ist seit 2016 ausdrücklich dafür gebaut,
 Patronen ohne HP-eigenen Chip zu erkennen und abzuweisen. Das ist keine Vermutung: Es ist
-von HP selbst dokumentiert und gerichtlich belegt — eine US-Sammelklage endete 2020 mit
+von HP selbst dokumentiert und gerichtlich belegt - eine US-Sammelklage endete 2020 mit
 einem Vergleich von rund 1,5 Millionen Dollar, und in den Schriftsätzen wurden die
-heimlich nachgeladenen Sperr-Updates als „Schadsoftware" (engl. „malware")
+heimlich nachgeladenen Sperr-Updates als "Schadsoftware" (engl. "malware")
 bezeichnet.<sup><a href="#q2">2</a></sup></p>
 
 <p>Wie weit das trägt, zeigte der März 2025. Ein HP-Firmware-Update (Version 20250209)
 für die Modellreihe LaserJet MFP M232 bis M237 brachte zuvor zuverlässig laufende Geräte
-dazu, die Arbeit zu verweigern — und zwar <em>auch mit Original-HP-Toner</em>, quittiert
-mit „Fehler 11". Nutzer meldeten, dass „echte HP-Tonerpatronen nicht erkannt werden"
-(engl. „genuine HP toner cartridges are not recognized"); HP bestätigte ein „Firmware-
+dazu, die Arbeit zu verweigern - und zwar <em>auch mit Original-HP-Toner</em>, quittiert
+mit "Fehler 11". Nutzer meldeten, dass "echte HP-Tonerpatronen nicht erkannt werden"
+(engl. "genuine HP toner cartridges are not recognized"); HP bestätigte ein "Firmware-
 Problem" und lieferte um den 18. März einen Notfall-Fix nach.<sup><a href="#q3">3</a></sup>
 Man muss HP hier zugutehalten: Dieser eine Vorfall war ein <em>fehlerhaftes</em> Update,
-keine absichtliche Sperre. Aber das ist beinahe schlimmer — es zeigt, dass selbst jenseits
+keine absichtliche Sperre. Aber das ist beinahe schlimmer - es zeigt, dass selbst jenseits
 des gewollten DRM die HP-Firmware ein stehendes Risiko ist. Für ein Gerät, das ein Leben
 lang halten soll, ist das disqualifizierend.</p>
 
 <h2>Brother: der gefallene Liebling</h2>
 
 <p>Jahrelang liess sich die Frage nach dem richtigen Drucker unter reparaturbewussten
-IT-Leuten mit einem Satz beantworten: „Kauf einfach einen Brother." Der Reparatur-
-Aktivist Louis Rossmann gab den von HP und Canon Geplagten den Rat, „einen Brother-
-Laserdrucker für 100 Dollar zu kaufen, und all deine Sorgen sind gelöst" (engl. „Buy a
+IT-Leuten mit einem Satz beantworten: "Kauf einfach einen Brother." Der Reparatur-
+Aktivist Louis Rossmann gab den von HP und Canon Geplagten den Rat, "einen Brother-
+Laserdrucker für 100 Dollar zu kaufen, und all deine Sorgen sind gelöst" (engl. "Buy a
 brother laser printer for $100 and all of your woes will be solved"). Anbieter von
-Kompatibel-Patronen berichten bei Brother von minimalen Problemen — verglichen mit HP ein
-himmelweiter Unterschied; ein deutsches Fachmedium nannte Brother noch „den letzten guten
+Kompatibel-Patronen berichten bei Brother von minimalen Problemen - verglichen mit HP ein
+himmelweiter Unterschied; ein deutsches Fachmedium nannte Brother noch "den letzten guten
 Hersteller".<sup><a href="#q4">4</a></sup> Dieser Ruf ist geprüft und gesichert.</p>
 
 <p>Und dann, im März 2025, bekam der Ruf einen Riss. Rossmann warf Brother vor, per
 Firmware auf bestimmten Farblaser-Modellen die automatische Farbregistrierung zu
-verschlechtern, sobald Fremdtoner erkannt werde — die Ausdrucke gerieten versetzt und
+verschlechtern, sobald Fremdtoner erkannt werde - die Ausdrucke gerieten versetzt und
 unbrauchbar, bis wieder Originaltoner eingesetzt wurde; namentlich genannt waren die
 Modelle MFC-3750, MFC-L3370CDW und HL-L9310CDW. Brother bestritt das offiziell (Stand
-10. März 2025) in klaren Worten: „Brother-Firmware-Updates blockieren die Verwendung von
-Tinten- und Tonerpatronen von Drittanbietern nicht" (engl. „Brother firmware updates do
+10. März 2025) in klaren Worten: "Brother-Firmware-Updates blockieren die Verwendung von
+Tinten- und Tonerpatronen von Drittanbietern nicht" (engl. "Brother firmware updates do
 not block the use of third-party ink and toner cartridges in our machines") und die Geräte
-„verschlechtern die Druckqualität nicht absichtlich" (engl. „do not intentionally degrade
-print quality"); eingeräumt wurde nur ein „Brother-Genuine-Check" bei der
+"verschlechtern die Druckqualität nicht absichtlich" (engl. "do not intentionally degrade
+print quality"); eingeräumt wurde nur ein "Brother-Genuine-Check" bei der
 Fehlersuche.<sup><a href="#q5">5</a></sup></p>
 
 <p>Hier ist Sorgfalt geboten, und das Verfahren hat sie erzwungen. Dass der Vorwurf
 <em>erhoben</em> und das Dementi <em>ausgesprochen</em> wurde, ist beides sicher belegt.
-Die eigentliche Sachfrage aber — verschlechtert die Firmware wirklich? — hat die
+Die eigentliche Sachfrage aber - verschlechtert die Firmware wirklich? - hat die
 adversariale Prüfung <em>nicht</em> als erwiesene Tatsache bestehen lassen: Die
 entsprechenden Behauptungen stützten sich auf Rossmann und einzelne Reddit-Berichte, nicht
 auf einen kontrollierten Labortest, und fielen mit zwei zu einer Stimme durch. Der deutsche
-Fachdienst Druckerchannel wertete die Vorwürfe als „nicht wirklich stichhaltig und eher als
-Einzelfall abzuhaken" — sein einziger zitierter Beleg war ein drei Jahre alter Reddit-
+Fachdienst Druckerchannel wertete die Vorwürfe als "nicht wirklich stichhaltig und eher als
+Einzelfall abzuhaken" - sein einziger zitierter Beleg war ein drei Jahre alter Reddit-
 Post.<sup><a href="#q6">6</a></sup> Beide Seiten mit gleicher Strenge: Druckerchannel ist
 <em>eine</em> Gegenstimme, und andere Redaktionen halten die zugrundeliegende Frage für
-offen; ebenso ist Brothers Dementi ein eigennütziges, eng gefasstes PR-Wort — das „absichtlich"
-und der eingeräumte „Genuine-Check" schwächen seine Beweiskraft. Das nüchterne Fazit steht
+offen; ebenso ist Brothers Dementi ein eigennütziges, eng gefasstes PR-Wort - das "absichtlich"
+und der eingeräumte "Genuine-Check" schwächen seine Beweiskraft. Das nüchterne Fazit steht
 dazwischen: Brother ist nicht als sauber <em>bewiesen</em>, bleibt aber nach heutiger
-Beleglage deutlich unproblematischer als HP — HP mit zugegebenem DRM und Gerichtsvergleich,
+Beleglage deutlich unproblematischer als HP - HP mit zugegebenem DRM und Gerichtsvergleich,
 Brother ohne zugegebenes DRM. Brother bleibt das geringere Übel.</p>
 
 <h2>Was sich im Juli 2026 kaufen lässt</h2>
 
 <p>Konkret wird es durch einen aktuellen, unabhängigen Redaktionstest. Die Zeitschrift
 c't (Ausgabe 26/2025, veröffentlicht Ende November 2025) prüfte im eigenen Labor vier
-farbfähige A4-Multifunktions-Laserdrucker zu massvollen Strassenpreisen und schrieb: „Brauchbare
+farbfähige A4-Multifunktions-Laserdrucker zu massvollen Strassenpreisen und schrieb: "Brauchbare
 Lasermultifunktionsdrucker mit Farbe gibt es schon ab gut 300 Euro, ab 380 Euro mit
 Duplex-Einzugscanner."<sup><a href="#q7">7</a></sup> Die vier Kandidaten, mit ungefähren
 Preisen (Stand Frühjahr 2026, Strassenpreis):</p>
 
 <ul>
-<li><strong>Kyocera Ecosys MA2101cwfx</strong> — rund 300 Euro, das günstigste Gerät im
+<li><strong>Kyocera Ecosys MA2101cwfx</strong> - rund 300 Euro, das günstigste Gerät im
 Test.</li>
-<li><strong>Brother DCP-L3560CDW</strong> — je nach Händler etwa 285 bis 388 Euro.</li>
-<li><strong>Canon i-Sensys MF667Cdw</strong> — im mittleren Bereich.</li>
-<li><strong>Xerox C325</strong> — das teuerste der vier.</li>
+<li><strong>Brother DCP-L3560CDW</strong> - je nach Händler etwa 285 bis 388 Euro.</li>
+<li><strong>Canon i-Sensys MF667Cdw</strong> - im mittleren Bereich.</li>
+<li><strong>Xerox C325</strong> - das teuerste der vier.</li>
 </ul>
 
-<p>Aus der Perspektive dieses Textes — Zuverlässigkeit, günstige Verbrauchsmaterialien,
-möglichst wenig Chip-Spielereien — sind zwei davon die naheliegenden Kandidaten: das
+<p>Aus der Perspektive dieses Textes - Zuverlässigkeit, günstige Verbrauchsmaterialien,
+möglichst wenig Chip-Spielereien - sind zwei davon die naheliegenden Kandidaten: das
 Kyocera Ecosys als schlicht günstigstes Gerät, und der Brother als die historisch
-fremdtoner-freundlichste Marke. Denn die Anforderung „billige Tinte, notfalls über
+fremdtoner-freundlichste Marke. Denn die Anforderung "billige Tinte, notfalls über
 AliExpress" heisst beim Laser: <em>Kompatibel-Toner</em>, und Brother ist die Marke, bei
 der solcher Toner am wenigsten Ärger macht. Zwei ehrliche Einschränkungen dazu. Erstens:
-Die konkreten Kompatibel-Toner-Nummern und -Preise sprengen hier den Rahmen — für den
+Die konkreten Kompatibel-Toner-Nummern und -Preise sprengen hier den Rahmen - für den
 empfohlenen Brother stehen sie weiter unten in einem eigenen Abschnitt, für die anderen
 Modelle wurden sie nicht eigens geprüft. Zweitens, und wichtiger: Ob ausgerechnet der empfohlene Brother
 DCP-L3560CDW dasselbe Firmware-Risiko der Farbregistrierung trägt wie die oben genannten,
-geflaggten Modelle, war die offenste Frage dieses Textes — und wurde darum in einer zweiten,
+geflaggten Modelle, war die offenste Frage dieses Textes - und wurde darum in einer zweiten,
 eng gefassten Prüfrunde eigens nachrecherchiert, ganz auf dieses Modell gerichtet. Der
 folgende Nachtrag gibt die Antwort; die Vorsichtsregel danach gilt ohnehin für jedes dieser
 Geräte.</p>
@@ -241,36 +242,36 @@ Geräte.</p>
 
 <p>Das Ergebnis ist eine ehrliche Fehlanzeige, und die ist genauer als ein schnelles Ja
 oder Nein. Zuerst die Entlastung: Der DCP-L3560CDW wird in <em>keiner</em> der Quellen zum
-Firmware-Vorwurf genannt. Der Vorwurf hängt ausschliesslich an älteren Geräten — MFC-3750,
-MFC-L3370CDW, HL-L9310CDW —, und weder die einschlägige Verbraucherrechte-Wiki noch die
+Firmware-Vorwurf genannt. Der Vorwurf hängt ausschliesslich an älteren Geräten - MFC-3750,
+MFC-L3370CDW, HL-L9310CDW -, und weder die einschlägige Verbraucherrechte-Wiki noch die
 deutsche Berichterstattung noch Brothers eigene Modellseite bringen den DCP-L3560CDW mit
 Fremdtoner oder Farbregistrierung in Verbindung.<sup><a href="#q9">9</a></sup> Der Vorwurf
 selbst steht überdies auf dünnen Beinen: Die Farbregistrierungs-Behauptung stützt sich auf
-den Bericht eines <em>einzigen</em> Nutzers — und zwar zu einem MFC-3750, streng genommen
+den Bericht eines <em>einzigen</em> Nutzers - und zwar zu einem MFC-3750, streng genommen
 einem Tinten-/Toner-Kombigerät, nicht der Farblaser-Serie; Tom's Hardware nannte Rossmanns
-Quellenlage ausdrücklich „nicht zahlreich und nicht hochwertig" (engl. „not numerous or
+Quellenlage ausdrücklich "nicht zahlreich und nicht hochwertig" (engl. "not numerous or
 high-quality").<sup><a href="#q9">9</a></sup> In sauberer Einteilung ist das ein
 <em>unbestätigter</em> Vorwurf, kein belegter Befund.</p>
 
-<p>Dann die nötige Kühle: „Nachweislich verschont" ist der DCP-L3560CDW damit
+<p>Dann die nötige Kühle: "Nachweislich verschont" ist der DCP-L3560CDW damit
 <em>nicht</em>. Fehlende Berichte sind Abwesenheit von Evidenz, nicht Beweis der
-Unbetroffenheit — womöglich ist das Modell schlicht jünger und weniger mit Fremdtoner
+Unbetroffenheit - womöglich ist das Modell schlicht jünger und weniger mit Fremdtoner
 durchprobiert. Und technisch ist der fragliche Weg da: Der Drucker steht auf einem aktiven,
 über das Internet ausgelieferten Firmware-Strang (das Update-Werkzeug trägt modellspezifisch
-Version 1.46), bezogen über genau jenen „Brother Internet Server", dessen Missbrauch der
+Version 1.46), bezogen über genau jenen "Brother Internet Server", dessen Missbrauch der
 Vorwurf anderen Geräten unterstellt.<sup><a href="#q10">10</a></sup> Der Mechanismus ist
-vorhanden; beobachtet wurde er an diesem Modell nie. Das ist der ehrliche Zwischenstand — und
+vorhanden; beobachtet wurde er an diesem Modell nie. Das ist der ehrliche Zwischenstand - und
 ein Grund mehr für die Offline-Regel gleich darauf.</p>
 
 <p>Die Gegenprobe schliesslich fällt zugunsten des zweiten Kandidaten aus. Den Kyocera
 Ecosys MA2101cwfx berührt der ganze Streit gar nicht; er nimmt Toner der Reihe
 TK-5480/TK-5490, für die Fremdtoner frei erhältlich ist, und seine Bildtrommel samt
 Entwicklereinheit ist auf ein langes Druckerleben ausgelegt (Kyoceras ECOSYS-Prinzip,
-Garantie bis rund 100'000 Seiten) — ein Zeichen für Langlebigkeit ohne routinemässigen
+Garantie bis rund 100'000 Seiten) - ein Zeichen für Langlebigkeit ohne routinemässigen
 Trommeltausch.<sup><a href="#q12">12</a></sup> Zweierlei blieb aber auch nach dieser Runde
 offen und sei darum genannt: der eigentliche Ruf der Kyocera-Linie <em>unter</em> IT-Leuten
 und etwaige eigene Firmware- oder Chip-Fallen liessen sich nicht belegen; das bleibt offen.
-Das konkrete Verbrauchsmaterial des Brother dagegen — Toner, Chip, Starter — liess sich in
+Das konkrete Verbrauchsmaterial des Brother dagegen - Toner, Chip, Starter - liess sich in
 einer dritten, ganz engen Runde klären; dazu weiter unten ein eigener Abschnitt.</p>
 
 <p>Unterm Strich schärft das die Empfehlung, statt sie umzuwerfen: Der geflaggte Schrecken
@@ -280,35 +281,35 @@ berührt hat.</p>
 
 <h2>Was der Brother frisst: Toner, Chip, Starter</h2>
 
-<p>Damit ist die letzte praktische Lücke geschlossen — eine dritte Prüfrunde ging nur noch
+<p>Damit ist die letzte praktische Lücke geschlossen - eine dritte Prüfrunde ging nur noch
 dem Verbrauchsmaterial des DCP-L3560CDW nach, und hier ist die Beleglage erfreulich fest,
 weil sie an Brothers eigenem Datenblatt und der offiziellen Zubehörliste hängt. Zuerst die
 Korrektur einer verbreiteten Fehlannahme, auch meiner eigenen: Der DCP-L3560CDW nimmt
 <em>nicht</em> die oft genannte Reihe TN-247/TN-249, sondern die Serie
-<strong>TN-248</strong> — TN-247 ist die Vorgänger-Generation, TN-249 gehört zu grösseren
+<strong>TN-248</strong> - TN-247 ist die Vorgänger-Generation, TN-249 gehört zu grösseren
 Business-Geräten. Original gibt es die Standard-Patronen TN-248BK/C/M/Y mit je rund 1'000
-Seiten und die „Jumbo"-Variante TN-248XL — TN-248XLBK mit rund 3'000 Seiten Schwarz,
+Seiten und die "Jumbo"-Variante TN-248XL - TN-248XLBK mit rund 3'000 Seiten Schwarz,
 TN-248XLC/M/Y mit je rund 2'300 Seiten Farbe; dazu die Trommel DR-248CL (bis rund 30'000
 Seiten), das Transferband BU-229CL und den Resttonerbehälter WT-229CL (je bis rund 50'000
 Seiten).<sup><a href="#q13">13</a></sup></p>
 
-<p>Für die drei praktischen Sorgen — Fremdtoner, Chip, Starter — fällt die Antwort günstig
+<p>Für die drei praktischen Sorgen - Fremdtoner, Chip, Starter - fällt die Antwort günstig
 aus, mit einer ehrlichen Einschränkung. <em>Fremdtoner</em> ist in Deutschland reichlich und
 frei erhältlich (Amazon, eBay, die einschlägigen Toner-Shops) und kostet grob die Hälfte des
 Originals oder weniger: einzelne XL-Patronen ab etwa 12 Euro, ein XL-Vierfarb-Satz je nach
 Anbieter rund 43 bis 100 Euro, gegenüber dem Original-Multipack TN-248VAL bei etwa 166 bis
 212 Euro.<sup><a href="#q14">14</a></sup> <em>Der Chip</em> sitzt bei den Kompatibel-Patronen
-bereits fertig darauf — „einfach einsetzen und losdrucken", kein Reset, kein Chiptausch
+bereits fertig darauf - "einfach einsetzen und losdrucken", kein Reset, kein Chiptausch
 nötig.<sup><a href="#q14">14</a></sup> Und der berüchtigte <em>Starter-Toner</em>: Der
 DCP-L3560CDW wird zwar mit Einführungstoner ausgeliefert, aber laut Datenblatt mit rund
-1'000 Seiten Schwarz und 1'000 Seiten Farbe — also mit der <em>gleichen</em> Reichweite wie
+1'000 Seiten Schwarz und 1'000 Seiten Farbe - also mit der <em>gleichen</em> Reichweite wie
 eine gekaufte Standardpatrone, nicht als halb gefüllte Mogelpackung.<sup><a href="#q13">13</a></sup>
 Die eigentliche Kostenwahrheit steckt woanders: Die Standard-Reichweite von 1'000 Seiten ist
-an sich niedrig — wer mehr als selten druckt, kauft ohnehin gleich XL.</p>
+an sich niedrig - wer mehr als selten druckt, kauft ohnehin gleich XL.</p>
 
-<p>Die Einschränkung, damit das nicht zu glatt klingt: Dass die Kompatibel-Chips „getestet
+<p>Die Einschränkung, damit das nicht zu glatt klingt: Dass die Kompatibel-Chips "getestet
 und mit aktuellen Firmware-Ständen funktionsfähig" seien, ist die Aussage eines Händlers zu
-seiner eigenen Hausmarke, kein unabhängiger Test. Und — die verbliebene Fehlanzeige — zu
+seiner eigenen Hausmarke, kein unabhängiger Test. Und - die verbliebene Fehlanzeige - zu
 genau diesem Modell fanden sich weder unabhängige Langzeit-Zuverlässigkeitsdaten noch
 Nutzerberichte über abgelehnte Fremd-Chips. Das ist beruhigend, aber kein Beweis: Fehlende
 Fehlermeldungen sind nicht dasselbe wie erwiesene Verträglichkeit. Für den, der ohnehin
@@ -318,48 +319,48 @@ offline bleibt, ist das Restrisiko klein.</p>
 
 <p>Die einzige wirksamste Massnahme ist zugleich die einfachste, und sie ist geprüft:
 Selbst Rossmann hält seinen eigenen, nur gelegentlich genutzten Brother-Drucker bewusst
-„vom Internet fern und ungepatcht" (engl. „off the internet and un-updated"), um der
-verbraucherfeindlichen Firmware zu entgehen — und sagt, er könne heute keinen Drucker mehr
+"vom Internet fern und ungepatcht" (engl. "off the internet and un-updated"), um der
+verbraucherfeindlichen Firmware zu entgehen - und sagt, er könne heute keinen Drucker mehr
 guten Gewissens empfehlen.<sup><a href="#q8">8</a></sup> Daraus die praktische Regel, die
 für den Selten-Drucker nichts kostet: die automatischen Firmware-Updates abschalten und
-den Drucker vom Internet trennen — drucken über USB oder ein abgeschottetes lokales Netz.
+den Drucker vom Internet trennen - drucken über USB oder ein abgeschottetes lokales Netz.
 Das entschärft genau jenes Firmware-Risiko, das die eigentliche moderne Bedrohung für einen
-„fürs Leben gekauften" Drucker ist. Denn nicht die Mechanik gibt heute zuerst auf, sondern
+"fürs Leben gekauften" Drucker ist. Denn nicht die Mechanik gibt heute zuerst auf, sondern
 das nachgeladene Update.</p>
 
 <p>Für den empfohlenen Brother ist dieser Weg dokumentiert und einfach: Der automatische
 Update-Check lässt sich im Menü abschalten (Werkzeug-Symbol → Alle Einstellungen →
-Geräteinformationen → „Firmware Auto Check" → Aus), so steht es in Brothers eigener
+Geräteinformationen → "Firmware Auto Check" → Aus), so steht es in Brothers eigener
 Einstellungstabelle für dieses Gerät; ein reiner USB-Treiber wird angeboten, der Drucker
 läuft ohne Internet.<sup><a href="#q11">11</a></sup> Ein Detail macht die Regel dringlicher:
-Brother stellt ältere Firmware-Stände offenbar nicht bereit — ein Zurückrollen eines einmal
+Brother stellt ältere Firmware-Stände offenbar nicht bereit - ein Zurückrollen eines einmal
 eingespielten Updates ist praktisch nicht vorgesehen. Lässt man ein schlechtes Update durch,
 kommt man nicht zurück; darum ist das Abschalten kein Aberglaube, sondern Vorsorge.<sup><a href="#q11">11</a></sup></p>
 
 <p>Weitere Fallen, hier <em>ohne</em> abschliessende Prüfung genannt und darum als
-Prüfpunkt, nicht als Urteil: nicht zurücksetzbare Toner-Chips, „Starter"-Toner (nur halb
+Prüfpunkt, nicht als Urteil: nicht zurücksetzbare Toner-Chips, "Starter"-Toner (nur halb
 gefüllt) im Lieferumfang, die Frage der Chip-Resetbarkeit. Wer sicher gehen will, prüft das
 für das konkrete Modell vor dem Kauf. Und umgekehrt, zur Ehrlichkeit des Verfahrens, die
 Dinge, die in dieser Runde <em>durchfielen</em> und die man darum nicht glauben sollte: dass
 Fremdtoner grundsätzlich verschmiere (die Stiftung Warentest widerlegte die pauschale
 Behauptung in ihrem eigenen Test); dass Brothers Firmware nachweislich absichtlich die
-Qualität mindere; dass „jede neue Brother-Firmware mehr Fremdtoner lahmlege"; und dass der
+Qualität mindere; dass "jede neue Brother-Firmware mehr Fremdtoner lahmlege"; und dass der
 Toner automatisch der grösste Kostenposten sei. Alle vier klangen plausibel, alle vier
 überlebten die Widerleger nicht.</p>
 
 <h2>Das geringste Übel</h2>
 
-<p>Es gibt keinen Drucker ohne Haken. Die ehrliche Empfehlung lautet darum nicht „der
-Beste", sondern „der Erträglichste": ein Farblaser von Brother oder Kyocera in der
+<p>Es gibt keinen Drucker ohne Haken. Die ehrliche Empfehlung lautet darum nicht "der
+Beste", sondern "der Erträglichste": ein Farblaser von Brother oder Kyocera in der
 300-Euro-Klasse, gekauft für die Hardware, offline gehalten, mit Kompatibel-Toner
-gefüttert; von HP die Finger gelassen. Das ist nicht das vollkommene Gerät — es ist das
+gefüttert; von HP die Finger gelassen. Das ist nicht das vollkommene Gerät - es ist das
 geringste Übel, und für Farbe, seltenes Drucken und den Wunsch nach Dauer ist es gut genug.
 Das war die Vorgabe, und sie ist erfüllbar.</p>
 
 <p>Der eigentliche Mangel aber sitzt nicht in diesem oder jenem Gehäuse. Er sitzt darin,
-dass eine ganze Branche es geschafft hat, „schliess es besser nicht ans Internet an" zum
+dass eine ganze Branche es geschafft hat, "schliess es besser nicht ans Internet an" zum
 vernünftigen Rat für ein Haushaltsgerät zu machen. Dass man einem Ding, das nur Papier
-schwärzen soll, misstrauen muss wie einem Fremden — den Rest darf der Leser selbst
+schwärzen soll, misstrauen muss wie einem Fremden - den Rest darf der Leser selbst
 aussprechen.</p>
 
 <h2>Was offen bleibt</h2>
@@ -372,18 +373,18 @@ hat:</p>
 und der vollwertige Starter-Toner nun geklärt; offen bleibt nur die härtere Frage:
 unabhängige Langzeit-Zuverlässigkeitsdaten zu Kompatibel-Chips fehlen (die Verträglichkeit
 stützt sich auf Händler-Marketing), und ob das <em>Nachfüllen</em> einer bestehenden
-Original-Patrone — statt Kauf einer fertigen Kompatibel-Patrone — einen Chip-Reset verlangt,
+Original-Patrone - statt Kauf einer fertigen Kompatibel-Patrone - einen Chip-Reset verlangt,
 wurde nicht belegt.</li>
 <li>Führt der DCP-L3560CDW technisch überhaupt jene automatische Farbregistrierung aus, die
-der Vorwurf „verschlechtern" will — oder ist dieses Druckwerk-Verhalten den älteren
+der Vorwurf "verschlechtern" will - oder ist dieses Druckwerk-Verhalten den älteren
 geflaggten Modellen eigen? Greift der Mechanismus gar nicht, wäre der Vorwurf für dieses
 Modell ohnehin gegenstandslos.</li>
 <li>Ist ein Nachfülltank-Tintenstrahler (EcoTank, MegaTank) trotz Verstopfungsrisiko bei
-seltenem Farbdruck je die bessere Wahl — und wie steht es dort um Auffangkissen-Sperren?
+seltenem Farbdruck je die bessere Wahl - und wie steht es dort um Auffangkissen-Sperren?
 (Von den geprüften Befunden nicht abgedeckt.)</li>
 <li>Wie ist der Ruf der Kyocera-Ecosys-Linie <em>unter</em> IT-Leuten, und trägt sie eigene
 Firmware- oder Chip-Fallen? Belegt sind nur die lang ausgelegte Trommel und die
-Fremdtoner-Verfügbarkeit — Reputation und mögliche Kyocera-Fallen blieben ohne Evidenz.</li>
+Fremdtoner-Verfügbarkeit - Reputation und mögliche Kyocera-Fallen blieben ohne Evidenz.</li>
 </ul>
 
 <h2>Quellen</h2>
@@ -594,7 +595,7 @@ unabhängige Langzeit-Zuverlässigkeit und AliExpress-Preise.</p>
 
 <footer class="fuss">
   <p>© 2026 Eric Naville · nach dem Bild der zwölf Weltanschauungen
-  <span class="quelle">(Rudolf Steiner, „Der menschliche und der kosmische Gedanke“, GA&nbsp;151)</span></p>
+  <span class="quelle">(Rudolf Steiner, "Der menschliche und der kosmische Gedanke", GA&nbsp;151)</span></p>
 </footer>
 
 </body>

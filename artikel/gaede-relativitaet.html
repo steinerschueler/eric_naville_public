@@ -3,7 +3,7 @@ status: veröffentlicht
 gattung: materialismus
 art: 1
 reihe: 5
-zusammenfassung: Ist die Raumzeit ein Ding oder eine verdinglichte Geometrie? Minkowskis Schatten, Einsteins Gleichzeitigkeit und das Block-Universum, das Lochargument — und die gemessene Krümmung, an der sich die Deutungen scheiden.
+zusammenfassung: Ist die Raumzeit ein Ding oder eine verdinglichte Geometrie? Minkowskis Schatten, Einsteins Gleichzeitigkeit und das Block-Universum, das Lochargument - und die gemessene Krümmung, an der sich die Deutungen scheiden.
 schlagworte: Bill Gaede, Relativität, Raumzeit, Minkowski, Block-Universum, Hole Argument, E=mc², LIGO, Unger, Smolin, Einstein, Zeitdilatation, Materialismus
 -->
 <!doctype html>
@@ -11,27 +11,27 @@ schlagworte: Bill Gaede, Relativität, Raumzeit, Minkowski, Block-Universum, Hol
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Die Relativität – Eric Naville</title>
-<meta name="description" content="Ist die Raumzeit ein Ding oder eine verdinglichte Geometrie? Minkowskis Schatten, Einsteins Gleichzeitigkeit und das Block-Universum, das Lochargument — und die gemessene Krümmung, an der sich die Deutungen scheiden.">
+<title>05 - Die Relativität - Eric Naville</title>
+<meta name="description" content="Ist die Raumzeit ein Ding oder eine verdinglichte Geometrie? Minkowskis Schatten, Einsteins Gleichzeitigkeit und das Block-Universum, das Lochargument - und die gemessene Krümmung, an der sich die Deutungen scheiden.">
 <link rel="canonical" href="https://eric-naville.ch/artikel/gaede-relativitaet.html">
 <meta property="og:url" content="https://eric-naville.ch/artikel/gaede-relativitaet.html">
-<meta property="og:title" content="Die Relativität">
-<meta property="og:description" content="Ist die Raumzeit ein Ding oder eine verdinglichte Geometrie? Minkowskis Schatten, Einsteins Gleichzeitigkeit und das Block-Universum, das Lochargument — und die gemessene Krümmung, an der sich die Deutungen scheiden.">
+<meta property="og:title" content="05 - Die Relativität">
+<meta property="og:description" content="Ist die Raumzeit ein Ding oder eine verdinglichte Geometrie? Minkowskis Schatten, Einsteins Gleichzeitigkeit und das Block-Universum, das Lochargument - und die gemessene Krümmung, an der sich die Deutungen scheiden.">
 <meta property="og:type" content="article">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23a8802c' stroke-width='6'/%3E%3Cpath d='M8 50h84' stroke='%23a8802c' stroke-width='5'/%3E%3Cpath d='M50 16v68' stroke='%235d4a35' stroke-width='7'/%3E%3C/svg%3E">
 <script>
 (function(){
   var w=document.documentElement;
-  try{var g=localStorage.getItem("thema"); if(g==="hell"||g==="dunkel") w.setAttribute("data-theme",g);}catch(e){}
-  function eff(){var t=w.getAttribute("data-theme"); if(t) return t;
-    return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dunkel":"hell";}
+  var B=["terminal","hell","dunkel"], N={terminal:"Terminal",hell:"Hell",dunkel:"Nacht"};
+  try{var g=localStorage.getItem("thema"); if(B.indexOf(g)>=0) w.setAttribute("data-theme",g);}catch(e){}
+  function eff(){var t=w.getAttribute("data-theme"); return B.indexOf(t)>=0?t:"terminal";}
+  function naechst(){ return B[(B.indexOf(eff())+1)%B.length]; }
   function wire(){
     var b=document.querySelector(".thema-schalter"); if(!b) return;
-    function zeige(){var d=eff()==="dunkel"; b.setAttribute("aria-pressed",d?"true":"false");
-      var l=d?"Zum hellen Erscheinungsbild wechseln":"Zum dunklen Erscheinungsbild wechseln";
+    function zeige(){var l="Erscheinungsbild: "+N[eff()]+" - weiter zu "+N[naechst()];
       b.setAttribute("aria-label",l); b.title=l;}
-    b.addEventListener("click",function(){var n=eff()==="dunkel"?"hell":"dunkel";
+    b.addEventListener("click",function(){var n=naechst();
       w.setAttribute("data-theme",n); try{localStorage.setItem("thema",n);}catch(e){} zeige();});
     zeige();
   }
@@ -43,6 +43,7 @@ schlagworte: Bill Gaede, Relativität, Raumzeit, Minkowski, Block-Universum, Hol
 
 <header class="kopf">
   <button type="button" class="thema-schalter" aria-label="Erscheinungsbild wechseln" title="Erscheinungsbild wechseln">
+    <svg class="terminal" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.2" width="18.8" height="15.6" rx="2.2"/><path d="M7 9.4l2.8 2.6L7 14.6M12.8 15h4.2"/></svg>
     <svg class="sonne" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.2v2.6M12 19.2v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.2 12h2.6M19.2 12h2.6M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9"/></svg>
     <svg class="mond" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.8A8.3 8.3 0 0 1 9.2 3.5a6.6 6.6 0 1 0 11.3 11.3z"/></svg>
   </button>
@@ -60,26 +61,26 @@ schlagworte: Bill Gaede, Relativität, Raumzeit, Minkowski, Block-Universum, Hol
   </nav>
 
   <article class="artikel" id="gaede-relativitaet">
-<h1>Die Relativität</h1>
+<h1>05 - Die Relativität</h1>
 <p class="datum">9. Juli 2026</p>
 
 <p>Ein Ding zeigt man, einen Begriff umschreibt man. Legt man diesen Schnitt an die
-Relativitätstheorie, so trifft er ihren wundesten Punkt — denn hier ist der Gegenstand
+Relativitätstheorie, so trifft er ihren wundesten Punkt - denn hier ist der Gegenstand
 der Physik nicht mehr ein Körper, sondern eine Geometrie: die Raumzeit, ein
 vierdimensionales Kontinuum, das gekrümmt sein, sich dehnen und die Zeit als eine seiner
 Achsen führen soll. Bill Gaede, der argentinische Ingenieur, dessen Kritik diese Reihe
 verfolgt, verlangt hier, was er überall verlangt: eine Definition. Was ist die Zeit, was der
-Raum, was die „Raumzeit“ — als physisches Objekt, in klarer Sprache, ohne magische Wendungen?
+Raum, was die "Raumzeit" - als physisches Objekt, in klarer Sprache, ohne magische Wendungen?
 Physik, sagt Gaede, sei die Wissenschaft dessen, was existiert, die Mathematik eine
-Wissenschaft des Verhaltens; und „existieren“ gelte in der Wissenschaft allein von Objekten.
+Wissenschaft des Verhaltens; und "existieren" gelte in der Wissenschaft allein von Objekten.
 Ein Wort, das kein Objekt mit Gestalt benennt, gehört nach diesem Massstab nicht in die Physik,
-sondern in die Mathematik — dort mag man mit Zahlengeraden und Dimensionen frei verfahren.
+sondern in die Mathematik - dort mag man mit Zahlengeraden und Dimensionen frei verfahren.
 Gaede selbst zieht die Grenze noch härter, als diese Reihe ihm folgt: Ihm ist die mathematische
 Physik geradezu irrational; diese Reihe nimmt von ihm die Definitionsfrage und prüft die
 Rechnung Gebiet für Gebiet. Der Ort dieser Prüfung im Kreis
 ist wie zuvor die Art&nbsp;I des Materialismus. Und gleich zu Beginn ist eine Trennung zu
-ziehen, die den ganzen Text trägt: Gaedes <em>Frage</em> — lässt sich die Raumzeit physisch
-definieren, und wenn nicht, ist sie dann noch Physik? — ist ernst, und die ersten Köpfe der
+ziehen, die den ganzen Text trägt: Gaedes <em>Frage</em> - lässt sich die Raumzeit physisch
+definieren, und wenn nicht, ist sie dann noch Physik? - ist ernst, und die ersten Köpfe der
 Physik haben an ihr gerührt; seine <em>Antwort</em>, die von der Begriffskritik weiter in die
 Leugnung der gemessenen Relativität führt, ist davon zu trennen. Die Frage nehmen wir auf; die
 Leugnung bleibt, wo sie hingehört.</p>
@@ -87,7 +88,7 @@ Leugnung bleibt, wo sie hingehört.</p>
 <h2>Raum und Zeit als Schatten</h2>
 
 <p>Dass hier Mathematik zur Physik erklärt wird, steht nicht erst bei Gaedes Gegnern, sondern
-im Gründungstext selbst — und ein Mathematiker hat es getan. Nicht Einstein, sondern Hermann
+im Gründungstext selbst - und ein Mathematiker hat es getan. Nicht Einstein, sondern Hermann
 Minkowski hat 1908 die Raumzeit als eigene Grösse eingeführt, und er tat es mit einem Satz,
 der wie eine Kriegserklärung an die Anschauung klingt:</p>
 
@@ -97,17 +98,17 @@ der wie eine Kriegserklärung an die Anschauung klingt:</p>
   <p class="zitat-quelle">– Hermann Minkowski</p>
 </blockquote>
 
-<p>Diese Anschauungen, sagt Minkowski, seien „auf experimentell-physikalischem Boden
-erwachsen“ — darin liege ihre Stärke. Ein Wertsystem <em>x, y, z, t</em> nennt er einen
-„Weltpunkt“, und „die Mannigfaltigkeit aller denkbaren Wertsysteme x, y, z, t soll die Welt
-heißen“; die Bahn eines Punktes durch sie heisst „Weltlinie“.<sup><a href="#q1">1</a></sup>
+<p>Diese Anschauungen, sagt Minkowski, seien "auf experimentell-physikalischem Boden
+erwachsen" - darin liege ihre Stärke. Ein Wertsystem <em>x, y, z, t</em> nennt er einen
+"Weltpunkt", und "die Mannigfaltigkeit aller denkbaren Wertsysteme x, y, z, t soll die Welt
+heißen"; die Bahn eines Punktes durch sie heisst "Weltlinie".<sup><a href="#q1">1</a></sup>
 Aus der Menge aller Zahlenquadrupel wird <em>die Welt</em>. Genau das ist Gaedes Zielscheibe
-im Reinformat: Eine Rechenmannigfaltigkeit — die Menge aller möglichen Wertsysteme — bekommt
-einen bestimmten Artikel und heisst „die Welt“, obwohl niemand ihre Gestalt zeigen kann. Für
+im Reinformat: Eine Rechenmannigfaltigkeit - die Menge aller möglichen Wertsysteme - bekommt
+einen bestimmten Artikel und heisst "die Welt", obwohl niemand ihre Gestalt zeigen kann. Für
 den Physiker ist das die reifste Fassung der Relativität: Die Lorentz-Transformation wird zur
 Drehung in der Raumzeit, die Naturgesetze werden vierdimensional und für jeden Beobachter
 dieselben. Für Gaede ist es Mathematik, die sich Physik nennt. Der Streit dreht sich, wie im
-ganzen Projekt, nicht um Minkowskis Rechnung — die ist unbestritten —, sondern um ein Wort: ob
+ganzen Projekt, nicht um Minkowskis Rechnung - die ist unbestritten -, sondern um ein Wort: ob
 eine Mannigfaltigkeit, die keine Gestalt hat, noch in die Physik gehört oder in die Mathematik.
 Dass sie keine Gestalt hat, bestreitet keiner von beiden.</p>
 
@@ -124,38 +125,38 @@ Raum, sagt er, sei bei Einstein zu einem Gegenstand geworden wie jeder andere:</
 
 <p>Die ganze Religion der mathematischen Physik, sagt er, ruhe auf der Vorstellung, dass der
 Raum ein physikalischer Gegenstand sei, nicht anders als ein Stuhl, eine Lampe oder ein Stein
-— als wäre er von gleicher Art. Wenn der Raum kein Festkörper sei, so Gaede, breche die ganze
-mathematische Physik zusammen (‚If space is not a solid, all of Mathematical Physics collapses
-today‘). Schärfer noch
+- als wäre er von gleicher Art. Wenn der Raum kein Festkörper sei, so Gaede, breche die ganze
+mathematische Physik zusammen ('If space is not a solid, all of Mathematical Physics collapses
+today'). Schärfer noch
 trifft er die Zeit, und hier sitzt der begriffliche Kern seines Einwands. Eine Dimension,
-bestimmt er, sei „eine von drei zueinander senkrechten Richtungen, in die ein Objekt weisen
-kann“ (‚One of three mutually-orthogonal directions in which an object may face‘) — eine
-Richtung, begrifflich stetig und aus einem Stück. Was die Mathematik „Dimension“ nenne, sei
+bestimmt er, sei "eine von drei zueinander senkrechten Richtungen, in die ein Objekt weisen
+kann" ('One of three mutually-orthogonal directions in which an object may face') - eine
+Richtung, begrifflich stetig und aus einem Stück. Was die Mathematik "Dimension" nenne, sei
 etwas ganz anderes: eine Zahlengerade, aus abzählbar vielen Punkten zusammengesetzt. Sie
-verwechsle beides, indem sie „auf Zahlengeraden zeigt und sie ‚Dimensionen‘ nennt“
-(‚referring to number lines and calling them ‚dimensions‘‘). Und die Zeit vollends sei keine Dimension —
-„TIME IS NOT A DIMENSION“ —, keine stetige Richtung, sondern eine durchnummerierte Reihe wie
+verwechsle beides, indem sie "auf Zahlengeraden zeigt und sie 'Dimensionen' nennt"
+('referring to number lines and calling them 'dimensions''). Und die Zeit vollends sei keine Dimension -
+"TIME IS NOT A DIMENSION" -, keine stetige Richtung, sondern eine durchnummerierte Reihe wie
 die Bilder eines Films. Die Physiker behandelten sie dennoch wie einen Gegenstand: als könne
-man „eine Minute oder eine Woche berühren“ (‚you can physically touch a minute or a week‘),
-als verbiege die Schwerkraft „eine Reihe von Sekunden … und liefe man schnell genug, könne man
-sogar ein Jahr dehnen“ (‚gravity warps a series of seconds … if you run fast enough, you can
-even stretch a year‘). Sein nüchternes Fazit: Die quantitative Zeit sei ein Skalar — „sie
-zeigt nirgendwohin“ (‚time is a scalar. It points to nowhere!‘).<sup><a href="#q2">2</a></sup></p>
+man "eine Minute oder eine Woche berühren" ('you can physically touch a minute or a week'),
+als verbiege die Schwerkraft "eine Reihe von Sekunden … und liefe man schnell genug, könne man
+sogar ein Jahr dehnen" ('gravity warps a series of seconds … if you run fast enough, you can
+even stretch a year'). Sein nüchternes Fazit: Die quantitative Zeit sei ein Skalar - "sie
+zeigt nirgendwohin" ('time is a scalar. It points to nowhere!').<sup><a href="#q2">2</a></sup></p>
 
 <p>Der Kern dieser Beobachtung ist unbestritten: Die Relativität behandelt die Zeit
-geometrisch, als vierte Achse — genau Minkowskis „Welt“. Und eine Zahlengerade ist kein
+geometrisch, als vierte Achse - genau Minkowskis "Welt". Und eine Zahlengerade ist kein
 physisches Ding; als mathematisches Gebilde ist sie tadellos, nur eben Mathematik. Gaedes
-<em>Schluss</em> aber — dass darum auch die gemessene Zeitdehnung bloss ein Begriffsfehler sei
-— führt von der Definitionsfrage hinaus in die Leugnung der Messung, und dorthin folgt ihm die
+<em>Schluss</em> aber - dass darum auch die gemessene Zeitdehnung bloss ein Begriffsfehler sei
+- führt von der Definitionsfrage hinaus in die Leugnung der Messung, und dorthin folgt ihm die
 Physik nicht.</p>
 
 <h2>Das verschwindende Jetzt</h2>
 
 <p>Woher die geometrische Zeit kommt, zeigt Einsteins Aufsatz von 1905, mit dem die spezielle
 Relativitätstheorie beginnt. Zwei Schritte darin treffen Gaedes Nerv. Der erste: Die Zeit
-wird an ein Verfahren gebunden — die „Zeit“ eines Ereignisses ist die Anzeige einer am Ort
+wird an ein Verfahren gebunden - die "Zeit" eines Ereignisses ist die Anzeige einer am Ort
 ruhenden, synchron laufenden Uhr; kein Fluss, kein Behälter, nur ein Uhrenstand. Der zweite:
-Der Äther, das ruhende Medium des Lichts, wird nicht widerlegt, sondern für „überflüssig“
+Der Äther, das ruhende Medium des Lichts, wird nicht widerlegt, sondern für "überflüssig"
 erklärt. Daraus folgt, dass die Gleichzeitigkeit ihren festen Sinn verliert:</p>
 
 <blockquote>
@@ -167,25 +168,25 @@ erklärt. Daraus folgt, dass die Gleichzeitigkeit ihren festen Sinn verliert:</p
   <p class="zitat-quelle">– Albert Einstein</p>
 </blockquote>
 
-<p>Was für den einen Beobachter „jetzt“ geschieht, geschieht für den bewegten anderen früher
+<p>Was für den einen Beobachter "jetzt" geschieht, geschieht für den bewegten anderen früher
 oder später.<sup><a href="#q3">3</a></sup> Aus dieser einen Tatsache zieht die Philosophie
-ihre kühnste Folgerung — das Block-Universum. Weil zwei Beobachter in Relativbewegung
+ihre kühnste Folgerung - das Block-Universum. Weil zwei Beobachter in Relativbewegung
 verschiedene Schnitte der Gleichzeitigkeit durch denselben Punkt legen und kein
-physikalischer Test einen davon auszeichnet, so folge — wenn überhaupt <em>irgendetwas</em>
-bestimmt ist —, dass die ganze Raumzeit gleichermassen bestimmt sein müsse: Vergangenheit,
-Gegenwart und Zukunft gleich wirklich, wie es der Eternalismus nennt, und das „Jetzt“ ohne
+physikalischer Test einen davon auszeichnet, so folge - wenn überhaupt <em>irgendetwas</em>
+bestimmt ist -, dass die ganze Raumzeit gleichermassen bestimmt sein müsse: Vergangenheit,
+Gegenwart und Zukunft gleich wirklich, wie es der Eternalismus nennt, und das "Jetzt" ohne
 ausgezeichneten Ort. Kurt Gödel hat den Gedanken zugespitzt: Der Begriff der Existenz lasse
 sich nicht relativieren, ohne seine Bedeutung völlig zu zerstören.</p>
 
 <p>Und hier ist zu trennen: Das Block-Universum ist Deutung, nicht Physik. Die
 Stanford-Enzyklopädie, die die Argumente sammelt, sagt es selbst. Der Nachweis, dass sich
 die verräumlichte Zeit widerspruchsfrei denken lässt, zeige nicht, dass der Eternalismus
-zutreffe, sondern „nur, dass er möglich ist“ (‚only that it is optional‘). Und Carlo Rovelli
-hält fest, keine der konkurrierenden Bestimmungen einer Gegenwart „verdiene, mit
-ontologischem Gewicht beladen zu werden“ (‚deserves to be charged with ontological
-weight‘).<sup><a href="#q4">4</a></sup> Die Gleichungen der Relativität schreiben kein
-Block-Universum vor; sie erlauben es. Gaede und der Eternalist stehen an derselben Stelle —
-der Verräumlichung der Zeit — und ziehen entgegengesetzte, gleich überschiessende Schlüsse:
+zutreffe, sondern "nur, dass er möglich ist" ('only that it is optional'). Und Carlo Rovelli
+hält fest, keine der konkurrierenden Bestimmungen einer Gegenwart "verdiene, mit
+ontologischem Gewicht beladen zu werden" ('deserves to be charged with ontological
+weight').<sup><a href="#q4">4</a></sup> Die Gleichungen der Relativität schreiben kein
+Block-Universum vor; sie erlauben es. Gaede und der Eternalist stehen an derselben Stelle -
+der Verräumlichung der Zeit - und ziehen entgegengesetzte, gleich überschiessende Schlüsse:
 der eine, die Zeit sei damit als blosse Achse entlarvt und die Relativität widerlegt; der
 andere, das Werden sei damit als Illusion erwiesen. Beide behandeln eine Deutung als Zwang.</p>
 
@@ -193,7 +194,7 @@ andere, das Werden sei damit als Illusion erwiesen. Beide behandeln eine Deutung
 
 <p>Ein Wort noch zu der berühmtesten Gleichung überhaupt, <em>E&nbsp;=&nbsp;mc²</em>, denn
 auch sie liest Gaede als Verdinglichung: Energie in Masse umzuwandeln sei so sinnlos, wie
-Gerechtigkeit in Liebe umzuwandeln — beides Beziehungen, keine Stoffe, die man aus einem
+Gerechtigkeit in Liebe umzuwandeln - beides Beziehungen, keine Stoffe, die man aus einem
 Gefäss ins andere giesst; ein Einwand, dem diese Reihe schon im ersten Gebiet begegnet ist.
 Doch Einsteins eigener Satz von 1905 sagt gerade nicht, Masse <em>sei</em> Energie, als
 ginge ein Stoff in einen anderen über. Er sagt Vorsichtigeres:</p>
@@ -203,67 +204,67 @@ ginge ein Stoff in einen anderen über. Er sagt Vorsichtigeres:</p>
   <p class="zitat-quelle">– Albert Einstein</p>
 </blockquote>
 
-<p>Ein <em>Maß für</em> — das ist eine Relationsaussage, keine Substanzgleichung. Die Masse
+<p>Ein <em>Maß für</em> - das ist eine Relationsaussage, keine Substanzgleichung. Die Masse
 ist nicht die Energie; sie misst sie.<sup><a href="#q5">5</a></sup> So gelesen, sagt Einsteins
 Satz gerade das, was Gaede verlangt: keine Verwandlung eines Stoffes in einen anderen. Ein
-Bild der Energie lässt sich nicht zeichnen, darin behält er recht — ob die Beziehung, die
+Bild der Energie lässt sich nicht zeichnen, darin behält er recht - ob die Beziehung, die
 <em>E&nbsp;=&nbsp;mc²</em> festhält und die in jeder Kernbindung und Paarvernichtung gemessen
 wird, darum weniger wirklich ist als ein greifbares Ding, ist wieder dieselbe offene Frage,
 nicht ihre Widerlegung.</p>
 
 <h2>Der Raum, der wirkt</h2>
 
-<p>Zu Gaedes „der Raum ist kein Gegenstand“ hat gerade der etwas Genaues gesagt, den er
-anklagt. Denn Einstein hat den Raum nicht für ein blosses Wort gehalten — im Gegenteil, er
+<p>Zu Gaedes "der Raum ist kein Gegenstand" hat gerade der etwas Genaues gesagt, den er
+anklagt. Denn Einstein hat den Raum nicht für ein blosses Wort gehalten - im Gegenteil, er
 hat ihm 1920 die physikalischen Eigenschaften ausdrücklich zurückgegeben und den nun nicht
-mehr mechanischen „Äther“ rehabilitiert. In seinem Leidener Vortrag heisst es, nach der
-allgemeinen Relativitätstheorie sei „ein Raum ohne Äther undenkbar“ — es gäbe in ihm weder
+mehr mechanischen "Äther" rehabilitiert. In seinem Leidener Vortrag heisst es, nach der
+allgemeinen Relativitätstheorie sei "ein Raum ohne Äther undenkbar" - es gäbe in ihm weder
 Lichtausbreitung noch Massstäbe noch Uhren, also keine Entfernungen im Sinne der Physik. Und
-weiter: Der Raum sei „mit physikalischen Eigenschaften ausgestattet“ (in der von Einstein
-autorisierten englischen Fassung ‚space is endowed with physical qualities‘); doch dürfe
-dieser Äther „nicht als aus Teilen bestehend gedacht werden, die sich durch die Zeit
-verfolgen liessen“ (‚may not be thought of as … consisting of parts which may be tracked
-through time‘), und „der Begriff der Bewegung ist auf ihn nicht anwendbar“ (‚The idea of
-motion may not be applied to it‘).<sup><a href="#q6">6</a></sup></p>
+weiter: Der Raum sei "mit physikalischen Eigenschaften ausgestattet" (in der von Einstein
+autorisierten englischen Fassung 'space is endowed with physical qualities'); doch dürfe
+dieser Äther "nicht als aus Teilen bestehend gedacht werden, die sich durch die Zeit
+verfolgen liessen" ('may not be thought of as … consisting of parts which may be tracked
+through time'), und "der Begriff der Bewegung ist auf ihn nicht anwendbar" ('The idea of
+motion may not be applied to it').<sup><a href="#q6">6</a></sup></p>
 
 <p>Damit gibt Einstein Gaede die eine Hälfte seines Entweder-Oder: Der Raum hat keine Gestalt,
-kein durch die Zeit verfolgbares Teil, keine Bewegung. Strittig bleibt allein die andere —
-ob ein gestaltloses, wirkendes Gefüge noch „Physik“ heisst oder „Mathematik“.
+kein durch die Zeit verfolgbares Teil, keine Bewegung. Strittig bleibt allein die andere -
+ob ein gestaltloses, wirkendes Gefüge noch "Physik" heisst oder "Mathematik".
 Der Raum der allgemeinen Relativitätstheorie ist physikalisch: Er trägt das Gravitationsfeld,
 er wirkt und wird gewirkt; aber er ist kein ponderables Ding aus verfolgbaren Teilen, dem man
 Bewegung zuschreiben könnte. Dem einen ist das ein Feld, das Gestalten trägt und selbst keine
-hat — Struktur, nicht Substanz; dem andern, der die Gestalt zur Bedingung des Wirklichen
-macht, bleibt es ein blosses Wort. Dieselbe Beschreibung, verschieden gewertet — und gerade
+hat - Struktur, nicht Substanz; dem andern, der die Gestalt zur Bedingung des Wirklichen
+macht, bleibt es ein blosses Wort. Dieselbe Beschreibung, verschieden gewertet - und gerade
 dieses gestaltlose Etwas erzeugt die Wirkungen, die man misst.</p>
 
 <h2>Die gemessene Krümmung</h2>
 
-<p>Denn was immer die Raumzeit ihrem Wesen nach sei — sie wirkt, und zwar messbar. Die
+<p>Denn was immer die Raumzeit ihrem Wesen nach sei - sie wirkt, und zwar messbar. Die
 Satellitenuhren des GPS gehen gegen die Bodenuhren täglich um rund achtunddreissig
 Millionstelsekunden vor, und ohne diese relativistische Korrektur liefe die Ortung binnen
 eines Tages um Kilometer aus dem Ruder; zwei optische Uhren am Normeninstitut gehen
 verschieden schnell, sobald die eine um dreiunddreissig Zentimeter höher steht; Merkurs Bahn
 dreht sich um dreiundvierzig Bogensekunden je Jahrhundert; und 2015 zeichneten die
-LIGO-Anlagen eine Dehnung des Raumes von etwa einem Teil in einer Trilliarde auf —
-10<sup>−21</sup> —, das Signal zweier verschmelzender Schwarzer Löcher.<sup><a href="#q7">7</a></sup>
-Was „Raumzeitkrümmung“ dem Wesen nach auch sei — sie wirkt prüfbar; ihr mathematischer
+LIGO-Anlagen eine Dehnung des Raumes von etwa einem Teil in einer Trilliarde auf -
+10<sup>-21</sup> -, das Signal zweier verschmelzender Schwarzer Löcher.<sup><a href="#q7">7</a></sup>
+Was "Raumzeitkrümmung" dem Wesen nach auch sei - sie wirkt prüfbar; ihr mathematischer
 Ausdruck, die geodätische Abweichung, ist nichts anderes als die Gezeitenkraft, der messbare
 Unterschied, mit dem zwei benachbarte Körper fallen. Ein Materialismus, der es ernst meint mit
-dem Physischen — das Ziel dieser Reihe —, kann diese Wirkungen nicht leugnen. Er kann nur
+dem Physischen - das Ziel dieser Reihe -, kann diese Wirkungen nicht leugnen. Er kann nur
 fragen, was da wirkt. Und genau das ist die lebendige, weiterlebende Hälfte von Gaedes
 Vorstoss.</p>
 
 <h2>Die Frage und die Antwort</h2>
 
 <p>Damit ist die Trennlinie erreicht. Es gibt eine Stelle,
-an der die Physik selbst fragt, ob die Raumzeit ein Ding ist — ohne einen Hauch von
+an der die Physik selbst fragt, ob die Raumzeit ein Ding ist - ohne einen Hauch von
 Aussenseiterei, mitten in Einsteins eigener Denkkrise der Jahre 1913 bis 1915. Sie heisst
 das Lochargument. Die Frage lautet: Sind die <em>Punkte</em> der Raumzeit reale
 Wesenheiten, oder sind sie es nicht? Die allgemeine Relativitätstheorie lässt eine Freiheit
 zu: Man kann die Felder über der Mannigfaltigkeit so umverteilen, dass alle Gesetze und alle
 <em>beobachtbaren</em> Grössen erhalten bleiben, sich aber ändert, welcher Punkt welche
 Materie trägt. Wer die Punkte für eigenständig hält, müsste zwei physikalisch verschiedene
-Welten annehmen, die durch keine Messung zu unterscheiden sind — er handelt sich Tatsachen
+Welten annehmen, die durch keine Messung zu unterscheiden sind - er handelt sich Tatsachen
 ein, die niemand je erfahren kann, und einen Bruch der Vorhersagbarkeit dazu. Einstein hat
 das Argument 1913 zunächst gegen die allgemeine Kovarianz gewendet und diese zeitweise
 verworfen; Ende 1915 kehrte er um und löste es mit dem Punkt-Koinzidenz-Argument, das die
@@ -278,18 +279,18 @@ Stanford-Enzyklopädie so zusammenfasst:</p>
 </blockquote>
 
 <p>Die Punkte der Raumzeit haben demnach keine von den Feldern unabhängige Identität; sie
-sind, wie die spätere Debatte sagt, „überzähliges metaphysisches Gepäck“.<sup><a
+sind, wie die spätere Debatte sagt, "überzähliges metaphysisches Gepäck".<sup><a
 href="#q8">8</a></sup> Das heisst: Die Physik selbst spricht den Raumzeitpunkten die
-selbständige Realität ab. Gaedes Frage — zeigt mir das Ding hinter der Geometrie — ist also
+selbständige Realität ab. Gaedes Frage - zeigt mir das Ding hinter der Geometrie - ist also
 nicht absurd. Sie ist eine der tiefsten offenen Fragen der Grundlagenphysik, und Einstein hat
 mit ihr gerungen und am Ende gegen das Ding entschieden. Nur: Diese Debatte wird
 <em>innerhalb</em> der Relativität geführt, mit ihrem vollen Formalismus, von Leuten, die
-alle die Messungen anerkennen. Sie leugnet die Relativität nicht — sie benutzt sie.</p>
+alle die Messungen anerkennen. Sie leugnet die Relativität nicht - sie benutzt sie.</p>
 
 <p>Und es gibt eine ernste Stimme, die Gaedes Anliegen ausspricht, ohne seine Leugnung. Der
 Naturphilosoph Roberto Mangabeira Unger und der theoretische Physiker Lee Smolin
 verteidigen in ihrem gemeinsamen Buch von 2014 die Realität der Zeit gegen das
-Block-Universum — mit voller Anerkennung der Relativität. Nicht ihre Gleichungen seien
+Block-Universum - mit voller Anerkennung der Relativität. Nicht ihre Gleichungen seien
 falsch, sondern ihre eternalistische Deutung verwechsle ein mathematisches Modell mit der
 Wirklichkeit. Die Verräumlichung der Zeit ist danach ein Fehler der Auslegung, nicht der
 Rechnung. Ihr Satz gegen die Vergötzung der Mathematik könnte über dem ganzen Gebiet
@@ -304,30 +305,30 @@ stehen:</p>
 </blockquote>
 
 <p>So sieht die reife Fassung von Gaedes Nerv aus.<sup><a href="#q9">9</a></sup> Das
-Verdinglichen der Geometrie und der Zeit ist fragwürdig — aber man begegnet ihm mit
+Verdinglichen der Geometrie und der Zeit ist fragwürdig - aber man begegnet ihm mit
 Argumenten, nicht mit dem Verwerfen der geprüften Physik. Gaedes Frage teilt er mit
-Minkowski, der Raum und Zeit selbst zu „Schatten“ erklärte, mit Einstein, der den
-Raumzeitpunkten die Realität nahm, mit Unger und Smolin. Seine <em>Antwort</em> — die Leugnung
-der Relativität — teilt er mit keinem von ihnen; sie steht gegen die Messungen, die jene alle
+Minkowski, der Raum und Zeit selbst zu "Schatten" erklärte, mit Einstein, der den
+Raumzeitpunkten die Realität nahm, mit Unger und Smolin. Seine <em>Antwort</em> - die Leugnung
+der Relativität - teilt er mit keinem von ihnen; sie steht gegen die Messungen, die jene alle
 anerkennen. Genau hier läuft die Trennlinie: die Frage lebt, die Leugnung bleibt aussen vor.</p>
 
 <h2>Die Substanz und ihr Schatten</h2>
 
-<p>Tritt man zurück, so fügt sich das Gebiet in das Muster, das diese Reihe verfolgt — und
+<p>Tritt man zurück, so fügt sich das Gebiet in das Muster, das diese Reihe verfolgt - und
 die Ordnung, die es sichtbar macht, ist Deutung dieser Seite, kein Lehrsatz. Dem Materialismus gehört
 im Bild dieser Seite der Körper; die Relativität aber, die den physischen Kosmos beschreiben
-will, rechnet nicht mit Körpern, sondern mit einer Geometrie und mit Relationen — mit der
+will, rechnet nicht mit Körpern, sondern mit einer Geometrie und mit Relationen - mit der
 Metrik, der Krümmung, der Gleichzeitigkeit, der Weltlinie. Was den Stoff beansprucht,
 arbeitet in Form und Beziehung. Minkowskis Wort trifft es genauer, als er meinte: Raum und
 Zeit sinken zu Schatten herab, und was Selbständigkeit behält, ist eine Rechenfigur. Ob das
 der Verlust des Stofflichen ist oder die Einsicht, dass die Schwere gar kein Ding, sondern
-eine Struktur ist — darüber, und nur darüber, geht der Streit.</p>
+eine Struktur ist - darüber, und nur darüber, geht der Streit.</p>
 
 <p>Am Ende hat sich auch hier jede grosse Verdinglichung als Zwitter erwiesen:
 Die Raumzeit ist kein Stein, aber auch kein leeres Wort; die Zeit ist als Achse geführt, doch
-ihr Werden ist damit nicht widerlegt; „Energie“ lässt sich nicht zeichnen und ist doch bis
+ihr Werden ist damit nicht widerlegt; "Energie" lässt sich nicht zeichnen und ist doch bis
 auf die Sonnenmasse genau bilanziert. Und dennoch überlebt seine Frage jede Antwort, die man
-ihr gibt — hartnäckiger hier als irgendwo sonst, denn hier ist der Gegenstand der Physik
+ihr gibt - hartnäckiger hier als irgendwo sonst, denn hier ist der Gegenstand der Physik
 selbst zur Geometrie geworden. Wohin die Krümmung die Materie treibt, im Grössten wie im
 Kleinsten, das führt weiter, als dieses Gebiet reicht: in den Bau des Kosmos und in das Korn
 der Quanten, wo sich dasselbe Ding-oder-Begriff noch einmal und noch schärfer stellt. Die
@@ -432,16 +433,16 @@ unhaltbar ausgewiesen und bleibt als seine Sache draussen; die Begriffskritik is
 </article>
 
   <nav class="artikel-nav" aria-label="Weitere Artikel dieser Art">
-    <a class="vor" href="gaede-feld.html"><span>← Früher</span>Das Feld</a>
+    <a class="vor" href="gaede-feld.html"><span>← Früher</span>04 - Das Feld</a>
     <a class="zur-art" href="../weltanschauungen/materialismus/art-1.html">Alle in Art I Gaede</a>
-    <a class="nach" href="gaede-singularitaet.html">Die Singularität<span>Später →</span></a>
+    <a class="nach" href="gaede-singularitaet.html">06 - Die Singularität<span>Später →</span></a>
   </nav>
 
 </main>
 
 <footer class="fuss">
   <p>© 2026 Eric Naville · nach dem Bild der zwölf Weltanschauungen
-  <span class="quelle">(Rudolf Steiner, „Der menschliche und der kosmische Gedanke“, GA&nbsp;151)</span></p>
+  <span class="quelle">(Rudolf Steiner, "Der menschliche und der kosmische Gedanke", GA&nbsp;151)</span></p>
 </footer>
 
 </body>

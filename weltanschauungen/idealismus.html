@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Idealismus – Eric Naville</title>
+<title>Idealismus - Eric Naville</title>
 <meta name="description" content="Ideen tragen die Welt; im Ideellen liegen ihr Sinn und ihre Ordnung.">
 <link rel="canonical" href="https://eric-naville.ch/weltanschauungen/idealismus.html">
 <meta property="og:url" content="https://eric-naville.ch/weltanschauungen/idealismus.html">
@@ -15,15 +15,15 @@
 <script>
 (function(){
   var w=document.documentElement;
-  try{var g=localStorage.getItem("thema"); if(g==="hell"||g==="dunkel") w.setAttribute("data-theme",g);}catch(e){}
-  function eff(){var t=w.getAttribute("data-theme"); if(t) return t;
-    return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dunkel":"hell";}
+  var B=["terminal","hell","dunkel"], N={terminal:"Terminal",hell:"Hell",dunkel:"Nacht"};
+  try{var g=localStorage.getItem("thema"); if(B.indexOf(g)>=0) w.setAttribute("data-theme",g);}catch(e){}
+  function eff(){var t=w.getAttribute("data-theme"); return B.indexOf(t)>=0?t:"terminal";}
+  function naechst(){ return B[(B.indexOf(eff())+1)%B.length]; }
   function wire(){
     var b=document.querySelector(".thema-schalter"); if(!b) return;
-    function zeige(){var d=eff()==="dunkel"; b.setAttribute("aria-pressed",d?"true":"false");
-      var l=d?"Zum hellen Erscheinungsbild wechseln":"Zum dunklen Erscheinungsbild wechseln";
+    function zeige(){var l="Erscheinungsbild: "+N[eff()]+" - weiter zu "+N[naechst()];
       b.setAttribute("aria-label",l); b.title=l;}
-    b.addEventListener("click",function(){var n=eff()==="dunkel"?"hell":"dunkel";
+    b.addEventListener("click",function(){var n=naechst();
       w.setAttribute("data-theme",n); try{localStorage.setItem("thema",n);}catch(e){} zeige();});
     zeige();
   }
@@ -35,6 +35,7 @@
 
 <header class="kopf">
   <button type="button" class="thema-schalter" aria-label="Erscheinungsbild wechseln" title="Erscheinungsbild wechseln">
+    <svg class="terminal" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.2" width="18.8" height="15.6" rx="2.2"/><path d="M7 9.4l2.8 2.6L7 14.6M12.8 15h4.2"/></svg>
     <svg class="sonne" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.2v2.6M12 19.2v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.2 12h2.6M19.2 12h2.6M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9"/></svg>
     <svg class="mond" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.8A8.3 8.3 0 0 1 9.2 3.5a6.6 6.6 0 1 0 11.3 11.3z"/></svg>
   </button>
@@ -52,7 +53,7 @@
 
   <article class="weltanschauung">
     <header class="wa-kopf">
-      <p class="stellung"><svg class="miniring" viewBox="0 0 44 44" width="34" height="34" aria-hidden="true"><line x1="4" y1="22" x2="40" y2="22"/><circle class="ring" cx="22" cy="22" r="17"/><circle class="punkt" cx="22.0" cy="5.0" r="1.6"/><circle class="punkt" cx="30.5" cy="7.3" r="1.6"/><circle class="punkt" cx="36.7" cy="13.5" r="1.6"/><circle class="punkt" cx="39.0" cy="22.0" r="1.6"/><circle class="punkt" cx="36.7" cy="30.5" r="1.6"/><circle class="punkt" cx="30.5" cy="36.7" r="1.6"/><circle class="punkt" cx="22.0" cy="39.0" r="1.6"/><circle class="punkt" cx="13.5" cy="36.7" r="1.6"/><circle class="punkt" cx="7.3" cy="30.5" r="1.6"/><circle class="aktiv-boden" cx="5.0" cy="22.0" r="3.2"/><circle class="punkt" cx="7.3" cy="13.5" r="1.6"/><circle class="punkt" cx="13.5" cy="7.3" r="1.6"/></svg><span>Gattung · Auf dem Boden – am Horizont · 9:00 Uhr · ♈︎ Widder</span></p>
+      <p class="stellung"><svg class="miniring" viewBox="0 0 44 44" width="34" height="34" aria-hidden="true"><line x1="4" y1="22" x2="40" y2="22"/><circle class="ring" cx="22" cy="22" r="17"/><circle class="punkt" cx="22.0" cy="5.0" r="1.6"/><circle class="punkt" cx="30.5" cy="7.3" r="1.6"/><circle class="punkt" cx="36.7" cy="13.5" r="1.6"/><circle class="punkt" cx="39.0" cy="22.0" r="1.6"/><circle class="punkt" cx="36.7" cy="30.5" r="1.6"/><circle class="punkt" cx="30.5" cy="36.7" r="1.6"/><circle class="punkt" cx="22.0" cy="39.0" r="1.6"/><circle class="punkt" cx="13.5" cy="36.7" r="1.6"/><circle class="punkt" cx="7.3" cy="30.5" r="1.6"/><circle class="aktiv-boden" cx="5.0" cy="22.0" r="3.2"/><circle class="punkt" cx="7.3" cy="13.5" r="1.6"/><circle class="punkt" cx="13.5" cy="7.3" r="1.6"/></svg><span>Gattung · Auf dem Boden - am Horizont · 9:00 Uhr · ♈︎ Widder</span></p>
       <h1>Idealismus</h1>
       <p class="substanz"><span class="etikett">Substanz</span>das Ideelle (die Idee)</p>
       <p class="leitsatz">Ideen tragen die Welt; im Ideellen liegen ihr Sinn und ihre Ordnung.</p>
@@ -140,7 +141,7 @@
 
   <nav class="kreis-nav" aria-label="Nachbarn im Kreis der zwölf">
     <a href="psychismus.html">← Psychismus</a>
-    <a href="realismus.html" class="gegenueber" title="Interpolarität – die Beziehung zum Gegenpol">Gegenpol: Realismus</a>
+    <a href="realismus.html" class="gegenueber" title="Interpolarität - die Beziehung zum Gegenpol">Gegenpol: Realismus</a>
     <a href="rationalismus.html">Rationalismus →</a>
   </nav>
 
@@ -148,7 +149,7 @@
 
 <footer class="fuss">
   <p>© 2026 Eric Naville · nach dem Bild der zwölf Weltanschauungen
-  <span class="quelle">(Rudolf Steiner, „Der menschliche und der kosmische Gedanke“, GA&nbsp;151)</span></p>
+  <span class="quelle">(Rudolf Steiner, "Der menschliche und der kosmische Gedanke", GA&nbsp;151)</span></p>
 </footer>
 
 </body>

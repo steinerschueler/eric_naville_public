@@ -3,7 +3,7 @@ gattung: realismus
 art: 1
 reihe: 3
 status: veröffentlicht
-zusammenfassung: Der dritte Gang: der Staat, der die Gebrechen vieler Herren mit einem einzigen heilt und Wirtschaft wie Geistesleben in die eine Hand nimmt. Marx, Engels und Lenin in stärkster Form – und dann, was aus der „Verwaltung von Sachen" wurde, als sie auch die Seelen verwaltete (Lyssenko, die Ingenieure der Seele, die Partei über den Glauben).
+zusammenfassung: Der dritte Gang: der Staat, der die Gebrechen vieler Herren mit einem einzigen heilt und Wirtschaft wie Geistesleben in die eine Hand nimmt. Marx, Engels und Lenin in stärkster Form - und dann, was aus der "Verwaltung von Sachen" wurde, als sie auch die Seelen verwaltete (Lyssenko, die Ingenieure der Seele, die Partei über den Glauben).
 schlagworte: Kommunismus, Marx, Engels, Lenin, Manifest, Staat und Revolution, Verwaltung von Sachen, Anarchie der Produktion, Planwirtschaft, Lyssenko, sozialistischer Realismus, Ingenieure der menschlichen Seele, Staatsatheismus, Otto Rühle, Ante Ciliga, Staatskapitalismus, Realismus
 -->
 <!doctype html>
@@ -11,27 +11,27 @@ schlagworte: Kommunismus, Marx, Engels, Lenin, Manifest, Staat und Revolution, V
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ein Büro und eine Fabrik – Eric Naville</title>
-<meta name="description" content="Der dritte Gang: der Staat, der die Gebrechen vieler Herren mit einem einzigen heilt und Wirtschaft wie Geistesleben in die eine Hand nimmt. Marx, Engels und Lenin in stärkster Form – und dann, was aus der „Verwaltung von Sachen&quot; wurde, als sie auch die Seelen verwaltete (Lyssenko, die Ingenieure der Seele, die Partei über den Glauben).">
+<title>03 - Ein Büro und eine Fabrik - Eric Naville</title>
+<meta name="description" content="Der dritte Gang: der Staat, der die Gebrechen vieler Herren mit einem einzigen heilt und Wirtschaft wie Geistesleben in die eine Hand nimmt. Marx, Engels und Lenin in stärkster Form - und dann, was aus der &quot;Verwaltung von Sachen&quot; wurde, als sie auch die Seelen verwaltete (Lyssenko, die Ingenieure der Seele, die Partei über den Glauben).">
 <link rel="canonical" href="https://eric-naville.ch/artikel/dreigliederung-kommunismus.html">
 <meta property="og:url" content="https://eric-naville.ch/artikel/dreigliederung-kommunismus.html">
-<meta property="og:title" content="Ein Büro und eine Fabrik">
-<meta property="og:description" content="Der dritte Gang: der Staat, der die Gebrechen vieler Herren mit einem einzigen heilt und Wirtschaft wie Geistesleben in die eine Hand nimmt. Marx, Engels und Lenin in stärkster Form – und dann, was aus der „Verwaltung von Sachen&quot; wurde, als sie auch die Seelen verwaltete (Lyssenko, die Ingenieure der Seele, die Partei über den Glauben).">
+<meta property="og:title" content="03 - Ein Büro und eine Fabrik">
+<meta property="og:description" content="Der dritte Gang: der Staat, der die Gebrechen vieler Herren mit einem einzigen heilt und Wirtschaft wie Geistesleben in die eine Hand nimmt. Marx, Engels und Lenin in stärkster Form - und dann, was aus der &quot;Verwaltung von Sachen&quot; wurde, als sie auch die Seelen verwaltete (Lyssenko, die Ingenieure der Seele, die Partei über den Glauben).">
 <meta property="og:type" content="article">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23a8802c' stroke-width='6'/%3E%3Cpath d='M8 50h84' stroke='%23a8802c' stroke-width='5'/%3E%3Cpath d='M50 16v68' stroke='%235d4a35' stroke-width='7'/%3E%3C/svg%3E">
 <script>
 (function(){
   var w=document.documentElement;
-  try{var g=localStorage.getItem("thema"); if(g==="hell"||g==="dunkel") w.setAttribute("data-theme",g);}catch(e){}
-  function eff(){var t=w.getAttribute("data-theme"); if(t) return t;
-    return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dunkel":"hell";}
+  var B=["terminal","hell","dunkel"], N={terminal:"Terminal",hell:"Hell",dunkel:"Nacht"};
+  try{var g=localStorage.getItem("thema"); if(B.indexOf(g)>=0) w.setAttribute("data-theme",g);}catch(e){}
+  function eff(){var t=w.getAttribute("data-theme"); return B.indexOf(t)>=0?t:"terminal";}
+  function naechst(){ return B[(B.indexOf(eff())+1)%B.length]; }
   function wire(){
     var b=document.querySelector(".thema-schalter"); if(!b) return;
-    function zeige(){var d=eff()==="dunkel"; b.setAttribute("aria-pressed",d?"true":"false");
-      var l=d?"Zum hellen Erscheinungsbild wechseln":"Zum dunklen Erscheinungsbild wechseln";
+    function zeige(){var l="Erscheinungsbild: "+N[eff()]+" - weiter zu "+N[naechst()];
       b.setAttribute("aria-label",l); b.title=l;}
-    b.addEventListener("click",function(){var n=eff()==="dunkel"?"hell":"dunkel";
+    b.addEventListener("click",function(){var n=naechst();
       w.setAttribute("data-theme",n); try{localStorage.setItem("thema",n);}catch(e){} zeige();});
     zeige();
   }
@@ -43,6 +43,7 @@ schlagworte: Kommunismus, Marx, Engels, Lenin, Manifest, Staat und Revolution, V
 
 <header class="kopf">
   <button type="button" class="thema-schalter" aria-label="Erscheinungsbild wechseln" title="Erscheinungsbild wechseln">
+    <svg class="terminal" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.2" width="18.8" height="15.6" rx="2.2"/><path d="M7 9.4l2.8 2.6L7 14.6M12.8 15h4.2"/></svg>
     <svg class="sonne" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.2v2.6M12 19.2v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.2 12h2.6M19.2 12h2.6M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9"/></svg>
     <svg class="mond" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.8A8.3 8.3 0 0 1 9.2 3.5a6.6 6.6 0 1 0 11.3 11.3z"/></svg>
   </button>
@@ -60,18 +61,18 @@ schlagworte: Kommunismus, Marx, Engels, Lenin, Manifest, Staat und Revolution, V
   </nav>
 
   <article class="artikel" id="dreigliederung-kommunismus">
-  <h1>Ein Büro und eine Fabrik</h1>
+  <h1>03 - Ein Büro und eine Fabrik</h1>
   <p class="datum">12. Juli 2026</p>
 
   <p>Der <a href="dreigliederung-herrschaft-der-wissenden.html">vorige Gang</a> zeigte das
-  Geistesleben, das nach dem Thron greift – den Priester, den Philosophen, der herrschen
+  Geistesleben, das nach dem Thron greift - den Priester, den Philosophen, der herrschen
   will, weil er das Höhere kennt. Nun kommt die entgegengesetzte Versuchung, und sie ist
   womöglich mächtiger, weil sie so vernünftig aussieht. Sie will die Gebrechen der vielen
   Herren mit einem einzigen Herrn heilen; nur ist dieser Herr diesmal nicht der Höchste,
-  sondern die Mitte selbst – der Staat, der sich für die ganze Vernunft der Gesellschaft
+  sondern die Mitte selbst - der Staat, der sich für die ganze Vernunft der Gesellschaft
   hält und darum Wirtschaft und Geistesleben in die eine Hand nimmt. Das ist die Idee des
-  Kommunismus. Wir zeigen sie zuerst in ihrer stärksten Form – nicht als Schreckbild,
-  sondern als den vielleicht vernünftigsten Gedanken seiner Zeit –, dann, was aus ihr
+  Kommunismus. Wir zeigen sie zuerst in ihrer stärksten Form - nicht als Schreckbild,
+  sondern als den vielleicht vernünftigsten Gedanken seiner Zeit -, dann, was aus ihr
   wurde, und wägen zuletzt. Auch dieser Gang steht beim Realismus: es geht um den
   wirklichen Bau eines wirklichen Gemeinwesens.</p>
 
@@ -81,13 +82,13 @@ schlagworte: Kommunismus, Marx, Engels, Lenin, Manifest, Staat und Revolution, V
   ihre Wucht nicht. Der Markt produziert nicht für den Bedarf, sondern für den Gewinn,
   und nicht nach Plan, sondern im blinden Wettlauf vieler Einzelner. Das Ergebnis sind
   wiederkehrende Krisen: volle Lager neben Hunger, stillstehende Fabriken neben
-  Arbeitslosen. Engels nennt das die „Anarchie innerhalb der gesellschaftlichen
-  Produktion" – ein Wort, das sein Gegenmittel schon enthält: gegen Anarchie hilft
+  Arbeitslosen. Engels nennt das die "Anarchie innerhalb der gesellschaftlichen
+  Produktion" - ein Wort, das sein Gegenmittel schon enthält: gegen Anarchie hilft
   Ordnung, gegen Blindheit Bewusstsein, gegen Zufall Plan. Und das Mittel liegt nahe:
   Gehörten die Produktionsmittel einer einzigen Stelle, so könnte diese Stelle den ganzen
   Stoffwechsel der Gesellschaft übersehen und lenken. Darum fasst das <em>Manifest</em>
-  die ganze Lehre in einen Satz – „Aufhebung des Privateigentums" – und macht daraus ein
-  Programm: das Proletariat werde „alle Produktionsinstrumente in den Händen des Staats …
+  die ganze Lehre in einen Satz - "Aufhebung des Privateigentums" - und macht daraus ein
+  Programm: das Proletariat werde "alle Produktionsinstrumente in den Händen des Staats …
   zentralisieren".<sup><a href="#n1">1</a></sup> Lenin denkt das praktisch zu Ende und
   findet dafür das Bild, das dieser Betrachtung den Namen gibt:</p>
 
@@ -97,11 +98,11 @@ schlagworte: Kommunismus, Marx, Engels, Lenin, Manifest, Staat und Revolution, V
     <p class="zitat-quelle">– Wladimir Iljitsch Lenin, <em>Staat und Revolution</em></p>
   </blockquote>
 
-  <p>Das Ganze zusammengehalten nicht durch Gewalt, sondern durch „Rechnungsführung und
-  Kontrolle" – das sei, sagt Lenin, „das Wichtigste".<sup><a href="#n2">2</a></sup> Für
+  <p>Das Ganze zusammengehalten nicht durch Gewalt, sondern durch "Rechnungsführung und
+  Kontrolle" - das sei, sagt Lenin, "das Wichtigste".<sup><a href="#n2">2</a></sup> Für
   einen Menschen, der die Krisen von 1873, 1893 und 1929 mit ansah, ist das kein
   Schreckbild, sondern die Vernunft selbst: die Wirtschaft endlich geführt wie ein guter
-  Hausvater sein Haus führt – mit Übersicht, für den Bedarf, ohne Verschwendung. Wo viele
+  Hausvater sein Haus führt - mit Übersicht, für den Bedarf, ohne Verschwendung. Wo viele
   blinde Willen sich stiessen, tritt <em>ein</em> sehender; wo der Markt niemandem
   gehorchte, gehorcht der Plan der Vernunft. Was dem Liberalen als Anmassung erscheint,
   erscheint dem Sozialisten als Mündigkeit der Menschheit.</p>
@@ -119,12 +120,12 @@ schlagworte: Kommunismus, Marx, Engels, Lenin, Manifest, Staat und Revolution, V
     <p class="zitat-quelle">– Friedrich Engels, <em>Die Entwicklung des Sozialismus von der Utopie zur Wissenschaft</em></p>
   </blockquote>
 
-  <p>Darum, sagt Engels, werde der Staat auch „nicht ‚abgeschafft', er stirbt ab". Aber –
-  und dieser Nebensatz trägt die ganze spätere Geschichte – ehe er abstirbt, muss er erst
-  alles ergreifen: „Der erste Akt, worin der Staat wirklich als Repräsentant der ganzen
+  <p>Darum, sagt Engels, werde der Staat auch "nicht 'abgeschafft', er stirbt ab". Aber -
+  und dieser Nebensatz trägt die ganze spätere Geschichte - ehe er abstirbt, muss er erst
+  alles ergreifen: "Der erste Akt, worin der Staat wirklich als Repräsentant der ganzen
   Gesellschaft auftritt … ist zugleich sein letzter selbständiger Akt als Staat." Zuerst
   die totale Besitzergreifung, dann, irgendwann, das Verschwinden des Zwanges. Und das
-  Ziel dieses Wegs ist kein geringeres als die Freiheit: „Es ist der Sprung der Menschheit
+  Ziel dieses Wegs ist kein geringeres als die Freiheit: "Es ist der Sprung der Menschheit
   aus dem Reich der Notwendigkeit in das Reich der Freiheit."<sup><a href="#n3">3</a></sup>
   Die Konzentration von allem in einer Hand erscheint so nicht als Fessel, sondern als der
   Akt der Befreiung selbst.</p>
@@ -136,7 +137,7 @@ schlagworte: Kommunismus, Marx, Engels, Lenin, Manifest, Staat und Revolution, V
   der Leib gesund, wenn Kopf, Rhythmus und Stoffwechsel je das Ihre tun; für den
   Marxismus, wenn <em>ein</em> Kopf alles lenkt. Und der Kommunismus hat dafür ein
   scheinbar zwingendes Argument: Es gibt gar keine neutrale, überparteiliche Sphäre. Eine
-  Wissenschaft, eine Kunst, eine Moral, die „über den Klassen" stünde, sei eine
+  Wissenschaft, eine Kunst, eine Moral, die "über den Klassen" stünde, sei eine
   bürgerliche Illusion; wenn aber nichts unpolitisch ist, dann ist ein <em>freies</em>
   Geistesleben eine Lüge, und seine Einordnung in die Leitung des Ganzen nur ehrlich. Das
   ist der stärkste Satz der Gegenseite: nicht die Trennung macht frei, sondern die
@@ -144,33 +145,33 @@ schlagworte: Kommunismus, Marx, Engels, Lenin, Manifest, Staat und Revolution, V
 
   <h2>Die Verwaltung der Seelen</h2>
 
-  <p>Und nun das, was daraus wurde – denn geprüft wird eine Ordnung nicht an ihrem
+  <p>Und nun das, was daraus wurde - denn geprüft wird eine Ordnung nicht an ihrem
   Versprechen, sondern an ihrem Vollzug. Die Falle sitzt genau dort, wo das
-  Selbstverständnis am edelsten ist: bei der „Verwaltung von Sachen". Denn wenn <em>eine</em>
+  Selbstverständnis am edelsten ist: bei der "Verwaltung von Sachen". Denn wenn <em>eine</em>
   Instanz Wirtschaft, Recht und Geistesleben zugleich leitet, dann verwaltet sie am Ende
   nicht nur Sachen, sondern auch Seelen. Sie entscheidet dann auch, was in der Natur wahr
   ist. Auf der Tagung der Lenin-Akademie 1948 wurde eine Frage der Vererbung nicht durch
   Beobachtung entschieden, sondern durch Beschluss: Der Agronom Trofim Lyssenko liess die
-  klassische Genetik als „bürgerlich" verbieten und schloss mit dem Satz, der alles sagt –
-  „Das Zentralkomitee der Partei hat mein Referat geprüft und gebilligt."<sup><a href="#n4">4</a></sup>
+  klassische Genetik als "bürgerlich" verbieten und schloss mit dem Satz, der alles sagt -
+  "Das Zentralkomitee der Partei hat mein Referat geprüft und gebilligt."<sup><a href="#n4">4</a></sup>
   Das Referat hatte Stalin eigenhändig redigiert; der Beschluss über die Wahrheit der
   Vererbung war also buchstäblich Stalins Feder. Damit ist die Wissenschaft kein Glied mehr
-  mit eigenem Gesetz – Beobachtung, Beweis, Widerlegbarkeit –, sondern ein Ressort des
+  mit eigenem Gesetz - Beobachtung, Beweis, Widerlegbarkeit -, sondern ein Ressort des
   Staates.</p>
 
   <p>Sie entscheidet auch, was ein Gedicht wert ist. Die Kunst wird zum Werkzeug der
-  Erziehung, der Schriftsteller zum Techniker an der Seele: „Ingenieure der menschlichen
-  Seele" nannte Stalin die Dichter (russ. «инженеры человеческих душ», <em>inženery
+  Erziehung, der Schriftsteller zum Techniker an der Seele: "Ingenieure der menschlichen
+  Seele" nannte Stalin die Dichter (russ. 'инженеры человеческих душ', <em>inženery
   čelovečeskich duš</em>), und das Wort wurde 1934 zur Vorschrift.<sup><a href="#n5">5</a></sup>
   In diesem einen Bild fallen die drei Glieder zusammen, die Steiner trennt: die Seele
   (Geistesleben) wird zum Werkstück (Wirtschaftssprache) im Dienst der Partei (Staat). Wer
   sich nicht fügte, war kein Dichter mehr: Anna Achmatowa wurde 1946 aus dem
-  Schriftstellerverband gestossen – und da die Veröffentlichung an die Mitgliedschaft hing,
+  Schriftstellerverband gestossen - und da die Veröffentlichung an die Mitgliedschaft hing,
   war das Urteil über den Wert ihrer Verse zugleich ein Urteil über ihr Brot.</p>
 
   <p>Sie entscheidet auch, was der Mensch glauben darf. Hier fällt dasselbe Wort wie bei
   Steiner, und darum ist der Gegensatz so scharf. Steiner wollte das Geistesleben dem Staat
-  und der Wirtschaft gegenüber „Privatsache" sein lassen. Marx hatte die Religion „das
+  und der Wirtschaft gegenüber "Privatsache" sein lassen. Marx hatte die Religion "das
   Opium des Volks" genannt; Lenin zieht daraus die Folgerung und dreht Steiners Wort um:</p>
 
   <blockquote>
@@ -179,32 +180,32 @@ schlagworte: Kommunismus, Marx, Engels, Lenin, Manifest, Staat und Revolution, V
     <p class="zitat-quelle">– Wladimir Iljitsch Lenin, <em>Sozialismus und die Religion</em></p>
   </blockquote>
 
-  <p>Das ist der ganze Unterschied in einem Satz. Dem Staat gegenüber Privatsache – das
+  <p>Das ist der ganze Unterschied in einem Satz. Dem Staat gegenüber Privatsache - das
   klingt fast wie Steiner. Aber über dem Staat steht die Partei, und ihr gegenüber ist die
   Religion gerade <em>keine</em> Privatsache, sondern Kampffeld.<sup><a href="#n6">6</a></sup>
   Die scheinbare Freiheit ist zurückgenommen, ehe sie ausgesprochen ist; die Instanz, die
   wirklich regiert, lässt das Geistesleben nicht los. Und sie entscheidet zuletzt, was das
-  Kind lernt: Schon das <em>Manifest</em> verlangt die „Vereinigung der Erziehung mit der
-  materiellen Produktion" – die Schule nicht dem Geistesleben überlassen, sondern an den
-  Zweck gekoppelt.<sup><a href="#n1">1</a></sup> So verwaltet die „Verwaltung von Sachen"
+  Kind lernt: Schon das <em>Manifest</em> verlangt die "Vereinigung der Erziehung mit der
+  materiellen Produktion" - die Schule nicht dem Geistesleben überlassen, sondern an den
+  Zweck gekoppelt.<sup><a href="#n1">1</a></sup> So verwaltet die "Verwaltung von Sachen"
   am Ende die Wahrheit, die Kunst, den Glauben und das Kind. Der Staat, der erst alles an
-  sich zog, um dann „abzusterben", starb nicht ab. Er blieb.</p>
+  sich zog, um dann "abzusterben", starb nicht ab. Er blieb.</p>
 
   <h2>Was von links dagegen gesagt wurde</h2>
 
-  <p>Man könnte all das für die Schadenfreude des Gegners halten – des Liberalen, des
+  <p>Man könnte all das für die Schadenfreude des Gegners halten - des Liberalen, des
   Frommen, die den Kommunismus ohnehin nie mochten. Aber die schärfste Beschreibung dieses
   Staates stammt nicht von aussen, sondern von innen, von der eigenen Linken, die an der
   Befreiung festhielt und gerade darum sah, was geschah. Otto Rühle, Rätekommunist, nannte
-  den bolschewistischen Staat schon 1939 den „ersten totalitären Staat" und sein Ergebnis
-  „nicht Sozialismus, sondern Staatskapitalismus" (engl. „not socialism but state
+  den bolschewistischen Staat schon 1939 den "ersten totalitären Staat" und sein Ergebnis
+  "nicht Sozialismus, sondern Staatskapitalismus" (engl. "not socialism but state
   capitalism"). Ante Ciliga, der als überzeugter Bolschewik in die Sowjetunion gegangen und
-  in ihren Lagern gelandet war, sah dort eine neue herrschende Klasse entstehen – die
-  Bürokratie, die über den Staat und damit über alles verfügt – und fasste die Wahl in
-  einen Satz: „ein einziger Machtblock, entweder der des Arbeitersozialismus oder der des
-  Staatskapitalismus" (engl. „a single power, either that of worker socialism or that of
+  in ihren Lagern gelandet war, sah dort eine neue herrschende Klasse entstehen - die
+  Bürokratie, die über den Staat und damit über alles verfügt - und fasste die Wahl in
+  einen Satz: "ein einziger Machtblock, entweder der des Arbeitersozialismus oder der des
+  Staatskapitalismus" (engl. "a single power, either that of worker socialism or that of
   State capitalism").<sup><a href="#n7">7</a></sup> Beide sagen dasselbe wie diese Reihe,
-  nur von innen: Wer alle Sphären in eine Hand nimmt, hebt die Herrschaft nicht auf – er
+  nur von innen: Wer alle Sphären in eine Hand nimmt, hebt die Herrschaft nicht auf - er
   vollendet sie.</p>
 
   <p>Und doch bleibe der wahre Kern der Idee stehen, denn er ist wahr. Die Anarchie des
@@ -217,11 +218,11 @@ schlagworte: Kommunismus, Marx, Engels, Lenin, Manifest, Staat und Revolution, V
   Wahrheit kein Luxus, sondern das Organ, mit dem eine Gesellschaft sich selbst noch die
   Wahrheit sagen kann. Wer einer einzigen Instanz erlaubt zu bestimmen, was wahr ist,
   blendet das eine Auge, das er zum Steuern braucht. Die Lehre, die versprach, die
-  „Regierung über Personen" abzuschaffen, brachte die vollständigste Regierung über
-  Personen hervor, die je bestand – weil sie zuerst alles in eine Hand nehmen musste. Es
+  "Regierung über Personen" abzuschaffen, brachte die vollständigste Regierung über
+  Personen hervor, die je bestand - weil sie zuerst alles in eine Hand nehmen musste. Es
   bleibt noch eine dritte Versuchung, und sie ist die heutige. Nicht der Staat will diesmal
   das Ganze sein, sondern sein alter Feind, der Markt; und es wird sich zeigen, dass die
-  beiden Gegner in einem einig sind – darin, aus der Seele eine Sache zu machen.</p>
+  beiden Gegner in einem einig sind - darin, aus der Seele eine Sache zu machen.</p>
 
   <h2>Quellen</h2>
 
@@ -311,16 +312,16 @@ schlagworte: Kommunismus, Marx, Engels, Lenin, Manifest, Staat und Revolution, V
 </article>
 
   <nav class="artikel-nav" aria-label="Weitere Artikel dieser Art">
-    <a class="vor" href="dreigliederung-herrschaft-der-wissenden.html"><span>← Früher</span>Die Herrschaft der Wissenden</a>
+    <a class="vor" href="dreigliederung-herrschaft-der-wissenden.html"><span>← Früher</span>02 - Die Herrschaft der Wissenden</a>
     <a class="zur-art" href="../weltanschauungen/realismus/art-1.html">Alle in Art I Dreigliederung</a>
-    <a class="nach" href="dreigliederung-kapitalismus.html">Der Preis von allem<span>Später →</span></a>
+    <a class="nach" href="dreigliederung-kapitalismus.html">04 - Der Preis von allem<span>Später →</span></a>
   </nav>
 
 </main>
 
 <footer class="fuss">
   <p>© 2026 Eric Naville · nach dem Bild der zwölf Weltanschauungen
-  <span class="quelle">(Rudolf Steiner, „Der menschliche und der kosmische Gedanke“, GA&nbsp;151)</span></p>
+  <span class="quelle">(Rudolf Steiner, "Der menschliche und der kosmische Gedanke", GA&nbsp;151)</span></p>
 </footer>
 
 </body>

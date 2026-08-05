@@ -1,37 +1,37 @@
 <!-- META
-status: veröffentlicht
 gattung: materialismus
 art: 1
 reihe: 2
-zusammenfassung: Bill Gaede legt die Grundworte der Physik – Energie, Masse, Feld, Kraft, Zeit – an einen einzigen Schnitt: ein Ding hat Gestalt, ein Begriff nicht. Der Reihe nach schliesst sich jeder Kreis, und keines der fünf Wörter benennt ein Ding.
+zusammenfassung: Bill Gaede legt die Grundworte der Physik - Energie, Masse, Feld, Kraft, Zeit - an einen einzigen Schnitt: ein Ding hat Gestalt, ein Begriff nicht. Der Reihe nach schliesst sich jeder Kreis, und keines der fünf Wörter benennt ein Ding.
 schlagworte: Bill Gaede, Definitionskritik, Objekt und Begriff, Feld, Kraft, Energie, Masse, Zeit, mathemagician, Feynman, Mach, Poincaré, Materialismus
+status: veröffentlicht
 -->
 <!doctype html>
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Die Physikdefinitionen des William Gaede – Eric Naville</title>
-<meta name="description" content="Bill Gaede legt die Grundworte der Physik – Energie, Masse, Feld, Kraft, Zeit – an einen einzigen Schnitt: ein Ding hat Gestalt, ein Begriff nicht. Der Reihe nach schliesst sich jeder Kreis, und keines der fünf Wörter benennt ein Ding.">
+<title>02 - Die Physikdefinitionen des William Gaede - Eric Naville</title>
+<meta name="description" content="Bill Gaede legt die Grundworte der Physik - Energie, Masse, Feld, Kraft, Zeit - an einen einzigen Schnitt: ein Ding hat Gestalt, ein Begriff nicht. Der Reihe nach schliesst sich jeder Kreis, und keines der fünf Wörter benennt ein Ding.">
 <link rel="canonical" href="https://eric-naville.ch/artikel/gaede-rechengroessen.html">
 <meta property="og:url" content="https://eric-naville.ch/artikel/gaede-rechengroessen.html">
-<meta property="og:title" content="Die Physikdefinitionen des William Gaede">
-<meta property="og:description" content="Bill Gaede legt die Grundworte der Physik – Energie, Masse, Feld, Kraft, Zeit – an einen einzigen Schnitt: ein Ding hat Gestalt, ein Begriff nicht. Der Reihe nach schliesst sich jeder Kreis, und keines der fünf Wörter benennt ein Ding.">
+<meta property="og:title" content="02 - Die Physikdefinitionen des William Gaede">
+<meta property="og:description" content="Bill Gaede legt die Grundworte der Physik - Energie, Masse, Feld, Kraft, Zeit - an einen einzigen Schnitt: ein Ding hat Gestalt, ein Begriff nicht. Der Reihe nach schliesst sich jeder Kreis, und keines der fünf Wörter benennt ein Ding.">
 <meta property="og:type" content="article">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23a8802c' stroke-width='6'/%3E%3Cpath d='M8 50h84' stroke='%23a8802c' stroke-width='5'/%3E%3Cpath d='M50 16v68' stroke='%235d4a35' stroke-width='7'/%3E%3C/svg%3E">
 <script>
 (function(){
   var w=document.documentElement;
-  try{var g=localStorage.getItem("thema"); if(g==="hell"||g==="dunkel") w.setAttribute("data-theme",g);}catch(e){}
-  function eff(){var t=w.getAttribute("data-theme"); if(t) return t;
-    return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dunkel":"hell";}
+  var B=["terminal","hell","dunkel"], N={terminal:"Terminal",hell:"Hell",dunkel:"Nacht"};
+  try{var g=localStorage.getItem("thema"); if(B.indexOf(g)>=0) w.setAttribute("data-theme",g);}catch(e){}
+  function eff(){var t=w.getAttribute("data-theme"); return B.indexOf(t)>=0?t:"terminal";}
+  function naechst(){ return B[(B.indexOf(eff())+1)%B.length]; }
   function wire(){
     var b=document.querySelector(".thema-schalter"); if(!b) return;
-    function zeige(){var d=eff()==="dunkel"; b.setAttribute("aria-pressed",d?"true":"false");
-      var l=d?"Zum hellen Erscheinungsbild wechseln":"Zum dunklen Erscheinungsbild wechseln";
+    function zeige(){var l="Erscheinungsbild: "+N[eff()]+" - weiter zu "+N[naechst()];
       b.setAttribute("aria-label",l); b.title=l;}
-    b.addEventListener("click",function(){var n=eff()==="dunkel"?"hell":"dunkel";
+    b.addEventListener("click",function(){var n=naechst();
       w.setAttribute("data-theme",n); try{localStorage.setItem("thema",n);}catch(e){} zeige();});
     zeige();
   }
@@ -43,6 +43,7 @@ schlagworte: Bill Gaede, Definitionskritik, Objekt und Begriff, Feld, Kraft, Ene
 
 <header class="kopf">
   <button type="button" class="thema-schalter" aria-label="Erscheinungsbild wechseln" title="Erscheinungsbild wechseln">
+    <svg class="terminal" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.2" width="18.8" height="15.6" rx="2.2"/><path d="M7 9.4l2.8 2.6L7 14.6M12.8 15h4.2"/></svg>
     <svg class="sonne" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.2v2.6M12 19.2v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.2 12h2.6M19.2 12h2.6M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9"/></svg>
     <svg class="mond" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.8A8.3 8.3 0 0 1 9.2 3.5a6.6 6.6 0 1 0 11.3 11.3z"/></svg>
   </button>
@@ -60,404 +61,393 @@ schlagworte: Bill Gaede, Definitionskritik, Objekt und Begriff, Feld, Kraft, Ene
   </nav>
 
   <article class="artikel" id="gaede-rechengroessen">
-<h1>Die Physikdefinitionen des William Gaede</h1>
+<h1>02 - Die Physikdefinitionen des William Gaede</h1>
+
 <p class="datum">5. Juli 2026</p>
 
-<p>Die Physik gilt als die Wissenschaft vom Stoff schlechthin. Wo immer der
-Materialismus sich auf eine Wissenschaft beruft, beruft er sich auf sie: Wirklich ist
-die Materie – und was Materie ist, sagt uns die Physik. Prüft man aber die Grundworte,
-mit denen sie arbeitet – Energie, Masse, Feld, Kraft, Zeit –, so findet sich erstaunlich
-wenig Stoffliches. Man findet Zahlen, Verhältnisse, Erhaltungsgrössen; und schlägt man
-nach, was die Wörter bedeuten, führt die Definition im Bogen zu sich selbst zurück. Das
+<p>Die Physik gilt als die Wissenschaft vom Stoff schlechthin. Sie ist die Wissenschaft des Materialismus schlechthin: In ihrem Zentrum ist
+die Materie - was Materie ist und wie sie sich verhält, das sagt uns die Physik. Prüft man aber die Grundworte,
+mit denen sie arbeitet - Energie, Masse, Feld, Kraft, Zeit -, so findet sich im Grunde genommen kaum Stoffliches. Man findet Zahlen, Verhältnisse, Erhaltungsgrössen; und schlägt man
+nach, was die Wörter bedeuten, führt die Definition über einen kleinen Umweg meist zu sich selbst zurück. Das
 lässt sich nicht bestreiten, es lässt sich nur zeigen: Ein Begriff ist zirkulär, oder er
-ist es nicht. Bill Gaede, ein argentinischer Ingenieur, der seine Physikkritik seit
-Jahrzehnten abseits des akademischen Betriebs veröffentlicht, hat die fünf Wörter der
-Reihe nach an einen einzigen Schnitt gelegt. Seine eigene
-Gegenlehre, die „Rope Hypothesis", steht hier nicht zur Debatte. Zur Debatte stehen die
-Definitionen – und die legt man am besten so vor, wie er sie vorlegt. Der Ort im Kreis
-ist die Art&nbsp;I des Materialismus, an der Stelle, wo der Mathematismus <em>unter</em>
-dem Materialismus sitzt.</p>
+ist es nicht. Bill Gaede hat die fünf Wörter der Reihe nach an einen einzigen Schnitt
+gelegt - an den, der <a href="gaede-ding-und-begriff.html">im vorigen Teil</a> gezogen wurde:
+Ein Objekt hat Gestalt, ein Begriff hat keine; dort steht auch, was von seiner eigenen
+Gegenlehre, der "Rope Hypothesis", zu halten ist. Zur Debatte stehen im Folgenden die
+Definitionen selbst - und diese legt man am besten so vor, wie er sie vorlegt. Der Ort im
+Weltanschauungskreis, wo wir die Gaede-Serie einordnen, ist die Art&nbsp;I des Materialismus,
+an der Stelle, wo der Mathematismus unter&nbsp;oder neben dem Materialismus sitzt.</p>
 
-<h2>Der Schnitt: Objekt oder Begriff</h2>
+<h2>Wo die Lehrbücher aufhören zu fragen</h2>
 
-<p>Gaedes Werkzeug ist eine einzige Unterscheidung, und sie ist so grundlegend, dass an ihr
-alles Weitere hängt. Jedes Wort des Wörterbuchs, sagt er, gehört in eine von zwei
-Schubladen: „Alle Wörter des Wörterbuchs lassen sich einer von zwei Kategorien zuordnen. Sie
-sind entweder Objekte oder Begriffe. Es gibt keine dritte Kategorie für die Zwecke der
-Physik“ (‚All words in the dictionary can be placed in one of two categories. They are either
-objects or concepts. There is no third category for the purposes of
-Physics‘).<sup><a href="#q1">1</a></sup> Ein Objekt ist „das, was Gestalt hat“ (‚that which
-has shape‘); ein Begriff ist „die Beziehung zwischen zwei oder mehr Objekten“ (‚the
-relationship between two or more objects‘) – ein Verhältnis, und Verhältnisse haben keine
-Gestalt. Aus dem Schnitt folgt eine Regel für jede Wissenschaft, die diesen Namen tragen
-will: „Kannst du ein entscheidendes Wort nicht definieren, an dem deine Theorie steht oder
+<p>Wer so schneidet, verlangt von jedem Wort etwas, das die Lehrbücher selten liefern: eine
+Bestimmung, die durchhält. Gaede macht daraus eine Regel für jede Wissenschaft, die diesen
+Namen tragen
+will: "Kannst du ein entscheidendes Wort nicht definieren, an dem deine Theorie steht oder
 fällt, so darfst und sollst du es in deiner Abhandlung nicht gebrauchen. Eine
 wissenschaftliche Definition ist eine, die sich durch die ganze Abhandlung hindurch
-gleichbleibend gebrauchen lässt“ (‚If you cannot define a crucial word that makes or breaks
+gleichbleibend gebrauchen lässt" ('If you cannot define a crucial word that makes or breaks
 your theory, you cannot and shouldn't use it in your dissertation. A scientific definition is
 one that can be used consistently throughout the
-dissertation‘).<sup><a href="#q2">2</a></sup></p>
+dissertation').<sup><a href="#q2">2</a></sup></p>
 
-<p>Und da beginnt das Erstaunliche schon beim Fundament. Kein Lehrbuch, hält Gaede fest,
-sagt zuerst, was ein Objekt ist: „In den letzten 10'000 Jahren hat niemand das Wort ‚Objekt‘
+<p>Und da beginnt das Erstaunliche schon ganz am Anfang. Kein Lehrbuch, hält Gaede fest,
+sagt zuerst, was ein Objekt ist: "In den letzten 10'000 Jahren hat niemand das Wort 'Objekt'
 je für die Zwecke der Physik definiert … Alle Bücher springen unmittelbar zu Gleichungen und
-anderen quantitativen Begriffen“ (‚no one in the last 10,000 years ever defined the word
-‚object' for the purposes of Physics … All books jump directly into equations and other
-quantitative concepts‘).<sup><a href="#q3">3</a></sup> Er beginnt darum dort, wo die
-Lehrbücher aufhören zu fragen, und legt eine kleine Liste vor – jedes Wort
+anderen quantitativen Begriffen" ('no one in the last 10,000 years ever defined the word
+'object' for the purposes of Physics … All books jump directly into equations and other
+quantitative concepts').<sup><a href="#q3">3</a></sup> Er beginnt darum dort, wo die
+Lehrbücher aufhören zu fragen, und legt eine kleine Liste vor - jedes Wort
 allein aus den vorigen bestimmt:</p>
 
 <blockquote>
-<p>“object: that which has shape<br>
+  <p>“object: that which has shape<br>
 distance: separation between two objects<br>
 location: the set of distances of one object to all others<br>
 exist: physical presence (object&nbsp;+&nbsp;location)<br>
 motion: two or more locations of an object”</p>
-<p>„Objekt: das, was Gestalt hat<br>
+  <p>„Objekt: das, was Gestalt hat<br>
 Abstand: Trennung zwischen zwei Objekten<br>
 Ort: die Menge der Abstände eines Objekts zu allen anderen<br>
 Existieren: physische Gegenwart (Objekt&nbsp;+&nbsp;Ort)<br>
 Bewegung: zwei oder mehr Orte eines Objekts“</p>
-<p class="zitat-quelle">– Bill Gaede, „Foundations of Physics"</p>
+  <p class="zitat-quelle">– Bill Gaede, „Foundations of Physics"</p>
 </blockquote>
 
-<p>Man sehe, wie er den ersten Begriff verteidigt. Ein „Advocatus Diaboli“, ein Anwalt des
-Teufels (engl. „devil's advocate“), bringt der Reihe nach zehn geläufige Bestimmungen von
-„Objekt“ vor; Gaede weist jede zurück, jede aus eigenem Grund. „Ein Objekt ist, was man
-berühren kann“ – nein: „Berühren verlangt ein zweites Objekt. Ist der Mond kein Objekt, bis
-der Komet ihn trifft?“ (‚Touch requires another object. Is the Moon not an object until the
-comet strikes it?‘). „Was man sehen kann“ – nein: „Sehen verlangt ein Objekt, das sieht. Jede
+<p>Man sehe, wie er den ersten Begriff verteidigt. Ein "Advocatus Diaboli", ein Anwalt des
+Teufels (engl. "devil's advocate"), bringt der Reihe nach zehn geläufige Bestimmungen von
+"Objekt" vor; Gaede weist jede zurück, jede aus eigenem Grund. "Ein Objekt ist, was man
+berühren kann" - nein: "Berühren verlangt ein zweites Objekt. Ist der Mond kein Objekt, bis
+der Komet ihn trifft?" ('Touch requires another object. Is the Moon not an object until the
+comet strikes it?'). "Was man sehen kann" - nein: "Sehen verlangt ein Objekt, das sieht. Jede
 Definition irgendeines Wortes, das in der Wissenschaft gebraucht werden soll und die einen
 Beobachter, Zeugen, ein Zeugnis, eine Meinung, ein Gefühl, eine Wahrnehmung usw. heranzieht,
-ist UNWISSENSCHAFTLICH!“ (‚See requires an object to do the seeing. Any definition of any word
+ist unwissenschaftlich!" ('See requires an object to do the seeing. Any definition of any word
 to be used in Science that invokes an observer, witness, testimony, opinion, feeling,
-perception, etc., is UNSCIENTIFIC!‘). „Etwas, das …“ – nein: „Ein Synonym ist eine zirkuläre
+perception, etc., is unscientific!'). "Etwas, das …" - nein: "Ein Synonym ist eine zirkuläre
 Definition (d.&nbsp;h. gar keine Definition). Wörter wie Ding, irgendetwas, etwas, Entität,
-Medium, Körper, Struktur, physisch, Zeug, Substanz … sind Synonyme“ (‚A synonym is a circular
+Medium, Körper, Struktur, physisch, Zeug, Substanz … sind Synonyme" ('A synonym is a circular
 definition (i.e., no definition at all). Words such as thing, anything, something, entity,
-medium, body, structure, physical, stuff, substance … are synonyms‘).<sup><a href="#q3">3</a></sup>
+medium, body, structure, physical, stuff, substance … are synonyms').<sup><a href="#q3">3</a></sup>
 Die Sinnes-Bestimmung etwa lehnt er ab, weil sie einen zweiten Gegenstand voraussetzt, den
-Zeugen: „Berühren, Sehen, Riechen, Schmecken und Hören rufen ausnahmslos ein zweites Objekt
-herbei: den Zeugen. Das machte die Definition des Objekts zirkulär“ (‚touch, see, smell,
+Zeugen: "Berühren, Sehen, Riechen, Schmecken und Hören rufen ausnahmslos ein zweites Objekt
+herbei: den Zeugen. Das machte die Definition des Objekts zirkulär" ('touch, see, smell,
 taste, and hearing invariably invoke a second object: the witness. This would make the
-definition of object circular‘). Und dann der Satz, der die operationale Definition in fünf
-Worten aushebt: „Das ist keine Definition, sondern ein Beweis, als Definition verkleidet“
-(‚This is not a definition, but a proof disguised as a
-definition‘).<sup><a href="#q4">4</a></sup></p>
+definition of object circular'). Und dann der Satz, der die operationale Definition in fünf
+Worten aushebt: "Das ist keine Definition, sondern ein Beweis, als Definition verkleidet"
+('This is not a definition, but a proof disguised as a
+definition').<sup><a href="#q4">4</a></sup></p>
 
 <p>Am schärfsten aber ist die Bewegung, mit der er die Beweislast umdreht. Wer die
 Gestalt-Definition angreifen will, sagt Gaede, muss zuerst eine eigene vorlegen, die er
-verteidigen kann: „BEVOR ein Anwalt des Teufels die vorstehende Definition angreift, wird von
+verteidigen kann: "BEVOR ein Anwalt des Teufels die vorstehende Definition angreift, wird von
 ihm verlangt, SEINE eigene Fassung vorzulegen und zu verteidigen … Objekt:&nbsp;______? Kann
 der Skeptiker die Lücke nicht mit einer Definition füllen, die er verteidigen kann, so wird
-ihm nicht gestattet, das Kriterium ‚Gestalt‘ anzugreifen“ (‚BEFORE a devil's advocate
+ihm nicht gestattet, das Kriterium 'Gestalt' anzugreifen" ('BEFORE a devil's advocate
 challenges the foregoing definition, he will be required to present and defend HIS personal
 version … object:&nbsp;______? If the skeptic cannot fill in the blanks with a definition he
-can defend, he will not be allowed to challenge the ‚shape' criterion‘).<sup><a href="#q3">3</a></sup>
+can defend, he will not be allowed to challenge the 'shape' criterion').<sup><a href="#q3">3</a></sup>
 Die Leere im Satz ist das ganze Argument. Sie wird sich, wie man sehen wird, bei jedem der
 fünf Grundworte nicht füllen lassen.</p>
 
 <h2>Energie</h2>
 
-<p>Man beginne mit dem Joker. „Energie ist ein bequemes Mehrzweckwort, das die Mathematiker
+<p>Man beginne mit dem Joker. "Energie ist ein bequemes Mehrzweckwort, das die Mathematiker
 erfunden haben, um alles zu beschreiben und nichts zu erklären. Energie ist der Joker in
-einem Pokerspiel“ (‚Energy is a convenient, multi-purpose word that the mathematicians have
+einem Pokerspiel" ('Energy is a convenient, multi-purpose word that the mathematicians have
 invented to describe everything and explain nothing. Energy is a wild card in a poker
-game‘).<sup><a href="#q5">5</a></sup> Gaede reiht die amtlichen Definitionen aneinander und
-lässt sie einander erklären. Energie sei „die Fähigkeit, Arbeit zu verrichten“ (‚the capacity
-for doing work‘); schlägt man Arbeit nach, ist sie „die von einer Kraft übertragene Menge an
-Energie“ (‚the amount of energy transferred by a force‘). Der Kreis ist geschlossen: Energie
-durch Arbeit, Arbeit durch Energie, und kein Ding ist benannt. Sein Prüfstein: „Du kannst
-kein Bild der Energie zeichnen. Also ist die Energie kein physisches Objekt“ (‚You cannot draw
-a picture of energy. Therefore, energy is not a physical object‘).<sup><a href="#q5">5</a></sup></p>
+game').<sup><a href="#q5">5</a></sup> Gaede reiht die amtlichen Definitionen aneinander und
+lässt sie einander erklären. Energie sei "die Fähigkeit, Arbeit zu verrichten" ('the capacity
+for doing work'); schlägt man Arbeit nach, ist sie "die von einer Kraft übertragene Menge an
+Energie" ('the amount of energy transferred by a force'). Der Kreis ist geschlossen: Energie
+durch Arbeit, Arbeit durch Energie, und kein Ding ist benannt. Sein Prüfstein: "Du kannst
+kein Bild der Energie zeichnen. Also ist die Energie kein physisches Objekt" ('You cannot draw
+a picture of energy. Therefore, energy is not a physical object').<sup><a href="#q5">5</a></sup></p>
 
 <p>Und hier hört der Einwand auf, Aussenseiterei zu sein, denn der freimütigste Zeuge ist
 die Physik selbst. Richard Feynman eröffnet in seinen <em>Lectures</em> das Kapitel zur
-Energieerhaltung mit der Kinderzimmer-Buchhaltung – eine Mutter findet abends stets 28
-Bauklötze, notfalls, indem sie das Badewasser peilt – und spricht die Pointe selbst aus:
-„es gibt keine Klötzchen“ (‚there are no blocks‘). Er zieht die Folge unmissverständlich:</p>
+Energieerhaltung mit der Kinderzimmer-Buchhaltung - eine Mutter findet abends stets 28
+Bauklötze, notfalls, indem sie das Badewasser peilt - und spricht die Pointe selbst aus:
+"es gibt keine Klötzchen" ('there are no blocks'). Er zieht die Folge unmissverständlich:</p>
 
 <blockquote>
-<p>“It is important to realize that in physics today, we have no knowledge of what energy
+  <p>“It is important to realize that in physics today, we have no knowledge of what energy
 <em>is</em>. We do not have a picture that energy comes in little blobs of a definite
 amount. … However, there are formulas for calculating some numerical quantity …”</p>
-<p>„Es ist wichtig, sich klarzumachen, dass wir in der heutigen Physik keine Kenntnis davon
+  <p>„Es ist wichtig, sich klarzumachen, dass wir in der heutigen Physik keine Kenntnis davon
 haben, was Energie <em>ist</em>. Wir haben kein Bild davon, dass Energie in kleinen Klümpchen
 von bestimmter Menge daherkäme. … Es gibt jedoch Formeln, um irgendeine Zahlengrösse zu
 berechnen …“</p>
-<p class="zitat-quelle">– Richard Feynman</p>
+  <p class="zitat-quelle">– Richard Feynman</p>
 </blockquote>
 
-<p>Was Gaede polemisch behauptet, räumt Feynman ohne Erregung ein: eine Zahl, die man
+<p>Was Gaede etwas polemisch behauptet, räumt Feynman ohne Erregung ein: eine Zahl, die man
 berechnet, kein Ding, das man zeigt.<sup><a href="#q6">6</a></sup> Von hier stammt Gaedes
-härtester Prüfsatz: „Es ist irrational zu sagen, man habe Energie in Masse verwandelt … das
-ist, wie wenn man sagte, man habe Gerechtigkeit in Liebe verwandelt“ (‚it is irrational to
+härtester Prüfsatz: "Es ist irrational zu sagen, man habe Energie in Masse verwandelt … das
+ist, wie wenn man sagte, man habe Gerechtigkeit in Liebe verwandelt" ('it is irrational to
 say that you converted energy into mass … it is like saying that you converted justice into
-love‘) – Beziehungen giesst man nicht aus einem Gefäss ins andere.<sup><a href="#q5">5</a></sup></p>
+love') - Beziehungen giesst man nicht aus einem Gefäss ins andere.<sup><a href="#q5">5</a></sup></p>
 
 <h2>Masse</h2>
 
-<p>Denselben Zirkel hat Ernst Mach schon 1883 an der Masse offengelegt, ruhiger als
-Gaede und lange vor ihm. Newtons amtliche Definition – Masse ist die aus Volumen mal
-Dichte bestimmte „Quantität der Materie" – zerfällt bei der ersten Nachfrage:</p>
+<p>Denselben Zirkel hat Ernst Mach schon 1883 an der Masse offengelegt, höflicher als
+Gaede und lange vor ihm. Newtons "amtliche" Definition (so verbreitet und unumstösslich ist sie) - Masse ist die aus Volumen mal
+Dichte bestimmte "Quantität der Materie" - zerfällt bei der ersten Nachfrage:</p>
 
 <blockquote>
-<p>„Da wir die Dichte doch nur definiren können, als die Masse der Volumseinheit, so ist
+  <p>„Da wir die Dichte doch nur definiren können, als die Masse der Volumseinheit, so ist
 der Cirkel offenbar."</p>
-<p class="zitat-quelle">– Ernst Mach</p>
+  <p class="zitat-quelle">– Ernst Mach</p>
 </blockquote>
 
 <p>Masse durch Dichte, Dichte durch Masse. Machs eigener Ausweg ist bezeichnend: Er
-ersetzt die Definition durch eine Messvorschrift und benennt damit ausdrücklich „nur ein
+ersetzt die Definition durch eine Messvorschrift und benennt damit ausdrücklich "nur ein
 thatsächliches Verhältniss", kein Ding.<sup><a href="#q7">7</a></sup> Gaede schliesst
 einen zweiten Kreis, den der Relativität: Wenn die Masse mit der Geschwindigkeit
-zunehme, erkläre man „die Zunahme der Masse, von der wir nicht wissen, was sie ist, durch
-eine Zunahme der Energie, von der wir ebenso wenig wissen, was sie ist“ (‚the increase in
+zunehme, erkläre man "die Zunahme der Masse, von der wir nicht wissen, was sie ist, durch
+eine Zunahme der Energie, von der wir ebenso wenig wissen, was sie ist" ('the increase in
 mass which we know not what it is, in terms of an increase in energy, which we also know not
-what it is‘) – das Unbekannte durch das Unbekannte.<sup><a href="#q8">8</a></sup></p>
+what it is') - das Unbekannte durch das Unbekannte.<sup><a href="#q8">8</a></sup></p>
 
 <h2>Feld</h2>
 
 <p>Am reinsten schliesst sich der Kreis beim Feld, und hier zitiert Gaede die Kette
-gleich selbst. Er nimmt die amtlichen Bestimmungen – „Feld: eine Raumgegend“ (‚field: a
-region of space‘) – und geht ihnen Wort für Wort nach:</p>
+gleich selbst. Er nimmt die amtlichen Bestimmungen - "Feld: eine Raumgegend" ('field: a
+region of space') - und geht ihnen Wort für Wort nach:</p>
 
 <blockquote>
-<p>“The words field, region, and space are synonyms: ‚field: a region of space… region: a
+  <p>“The words field, region, and space are synonyms: ‚field: a region of space… region: a
 portion of space… space: the infinite extension of field'. As long as the mathematicians
 define these strategic words in terms of the others, they will never understand what they
 are talking about.”</p>
-<p>„Die Wörter Feld, Gegend und Raum sind Synonyme: ‚Feld: eine Raumgegend … Gegend: ein Teil
+  <p>„Die Wörter Feld, Gegend und Raum sind Synonyme: ‚Feld: eine Raumgegend … Gegend: ein Teil
 des Raumes … Raum: die unendliche Ausdehnung des Feldes‘. Solange die Mathematiker diese
 strategischen Wörter durch die jeweils anderen definieren, werden sie nie verstehen, wovon
 sie reden.“</p>
-<p class="zitat-quelle">– Bill Gaede</p>
+  <p class="zitat-quelle">– Bill Gaede</p>
 </blockquote>
 
-<p><em>Feld</em> → „eine Raumgegend“ → <em>Gegend</em> → „ein Teil des Raumes“ →
-<em>Raum</em> → „die unendliche Ausdehnung des Feldes“ → <em>Feld</em>. Das Wort kehrt
-buchstäblich zu sich zurück. Gaedes Befund: „So etwas wie ein ‚Ding‘ namens Feld gibt es
-nicht. … Das Wort Feld bezeichnet ein Tätigkeitswort, kein Hauptwort“ (‚There is no such
-‚thing' as a field. … The word field represents a verb; not a noun‘). Und die kleine
-Ideengeschichte dazu: „Faraday erfand es, um auf ein Unbekanntes zu verweisen, und 200 Jahre
-später ist das Wort noch immer undefiniert“ (‚Faraday invented it to refer to an unknown, and
-200 years later the word still remains undefined‘). Darum die Regel: „Das Wort Feld kann für
-die Zwecke der Wissenschaft nicht als Hauptwort gebraucht werden“ (‚The word field cannot be
-used as a noun for the purposes of science‘).<sup><a href="#q9">9</a></sup></p>
+<p><em>Feld</em> → "eine Raumgegend" → <em>Gegend</em> → "ein Teil des Raumes" →
+<em>Raum</em> → "die unendliche Ausdehnung des Feldes" → <em>Feld</em>. Das Wort kehrt
+buchstäblich zu sich zurück. Gaedes Befund: "So etwas wie ein 'Ding' namens Feld gibt es
+nicht. … Das Wort Feld bezeichnet ein Tätigkeitswort, kein Hauptwort" ('There is no such
+'thing' as a field. … The word field represents a verb; not a noun'). Und die kleine
+Ideengeschichte dazu: "Faraday erfand es, um auf ein Unbekanntes zu verweisen, und 200 Jahre
+später ist das Wort noch immer undefiniert" ('Faraday invented it to refer to an unknown, and
+200 years later the word still remains undefined'). Darum die Regel: "Das Wort Feld kann für
+die Zwecke der Wissenschaft nicht als Hauptwort gebraucht werden" ('The word field cannot be
+used as a noun for the purposes of science').<sup><a href="#q9">9</a></sup></p>
 
 <h2>Kraft</h2>
 
-<p>Die Kraft führt Gaede grammatisch vor. Sie sei kein Gegenstand, sondern ein Mass –
-„Kraft ist, wie alle anderen Grössen, bloss ein weiteres quantitatives Adverb, ein
-Gattungsname für eine Art von Bewegung“ (‚force, like all other magnitudes, is just another
-quantitative adverb, a generic name given to a type of motion‘). Und er stellt die Gleichung
+<p>Die Kraft führt Gaede grammatisch vor. Sie sei kein Gegenstand, sondern ein Mass -
+"Kraft ist, wie alle anderen Grössen, bloss ein weiteres quantitatives Adverb, ein
+Gattungsname für eine Art von Bewegung" ('force, like all other magnitudes, is just another
+quantitative adverb, a generic name given to a type of motion'). Und er stellt die Gleichung
 als das hin, was sie ist:</p>
 
 <blockquote>
-<p>“adverb = adverb × adverb<br>
+  <p>“adverb = adverb × adverb<br>
 force = mass × acceleration<br>
 Therefore, the word force cannot be used as a battering ram to push things along as the
 mathematicians perpetually do. Force is not the baseball bat, but rather what the baseball
 bat does to a ball.”</p>
-<p>„Adverb = Adverb × Adverb<br>
+  <p>„Adverb = Adverb × Adverb<br>
 Kraft = Masse × Beschleunigung<br>
 Darum kann das Wort Kraft nicht als Rammbock gebraucht werden, um Dinge voranzustossen, wie
 es die Mathematiker unablässig tun. Die Kraft ist nicht der Baseballschläger, sondern das,
 was der Schläger dem Ball antut.“</p>
-<p class="zitat-quelle">– Bill Gaede</p>
+  <p class="zitat-quelle">– Bill Gaede</p>
 </blockquote>
 
-<p>Die Kraft ist nicht der Schläger, sondern was der Schläger dem Ball tut – ein Tun,
-kein Ding; und wer mit ihr „Dinge anstösst", behandelt ein Adverb wie einen Stein. Den
+<p>Die Kraft ist nicht der Schläger, sondern was der Schläger dem Ball tut - ein Tun,
+kein Ding; und wer mit ihr "Dinge anstösst", behandelt ein Adverb wie einen Stein. Den
 Widerspruch treibt Gaede bis in die Quantentheorie, die dieselbe Kraft zugleich als
-Trägerteilchen ausgebe: „das Stossen selbst ist ein Stein“ (‚push itself is a
-stone‘).<sup><a href="#q10">10</a></sup> Auch das hat die erste Garde vorgezeichnet. Henri
-Poincaré liess 1902 die Definitionen von Kraft und Masse im Kreis aufmarschieren – Kraft sei
-„das Produkt aus Masse und Beschleunigung“ (‚the product of the mass and the acceleration‘),
-warum dann nicht sagen, Masse sei „der Quotient aus Kraft und Beschleunigung“ (‚the quotient
-of the force by the acceleration‘)? – und schloss: „Diese Schwierigkeiten sind
-unüberwindlich“ (‚These difficulties are insurmountable‘).<sup><a href="#q11">11</a></sup></p>
+Trägerteilchen ausgebe: "das Stossen selbst ist ein Stein" ('push itself is a
+stone').<sup><a href="#q10">10</a></sup> Auch das hat die erste Garde vorgezeichnet. Henri
+Poincaré liess 1902 die Definitionen von Kraft und Masse im Kreis aufmarschieren - Kraft sei
+"das Produkt aus Masse und Beschleunigung" ('the product of the mass and the acceleration'),
+warum dann nicht sagen, Masse sei "der Quotient aus Kraft und Beschleunigung" ('the quotient
+of the force by the acceleration')? - und schloss: "Diese Schwierigkeiten sind
+unüberwindlich" ('These difficulties are insurmountable').<sup><a href="#q11">11</a></sup></p>
 
 <h2>Zeit</h2>
 
-<p>Die Zeit endlich behandeln die Physiker, sagt Gaede, „als etwas, das Gestalt hat wie ein
-Stein oder ein Haus oder ein Baum“ (‚as something that has shape like a rock or a house or a
-tree‘); man könne eine Minute berühren, die Schwerkraft verbiege eine Reihe von Sekunden.
+<p>Die Zeit endlich behandeln die Physiker, sagt Gaede, "als etwas, das Gestalt hat wie ein
+Stein oder ein Haus oder ein Baum" ('as something that has shape like a rock or a house or a
+tree'); man könne eine Minute berühren, die Schwerkraft verbiege eine Reihe von Sekunden.
 Dagegen setzt er die nüchterne Bestimmung. Die Zeit der Mathematik sei eine Zahlengerade:
-„quantitative Zeit … ist eine Zahlengerade, eine richtungslose Folge von Zahlen … Zeit ist
-ein Skalar. Sie zeigt nirgendwohin!“ (‚quantitative time … is a number line, a
-direction-less series of numbers … time is a scalar. It points to nowhere!‘). Sie sei ein
-Adverb, kein Nomen – „Zeit bestimmt näher, wie sich etwas bewegt. Sie bestimmt nicht das
-‚Etwas‘ selbst. Eine Dimension ist zu einer Fotografie, was die Zeit zu einem Film ist“
-(‚Time qualifies how something moves. It doesn't qualify the ‚something' itself. A dimension
-is to a photograph what time is to a movie‘). Und seine eigene Doppel-Definition, die die Zeit
-als Verhältnis fasst statt als Ding: „qualitative Zeit … Ein qualitatives Verhältnis,
-festgelegt zwischen zwei Orten eines Objekts“ (‚qualitative time … A qualitative relation
-established between two locations of an object‘); „quantitative Zeit … Ein zahlenmässiges
+"quantitative Zeit … ist eine Zahlengerade, eine richtungslose Folge von Zahlen … Zeit ist
+ein Skalar. Sie zeigt nirgendwohin!" ('quantitative time … is a number line, a
+direction-less series of numbers … time is a scalar. It points to nowhere!'). Sie sei ein
+Adverb, kein Nomen - "Zeit bestimmt näher, wie sich etwas bewegt. Sie bestimmt nicht das
+'Etwas' selbst. Eine Dimension ist zu einer Fotografie, was die Zeit zu einem Film ist"
+('Time qualifies how something moves. It doesn't qualify the 'something' itself. A dimension
+is to a photograph what time is to a movie'). Und seine eigene Doppel-Definition, die die Zeit
+als Verhältnis fasst statt als Ding: "qualitative Zeit … Ein qualitatives Verhältnis,
+festgelegt zwischen zwei Orten eines Objekts" ('qualitative time … A qualitative relation
+established between two locations of an object'); "quantitative Zeit … Ein zahlenmässiges
 Verhältnis, festgelegt zwischen zwei Bewegungen, deren eine ein vorab festgelegter Massstab
-ist“ (‚quantitative time … A numerical relation established between two motions, one of which
-is a pre-established standard‘).<sup><a href="#q12">12</a></sup> Fünf Wörter, fünf Mal
+ist" ('quantitative time … A numerical relation established between two motions, one of which
+is a pre-established standard').<sup><a href="#q12">12</a></sup> Fünf Wörter, fünf Mal
 dieselbe Leere im Satz: Keines liess sich mit einem Ding füllen.</p>
 
 <h2>Zeigen, nicht erklären</h2>
 
 <p>Warum diese Beharrlichkeit? Weil hinter ihr ein Bild davon steht, was
-Physik zu tun hätte. Ein Objekt, sagt Gaede, wird nicht erklärt, es wird vorgezeigt:
-„Objekte führen wir vor, Begriffe definieren wir. Das Wort Tisch definieren wir nicht. Wir
-deuten hin und geben einen Laut von uns“ (‚Objects, we illustrate. Concepts, we define. We
-don't define the word table. We point and utter a sound‘).<sup><a href="#q1">1</a></sup>
-Erklären heisst dann, einen anschaubaren Mechanismus zeigen – eine Theorie, von der sich ein
-Film drehen liesse: „Die Sprache der Physik ist die VORFÜHRUNG! Wer von seiner Theorie keinen
-Film drehen kann, treibt keine Physik!“ (‚The language of Physics is ILLUSTRATION! He who
-cannot make a motion picture of his theory is not doing Physics!‘). Die Hypothese ist ihm das
+Physik zu tun hätte. Ein Objekt wird nicht erklärt, es wird vorgezeigt; und erklären heisst
+dann, einen anschaubaren Mechanismus zeigen - eine Theorie, von der sich ein
+Film drehen liesse: "Die Sprache der Physik ist die VORFÜHRUNG! Wer von seiner Theorie keinen
+Film drehen kann, treibt keine Physik!" ('The language of Physics is ILLUSTRATION! He who
+cannot make a motion picture of his theory is not doing
+Physics!').<sup><a href="#q1">1</a></sup> Die Hypothese ist ihm das
 Standbild, die Theorie der Film; ein Vogel ist nicht dasselbe wie ein fliegender Vogel, ein
-Junge nicht dasselbe wie ein laufender Junge – „das eine ist ein Film, das andere eine
-Fotografie“ (‚One is a movie. The other is a photograph‘).<sup><a href="#q1">1</a></sup> Der
+Junge nicht dasselbe wie ein laufender Junge - "das eine ist ein Film, das andere eine
+Fotografie" ('One is a movie. The other is a photograph').<sup><a href="#q1">1</a></sup> Der
 Prüfstein ist nicht das Experiment und nicht die Vorhersage, sondern die Darstellbarkeit:
-„Lässt es sich nicht vorführen oder veranschaulichen, dann ist es nicht wirklich“ (‚If it can
-not be illustrated or visualized, then it is not real‘). Und darum steht am Ende die
-Trennung, die alles ordnet: „Der Beweis gehört der Mathematik. Die Wissenschaft beweist nie.
+"Lässt es sich nicht vorführen oder veranschaulichen, dann ist es nicht wirklich" ('If it can
+not be illustrated or visualized, then it is not real'). Und darum steht am Ende die
+Trennung, die alles ordnet: "Der Beweis gehört der Mathematik. Die Wissenschaft beweist nie.
 Die Mathematik beschreibt abstrakte dynamische Begriffe, während die Wissenschaft statische
-physische Objekte vorführt und Erscheinungen erklärt“ (‚Proof is for math. Science never
+physische Objekte vorführt und Erscheinungen erklärt" ('Proof is for math. Science never
 proves. Math describes abstract dynamic concepts whereas science illustrates static physical
-objects, and explains phenomena‘).<sup><a href="#q13">13</a></sup></p>
+objects, and explains phenomena').<sup><a href="#q13">13</a></sup></p>
 
 <h2>Das Urteil</h2>
 
 <p>Legt man diesen Massstab an die Grundworte, so fällt Gaedes Urteil hart aus, und er
 spricht es in seinen eigenen Worten. Wo ein Mass zum Ding erklärt wird, ein Adjektiv zum
-Substantiv, sei die Physik zur Religion geworden: „Die Mathematik wird zur Religion, wenn die
+Substantiv, sei die Physik zur Religion geworden: "Die Mathematik wird zur Religion, wenn die
 Mathematiker versuchen, ihren Funktionen eine physische Deutung zu geben … Diese Religion
-trägt den Namen mathematische Physik, eine irrationale Disziplin“ (‚Mathematics becomes a
+trägt den Namen mathematische Physik, eine irrationale Disziplin" ('Mathematics becomes a
 religion when the mathematicians attempt to provide a physical interpretation to their
 functions … This religion is known as Mathematical Physics, an irrational
-discipline‘).<sup><a href="#q14">14</a></sup> Nicht das Übernatürliche wirft er ihr vor,
-sondern das Irrationale in seinem Sinn – das nicht Vorstellbare: „Die mathematische Physik ist
+discipline').<sup><a href="#q14">14</a></sup> Nicht das Übernatürliche wirft er ihr vor,
+sondern das Irrationale in seinem Sinn - das nicht Vorstellbare: "Die mathematische Physik ist
 grösstenteils irrational … Wenn wir Magie oder einen unergründlichen Urheber oder Vorgang
 anrufen, dann können wir schlechterdings alles erklären und schlechterdings nichts
-verstehen“ (‚Mathematical Physics is for the most part irrational … If we are going to invoke
+verstehen" ('Mathematical Physics is for the most part irrational … If we are going to invoke
 magic or an unfathomable agent or process, then we can explain absolutely anything and
-understand absolutely nothing‘).<sup><a href="#q15">15</a></sup> Die Verwandlung selbst hat
+understand absolutely nothing').<sup><a href="#q15">15</a></sup> Die Verwandlung selbst hat
 er, in seinem Buch, in ein Bild gefasst, das die fünf Grundworte auf einmal trifft:</p>
 
 <blockquote>
-<p>“A mathematician is a magician who converts adjectives into nouns: continuous into
+  <p>“A mathematician is a magician who converts adjectives into nouns: continuous into
 continuum, infinite into infinity, infinitesimal into location, 0D into point, 1D into
 line, curved into geodesic.”</p>
-<p>„Ein Mathematiker ist ein Magier, der Adjektive in Substantive verwandelt: stetig in
+  <p>„Ein Mathematiker ist ein Magier, der Adjektive in Substantive verwandelt: stetig in
 Kontinuum, unendlich in Unendlichkeit, unendlich klein in Ort, 0D in Punkt, 1D in Linie,
 gekrümmt in Geodäte.“</p>
-<p class="zitat-quelle">– Bill Gaede, <em>Why God Doesn't Exist</em></p>
+  <p class="zitat-quelle">– Bill Gaede, <em>Why God Doesn't Exist</em></p>
 </blockquote>
 
 <p>Das Adjektiv <em>stetig</em> wird zum Ding <em>Kontinuum</em>, das Verhalten
-<em>Feld</em> zum Gegenstand, das Adverb <em>Kraft</em> zum Stein – und Gaede nennt den,
-der diese Wörter in die Wörterbücher schrieb, mit einem eigenen Wort einen „mathemagician“,
+<em>Feld</em> zum Gegenstand, das Adverb <em>Kraft</em> zum Stein - und Gaede nennt den,
+der diese Wörter in die Wörterbücher schrieb, mit einem eigenen Wort einen "mathemagician",
 einen Mathemagier, keinen Physiker.<sup><a href="#q16">16</a></sup></p>
 
 <p>Im Bild dieser Webseite hat jede Weltanschauung ihre Substanz: dem Materialismus gehört
 die Materie, der Körper; dem Mathematismus das Mathema, die Form. Die Grundworte der Physik
-– Erhaltungsgrösse, Funktion, Verhältnis, Zahl – gehören sämtlich der zweiten. Das ist kein
+- Erhaltungsgrösse, Funktion, Verhältnis, Zahl - gehören sämtlich der zweiten. Das ist kein
 Tadel: Als Rechenwerk ist die Physik triumphal, ihre Voraussagen treffen ein, und eine
 Physik, die ihre Grundworte ehrlich als Rechengrössen führte, verlöre keine einzige ihrer
 Gleichungen. Mangelhaft wird ihr Begriff erst dort, wo die Rechengrösse unbemerkt zum Ding
-erklärt wird – wo Energie „fliesst" wie ein Stoff, das Feld den Raum „erfüllt" wie ein
-Nebel, die Zeit sich „dehnt" wie ein Band. Ein Materialismus, der seinen Stoff nur noch in
-Formen zu fassen bekommt, ist an seinen eigenen Begriffen gemessen Mathematismus geworden –
+erklärt wird - wo Energie "fliesst" wie ein Stoff, das Feld den Raum "erfüllt" wie ein
+Nebel, die Zeit sich "dehnt" wie ein Band. Ein Materialismus, der seinen Stoff nur noch in
+Formen zu fassen bekommt, ist an seinen eigenen Begriffen gemessen Mathematismus geworden -
 er weiss es nur nicht. Was die Materie selbst sei, bleibt damit offen; offener jedenfalls,
-als die Selbstsicherheit des Wortes „Physik" vermuten lässt.</p>
+als die Selbstsicherheit des Wortes "Physik" vermuten lässt.</p>
 
 <h2>Quellen</h2>
 
 <ol class="quellen">
-<li id="q1">Bill Gaede, „MPEU" (die zwei Kategorien: „All words in the dictionary … either
-objects or concepts. There is no third category …"; „Objects, we illustrate. Concepts, we
-define. … We point and utter a sound"; „The language of Physics is ILLUSTRATION! He who
+  <li id="q1">Bill Gaede, „MPEU" („The language of Physics is ILLUSTRATION! He who
 cannot make a motion picture of his theory is not doing Physics!"; „a bird is not the same
 as a flying bird … One is a movie. The other is a photograph") –
 <a href="http://www.youstupidrelativist.com/MPEU.html">youstupidrelativist.com/MPEU.html</a>,
-[direkt] gelesen. „concept: the relationship between two or more objects" nach der
+[direkt] gelesen. Die zwei Kategorien selbst („All words in the dictionary … either objects
+or concepts") stehen auf derselben Seite; sie sind im vorigen Teil der Reihe zitiert und
+hier nur vorausgesetzt. „concept: the relationship between two or more objects" nach der
 Methoden-Ausformulierung der „Rational Science"-Bewegung
 (<a href="http://rationalsciencemethod.blogspot.com/2012/12/the-rational-scientific-method.html">rationalsciencemethod.blogspot.com</a>,
 verfasst von „Mike H", nicht Gaede – als Gemeinschafts-Fassung geführt).</li>
-<li id="q2">Bill Gaede, „The five unscientific words of Mathematical Physics" (die
+  <li id="q2">Bill Gaede, „The five unscientific words of Mathematical Physics" (die
 „golden rules": „If you cannot define a crucial word … you cannot and shouldn't use it";
 „A scientific definition is one that can be used consistently throughout the
 dissertation"; „If you cannot draw it, it doesn't belong in Physics") –
 <a href="http://www.youstupidrelativist.com/02Sci/07Words/00SumWords.html">youstupidrelativist.com/02Sci/07Words/00SumWords.html</a>,
 [direkt].</li>
-<li id="q3">Bill Gaede, „Physics deals with objects" / „MPhyz" (kein Lehrbuch definiert
+  <li id="q3">Bill Gaede, „Physics deals with objects" / „MPhyz" (kein Lehrbuch definiert
 „object"; die Definitionsliste object/distance/location/exist/motion; die zehn
 Schein-Definitionen und die Beweislastumkehr „object:&nbsp;______?") –
 <a href="http://www.youstupidrelativist.com/MPhyz.html">youstupidrelativist.com/MPhyz.html</a>,
 [direkt]. Die zitierte Liste steht dort als „Foundations of Physics"; eine leicht
 abweichende Fassung findet sich in der Methoden-Ausformulierung (Anm.&nbsp;1).</li>
-<li id="q4">Bill Gaede, „What is an object?" (die Sinnes-Definition setzt „a second
+  <li id="q4">Bill Gaede, „What is an object?" (die Sinnes-Definition setzt „a second
 object: the witness" voraus und ist darum zirkulär; „This is not a definition, but a proof
 disguised as a definition") – frei lesbare Buch-Grundlegung,
 <a href="https://ropehypothesis.com/foundations-of-physics/what-is-an-object/">ropehypothesis.com/foundations-of-physics/what-is-an-object/</a>,
 [direkt].</li>
-<li id="q5">Bill Gaede, „Energy" (Nomen/Verb/Adverb; der Arbeit-Kreis „capacity for doing
+  <li id="q5">Bill Gaede, „Energy" (Nomen/Verb/Adverb; der Arbeit-Kreis „capacity for doing
 work" ⇄ „the amount of energy transferred by a force"; „You cannot draw a picture of
 energy"; „it is irrational to say that you converted energy into mass") –
 <a href="http://www.youstupidrelativist.com/02Sci/07Words/01Energy.html">youstupidrelativist.com/02Sci/07Words/01Energy.html</a>,
 [direkt].</li>
-<li id="q6">Richard&nbsp;P. Feynman, Robert&nbsp;B. Leighton, Matthew Sands: <a
-href="https://www.feynmanlectures.caltech.edu/I_04.html"><em>The Feynman Lectures on
+  <li id="q6">Richard&nbsp;P. Feynman, Robert&nbsp;B. Leighton, Matthew Sands: <a href="https://www.feynmanlectures.caltech.edu/I_04.html"><em>The Feynman Lectures on
 Physics</em>, Bd.&nbsp;I, Kap.&nbsp;4 „Conservation of Energy"</a>, Abschn.&nbsp;4–1
 („there are no blocks"; „in physics today, we have no knowledge of what energy is"),
 [direkt].</li>
-<li id="q7">Ernst Mach: <a href="https://archive.org/details/bub_gb_tYumOJPD7n8C"><em>Die
+  <li id="q7">Ernst Mach: <a href="https://archive.org/details/bub_gb_tYumOJPD7n8C"><em>Die
 Mechanik in ihrer Entwickelung</em></a>, 3.&nbsp;Aufl., Leipzig 1897, S.&nbsp;188 („der
 Cirkel offenbar") und S.&nbsp;211&nbsp;f. („nur ein thatsächliches Verhältniss"; im
 Massenbegriff liege „keine Theorie"); Erstauflage 1883. [direkt].</li>
-<li id="q8">Bill Gaede, „Mass confusion in Special Relativity" („the increase in mass
+  <li id="q8">Bill Gaede, „Mass confusion in Special Relativity" („the increase in mass
 which we know not what it is, in terms of an increase in energy, which we also know not
 what it is") –
 <a href="http://www.youstupidrelativist.com/05SR/02Mass/00SumMass.html">youstupidrelativist.com/05SR/02Mass/00SumMass.html</a>,
 [direkt].</li>
-<li id="q9">Bill Gaede, „The mathematicians have no idea what a field is" (der geschlossene
+  <li id="q9">Bill Gaede, „The mathematicians have no idea what a field is" (der geschlossene
 Kreis field → region → space → field; „There is no such ‚thing' as a field … The word
 field represents a verb; not a noun"; „Faraday invented it to refer to an unknown, and 200
 years later the word still remains undefined"; „cannot be used as a noun for the purposes
 of science") –
 <a href="http://www.youstupidrelativist.com/06QM/01Field/01TwoFields.html">youstupidrelativist.com/06QM/01Field/01TwoFields.html</a>,
 [direkt].</li>
-<li id="q10">Bill Gaede, „The mechanics use the word force as a physical object" („adverb =
+  <li id="q10">Bill Gaede, „The mechanics use the word force as a physical object" („adverb =
 adverb × adverb / force = mass × acceleration"; „not the baseball bat, but rather what the
 baseball bat does to a ball"; „push itself is a stone") –
 <a href="http://www.youstupidrelativist.com/06QM/02Force/00SumForce.html">youstupidrelativist.com/06QM/02Force/00SumForce.html</a>,
 [direkt].</li>
-<li id="q11">Henri Poincaré: <a href="https://archive.org/details/scienceandhypoth00poinuoft"><em>Science
+  <li id="q11">Henri Poincaré: <a href="https://archive.org/details/scienceandhypoth00poinuoft"><em>Science
 and Hypothesis</em></a>, London 1905 (frz. Original 1902), Kap.&nbsp;VI, S.&nbsp;97&nbsp;f.
 (der Kreis Kraft ⇄ Masse; „These difficulties are insurmountable"), [direkt]. Deutsche
 Wiedergaben der englischen Übersetzung: eigene Übersetzungen.</li>
-<li id="q12">Bill Gaede, „Time is a number line and not a dimension" („time is a scalar. It
+  <li id="q12">Bill Gaede, „Time is a number line and not a dimension" („time is a scalar. It
 points to nowhere!"; „A dimension is to a photograph what time is to a movie"; die
 qualitative/quantitative Doppel-Definition) –
 <a href="http://www.youstupidrelativist.com/01Math/05Dim/08Time.html">youstupidrelativist.com/01Math/05Dim/08Time.html</a>,
 und „How can relativists stretch time?"
 (<a href="http://www.youstupidrelativist.com/05SR/03Time/00SumTime.html">…/05SR/03Time/00SumTime.html</a>),
 [direkt].</li>
-<li id="q13">Bill Gaede, „Scientists don't know what Science is" („Science is not about
+  <li id="q13">Bill Gaede, „Scientists don't know what Science is" („Science is not about
 predictions, falsification, or experimentation"; „If it can not be illustrated or
 visualized, then it is not real"; „Proof is for math. Science never proves") –
 <a href="http://www.youstupidrelativist.com/02Sci/00SumSci.html">youstupidrelativist.com/02Sci/00SumSci.html</a>,
 und die Methoden-Ausformulierung (Anm.&nbsp;1), [direkt].</li>
-<li id="q14">Bill Gaede, „Mathematical Physics is a religion" / „00SumLang" (nach <em>Why
+  <li id="q14">Bill Gaede, „Mathematical Physics is a religion" / „00SumLang" (nach <em>Why
 God Doesn't Exist</em>) („Mathematics becomes a religion …"; „an irrational discipline";
 „An equation … will not tell us WHAT a chair IS") –
 <a href="http://www.youstupidrelativist.com/01Math/09MathPhyz/00SumLang.html">youstupidrelativist.com/01Math/09MathPhyz/00SumLang.html</a>;
 dazu „Mathematics is a science of behavior. Physics is the science of existence"
 (<a href="http://www.youstupidrelativist.com/01Math/00SumMath.html">…/01Math/00SumMath.html</a>),
 [direkt].</li>
-<li id="q15">Bill Gaede, „Science and Religion" („Mathematical Physics is for the most part
+  <li id="q15">Bill Gaede, „Science and Religion" („Mathematical Physics is for the most part
 irrational"; „Mathematical Physics is entirely irrational; none of it survives"; „If we
 are going to invoke magic … we can explain absolutely anything and understand absolutely
 nothing") –
 <a href="http://www.youstupidrelativist.com/02Sci/03SciRel.html">youstupidrelativist.com/02Sci/03SciRel.html</a>,
 [direkt].</li>
-<li id="q16">Das Bild „A mathematician is a magician who converts adjectives into nouns …"
+  <li id="q16">Das Bild „A mathematician is a magician who converts adjectives into nouns …"
 und „The mathematicians are the priests of the modern world" stammen aus Gaedes Buch
 <em>Why God Doesn't Exist</em> (breit belegt u.&nbsp;a. über die Goodreads-Autorenseite mit
 Werk-Zuschreibung; nicht auf den freien Webseiten lokalisiert – als Buch-Zitate geführt).
@@ -485,16 +475,16 @@ er ist es nicht.</p>
 </article>
 
   <nav class="artikel-nav" aria-label="Weitere Artikel dieser Art">
-    <a class="vor" href="gaede-ding-und-begriff.html"><span>← Früher</span>Ding und Begriff</a>
+    <a class="vor" href="gaede-ding-und-begriff.html"><span>← Früher</span>01 - Ding und Begriff</a>
     <a class="zur-art" href="../weltanschauungen/materialismus/art-1.html">Alle in Art I Gaede</a>
-    <a class="nach" href="gaede-mechanik.html">Die Mechanik<span>Später →</span></a>
+    <a class="nach" href="gaede-mechanik.html">03 - Die Mechanik<span>Später →</span></a>
   </nav>
 
 </main>
 
 <footer class="fuss">
   <p>© 2026 Eric Naville · nach dem Bild der zwölf Weltanschauungen
-  <span class="quelle">(Rudolf Steiner, „Der menschliche und der kosmische Gedanke“, GA&nbsp;151)</span></p>
+  <span class="quelle">(Rudolf Steiner, "Der menschliche und der kosmische Gedanke", GA&nbsp;151)</span></p>
 </footer>
 
 </body>

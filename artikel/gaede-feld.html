@@ -3,7 +3,7 @@ status: veröffentlicht
 gattung: materialismus
 art: 1
 reihe: 4
-zusammenfassung: Ist das Feld ein Ding oder ein reifizierter Begriff? Gaedes „Sammlung von Zahlen", Maxwell als Feld-Realist, Fernwirkung gegen Nahwirkung, der entstofflichte Äther, Feynmans örtliches Feld und Aharonov-Bohm — und ob Gestalt zum Wirklichsein gehört.
+zusammenfassung: Ist das Feld ein Ding oder ein reifizierter Begriff? Gaedes "Sammlung von Zahlen", Maxwell als Feld-Realist, Fernwirkung gegen Nahwirkung, der entstofflichte Äther, Feynmans örtliches Feld und Aharonov-Bohm - und ob Gestalt zum Wirklichsein gehört.
 schlagworte: William Gaede, Feld, Maxwell, Faraday, Fernwirkung, Äther, Feynman, Aharonov-Bohm, Rope Hypothesis, Weber, Materialismus
 -->
 <!doctype html>
@@ -11,27 +11,27 @@ schlagworte: William Gaede, Feld, Maxwell, Faraday, Fernwirkung, Äther, Feynman
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Das Feld – Eric Naville</title>
-<meta name="description" content="Ist das Feld ein Ding oder ein reifizierter Begriff? Gaedes „Sammlung von Zahlen&quot;, Maxwell als Feld-Realist, Fernwirkung gegen Nahwirkung, der entstofflichte Äther, Feynmans örtliches Feld und Aharonov-Bohm — und ob Gestalt zum Wirklichsein gehört.">
+<title>04 - Das Feld - Eric Naville</title>
+<meta name="description" content="Ist das Feld ein Ding oder ein reifizierter Begriff? Gaedes &quot;Sammlung von Zahlen&quot;, Maxwell als Feld-Realist, Fernwirkung gegen Nahwirkung, der entstofflichte Äther, Feynmans örtliches Feld und Aharonov-Bohm - und ob Gestalt zum Wirklichsein gehört.">
 <link rel="canonical" href="https://eric-naville.ch/artikel/gaede-feld.html">
 <meta property="og:url" content="https://eric-naville.ch/artikel/gaede-feld.html">
-<meta property="og:title" content="Das Feld">
-<meta property="og:description" content="Ist das Feld ein Ding oder ein reifizierter Begriff? Gaedes „Sammlung von Zahlen&quot;, Maxwell als Feld-Realist, Fernwirkung gegen Nahwirkung, der entstofflichte Äther, Feynmans örtliches Feld und Aharonov-Bohm — und ob Gestalt zum Wirklichsein gehört.">
+<meta property="og:title" content="04 - Das Feld">
+<meta property="og:description" content="Ist das Feld ein Ding oder ein reifizierter Begriff? Gaedes &quot;Sammlung von Zahlen&quot;, Maxwell als Feld-Realist, Fernwirkung gegen Nahwirkung, der entstofflichte Äther, Feynmans örtliches Feld und Aharonov-Bohm - und ob Gestalt zum Wirklichsein gehört.">
 <meta property="og:type" content="article">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23a8802c' stroke-width='6'/%3E%3Cpath d='M8 50h84' stroke='%23a8802c' stroke-width='5'/%3E%3Cpath d='M50 16v68' stroke='%235d4a35' stroke-width='7'/%3E%3C/svg%3E">
 <script>
 (function(){
   var w=document.documentElement;
-  try{var g=localStorage.getItem("thema"); if(g==="hell"||g==="dunkel") w.setAttribute("data-theme",g);}catch(e){}
-  function eff(){var t=w.getAttribute("data-theme"); if(t) return t;
-    return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dunkel":"hell";}
+  var B=["terminal","hell","dunkel"], N={terminal:"Terminal",hell:"Hell",dunkel:"Nacht"};
+  try{var g=localStorage.getItem("thema"); if(B.indexOf(g)>=0) w.setAttribute("data-theme",g);}catch(e){}
+  function eff(){var t=w.getAttribute("data-theme"); return B.indexOf(t)>=0?t:"terminal";}
+  function naechst(){ return B[(B.indexOf(eff())+1)%B.length]; }
   function wire(){
     var b=document.querySelector(".thema-schalter"); if(!b) return;
-    function zeige(){var d=eff()==="dunkel"; b.setAttribute("aria-pressed",d?"true":"false");
-      var l=d?"Zum hellen Erscheinungsbild wechseln":"Zum dunklen Erscheinungsbild wechseln";
+    function zeige(){var l="Erscheinungsbild: "+N[eff()]+" - weiter zu "+N[naechst()];
       b.setAttribute("aria-label",l); b.title=l;}
-    b.addEventListener("click",function(){var n=eff()==="dunkel"?"hell":"dunkel";
+    b.addEventListener("click",function(){var n=naechst();
       w.setAttribute("data-theme",n); try{localStorage.setItem("thema",n);}catch(e){} zeige();});
     zeige();
   }
@@ -43,6 +43,7 @@ schlagworte: William Gaede, Feld, Maxwell, Faraday, Fernwirkung, Äther, Feynman
 
 <header class="kopf">
   <button type="button" class="thema-schalter" aria-label="Erscheinungsbild wechseln" title="Erscheinungsbild wechseln">
+    <svg class="terminal" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.2" width="18.8" height="15.6" rx="2.2"/><path d="M7 9.4l2.8 2.6L7 14.6M12.8 15h4.2"/></svg>
     <svg class="sonne" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.2v2.6M12 19.2v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.2 12h2.6M19.2 12h2.6M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9"/></svg>
     <svg class="mond" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.8A8.3 8.3 0 0 1 9.2 3.5a6.6 6.6 0 1 0 11.3 11.3z"/></svg>
   </button>
@@ -60,12 +61,12 @@ schlagworte: William Gaede, Feld, Maxwell, Faraday, Fernwirkung, Äther, Feynman
   </nav>
 
   <article class="artikel" id="gaede-feld">
-<h1>Das Feld</h1>
+<h1>04 - Das Feld</h1>
 <p class="datum">9. Juli 2026</p>
 
 <p>Die Kraft, so weit das vorige Gebiet sie trug, hatte am Ende keinen Ort: bei
 Newton eine Handlung, bei Mach eine Beziehung zu den fernen Sternen, bei Feynman
-ein materieller Ursprung ohne Bild. Die Physik gibt ihr endlich einen — das Feld.
+ein materieller Ursprung ohne Bild. Die Physik gibt ihr endlich einen - das Feld.
 Zwischen zwei Ladungen, zwischen Magnet und Eisen, zwischen Sonne und Auge liegt
 nicht mehr leerer Abstand, sondern ein Etwas, das den ganzen Raum erfüllt und in
 jedem seiner Punkte einen Wert trägt. Nur hat dieses Etwas keine Gestalt. Man kann
@@ -74,29 +75,29 @@ man kann es allein als Zahl je Ort angeben. Damit ist es für Bill Gaede, den
 argentinischen Ingenieur, dessen Kritik diese Reihe verfolgt, der reinste Fall des
 Verdachts: ein Begriff, den die Physik zum Ding gemacht hat, um mit ihm zu rechnen
 wie mit Steinen. Der Ort dieser Prüfung im Kreis ist die Art&nbsp;I des
-Materialismus; auf dem Prüftisch liegt die Frage, ob „Gestalt“ zum Wirklichsein
-gehört — oder ob ein Ding auch dann eines sein kann, wenn man es nur noch rechnen
+Materialismus; auf dem Prüftisch liegt die Frage, ob "Gestalt" zum Wirklichsein
+gehört - oder ob ein Ding auch dann eines sein kann, wenn man es nur noch rechnen
 und nicht mehr zeigen kann.</p>
 
 <h2>Eine Sammlung von Zahlen</h2>
 
 <p>Gaede legt an das Feld dieselbe Klinge wie an alle Grundworte der Physik, und er
 führt sie zweimal, weil das Feld zwei Gesichter zeigt. Der Mathematiker, sagt er,
-bestimme es als „Zuordnung einer Grösse zu jedem Punkt des Raumes“ (‚an assignment
-of a quantity to every point in space‘), als „eine mathematische Grösse, die man
-sich als Sammlung von Zahlen denken kann“ (‚a mathematical entity which can be
-thought of as a collection of numbers‘). Der Physiker dagegen nenne es „eine
-Raumgegend“ (‚a region of space‘). Beide Fassungen lässt Gaede scheitern, und beide
+bestimme es als "Zuordnung einer Grösse zu jedem Punkt des Raumes" ('an assignment
+of a quantity to every point in space'), als "eine mathematische Grösse, die man
+sich als Sammlung von Zahlen denken kann" ('a mathematical entity which can be
+thought of as a collection of numbers'). Der Physiker dagegen nenne es "eine
+Raumgegend" ('a region of space'). Beide Fassungen lässt Gaede scheitern, und beide
 am selben Punkt: Weder eine Zahl noch eine Gegend hat die Kraft, einen Körper zu
 bewegen.</p>
 
-<p>Eine Zahl sei eine Abstraktion, hält er fest: „wie der Geist und der Engel der
-Religion fehlt einer Zahl der Muskel, um physische Gegenstände umherzuschieben“
-(‚Like the spirit and angel of religion, a number lacks the muscle to move physical objects around‘). Und eine Gegend
-erst recht: „es ist schlechterdings lächerlich, dass ein Mathematiker behauptet,
-eine Region könne mit Teilchen in Wechselwirkung treten und sie bewegen“ (‚it is
+<p>Eine Zahl sei eine Abstraktion, hält er fest: "wie der Geist und der Engel der
+Religion fehlt einer Zahl der Muskel, um physische Gegenstände umherzuschieben"
+('Like the spirit and angel of religion, a number lacks the muscle to move physical objects around'). Und eine Gegend
+erst recht: "es ist schlechterdings lächerlich, dass ein Mathematiker behauptet,
+eine Region könne mit Teilchen in Wechselwirkung treten und sie bewegen" ('it is
 absolutely ludicrous for a mathematician to state that a region can interface with
-and move particles‘). Der Fehler liege schon in der Wortart:</p>
+and move particles'). Der Fehler liege schon in der Wortart:</p>
 
 <blockquote>
   <p>“A field is a concept, a word used to refer to the entire process. The word
@@ -104,19 +105,19 @@ and move particles‘). Der Fehler liege schon in der Wortart:</p>
   <p class="zitat-quelle">– Bill Gaede</p>
 </blockquote>
 
-<p>Ein Feld sei kein Gegenstand, sondern ein Vorgang — der ganze Prozess, in ein
-Hauptwort verkleidet. „Das Wort Feld kann für die Zwecke der
-Wissenschaft nicht als Substantiv gebraucht werden“ (‚The word field cannot be
-used as a noun for the purposes of science‘). Und den Beweis liefere die Physik
+<p>Ein Feld sei kein Gegenstand, sondern ein Vorgang - der ganze Prozess, in ein
+Hauptwort verkleidet. "Das Wort Feld kann für die Zwecke der
+Wissenschaft nicht als Substantiv gebraucht werden" ('The word field cannot be
+used as a noun for the purposes of science'). Und den Beweis liefere die Physik
 selbst mit ihren eigenen Wörterbüchern: Feld sei eine Raumgegend, Gegend ein Teil
-des Raumes, Raum die unendliche Ausdehnung des Feldes — ein Ring, der sich nie
+des Raumes, Raum die unendliche Ausdehnung des Feldes - ein Ring, der sich nie
 erdet, Feld über Raum und Raum über Feld.<sup><a href="#q1">1</a></sup></p>
 
 <h2>Der Erfinder und der Rechner</h2>
 
 <p>Man könnte das für die Übertreibung eines Aussenstehenden halten. Nur ist das
 Feld nicht als Rechenbehelf in die Physik gekommen, sondern als Antwort auf eine
-Not — und wer es einführte, meinte damit eine Wirklichkeit, kein Gerüst aus Zahlen.
+Not - und wer es einführte, meinte damit eine Wirklichkeit, kein Gerüst aus Zahlen.
 Michael Faraday sah dort etwas, wo die rechnenden Physiker
 nur Abstand sahen. James Clerk Maxwell, der Faradays Anschauung in Gleichungen
 brachte, hat den Unterschied im Vorwort seines <em>Treatise</em> festgehalten:</p>
@@ -135,18 +136,18 @@ Mathematiker nur über die Ferne wirkende Kraftzentren sahen; er sah ein Medium,
 jene nichts als Abstand sahen, und suchte den Sitz der Erscheinungen in wirklichen
 Vorgängen in diesem Medium. Maxwell zog daraus die Konsequenz: Er legte die Energie
 in den Raum hinein. Die elektrostatische Energie des ganzen Feldes,
-schreibt er, bleibe dieselbe, wenn man annehme, dass sie „in jedem Teil des Feldes
-wohnt, wo elektrische Kraft und elektrische Verschiebung auftreten“ (‚it resides in
+schreibt er, bleibe dieselbe, wenn man annehme, dass sie "in jedem Teil des Feldes
+wohnt, wo elektrische Kraft und elektrische Verschiebung auftreten" ('it resides in
 every part of the field where electrical force and electrical displacement
-occur‘) — statt in den Ladungen zu stecken. Noch deutlicher wird er beim Licht: In
+occur') - statt in den Ladungen zu stecken. Noch deutlicher wird er beim Licht: In
 der Spanne, nachdem das Licht den einen Körper verlassen und ehe es den zweiten
-erreicht hat, „muss es als Energie im dazwischenliegenden Raum existiert haben“
-(‚it must have existed as energy in the intervening space‘).<sup><a
+erreicht hat, "muss es als Energie im dazwischenliegenden Raum existiert haben"
+('it must have existed as energy in the intervening space').<sup><a
 href="#q2">2</a></sup> Für Maxwell ist das Feld kein Buchhaltungstrick, sondern ein
 Träger von Energie: Was den Sender verlassen und den Empfänger noch nicht erreicht
 hat, ist unterwegs, im Feld, dazwischen.</p>
 
-<p>Bei Faraday war die Frage noch offen an sich selbst gestellt — und zur
+<p>Bei Faraday war die Frage noch offen an sich selbst gestellt - und zur
 Wirklichkeit hin beantwortet. Er konnte sich, so ist es überliefert, die gekrümmten
 Kraftlinien nicht ohne eine physische Existenz im Zwischenraum denken, und gerade
 weil sie gekrümmt sind: Eine blosse geometrische Zeichenhilfe verlangt keine
@@ -154,14 +155,14 @@ Bedingung im leeren Raum, eine gebogene Wirkung schon.<sup><a href="#q3">3</a></
 Hier scheiden sich die Wege, ehrlich und lange vor jeder Doktrin. Faraday und
 Maxwell antworten: Der Zwischenraum ist der eigentliche Schauplatz. Die rechnenden
 Physiker antworten: Im Zwischenraum ist nichts, nur ein Gerüst aus Zahlen. Gaede und
-Maxwell reden über dasselbe — dass „Feld“ förmlich eine Zuordnung von Zahlen zu
-Orten ist, bestreitet kein Physiker —; nur zieht Maxwell daraus die Wirklichkeit des
+Maxwell reden über dasselbe - dass "Feld" förmlich eine Zuordnung von Zahlen zu
+Orten ist, bestreitet kein Physiker -; nur zieht Maxwell daraus die Wirklichkeit des
 Feldes und Gaede seine Nicht-Existenz. Der Streit ist einer der Wertung, nicht der
 Beobachtung.</p>
 
 <h2>Über die Ferne oder von Punkt zu Punkt</h2>
 
-<p>Hinter der Frage „Ding oder Rechengerät“ steht eine ältere, und sie ist mit ihr
+<p>Hinter der Frage "Ding oder Rechengerät" steht eine ältere, und sie ist mit ihr
 dieselbe: Wirkt die Kraft <em>über die Ferne</em>, unmittelbar von Körper zu Körper
 durch den leeren Raum hindurch, oder <em>von Nachbarpunkt zu Nachbarpunkt</em> durch
 ein Medium? Das Feld ist die Antwort der zweiten Partei. Und der erste Zeuge gegen
@@ -179,7 +180,7 @@ Bentley schreibt er:</p>
 </blockquote>
 
 <p>Die Gravitation, sagt Newton, brauche ein Mittel, durch das sie übertragen werde;
-die unvermittelte Fernwirkung sei „eine so grosse Absurdität“, dass kein denkender
+die unvermittelte Fernwirkung sei "eine so grosse Absurdität", dass kein denkender
 Mensch ihr verfallen dürfe.<sup><a href="#q4">4</a></sup> Genau dieses Mittel liefern
 Faraday und Maxwell für die Elektrizität als Feld. Und die entscheidende
 physikalische Auflösung heisst Verzögerung. Das Feld überträgt seine Wirkung nicht im
@@ -191,23 +192,23 @@ besteht weiter, nachdem der Sender abgeschaltet, ja nachdem der Stern erloschen 
 der ihn aussandte. Die Energie ist dann weder mehr bei der Quelle noch schon beim
 Empfänger; sie ist im Feld, zwischen den Körpern, allein unterwegs. Dem einen ist das
 der Beweis, dass hier ein Etwas trägt; dem andern nur eine Rechengrösse, die
-fortbesteht — dieselbe Beobachtung, verschieden gewertet.</p>
+fortbesteht - dieselbe Beobachtung, verschieden gewertet.</p>
 
 <p>Und doch ist die Fernwirkung nicht restlos tot, und das gehört gesagt. John
 Wheeler und Feynman haben 1945 die Elektrodynamik erfolgreich ganz ohne
-selbständiges Feld formuliert — als direkte, verzögerte und vorgezogene Wirkung
+selbständiges Feld formuliert - als direkte, verzögerte und vorgezogene Wirkung
 zwischen den Ladungen. Und in der Quantenphysik gibt es eine nichtörtliche
-Verknüpfung entfernter Teilchen, die Einstein selbst „spukhafte Fernwirkung“ nannte
+Verknüpfung entfernter Teilchen, die Einstein selbst "spukhafte Fernwirkung" nannte
 und die bis heute steht. Die Nahwirkung hat sich durchgesetzt, aber nicht dadurch,
-dass die Fernwirkung widerlegt worden wäre — der Streit blieb ein physikalischer,
+dass die Fernwirkung widerlegt worden wäre - der Streit blieb ein physikalischer,
 kein durch Wörterbücher entschiedener.<sup><a href="#q5">5</a></sup></p>
 
 <h2>Das Gespenst des Äthers</h2>
 
-<p>Für eine Weile hatte Gaedes Forderung „zeige das Ding“ sogar eine Antwort. Maxwells
+<p>Für eine Weile hatte Gaedes Forderung "zeige das Ding" sogar eine Antwort. Maxwells
 Feld war zunächst mechanisch gedacht: ein stofflicher Äther mit Wirbeln und
 Zwischenrädern, dessen Spannungen und Drehungen die Feldgrössen <em>sind</em>. Das
-Feld war der Zustand eines Dinges, und das Ding war der Äther — man musste nur zeigen,
+Feld war der Zustand eines Dinges, und das Ding war der Äther - man musste nur zeigen,
 wie sein Räderwerk lief. Diesen Äther wirft Einstein 1905 hinaus:</p>
 
 <blockquote>
@@ -219,11 +220,11 @@ wie sein Räderwerk lief. Diesen Äther wirft Einstein 1905 hinaus:</p>
   <p class="zitat-quelle">– Albert Einstein</p>
 </blockquote>
 
-<p>Damit steht die Physik vor Gaedes Frage in voller Schärfe. Das Feld bleibt —
-Maxwells Gleichungen gelten unverändert, tragen Energie und Impuls —, aber sein
+<p>Damit steht die Physik vor Gaedes Frage in voller Schärfe. Das Feld bleibt -
+Maxwells Gleichungen gelten unverändert, tragen Energie und Impuls -, aber sein
 stofflicher Träger ist fort. Das Feld ist, mit einem Bild, das Gespenst des Äthers:
 Die Wirkung blieb, das Ding verschwand. Ein Zustand ohne die Substanz, deren Zustand
-er wäre — genau der Fall, den Gaede mit dem Bild von „Geist und Engel der Religion“
+er wäre - genau der Fall, den Gaede mit dem Bild von "Geist und Engel der Religion"
 trifft: etwas ohne den Muskel, einen Körper zu bewegen, und für ihn schlicht widersinnig. Nur hat Einstein den Äther nicht schlicht begraben. Fünfzehn Jahre
 später kehrt er zurück, aber entstofflicht:</p>
 
@@ -242,7 +243,7 @@ später kehrt er zurück, aber entstofflicht:</p>
 verfolgbaren Teilen, keine wägbare Materie; auf Bewegung, die Grundgebärde des
 Körpers, lässt es sich nicht befragen. Und im selben Satz nimmt er den Radikalschluss
 zurück: Der Raum ist nicht eigenschaftslos, er trägt physikalische Struktur. Das Feld
-ist der entstofflichte Nachfolger des Äthers — nicht das Ding, das der Äther war, aber
+ist der entstofflichte Nachfolger des Äthers - nicht das Ding, das der Äther war, aber
 auch nicht das Nichts, das der leere Raum wäre.<sup><a href="#q6">6</a></sup></p>
 
 <h2>Dieselbe Zahlenmenge, zwei Urteile</h2>
@@ -258,27 +259,27 @@ derselben Sammlung das <em>wirkliche</em> Feld:</p>
   <p class="zitat-quelle">– Richard Feynman</p>
 </blockquote>
 
-<p>Es ist dieselbe Zahlenmenge, die Gaede verwirft — und sie heisst bei Feynman
+<p>Es ist dieselbe Zahlenmenge, die Gaede verwirft - und sie heisst bei Feynman
 wirklich nicht <em>trotz</em>, sondern <em>weil</em> sie die Wirkung örtlich macht:
 Was an einem Punkt geschieht, hängt allein von den Werten an diesem Punkt ab, nicht
 von etwas Fernem.<sup><a href="#q8">8</a></sup> Und diese Zahlen tragen, wozu ein
 blosser Merkzettel nicht taugt: Energie, örtlich verteilt, und Impuls, den selbst ein
 ruhendes Feld aus Magnet und Ladung als Drehimpuls hält und beim Abschalten
 zurückgibt.<sup><a href="#q7">7</a></sup> Dem Physiker ist das Grund genug, das Feld
-„wirklich“ zu nennen; für Gaede bleibt es eine Zahl ohne Muskel, weil sie keine
-Gestalt hat. Der Streit steht nicht über den Zahlen — die räumt jeder ein —, sondern
-über der einen Frage, ob „Gestalt“ zum Wirklichsein gehört. Das entscheidet dieses
+"wirklich" zu nennen; für Gaede bleibt es eine Zahl ohne Muskel, weil sie keine
+Gestalt hat. Der Streit steht nicht über den Zahlen - die räumt jeder ein -, sondern
+über der einen Frage, ob "Gestalt" zum Wirklichsein gehört. Das entscheidet dieses
 Gebiet nicht.</p>
 
 <h2>Das Seil, das man zeichnen kann</h2>
 
-<p>Gaede bleibt aber nicht beim Nein. Auf „was ist das Feld?“ gibt er eine eigene,
+<p>Gaede bleibt aber nicht beim Nein. Auf "was ist das Feld?" gibt er eine eigene,
 positive Antwort, und sie ist seine ganz allein. Alle Atome seien paarweise durch ein
-physisches Seil verbunden — zwei verdrillte Fäden, an eine DNA erinnernd. Elektrizität,
+physisches Seil verbunden - zwei verdrillte Fäden, an eine DNA erinnernd. Elektrizität,
 Magnetismus, Licht und Schwerkraft seien mechanische Zustände desselben Seils; Licht
 sei danach weder Welle noch Teilchen noch Feld, sondern eine Drehung, eine Torsion
 entlang des Doppelfadens. Das ersetzt das gestaltlose Feld durch ein gestalthaftes
-Ding — und das ist Gaedes ganzer Zweck: ein Schaustück, das man zeichnen kann, ein
+Ding - und das ist Gaedes ganzer Zweck: ein Schaustück, das man zeichnen kann, ein
 Objekt, von dem sich der geforderte Film drehen liesse.</p>
 
 <p>Die Physik lehnt diese <em>Rope Hypothesis</em> ab, und es lohnt zu sagen, warum,
@@ -288,13 +289,13 @@ Elektrodynamik: Es müsste ein bevorzugtes Ruhesystem auszeichnen, das die Versu
 Michelson und Morley gerade ausschliessen; es müsste erklären, wie Strahlung frei durch
 den Raum läuft, ohne Verbindung von Sender zu Empfänger, Sternenlicht aus allen
 Richtungen und noch von erloschenen Quellen; und es müsste Polarisation, Interferenz,
-den Photoeffekt und die Zahlenvorhersagen Maxwells nachrechnen — nichts davon leistet
+den Photoeffekt und die Zahlenvorhersagen Maxwells nachrechnen - nichts davon leistet
 das Seil. Veröffentlicht ist es nur im Selbstverlag und auf schrankenlosen
 Preprint-Ablagen; in den Fachzeitschriften kommt es nicht vor, weder zustimmend noch
 widerlegend.<sup><a href="#q9">9</a></sup> Es ist die folgerichtige, aber gescheiterte
-Einlösung seines Verlangens „zeige das Objekt“: Sobald er das Feld durch ein sichtbares
+Einlösung seines Verlangens "zeige das Objekt": Sobald er das Feld durch ein sichtbares
 Ding ersetzt, zerbricht das Ding an eben der Empirie, an der das gestaltlose Feld sich
-bewährt. Das ist die schärfste innere Spannung seines Werks — die Forderung, die ihn
+bewährt. Das ist die schärfste innere Spannung seines Werks - die Forderung, die ihn
 trägt, scheitert an ihrer eigenen Einlösung.</p>
 
 <p>Nicht jeder aber, der das Feld als Ding bestreitet, tut es von der Sprache her. Der
@@ -309,32 +310,32 @@ Physik selbst.</p>
 
 <h2>Die ausgewanderte Substanz</h2>
 
-<p>Tritt man zurück, so zeigt sich dasselbe Muster wie in den früheren Gebieten — und
+<p>Tritt man zurück, so zeigt sich dasselbe Muster wie in den früheren Gebieten - und
 die Ordnung, die es sichtbar macht, ist Deutung dieser Seite, nicht Gaedes Wort und
 nicht Lehrsatz.
 Im Bild dieser Seite trägt jede Weltanschauung ihre Substanz: dem Materialismus
 gehört der Körper, dem Mathematismus die Zahl und die Form, dem Rationalismus der
-Begriff und die Beziehung. Das Feld ist eine Sammlung von Zahlen — das ist die Form —
-und eine Beziehung zwischen Ladungen — das ist der Begriff —, und doch beansprucht es
+Begriff und die Beziehung. Das Feld ist eine Sammlung von Zahlen - das ist die Form -
+und eine Beziehung zwischen Ladungen - das ist der Begriff -, und doch beansprucht es
 den Körperraum: Es erfüllt den Raum, es trägt Energie, es hält Impuls, es bewegt den
 Zeiger jedes Instruments. Was den Körper beansprucht, zahlt in Zahl und Beziehung. Hier
 ist diese Auswanderung am reinsten von allen, weil das Feld nichts ist als Wert je Ort
-— und dennoch wirkt.</p>
+- und dennoch wirkt.</p>
 
-<p>Und dieses „und dennoch wirkt“ ist der Punkt, an dem sich die Deutungen scheiden. Das
+<p>Und dieses "und dennoch wirkt" ist der Punkt, an dem sich die Deutungen scheiden. Das
 Feld trägt Energie durch den leeren Raum; es nimmt Impuls auf und gibt ihn zurück. Dem
 einen ist eine Beziehung, die das tut, keine blosse Beziehung mehr, sondern etwas
 Wirkliches; dem andern bleibt sie eine Rechengrösse, so wirksam sie sei. Der eigentliche
-Streit steht also nicht darüber, ob das Feld mit Zahlen rechnet — das räumt jeder ein —,
-sondern darüber, ob „Gestalt“ zum Wirklichsein gehört. Gaede macht die Gestalt zur
+Streit steht also nicht darüber, ob das Feld mit Zahlen rechnet - das räumt jeder ein -,
+sondern darüber, ob "Gestalt" zum Wirklichsein gehört. Gaede macht die Gestalt zur
 Bedingung und findet kein Feld-Ding darin; die Physik lässt die Bedingung fallen und findet
 den Raum voller Struktur. Beide sehen dasselbe Feld; sie werten das eine fehlende Mass verschieden.</p>
 
-<p>Das Feld hat der heimatlosen Kraft einen Ort gegeben — einen Ort ohne Gestalt. Ob ein
+<p>Das Feld hat der heimatlosen Kraft einen Ort gegeben - einen Ort ohne Gestalt. Ob ein
 Ding eine Gestalt haben muss, um ein Ding zu sein, oder ob die tiefsten Dinge der Welt
 längst aufgehört haben, eine zu haben, das entscheidet dieses Gebiet nicht; es schärft
 die Frage nur und reicht sie weiter. Denn je kleiner das Etwas wird, dem wir nachgehen,
-desto hartnäckiger kehrt sie wieder — und das Kleinste von allem hat noch weniger
+desto hartnäckiger kehrt sie wieder - und das Kleinste von allem hat noch weniger
 Gestalt als das Feld.</p>
 
 <h2>Quellen</h2>
@@ -446,16 +447,16 @@ anerkannte Lehre hier draussen.</p>
 </article>
 
   <nav class="artikel-nav" aria-label="Weitere Artikel dieser Art">
-    <a class="vor" href="gaede-mechanik.html"><span>← Früher</span>Die Mechanik</a>
+    <a class="vor" href="gaede-mechanik.html"><span>← Früher</span>03 - Die Mechanik</a>
     <a class="zur-art" href="../weltanschauungen/materialismus/art-1.html">Alle in Art I Gaede</a>
-    <a class="nach" href="gaede-relativitaet.html">Die Relativität<span>Später →</span></a>
+    <a class="nach" href="gaede-relativitaet.html">05 - Die Relativität<span>Später →</span></a>
   </nav>
 
 </main>
 
 <footer class="fuss">
   <p>© 2026 Eric Naville · nach dem Bild der zwölf Weltanschauungen
-  <span class="quelle">(Rudolf Steiner, „Der menschliche und der kosmische Gedanke“, GA&nbsp;151)</span></p>
+  <span class="quelle">(Rudolf Steiner, "Der menschliche und der kosmische Gedanke", GA&nbsp;151)</span></p>
 </footer>
 
 </body>

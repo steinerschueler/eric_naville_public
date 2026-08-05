@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Art I Dreigliederung · Realismus – Eric Naville</title>
+<title>Art I Dreigliederung · Realismus - Eric Naville</title>
 <meta name="description" content="Artikel in Art I Dreigliederung (Realismus)">
 <link rel="canonical" href="https://eric-naville.ch/weltanschauungen/realismus/art-1.html">
 <meta property="og:url" content="https://eric-naville.ch/weltanschauungen/realismus/art-1.html">
@@ -15,15 +15,15 @@
 <script>
 (function(){
   var w=document.documentElement;
-  try{var g=localStorage.getItem("thema"); if(g==="hell"||g==="dunkel") w.setAttribute("data-theme",g);}catch(e){}
-  function eff(){var t=w.getAttribute("data-theme"); if(t) return t;
-    return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dunkel":"hell";}
+  var B=["terminal","hell","dunkel"], N={terminal:"Terminal",hell:"Hell",dunkel:"Nacht"};
+  try{var g=localStorage.getItem("thema"); if(B.indexOf(g)>=0) w.setAttribute("data-theme",g);}catch(e){}
+  function eff(){var t=w.getAttribute("data-theme"); return B.indexOf(t)>=0?t:"terminal";}
+  function naechst(){ return B[(B.indexOf(eff())+1)%B.length]; }
   function wire(){
     var b=document.querySelector(".thema-schalter"); if(!b) return;
-    function zeige(){var d=eff()==="dunkel"; b.setAttribute("aria-pressed",d?"true":"false");
-      var l=d?"Zum hellen Erscheinungsbild wechseln":"Zum dunklen Erscheinungsbild wechseln";
+    function zeige(){var l="Erscheinungsbild: "+N[eff()]+" - weiter zu "+N[naechst()];
       b.setAttribute("aria-label",l); b.title=l;}
-    b.addEventListener("click",function(){var n=eff()==="dunkel"?"hell":"dunkel";
+    b.addEventListener("click",function(){var n=naechst();
       w.setAttribute("data-theme",n); try{localStorage.setItem("thema",n);}catch(e){} zeige();});
     zeige();
   }
@@ -35,6 +35,7 @@
 
 <header class="kopf">
   <button type="button" class="thema-schalter" aria-label="Erscheinungsbild wechseln" title="Erscheinungsbild wechseln">
+    <svg class="terminal" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.2" width="18.8" height="15.6" rx="2.2"/><path d="M7 9.4l2.8 2.6L7 14.6M12.8 15h4.2"/></svg>
     <svg class="sonne" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.2v2.6M12 19.2v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.2 12h2.6M19.2 12h2.6M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9"/></svg>
     <svg class="mond" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.8A8.3 8.3 0 0 1 9.2 3.5a6.6 6.6 0 1 0 11.3 11.3z"/></svg>
   </button>
@@ -58,21 +59,21 @@
 
   <p class="art-filter"><input id="filter" type="search" placeholder="In Art I Dreigliederung filtern …" aria-label="In Art I Dreigliederung filtern" autocomplete="off"><span id="filter-zahl" role="status"></span></p>
   <ol id="liste" class="artikel-liste">
-      <li data-such="der dreigliedrige soziale organismus staat, wirtschaft und geistesleben werden gewöhnlich in einen topf geworfen und einem herrn unterstellt – der kirche, der partei, dem markt. rudolf steiner trennt 1919 sauber: drei glieder eines sozialen organismus, jedes nach eigenem gesetz, keines dem andern gehorchend. soziale dreigliederung, rudolf steiner, ga 23, geistesleben, rechtsleben, wirtschaftsleben, freiheit gleichheit brüderlichkeit, einheitsstaat, sozialer organismus, realismus">
-        <a href="../../artikel/dreigliederung-organismus.html"><span class="titel">Der dreigliedrige soziale Organismus</span><span class="datum">12. Juli 2026</span></a>
-        <p class="ausz">Staat, Wirtschaft und Geistesleben werden gewöhnlich in einen Topf geworfen und einem Herrn unterstellt – der Kirche, der Partei, dem Markt. Rudolf Steiner trennt 1919 sauber: drei Glieder eines sozialen Organismus, jedes nach eigenem Gesetz, keines dem andern gehorchend.</p>
+      <li data-such="01 - der dreigliedrige soziale organismus staat, wirtschaft und geistesleben werden gewöhnlich in einen topf geworfen und einem herrn unterstellt - der kirche, der partei, dem markt. rudolf steiner trennt 1919 sauber: drei glieder eines sozialen organismus, jedes nach eigenem gesetz, keines dem andern gehorchend. soziale dreigliederung, rudolf steiner, ga 23, geistesleben, rechtsleben, wirtschaftsleben, freiheit gleichheit brüderlichkeit, einheitsstaat, sozialer organismus, realismus">
+        <a href="../../artikel/dreigliederung-organismus.html"><span class="titel">01 - Der dreigliedrige soziale Organismus</span><span class="datum">12. Juli 2026</span></a>
+        <p class="ausz">Staat, Wirtschaft und Geistesleben werden gewöhnlich in einen Topf geworfen und einem Herrn unterstellt - der Kirche, der Partei, dem Markt. Rudolf Steiner trennt 1919 sauber: drei Glieder eines sozialen Organismus, jedes nach eigenem Gesetz, keines dem andern gehorchend.</p>
       </li>
-      <li data-such="die herrschaft der wissenden der zweite gang: die meinung, das höhere – religion, der philosophenkönig, die wissenschaft – solle den staat lenken. platons schiff, die zwei schwerter der kirche, die vor-aufklärerische verschmelzung von kirche, recht und wirtschaft, und die grenze, die locke, jefferson und die laïcité zogen. platon philosophenkönig, politeia, zwei-schwerter-lehre, gelasius, unam sanctam, thomas von aquin, gebt dem kaiser, matthäus 22, kanonrecht, zinsverbot, locke, spinoza, jefferson, laïcité, integralismus, vermeule, velayat-e faqih, khomeini, rené guénon, theokratie, geistesleben, realismus">
-        <a href="../../artikel/dreigliederung-herrschaft-der-wissenden.html"><span class="titel">Die Herrschaft der Wissenden</span><span class="datum">12. Juli 2026</span></a>
-        <p class="ausz">Der zweite Gang: die Meinung, das Höhere – Religion, der Philosophenkönig, die Wissenschaft – solle den Staat lenken. Platons Schiff, die zwei Schwerter der Kirche, die vor-aufklärerische Verschmelzung von Kirche, Recht und Wirtschaft, und die Grenze, die Locke, Jefferson und die laïcité zogen.</p>
+      <li data-such="02 - die herrschaft der wissenden der zweite gang: die meinung, das höhere - religion, der philosophenkönig, die wissenschaft - solle den staat lenken. platons schiff, die zwei schwerter der kirche, die vor-aufklärerische verschmelzung von kirche, recht und wirtschaft, und die grenze, die locke, jefferson und die laïcité zogen. platon philosophenkönig, politeia, zwei-schwerter-lehre, gelasius, unam sanctam, thomas von aquin, gebt dem kaiser, matthäus 22, kanonrecht, zinsverbot, locke, spinoza, jefferson, laïcité, integralismus, vermeule, velayat-e faqih, khomeini, rené guénon, theokratie, geistesleben, realismus">
+        <a href="../../artikel/dreigliederung-herrschaft-der-wissenden.html"><span class="titel">02 - Die Herrschaft der Wissenden</span><span class="datum">12. Juli 2026</span></a>
+        <p class="ausz">Der zweite Gang: die Meinung, das Höhere - Religion, der Philosophenkönig, die Wissenschaft - solle den Staat lenken. Platons Schiff, die zwei Schwerter der Kirche, die vor-aufklärerische Verschmelzung von Kirche, Recht und Wirtschaft, und die Grenze, die Locke, Jefferson und die laïcité zogen.</p>
       </li>
-      <li data-such="ein büro und eine fabrik der dritte gang: der staat, der die gebrechen vieler herren mit einem einzigen heilt und wirtschaft wie geistesleben in die eine hand nimmt. marx, engels und lenin in stärkster form – und dann, was aus der „verwaltung von sachen&quot; wurde, als sie auch die seelen verwaltete (lyssenko, die ingenieure der seele, die partei über den glauben). kommunismus, marx, engels, lenin, manifest, staat und revolution, verwaltung von sachen, anarchie der produktion, planwirtschaft, lyssenko, sozialistischer realismus, ingenieure der menschlichen seele, staatsatheismus, otto rühle, ante ciliga, staatskapitalismus, realismus">
-        <a href="../../artikel/dreigliederung-kommunismus.html"><span class="titel">Ein Büro und eine Fabrik</span><span class="datum">12. Juli 2026</span></a>
-        <p class="ausz">Der dritte Gang: der Staat, der die Gebrechen vieler Herren mit einem einzigen heilt und Wirtschaft wie Geistesleben in die eine Hand nimmt. Marx, Engels und Lenin in stärkster Form – und dann, was aus der „Verwaltung von Sachen&quot; wurde, als sie auch die Seelen verwaltete (Lyssenko, die Ingenieure der Seele, die Partei über den Glauben).</p>
+      <li data-such="03 - ein büro und eine fabrik der dritte gang: der staat, der die gebrechen vieler herren mit einem einzigen heilt und wirtschaft wie geistesleben in die eine hand nimmt. marx, engels und lenin in stärkster form - und dann, was aus der &quot;verwaltung von sachen&quot; wurde, als sie auch die seelen verwaltete (lyssenko, die ingenieure der seele, die partei über den glauben). kommunismus, marx, engels, lenin, manifest, staat und revolution, verwaltung von sachen, anarchie der produktion, planwirtschaft, lyssenko, sozialistischer realismus, ingenieure der menschlichen seele, staatsatheismus, otto rühle, ante ciliga, staatskapitalismus, realismus">
+        <a href="../../artikel/dreigliederung-kommunismus.html"><span class="titel">03 - Ein Büro und eine Fabrik</span><span class="datum">12. Juli 2026</span></a>
+        <p class="ausz">Der dritte Gang: der Staat, der die Gebrechen vieler Herren mit einem einzigen heilt und Wirtschaft wie Geistesleben in die eine Hand nimmt. Marx, Engels und Lenin in stärkster Form - und dann, was aus der &quot;Verwaltung von Sachen&quot; wurde, als sie auch die Seelen verwaltete (Lyssenko, die Ingenieure der Seele, die Partei über den Glauben).</p>
       </li>
-      <li data-such="der preis von allem der vierte gang und der schluss der reihe: das wirtschaften, das über seine ufer tritt und alles andere zur ware macht. smith, hayek, friedman und becker in stärkster form – ausdehnung als freiheit, nicht herrschaft –, dann die kolonisierung von bildung, wissenschaft und glauben (polanyi, sandel, die käufliche universität), und was die drei gänge gemeinsam zeigen. kapitalismus, adam smith, unsichtbare hand, hayek, preissystem, katallaxie, friedman, bildungsgutschein, gary becker, polanyi, fiktive waren, marktgesellschaft, sandel, academic capitalism, lexchin, mara einstein, habermas, kolonisierung, henry george, kevin carson, realismus">
-        <a href="../../artikel/dreigliederung-kapitalismus.html"><span class="titel">Der Preis von allem</span><span class="datum">12. Juli 2026</span></a>
-        <p class="ausz">Der vierte Gang und der Schluss der Reihe: das Wirtschaften, das über seine Ufer tritt und alles andere zur Ware macht. Smith, Hayek, Friedman und Becker in stärkster Form – Ausdehnung als Freiheit, nicht Herrschaft –, dann die Kolonisierung von Bildung, Wissenschaft und Glauben (Polanyi, Sandel, die käufliche Universität), und was die drei Gänge gemeinsam zeigen.</p>
+      <li data-such="04 - der preis von allem der vierte gang und der schluss der reihe: das wirtschaften, das über seine ufer tritt und alles andere zur ware macht. smith, hayek, friedman und becker in stärkster form - ausdehnung als freiheit, nicht herrschaft -, dann die kolonisierung von bildung, wissenschaft und glauben (polanyi, sandel, die käufliche universität), und was die drei gänge gemeinsam zeigen. kapitalismus, adam smith, unsichtbare hand, hayek, preissystem, katallaxie, friedman, bildungsgutschein, gary becker, polanyi, fiktive waren, marktgesellschaft, sandel, academic capitalism, lexchin, mara einstein, habermas, kolonisierung, henry george, kevin carson, realismus">
+        <a href="../../artikel/dreigliederung-kapitalismus.html"><span class="titel">04 - Der Preis von allem</span><span class="datum">12. Juli 2026</span></a>
+        <p class="ausz">Der vierte Gang und der Schluss der Reihe: das Wirtschaften, das über seine Ufer tritt und alles andere zur Ware macht. Smith, Hayek, Friedman und Becker in stärkster Form - Ausdehnung als Freiheit, nicht Herrschaft -, dann die Kolonisierung von Bildung, Wissenschaft und Glauben (Polanyi, Sandel, die käufliche Universität), und was die drei Gänge gemeinsam zeigen.</p>
       </li>
   </ol>
   <script>
@@ -100,7 +101,7 @@
 
 <footer class="fuss">
   <p>© 2026 Eric Naville · nach dem Bild der zwölf Weltanschauungen
-  <span class="quelle">(Rudolf Steiner, „Der menschliche und der kosmische Gedanke“, GA&nbsp;151)</span></p>
+  <span class="quelle">(Rudolf Steiner, "Der menschliche und der kosmische Gedanke", GA&nbsp;151)</span></p>
 </footer>
 
 </body>

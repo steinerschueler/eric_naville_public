@@ -11,15 +11,15 @@
 <script>
 (function(){
   var w=document.documentElement;
-  try{var g=localStorage.getItem("thema"); if(g==="hell"||g==="dunkel") w.setAttribute("data-theme",g);}catch(e){}
-  function eff(){var t=w.getAttribute("data-theme"); if(t) return t;
-    return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dunkel":"hell";}
+  var B=["terminal","hell","dunkel"], N={terminal:"Terminal",hell:"Hell",dunkel:"Nacht"};
+  try{var g=localStorage.getItem("thema"); if(B.indexOf(g)>=0) w.setAttribute("data-theme",g);}catch(e){}
+  function eff(){var t=w.getAttribute("data-theme"); return B.indexOf(t)>=0?t:"terminal";}
+  function naechst(){ return B[(B.indexOf(eff())+1)%B.length]; }
   function wire(){
     var b=document.querySelector(".thema-schalter"); if(!b) return;
-    function zeige(){var d=eff()==="dunkel"; b.setAttribute("aria-pressed",d?"true":"false");
-      var l=d?"Zum hellen Erscheinungsbild wechseln":"Zum dunklen Erscheinungsbild wechseln";
+    function zeige(){var l="Erscheinungsbild: "+N[eff()]+" - weiter zu "+N[naechst()];
       b.setAttribute("aria-label",l); b.title=l;}
-    b.addEventListener("click",function(){var n=eff()==="dunkel"?"hell":"dunkel";
+    b.addEventListener("click",function(){var n=naechst();
       w.setAttribute("data-theme",n); try{localStorage.setItem("thema",n);}catch(e){} zeige();});
     zeige();
   }
@@ -34,6 +34,7 @@
 <!-- KOPF:ANFANG -->
 <header class="kopf">
   <button type="button" class="thema-schalter" aria-label="Erscheinungsbild wechseln" title="Erscheinungsbild wechseln">
+    <svg class="terminal" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.2" width="18.8" height="15.6" rx="2.2"/><path d="M7 9.4l2.8 2.6L7 14.6M12.8 15h4.2"/></svg>
     <svg class="sonne" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.2v2.6M12 19.2v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.2 12h2.6M19.2 12h2.6M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9"/></svg>
     <svg class="mond" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.8A8.3 8.3 0 0 1 9.2 3.5a6.6 6.6 0 1 0 11.3 11.3z"/></svg>
   </button>
@@ -86,11 +87,12 @@
 </g>
 <g class="kreis kreis-krone" data-slug="materialismus">
 <a href="weltanschauungen/materialismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
-  <title>Materialismus – Die Welt ist Stoff: Alles Wirkliche – auch das Denken – wird aus materiellen Vorgängen begriffen.</title>
+  <title>Materialismus - Die Welt ist Stoff: Alles Wirkliche - auch das Denken - wird aus materiellen Vorgängen begriffen.</title>
   <circle class="kreisflaeche" cx="550" cy="187.8" r="67.8"/>
 </a>
 <g class="innenwelt">
-<path class="innenholz" d="M 552.1 260 L 552.6 256 L 553 251.9 L 553.1 247.9 L 553.2 243.9 L 553.1 239.9 L 552.9 235.9 L 552.7 231.9 L 552.4 227.9 L 552.1 223.9 L 551.7 219.9 L 551.4 216 L 551.1 212 L 550.9 208 L 550.7 204 L 550.7 200 L 550.7 196 L 550.9 192 L 551.3 188 L 548.7 187.7 L 548.2 191.8 L 548 195.9 L 547.8 200 L 547.8 204.1 L 547.8 208.1 L 548 212.2 L 548.2 216.2 L 548.4 220.2 L 548.7 224.2 L 548.9 228.1 L 549.1 232.1 L 549.3 236 L 549.4 240 L 549.3 243.9 L 549.2 247.8 L 548.9 251.6 L 548.5 255.5 L 547.9 259.3 Z"/>
+<path class="innenholz" d="M 550 259.7 L 552.1 259.1 L 552.1 257.7 L 552.1 256.3 L 550 255.7 L 550 255.7 L 547.9 256.3 L 547.9 257.7 L 547.9 259.1 L 550 259.7 Z"/>
+<path class="innenholz" d="M 552.1 227.6 L 552.4 225.3 L 552.5 223 L 552.6 220.8 L 552.6 218.5 L 552.6 216.3 L 552.4 214.1 L 552.3 211.9 L 552.1 209.7 L 551.9 207.5 L 551.7 205.4 L 551.5 203.2 L 551.3 201 L 551.2 198.9 L 551.1 196.7 L 551 194.5 L 551 192.4 L 551.1 190.2 L 551.3 188 L 548.7 187.7 L 548.4 190 L 548.2 192.2 L 548.1 194.5 L 548.1 196.7 L 548.1 199 L 548.2 201.2 L 548.3 203.4 L 548.4 205.6 L 548.5 207.8 L 548.6 210 L 548.7 212.1 L 548.8 214.3 L 548.8 216.4 L 548.8 218.5 L 548.7 220.6 L 548.5 222.7 L 548.3 224.8 L 547.9 226.8 Z"/>
 <circle class="innenholz" cx="550" cy="187.8" r="2.4"/>
 <path class="innenholz" d="M 551.2 187.5 L 550.2 184.5 L 549.1 181.5 L 547.9 178.6 L 546.6 175.8 L 545.3 173.1 L 543.9 170.6 L 542.4 168.1 L 540.9 165.7 L 539.3 163.4 L 537.6 161.2 L 535.9 159.1 L 534.2 157.1 L 532.5 155.2 L 530.7 153.4 L 530.3 153.8 L 530 154.1 L 531.7 156 L 533.3 157.9 L 534.9 159.9 L 536.5 162 L 538 164.2 L 539.5 166.5 L 540.9 168.9 L 542.3 171.4 L 543.6 174 L 544.8 176.7 L 546 179.4 L 547 182.2 L 548 185.2 L 548.8 188.2 Z"/>
 <path class="innenholz" d="M 550.8 187 L 548.4 184.8 L 546 182.8 L 543.6 180.9 L 541.1 179.1 L 538.6 177.5 L 536.1 175.9 L 533.5 174.5 L 531 173.2 L 528.5 172 L 526 170.9 L 523.4 170 L 521 169.1 L 518.5 168.3 L 516.1 167.7 L 515.9 168.2 L 515.8 168.7 L 518.2 169.4 L 520.6 170.2 L 523 171.2 L 525.4 172.2 L 527.8 173.4 L 530.3 174.6 L 532.7 176 L 535.1 177.5 L 537.5 179.1 L 539.9 180.7 L 542.3 182.6 L 544.6 184.5 L 546.9 186.5 L 549.2 188.7 Z"/>
@@ -202,20 +204,21 @@
   <text class="art-ziffer" x="550" y="135.8" text-anchor="middle">XII</text>
 </a>
 </g>
-<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="550" cy="178.7" rx="25.4" ry="4.7"/><ellipse class="etikett-schleier" cx="550" cy="193.2" rx="23.4" ry="2.4"/><ellipse class="etikett-schleier" cx="550" cy="201.3" rx="10.8" ry="2.3"/><text class="mitte-name" x="550" y="180.8" text-anchor="middle">Materialismus</text><text class="mitte-substanz" x="550" y="194.3" text-anchor="middle">die Materie (der Körper)</text><a href="weltanschauungen/materialismus.html" class="mitte-seite"><text x="550" y="202.3" text-anchor="middle">8 Artikel →</text></a></g>
+<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="550" cy="178.7" rx="26.7" ry="4.7"/><ellipse class="etikett-schleier" cx="550" cy="193.2" rx="24.6" ry="2.4"/><ellipse class="etikett-schleier" cx="550" cy="201.3" rx="11.3" ry="2.3"/><text class="mitte-name" x="550" y="180.8" text-anchor="middle">Materialismus</text><text class="mitte-substanz" x="550" y="194.3" text-anchor="middle">die Materie (der Körper)</text><a href="weltanschauungen/materialismus.html" class="mitte-seite"><text x="550" y="202.3" text-anchor="middle">8 Artikel →</text></a></g>
 </g>
-<a href="weltanschauungen/materialismus.html" class="kreis-link" aria-label="Materialismus – hineinzoomen">
-  <title>Materialismus – Die Welt ist Stoff: Alles Wirkliche – auch das Denken – wird aus materiellen Vorgängen begriffen.</title>
-  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="550" cy="164.9" rx="18.1" ry="10.8"/><ellipse class="etikett-schleier" cx="550" cy="181.9" rx="58.7" ry="10.8"/><ellipse class="etikett-schleier" cx="550" cy="200.7" rx="33" ry="9"/><text class="kreis-nummer" x="550" y="169.8" text-anchor="middle">XII</text><text class="kreis-name" x="550" y="186.8" text-anchor="middle">Materialismus</text><text class="kreis-zeichen" x="550" y="204.8" text-anchor="middle">♋︎ Krebs</text></g>
+<a href="weltanschauungen/materialismus.html" class="kreis-link" aria-label="Materialismus - hineinzoomen">
+  <title>Materialismus - Die Welt ist Stoff: Alles Wirkliche - auch das Denken - wird aus materiellen Vorgängen begriffen.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="550" cy="164.9" rx="18.8" ry="10.8"/><ellipse class="etikett-schleier" cx="550" cy="181.9" rx="61.6" ry="10.8"/><ellipse class="etikett-schleier" cx="550" cy="200.7" rx="34.5" ry="9"/><text class="kreis-nummer" x="550" y="169.8" text-anchor="middle">XII</text><text class="kreis-name" x="550" y="186.8" text-anchor="middle">Materialismus</text><text class="kreis-zeichen" x="550" y="204.8" text-anchor="middle">♋︎ Krebs</text></g>
 </a>
 </g>
 <g class="kreis kreis-krone" data-slug="sensualismus">
 <a href="weltanschauungen/sensualismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
-  <title>Sensualismus – Wirklich ist, was die Sinne bezeugen; die Empfindung gilt als Grund der Wirklichkeit.</title>
+  <title>Sensualismus - Wirklich ist, was die Sinne bezeugen; die Empfindung gilt als Grund der Wirklichkeit.</title>
   <circle class="kreisflaeche" cx="681.1" cy="223" r="67.8"/>
 </a>
 <g class="innenwelt">
-<path class="innenholz" d="M 646.8 286.5 L 649.3 283.3 L 651.6 280 L 653.8 276.6 L 655.8 273.1 L 657.8 269.6 L 659.6 266 L 661.4 262.5 L 663.1 258.9 L 664.8 255.2 L 666.5 251.6 L 668.2 248 L 670 244.4 L 671.8 240.9 L 673.6 237.3 L 675.6 233.8 L 677.6 230.4 L 679.8 227 L 682.1 223.8 L 680 222.2 L 677.6 225.5 L 675.3 228.9 L 673.1 232.4 L 671 235.9 L 669.1 239.4 L 667.2 243 L 665.3 246.6 L 663.6 250.2 L 661.8 253.8 L 660 257.3 L 658.2 260.9 L 656.4 264.3 L 654.5 267.8 L 652.5 271.2 L 650.4 274.5 L 648.3 277.7 L 646 280.8 L 643.5 283.9 Z"/>
+<path class="innenholz" d="M 645.2 285.2 L 647.3 285.7 L 648 284.5 L 648.7 283.3 L 647.2 281.7 L 647.2 281.7 L 645 281.2 L 644.3 282.4 L 643.6 283.6 L 645.2 285.2 Z"/>
+<path class="innenholz" d="M 663 258.4 L 664.4 256.6 L 665.7 254.7 L 666.9 252.8 L 668 250.9 L 669.1 248.9 L 670.1 246.9 L 671 245 L 672 243 L 672.9 241 L 673.8 239 L 674.7 237 L 675.6 235 L 676.6 233.1 L 677.6 231.2 L 678.6 229.3 L 679.7 227.4 L 680.9 225.5 L 682.1 223.8 L 680 222.2 L 678.7 224 L 677.4 225.9 L 676.1 227.8 L 675 229.7 L 673.9 231.7 L 672.8 233.6 L 671.8 235.6 L 670.8 237.5 L 669.8 239.5 L 668.8 241.4 L 667.8 243.4 L 666.8 245.2 L 665.8 247.1 L 664.7 248.9 L 663.5 250.7 L 662.4 252.4 L 661.1 254.1 L 659.8 255.7 Z"/>
 <circle class="innenholz" cx="681.1" cy="223" r="2.4"/>
 <path class="innenholz" d="M 682.2 222.6 L 681.2 219.6 L 680.1 216.6 L 679 213.7 L 677.7 210.9 L 676.4 208.3 L 675 205.7 L 673.5 203.2 L 671.9 200.8 L 670.3 198.5 L 668.7 196.3 L 667 194.2 L 665.3 192.2 L 663.5 190.3 L 661.8 188.5 L 661.4 188.9 L 661 189.2 L 662.7 191.1 L 664.4 193 L 666 195 L 667.6 197.1 L 669.1 199.3 L 670.6 201.7 L 672 204 L 673.4 206.5 L 674.7 209.1 L 675.9 211.8 L 677 214.5 L 678.1 217.4 L 679 220.3 L 679.9 223.3 Z"/>
 <path class="innenholz" d="M 681.9 222.1 L 679.5 220 L 677.1 217.9 L 674.6 216 L 672.1 214.2 L 669.6 212.6 L 667.1 211 L 664.6 209.6 L 662.1 208.3 L 659.5 207.1 L 657 206.1 L 654.5 205.1 L 652 204.2 L 649.6 203.5 L 647.1 202.8 L 647 203.3 L 646.9 203.8 L 649.2 204.5 L 651.6 205.4 L 654.1 206.3 L 656.5 207.3 L 658.9 208.5 L 661.3 209.7 L 663.8 211.1 L 666.2 212.6 L 668.6 214.2 L 671 215.9 L 673.3 217.7 L 675.7 219.6 L 678 221.7 L 680.2 223.8 Z"/>
@@ -325,20 +328,21 @@
   <text class="art-ziffer" x="681.1" y="170.9" text-anchor="middle">XII</text>
 </a>
 </g>
-<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="681.1" cy="213.8" rx="23.7" ry="4.7"/><ellipse class="etikett-schleier" cx="681.1" cy="228.3" rx="28" ry="2.4"/><ellipse class="etikett-schleier" cx="681.1" cy="236.4" rx="10.8" ry="2.3"/><text class="mitte-name" x="681.1" y="216" text-anchor="middle">Sensualismus</text><text class="mitte-substanz" x="681.1" y="229.5" text-anchor="middle">der physische Sinn (der Leib)</text><a href="weltanschauungen/sensualismus.html" class="mitte-seite"><text x="681.1" y="237.5" text-anchor="middle">0 Artikel →</text></a></g>
+<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="681.1" cy="213.8" rx="24.8" ry="4.7"/><ellipse class="etikett-schleier" cx="681.1" cy="228.3" rx="29.5" ry="2.4"/><ellipse class="etikett-schleier" cx="681.1" cy="236.4" rx="11.3" ry="2.3"/><text class="mitte-name" x="681.1" y="216" text-anchor="middle">Sensualismus</text><text class="mitte-substanz" x="681.1" y="229.5" text-anchor="middle">der physische Sinn (der Leib)</text><a href="weltanschauungen/sensualismus.html" class="mitte-seite"><text x="681.1" y="237.5" text-anchor="middle">0 Artikel →</text></a></g>
 </g>
-<a href="weltanschauungen/sensualismus.html" class="kreis-link" aria-label="Sensualismus – hineinzoomen">
-  <title>Sensualismus – Wirklich ist, was die Sinne bezeugen; die Empfindung gilt als Grund der Wirklichkeit.</title>
-  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="681.1" cy="200" rx="14.1" ry="10.8"/><ellipse class="etikett-schleier" cx="681.1" cy="217" rx="54.6" ry="10.8"/><ellipse class="etikett-schleier" cx="681.1" cy="235.8" rx="29.6" ry="9"/><text class="kreis-nummer" x="681.1" y="205" text-anchor="middle">XI</text><text class="kreis-name" x="681.1" y="222" text-anchor="middle">Sensualismus</text><text class="kreis-zeichen" x="681.1" y="240" text-anchor="middle">♌︎ Löwe</text></g>
+<a href="weltanschauungen/sensualismus.html" class="kreis-link" aria-label="Sensualismus - hineinzoomen">
+  <title>Sensualismus - Wirklich ist, was die Sinne bezeugen; die Empfindung gilt als Grund der Wirklichkeit.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="681.1" cy="200" rx="14.5" ry="10.8"/><ellipse class="etikett-schleier" cx="681.1" cy="217" rx="57.3" ry="10.8"/><ellipse class="etikett-schleier" cx="681.1" cy="235.8" rx="30.9" ry="9"/><text class="kreis-nummer" x="681.1" y="205" text-anchor="middle">XI</text><text class="kreis-name" x="681.1" y="222" text-anchor="middle">Sensualismus</text><text class="kreis-zeichen" x="681.1" y="240" text-anchor="middle">♌︎ Löwe</text></g>
 </a>
 </g>
 <g class="kreis kreis-krone" data-slug="phaenomenalismus">
 <a href="weltanschauungen/phaenomenalismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
-  <title>Phänomenalismus – Die Welt ist uns Erscheinung: Erkannt werden die Phänomene, nicht das Ding an sich.</title>
+  <title>Phänomenalismus - Die Welt ist uns Erscheinung: Erkannt werden die Phänomene, nicht das Ding an sich.</title>
   <circle class="kreisflaeche" cx="777" cy="318.9" r="67.8"/>
 </a>
 <g class="innenwelt">
-<path class="innenholz" d="M 715.5 356.8 L 719.3 355.3 L 723 353.5 L 726.6 351.7 L 730.1 349.7 L 733.5 347.6 L 736.9 345.5 L 740.2 343.3 L 743.5 341 L 746.8 338.8 L 750.1 336.5 L 753.4 334.2 L 756.7 332 L 760 329.8 L 763.4 327.6 L 766.8 325.6 L 770.3 323.6 L 773.9 321.8 L 777.5 320.1 L 776.5 317.7 L 772.7 319.4 L 769 321.2 L 765.4 323.1 L 761.9 325.1 L 758.4 327.2 L 755 329.3 L 751.6 331.5 L 748.2 333.7 L 744.9 335.9 L 741.6 338.1 L 738.3 340.3 L 734.9 342.4 L 731.6 344.4 L 728.2 346.4 L 724.7 348.2 L 721.3 349.9 L 717.7 351.5 L 714.1 352.9 Z"/>
+<path class="innenholz" d="M 714.8 354.8 L 716.4 356.4 L 717.6 355.7 L 718.8 355 L 718.3 352.8 L 718.3 352.8 L 716.7 351.3 L 715.5 352 L 714.3 352.7 L 714.8 354.8 Z"/>
+<path class="innenholz" d="M 743.7 340.6 L 745.8 339.7 L 747.8 338.7 L 749.8 337.7 L 751.8 336.5 L 753.6 335.4 L 755.5 334.2 L 757.3 332.9 L 759.1 331.7 L 760.9 330.4 L 762.7 329.2 L 764.5 327.9 L 766.3 326.7 L 768.1 325.4 L 769.9 324.3 L 771.8 323.1 L 773.6 322.1 L 775.6 321.1 L 777.5 320.1 L 776.5 317.7 L 774.4 318.6 L 772.4 319.6 L 770.3 320.6 L 768.4 321.7 L 766.5 322.9 L 764.6 324 L 762.7 325.2 L 760.8 326.4 L 759 327.6 L 757.2 328.8 L 755.4 330 L 753.5 331.1 L 751.7 332.2 L 749.9 333.2 L 748 334.2 L 746.1 335.1 L 744.2 335.9 L 742.2 336.6 Z"/>
 <circle class="innenholz" cx="777" cy="318.9" r="2.4"/>
 <path class="innenholz" d="M 778.2 318.6 L 777.2 315.5 L 776.1 312.6 L 774.9 309.7 L 773.7 306.9 L 772.3 304.2 L 770.9 301.6 L 769.4 299.1 L 767.9 296.7 L 766.3 294.4 L 764.7 292.3 L 763 290.2 L 761.2 288.2 L 759.5 286.3 L 757.7 284.5 L 757.4 284.8 L 757 285.2 L 758.7 287 L 760.3 289 L 762 291 L 763.5 293.1 L 765.1 295.3 L 766.5 297.6 L 768 300 L 769.3 302.5 L 770.6 305.1 L 771.8 307.7 L 773 310.5 L 774 313.3 L 775 316.2 L 775.9 319.3 Z"/>
 <path class="innenholz" d="M 777.9 318.1 L 775.5 315.9 L 773 313.9 L 770.6 312 L 768.1 310.2 L 765.6 308.5 L 763.1 307 L 760.6 305.6 L 758 304.3 L 755.5 303.1 L 753 302 L 750.5 301 L 748 300.2 L 745.5 299.4 L 743.1 298.8 L 743 299.3 L 742.8 299.7 L 745.2 300.5 L 747.6 301.3 L 750 302.3 L 752.4 303.3 L 754.9 304.4 L 757.3 305.7 L 759.7 307.1 L 762.1 308.5 L 764.6 310.1 L 766.9 311.8 L 769.3 313.6 L 771.6 315.6 L 773.9 317.6 L 776.2 319.8 Z"/>
@@ -448,20 +452,19 @@
   <text class="art-ziffer" x="777" y="266.8" text-anchor="middle">XII</text>
 </a>
 </g>
-<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="777" cy="309.8" rx="28.9" ry="4.7"/><ellipse class="etikett-schleier" cx="777" cy="324.3" rx="25.2" ry="2.4"/><ellipse class="etikett-schleier" cx="777" cy="332.4" rx="10.8" ry="2.3"/><text class="mitte-name" x="777" y="311.9" text-anchor="middle">Phänomenalismus</text><text class="mitte-substanz" x="777" y="325.4" text-anchor="middle">das Phänomen (die Gestalt)</text><a href="weltanschauungen/phaenomenalismus.html" class="mitte-seite"><text x="777" y="333.4" text-anchor="middle">0 Artikel →</text></a></g>
+<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="777" cy="309.8" rx="30.4" ry="4.7"/><ellipse class="etikett-schleier" cx="777" cy="324.3" rx="26.6" ry="2.4"/><ellipse class="etikett-schleier" cx="777" cy="332.4" rx="11.3" ry="2.3"/><text class="mitte-name" x="777" y="311.9" text-anchor="middle">Phänomenalismus</text><text class="mitte-substanz" x="777" y="325.4" text-anchor="middle">das Phänomen (die Gestalt)</text><a href="weltanschauungen/phaenomenalismus.html" class="mitte-seite"><text x="777" y="333.4" text-anchor="middle">0 Artikel →</text></a></g>
 </g>
-<a href="weltanschauungen/phaenomenalismus.html" class="kreis-link" aria-label="Phänomenalismus – hineinzoomen">
-  <title>Phänomenalismus – Die Welt ist uns Erscheinung: Erkannt werden die Phänomene, nicht das Ding an sich.</title>
-  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="777" cy="296" rx="10.1" ry="10.8"/><ellipse class="etikett-schleier" cx="777" cy="313" rx="62" ry="10.8"/><ellipse class="etikett-schleier" cx="777" cy="331.8" rx="43.1" ry="9"/><text class="kreis-nummer" x="777" y="300.9" text-anchor="middle">X</text><text class="kreis-name" x="777" y="317.9" text-anchor="middle">Phänomenalismus</text><text class="kreis-zeichen" x="777" y="335.9" text-anchor="middle">♍︎ Jungfrau</text></g>
+<a href="weltanschauungen/phaenomenalismus.html" class="kreis-link" aria-label="Phänomenalismus - hineinzoomen">
+  <title>Phänomenalismus - Die Welt ist uns Erscheinung: Erkannt werden die Phänomene, nicht das Ding an sich.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="777" cy="296" rx="10.3" ry="10.8"/><ellipse class="etikett-schleier" cx="777" cy="313" rx="62" ry="10.8"/><ellipse class="etikett-schleier" cx="777" cy="331.8" rx="45.2" ry="9"/><text class="kreis-nummer" x="777" y="300.9" text-anchor="middle">X</text><text class="kreis-name" x="777" y="317.9" text-anchor="middle">Phänomenalismus</text><text class="kreis-zeichen" x="777" y="335.9" text-anchor="middle">♍︎ Jungfrau</text></g>
 </a>
 </g>
 <g class="kreis kreis-boden" data-slug="realismus">
 <a href="weltanschauungen/realismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
-  <title>Realismus – Die äussere Welt ist wirklich, so wie sie sich dem wachen Blick zeigt – unabhängig von uns.</title>
+  <title>Realismus - Die äussere Welt ist wirklich, so wie sie sich dem wachen Blick zeigt - unabhängig von uns.</title>
   <circle class="kreisflaeche" cx="812.2" cy="450" r="67.8"/>
 </a>
 <g class="innenwelt">
-<path class="innenholz" d="M 739.9 452.2 L 744 452.7 L 748 453.1 L 752.1 453.2 L 756.1 453.3 L 760.1 453.2 L 764.1 453 L 768.1 452.8 L 772.1 452.5 L 776.1 452.2 L 780.1 451.8 L 784 451.5 L 788 451.2 L 792 451 L 796 450.8 L 800 450.8 L 804 450.8 L 808 451 L 812 451.4 L 812.3 448.6 L 808.2 448.1 L 804.1 447.9 L 800 447.7 L 795.9 447.7 L 791.9 447.7 L 787.8 447.9 L 783.8 448.1 L 779.8 448.3 L 775.8 448.6 L 771.9 448.8 L 767.9 449 L 764 449.2 L 760 449.3 L 756.1 449.2 L 752.2 449.1 L 748.4 448.8 L 744.5 448.4 L 740.7 447.8 Z"/>
 <circle class="innenholz" cx="812.2" cy="450" r="2.4"/>
 <path class="innenholz" d="M 813.3 449.7 L 812.3 446.6 L 811.2 443.6 L 810 440.8 L 808.8 438 L 807.4 435.3 L 806 432.7 L 804.6 430.2 L 803 427.8 L 801.4 425.5 L 799.8 423.3 L 798.1 421.2 L 796.4 419.2 L 794.6 417.4 L 792.8 415.6 L 792.5 415.9 L 792.1 416.3 L 793.8 418.1 L 795.5 420 L 797.1 422.1 L 798.7 424.2 L 800.2 426.4 L 801.7 428.7 L 803.1 431.1 L 804.5 433.6 L 805.7 436.1 L 807 438.8 L 808.1 441.6 L 809.2 444.4 L 810.1 447.3 L 811 450.3 Z"/>
 <path class="innenholz" d="M 813 449.1 L 810.6 447 L 808.2 445 L 805.7 443 L 803.2 441.3 L 800.7 439.6 L 798.2 438.1 L 795.7 436.7 L 793.1 435.4 L 790.6 434.2 L 788.1 433.1 L 785.6 432.1 L 783.1 431.3 L 780.6 430.5 L 778.2 429.8 L 778.1 430.3 L 777.9 430.8 L 780.3 431.5 L 782.7 432.4 L 785.1 433.3 L 787.6 434.4 L 790 435.5 L 792.4 436.8 L 794.8 438.1 L 797.3 439.6 L 799.7 441.2 L 802.1 442.9 L 804.4 444.7 L 806.8 446.6 L 809.1 448.7 L 811.3 450.9 Z"/>
@@ -573,20 +576,21 @@
   <text class="art-ziffer" x="812.2" y="397.9" text-anchor="middle">XII</text>
 </a>
 </g>
-<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="812.2" cy="440.9" rx="18.4" ry="4.7"/><ellipse class="etikett-schleier" cx="812.2" cy="455.4" rx="19.7" ry="2.4"/><ellipse class="etikett-schleier" cx="812.2" cy="463.4" rx="10.8" ry="2.3"/><text class="mitte-name" x="812.2" y="443" text-anchor="middle">Realismus</text><text class="mitte-substanz" x="812.2" y="456.5" text-anchor="middle">das Reale (das Sein)</text><a href="weltanschauungen/realismus.html" class="mitte-seite"><text x="812.2" y="464.5" text-anchor="middle">4 Artikel →</text></a></g>
+<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="812.2" cy="440.9" rx="19.3" ry="4.7"/><ellipse class="etikett-schleier" cx="812.2" cy="455.4" rx="20.7" ry="2.4"/><ellipse class="etikett-schleier" cx="812.2" cy="463.4" rx="11.3" ry="2.3"/><text class="mitte-name" x="812.2" y="443" text-anchor="middle">Realismus</text><text class="mitte-substanz" x="812.2" y="456.5" text-anchor="middle">das Reale (das Sein)</text><a href="weltanschauungen/realismus.html" class="mitte-seite"><text x="812.2" y="464.5" text-anchor="middle">4 Artikel →</text></a></g>
 </g>
-<a href="weltanschauungen/realismus.html" class="kreis-link" aria-label="Realismus – hineinzoomen">
-  <title>Realismus – Die äussere Welt ist wirklich, so wie sie sich dem wachen Blick zeigt – unabhängig von uns.</title>
-  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="812.2" cy="427.1" rx="14.1" ry="10.8"/><ellipse class="etikett-schleier" cx="812.2" cy="444.1" rx="42.5" ry="10.8"/><ellipse class="etikett-schleier" cx="812.2" cy="462.9" rx="33" ry="9"/><text class="kreis-nummer" x="812.2" y="432" text-anchor="middle">IX</text><text class="kreis-name" x="812.2" y="449" text-anchor="middle">Realismus</text><text class="kreis-zeichen" x="812.2" y="467" text-anchor="middle">♎︎ Waage</text></g>
+<a href="weltanschauungen/realismus.html" class="kreis-link" aria-label="Realismus - hineinzoomen">
+  <title>Realismus - Die äussere Welt ist wirklich, so wie sie sich dem wachen Blick zeigt - unabhängig von uns.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="812.2" cy="427.1" rx="14.5" ry="10.8"/><ellipse class="etikett-schleier" cx="812.2" cy="444.1" rx="44.5" ry="10.8"/><ellipse class="etikett-schleier" cx="812.2" cy="462.9" rx="34.5" ry="9"/><text class="kreis-nummer" x="812.2" y="432" text-anchor="middle">IX</text><text class="kreis-name" x="812.2" y="449" text-anchor="middle">Realismus</text><text class="kreis-zeichen" x="812.2" y="467" text-anchor="middle">♎︎ Waage</text></g>
 </a>
 </g>
 <g class="kreis kreis-wurzel" data-slug="dynamismus">
 <a href="weltanschauungen/dynamismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
-  <title>Dynamismus – Hinter allem Stofflichen wirken Kräfte; Kraft ist das eigentlich Wirkende in der Welt.</title>
+  <title>Dynamismus - Hinter allem Stofflichen wirken Kräfte; Kraft ist das eigentlich Wirkende in der Welt.</title>
   <circle class="kreisflaeche" cx="777" cy="581.1" r="67.8"/>
 </a>
 <g class="innenwelt">
-<path class="innenholz" d="M 713.4 546.8 L 716.7 549.3 L 720 551.7 L 723.4 553.9 L 726.8 555.9 L 730.4 557.8 L 733.9 559.7 L 737.5 561.5 L 741.1 563.2 L 744.7 564.9 L 748.3 566.6 L 751.9 568.3 L 755.5 570.1 L 759.1 571.9 L 762.6 573.7 L 766.1 575.7 L 769.5 577.7 L 772.9 579.9 L 776.2 582.2 L 777.9 580 L 774.5 577.5 L 771.1 575.2 L 767.7 573 L 764.2 571 L 760.6 569 L 757 567.1 L 753.4 565.3 L 749.9 563.5 L 746.3 561.7 L 742.7 559.9 L 739.2 558.1 L 735.7 556.3 L 732.3 554.4 L 728.9 552.4 L 725.6 550.4 L 722.4 548.2 L 719.2 545.9 L 716.2 543.5 Z"/>
+<path class="innenholz" d="M 714.8 545.2 L 714.2 547.4 L 715.4 548.1 L 716.6 548.7 L 718.3 547.2 L 718.3 547.2 L 718.8 544.9 L 717.6 544.2 L 716.4 543.6 L 714.8 545.2 Z"/>
+<path class="innenholz" d="M 741.5 563.1 L 743.4 564.5 L 745.2 565.8 L 747.1 567 L 749.1 568.1 L 751 569.1 L 753 570.1 L 755 571.1 L 757 572 L 759 573 L 761 573.9 L 762.9 574.8 L 764.9 575.7 L 766.9 576.7 L 768.8 577.7 L 770.7 578.7 L 772.6 579.8 L 774.4 581 L 776.2 582.2 L 777.9 580 L 776 578.6 L 774.2 577.3 L 772.3 576.1 L 770.3 574.9 L 768.4 573.8 L 766.4 572.7 L 764.5 571.7 L 762.5 570.7 L 760.5 569.7 L 758.6 568.7 L 756.7 567.7 L 754.8 566.7 L 752.9 565.7 L 751.1 564.6 L 749.4 563.5 L 747.6 562.3 L 746 561 L 744.4 559.7 Z"/>
 <circle class="innenholz" cx="777" cy="581.1" r="2.4"/>
 <path class="innenholz" d="M 778.2 580.7 L 777.2 577.7 L 776.1 574.7 L 774.9 571.8 L 773.7 569.1 L 772.3 566.4 L 770.9 563.8 L 769.4 561.3 L 767.9 558.9 L 766.3 556.6 L 764.7 554.4 L 763 552.3 L 761.2 550.3 L 759.5 548.4 L 757.7 546.6 L 757.4 547 L 757 547.4 L 758.7 549.2 L 760.3 551.1 L 762 553.1 L 763.5 555.2 L 765.1 557.5 L 766.5 559.8 L 768 562.2 L 769.3 564.6 L 770.6 567.2 L 771.8 569.9 L 773 572.6 L 774 575.5 L 775 578.4 L 775.9 581.4 Z"/>
 <path class="innenholz" d="M 777.9 580.2 L 775.5 578.1 L 773 576 L 770.6 574.1 L 768.1 572.3 L 765.6 570.7 L 763.1 569.2 L 760.6 567.7 L 758 566.4 L 755.5 565.2 L 753 564.2 L 750.5 563.2 L 748 562.3 L 745.5 561.6 L 743.1 560.9 L 743 561.4 L 742.8 561.9 L 745.2 562.6 L 747.6 563.5 L 750 564.4 L 752.4 565.4 L 754.9 566.6 L 757.3 567.9 L 759.7 569.2 L 762.1 570.7 L 764.6 572.3 L 766.9 574 L 769.3 575.8 L 771.6 577.7 L 773.9 579.8 L 776.2 581.9 Z"/>
@@ -696,20 +700,21 @@
   <text class="art-ziffer" x="777" y="529" text-anchor="middle">XII</text>
 </a>
 </g>
-<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="777" cy="571.9" rx="20.2" ry="4.7"/><ellipse class="etikett-schleier" cx="777" cy="586.5" rx="22.5" ry="2.4"/><ellipse class="etikett-schleier" cx="777" cy="594.5" rx="10.8" ry="2.3"/><text class="mitte-name" x="777" y="574.1" text-anchor="middle">Dynamismus</text><text class="mitte-substanz" x="777" y="587.6" text-anchor="middle">die Dynamis (die Seele)</text><a href="weltanschauungen/dynamismus.html" class="mitte-seite"><text x="777" y="595.6" text-anchor="middle">0 Artikel →</text></a></g>
+<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="777" cy="571.9" rx="21.1" ry="4.7"/><ellipse class="etikett-schleier" cx="777" cy="586.5" rx="23.6" ry="2.4"/><ellipse class="etikett-schleier" cx="777" cy="594.5" rx="11.3" ry="2.3"/><text class="mitte-name" x="777" y="574.1" text-anchor="middle">Dynamismus</text><text class="mitte-substanz" x="777" y="587.6" text-anchor="middle">die Dynamis (die Seele)</text><a href="weltanschauungen/dynamismus.html" class="mitte-seite"><text x="777" y="595.6" text-anchor="middle">0 Artikel →</text></a></g>
 </g>
-<a href="weltanschauungen/dynamismus.html" class="kreis-link" aria-label="Dynamismus – hineinzoomen">
-  <title>Dynamismus – Hinter allem Stofflichen wirken Kräfte; Kraft ist das eigentlich Wirkende in der Welt.</title>
-  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="777" cy="558.1" rx="22.2" ry="10.8"/><ellipse class="etikett-schleier" cx="777" cy="575.1" rx="46.5" ry="10.8"/><ellipse class="etikett-schleier" cx="777" cy="594" rx="43.1" ry="9"/><text class="kreis-nummer" x="777" y="563.1" text-anchor="middle">VIII</text><text class="kreis-name" x="777" y="580.1" text-anchor="middle">Dynamismus</text><text class="kreis-zeichen" x="777" y="598.1" text-anchor="middle">♏︎ Skorpion</text></g>
+<a href="weltanschauungen/dynamismus.html" class="kreis-link" aria-label="Dynamismus - hineinzoomen">
+  <title>Dynamismus - Hinter allem Stofflichen wirken Kräfte; Kraft ist das eigentlich Wirkende in der Welt.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="777" cy="558.1" rx="23.1" ry="10.8"/><ellipse class="etikett-schleier" cx="777" cy="575.1" rx="48.7" ry="10.8"/><ellipse class="etikett-schleier" cx="777" cy="594" rx="45.2" ry="9"/><text class="kreis-nummer" x="777" y="563.1" text-anchor="middle">VIII</text><text class="kreis-name" x="777" y="580.1" text-anchor="middle">Dynamismus</text><text class="kreis-zeichen" x="777" y="598.1" text-anchor="middle">♏︎ Skorpion</text></g>
 </a>
 </g>
 <g class="kreis kreis-wurzel" data-slug="monadismus">
 <a href="weltanschauungen/monadismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
-  <title>Monadismus – Die Welt besteht aus einer Vielheit in sich geschlossener Wesenseinheiten, die von innen heraus wirken.</title>
+  <title>Monadismus - Die Welt besteht aus einer Vielheit in sich geschlossener Wesenseinheiten, die von innen heraus wirken.</title>
   <circle class="kreisflaeche" cx="681.1" cy="677" r="67.8"/>
 </a>
 <g class="innenwelt">
-<path class="innenholz" d="M 643.1 615.6 L 644.7 619.4 L 646.4 623 L 648.2 626.6 L 650.2 630.1 L 652.3 633.6 L 654.4 637 L 656.6 640.3 L 658.9 643.6 L 661.2 646.9 L 663.4 650.2 L 665.7 653.4 L 668 656.7 L 670.1 660.1 L 672.3 663.4 L 674.3 666.9 L 676.3 670.4 L 678.1 673.9 L 679.8 677.6 L 682.4 676.5 L 680.7 672.7 L 678.9 669 L 677 665.4 L 675 661.8 L 672.9 658.3 L 670.7 654.9 L 668.6 651.5 L 666.4 648.2 L 664.1 644.9 L 661.9 641.5 L 659.8 638.2 L 657.7 634.9 L 655.7 631.5 L 653.7 628.1 L 651.9 624.7 L 650.2 621.2 L 648.6 617.7 L 647.2 614 Z"/>
+<path class="innenholz" d="M 645.2 614.8 L 643.6 616.4 L 644.2 617.6 L 644.9 618.8 L 647.2 618.3 L 647.2 618.3 L 648.7 616.6 L 648.1 615.4 L 647.4 614.2 L 645.2 614.8 Z"/>
+<path class="innenholz" d="M 659.3 643.7 L 660.2 645.8 L 661.2 647.9 L 662.3 649.9 L 663.4 651.8 L 664.5 653.7 L 665.7 655.6 L 667 657.4 L 668.2 659.2 L 669.5 661 L 670.8 662.8 L 672 664.5 L 673.3 666.3 L 674.5 668.1 L 675.6 670 L 676.8 671.8 L 677.8 673.7 L 678.9 675.6 L 679.8 677.6 L 682.4 676.5 L 681.5 674.4 L 680.5 672.3 L 679.4 670.3 L 678.4 668.3 L 677.2 666.4 L 676.1 664.5 L 674.9 662.6 L 673.7 660.8 L 672.5 659 L 671.3 657.1 L 670.1 655.3 L 669 653.5 L 667.9 651.6 L 666.9 649.8 L 665.9 647.9 L 665 646.1 L 664.2 644.1 L 663.5 642.2 Z"/>
 <circle class="innenholz" cx="681.1" cy="677" r="2.4"/>
 <path class="innenholz" d="M 682.2 676.7 L 681.2 673.6 L 680.1 670.7 L 679 667.8 L 677.7 665 L 676.4 662.3 L 675 659.7 L 673.5 657.2 L 671.9 654.8 L 670.3 652.6 L 668.7 650.4 L 667 648.3 L 665.3 646.3 L 663.5 644.4 L 661.8 642.6 L 661.4 643 L 661 643.3 L 662.7 645.1 L 664.4 647.1 L 666 649.1 L 667.6 651.2 L 669.1 653.4 L 670.6 655.7 L 672 658.1 L 673.4 660.6 L 674.7 663.2 L 675.9 665.8 L 677 668.6 L 678.1 671.4 L 679 674.4 L 679.9 677.4 Z"/>
 <path class="innenholz" d="M 681.9 676.2 L 679.5 674 L 677.1 672 L 674.6 670.1 L 672.1 668.3 L 669.6 666.6 L 667.1 665.1 L 664.6 663.7 L 662.1 662.4 L 659.5 661.2 L 657 660.1 L 654.5 659.1 L 652 658.3 L 649.6 657.5 L 647.1 656.9 L 647 657.4 L 646.9 657.8 L 649.2 658.6 L 651.6 659.4 L 654.1 660.4 L 656.5 661.4 L 658.9 662.6 L 661.3 663.8 L 663.8 665.2 L 666.2 666.6 L 668.6 668.2 L 671 669.9 L 673.3 671.7 L 675.7 673.7 L 678 675.7 L 680.2 677.9 Z"/>
@@ -819,20 +824,21 @@
   <text class="art-ziffer" x="681.1" y="624.9" text-anchor="middle">XII</text>
 </a>
 </g>
-<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="681.1" cy="667.9" rx="20.2" ry="4.7"/><ellipse class="etikett-schleier" cx="681.1" cy="682.4" rx="21.6" ry="2.4"/><ellipse class="etikett-schleier" cx="681.1" cy="690.5" rx="10.8" ry="2.3"/><text class="mitte-name" x="681.1" y="670" text-anchor="middle">Monadismus</text><text class="mitte-substanz" x="681.1" y="683.5" text-anchor="middle">die Monade (das Wesen)</text><a href="weltanschauungen/monadismus.html" class="mitte-seite"><text x="681.1" y="691.5" text-anchor="middle">0 Artikel →</text></a></g>
+<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="681.1" cy="667.9" rx="21.1" ry="4.7"/><ellipse class="etikett-schleier" cx="681.1" cy="682.4" rx="22.7" ry="2.4"/><ellipse class="etikett-schleier" cx="681.1" cy="690.5" rx="11.3" ry="2.3"/><text class="mitte-name" x="681.1" y="670" text-anchor="middle">Monadismus</text><text class="mitte-substanz" x="681.1" y="683.5" text-anchor="middle">die Monade (das Wesen)</text><a href="weltanschauungen/monadismus.html" class="mitte-seite"><text x="681.1" y="691.5" text-anchor="middle">0 Artikel →</text></a></g>
 </g>
-<a href="weltanschauungen/monadismus.html" class="kreis-link" aria-label="Monadismus – hineinzoomen">
-  <title>Monadismus – Die Welt besteht aus einer Vielheit in sich geschlossener Wesenseinheiten, die von innen heraus wirken.</title>
-  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="681.1" cy="654.1" rx="18.1" ry="10.8"/><ellipse class="etikett-schleier" cx="681.1" cy="671.1" rx="46.5" ry="10.8"/><ellipse class="etikett-schleier" cx="681.1" cy="689.9" rx="39.8" ry="9"/><text class="kreis-nummer" x="681.1" y="659" text-anchor="middle">VII</text><text class="kreis-name" x="681.1" y="676" text-anchor="middle">Monadismus</text><text class="kreis-zeichen" x="681.1" y="694" text-anchor="middle">♐︎ Schütze</text></g>
+<a href="weltanschauungen/monadismus.html" class="kreis-link" aria-label="Monadismus - hineinzoomen">
+  <title>Monadismus - Die Welt besteht aus einer Vielheit in sich geschlossener Wesenseinheiten, die von innen heraus wirken.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="681.1" cy="654.1" rx="18.8" ry="10.8"/><ellipse class="etikett-schleier" cx="681.1" cy="671.1" rx="48.7" ry="10.8"/><ellipse class="etikett-schleier" cx="681.1" cy="689.9" rx="41.6" ry="9"/><text class="kreis-nummer" x="681.1" y="659" text-anchor="middle">VII</text><text class="kreis-name" x="681.1" y="676" text-anchor="middle">Monadismus</text><text class="kreis-zeichen" x="681.1" y="694" text-anchor="middle">♐︎ Schütze</text></g>
 </a>
 </g>
 <g class="kreis kreis-wurzel" data-slug="spiritualismus">
 <a href="weltanschauungen/spiritualismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
-  <title>Spiritualismus – Das Geistige ist die eigentliche Wirklichkeit; das Stoffliche ist seine Offenbarung.</title>
+  <title>Spiritualismus - Das Geistige ist die eigentliche Wirklichkeit; das Stoffliche ist seine Offenbarung.</title>
   <circle class="kreisflaeche" cx="550" cy="712.2" r="67.8"/>
 </a>
 <g class="innenwelt">
-<path class="innenholz" d="M 547.8 639.9 L 547.3 644 L 546.9 648 L 546.8 652.1 L 546.7 656.1 L 546.8 660.1 L 547 664.1 L 547.2 668.1 L 547.5 672.1 L 547.8 676.1 L 548.2 680.1 L 548.5 684 L 548.8 688 L 549 692 L 549.2 696 L 549.2 700 L 549.2 704 L 549 708 L 548.6 712 L 551.4 712.3 L 551.9 708.2 L 552.1 704.1 L 552.3 700 L 552.3 695.9 L 552.3 691.9 L 552.1 687.8 L 551.9 683.8 L 551.7 679.8 L 551.4 675.8 L 551.2 671.9 L 551 667.9 L 550.8 664 L 550.7 660 L 550.8 656.1 L 550.9 652.2 L 551.2 648.4 L 551.6 644.5 L 552.2 640.7 Z"/>
+<path class="innenholz" d="M 550 640.3 L 547.8 640.9 L 547.8 642.3 L 547.8 643.7 L 550 644.3 L 550 644.3 L 552.2 643.7 L 552.2 642.3 L 552.2 640.9 L 550 640.3 Z"/>
+<path class="innenholz" d="M 547.8 672.4 L 547.5 674.7 L 547.4 677 L 547.3 679.2 L 547.3 681.4 L 547.3 683.7 L 547.5 685.9 L 547.6 688.1 L 547.8 690.3 L 548 692.5 L 548.2 694.6 L 548.4 696.8 L 548.6 699 L 548.7 701.1 L 548.8 703.3 L 548.9 705.5 L 548.9 707.6 L 548.8 709.8 L 548.6 712 L 551.4 712.3 L 551.7 710 L 551.9 707.8 L 552 705.5 L 552 703.3 L 552 701 L 551.9 698.8 L 551.8 696.6 L 551.7 694.4 L 551.6 692.2 L 551.5 690 L 551.4 687.9 L 551.3 685.7 L 551.3 683.6 L 551.3 681.5 L 551.4 679.4 L 551.6 677.3 L 551.8 675.2 L 552.2 673.2 Z"/>
 <circle class="innenholz" cx="550" cy="712.2" r="2.4"/>
 <path class="innenholz" d="M 551.2 711.8 L 550.2 708.8 L 549.1 705.8 L 547.9 702.9 L 546.6 700.1 L 545.3 697.4 L 543.9 694.9 L 542.4 692.4 L 540.9 690 L 539.3 687.7 L 537.6 685.5 L 535.9 683.4 L 534.2 681.4 L 532.5 679.5 L 530.7 677.7 L 530.3 678.1 L 530 678.4 L 531.7 680.3 L 533.3 682.2 L 534.9 684.2 L 536.5 686.3 L 538 688.5 L 539.5 690.8 L 540.9 693.2 L 542.3 695.7 L 543.6 698.3 L 544.8 701 L 546 703.7 L 547 706.5 L 548 709.5 L 548.8 712.5 Z"/>
 <path class="innenholz" d="M 550.8 711.3 L 548.4 709.1 L 546 707.1 L 543.6 705.2 L 541.1 703.4 L 538.6 701.8 L 536.1 700.2 L 533.5 698.8 L 531 697.5 L 528.5 696.3 L 526 695.2 L 523.4 694.3 L 521 693.4 L 518.5 692.6 L 516.1 692 L 515.9 692.5 L 515.8 693 L 518.2 693.7 L 520.6 694.5 L 523 695.5 L 525.4 696.5 L 527.8 697.7 L 530.3 698.9 L 532.7 700.3 L 535.1 701.8 L 537.5 703.4 L 539.9 705.1 L 542.3 706.9 L 544.6 708.8 L 546.9 710.8 L 549.2 713 Z"/>
@@ -942,20 +948,21 @@
   <text class="art-ziffer" x="550" y="660.1" text-anchor="middle">XII</text>
 </a>
 </g>
-<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="550" cy="703" rx="27.2" ry="4.7"/><ellipse class="etikett-schleier" cx="550" cy="717.5" rx="27.1" ry="2.4"/><ellipse class="etikett-schleier" cx="550" cy="725.6" rx="10.8" ry="2.3"/><text class="mitte-name" x="550" y="705.2" text-anchor="middle">Spiritualismus</text><text class="mitte-substanz" x="550" y="718.7" text-anchor="middle">der Spirit (das Bewusstsein)</text><a href="weltanschauungen/spiritualismus.html" class="mitte-seite"><text x="550" y="726.7" text-anchor="middle">0 Artikel →</text></a></g>
+<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="550" cy="703" rx="28.5" ry="4.7"/><ellipse class="etikett-schleier" cx="550" cy="717.5" rx="28.5" ry="2.4"/><ellipse class="etikett-schleier" cx="550" cy="725.6" rx="11.3" ry="2.3"/><text class="mitte-name" x="550" y="705.2" text-anchor="middle">Spiritualismus</text><text class="mitte-substanz" x="550" y="718.7" text-anchor="middle">der Spirit (das Bewusstsein)</text><a href="weltanschauungen/spiritualismus.html" class="mitte-seite"><text x="550" y="726.7" text-anchor="middle">0 Artikel →</text></a></g>
 </g>
-<a href="weltanschauungen/spiritualismus.html" class="kreis-link" aria-label="Spiritualismus – hineinzoomen">
-  <title>Spiritualismus – Das Geistige ist die eigentliche Wirklichkeit; das Stoffliche ist seine Offenbarung.</title>
-  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="550" cy="689.2" rx="14.1" ry="10.8"/><ellipse class="etikett-schleier" cx="550" cy="706.2" rx="62" ry="10.8"/><ellipse class="etikett-schleier" cx="550" cy="725" rx="46.5" ry="9"/><text class="kreis-nummer" x="550" y="694.2" text-anchor="middle">VI</text><text class="kreis-name" x="550" y="711.2" text-anchor="middle">Spiritualismus</text><text class="kreis-zeichen" x="550" y="729.2" text-anchor="middle">♑︎ Steinbock</text></g>
+<a href="weltanschauungen/spiritualismus.html" class="kreis-link" aria-label="Spiritualismus - hineinzoomen">
+  <title>Spiritualismus - Das Geistige ist die eigentliche Wirklichkeit; das Stoffliche ist seine Offenbarung.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="550" cy="689.2" rx="14.5" ry="10.8"/><ellipse class="etikett-schleier" cx="550" cy="706.2" rx="62" ry="10.8"/><ellipse class="etikett-schleier" cx="550" cy="725" rx="48.7" ry="9"/><text class="kreis-nummer" x="550" y="694.2" text-anchor="middle">VI</text><text class="kreis-name" x="550" y="711.2" text-anchor="middle">Spiritualismus</text><text class="kreis-zeichen" x="550" y="729.2" text-anchor="middle">♑︎ Steinbock</text></g>
 </a>
 </g>
 <g class="kreis kreis-wurzel" data-slug="pneumatismus">
 <a href="weltanschauungen/pneumatismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
-  <title>Pneumatismus – Ein einheitlicher, schaffender Weltengeist durchwaltet das All.</title>
+  <title>Pneumatismus - Ein einheitlicher, schaffender Weltengeist durchwaltet das All.</title>
   <circle class="kreisflaeche" cx="418.9" cy="677" r="67.8"/>
 </a>
 <g class="innenwelt">
-<path class="innenholz" d="M 453.2 613.4 L 450.7 616.7 L 448.3 620 L 446.1 623.4 L 444.1 626.8 L 442.2 630.4 L 440.3 633.9 L 438.5 637.5 L 436.8 641.1 L 435.1 644.7 L 433.4 648.3 L 431.7 651.9 L 429.9 655.5 L 428.1 659.1 L 426.3 662.6 L 424.3 666.1 L 422.3 669.5 L 420.1 672.9 L 417.8 676.2 L 420 677.9 L 422.5 674.5 L 424.8 671.1 L 427 667.7 L 429 664.2 L 431 660.6 L 432.9 657 L 434.7 653.4 L 436.5 649.9 L 438.3 646.3 L 440.1 642.7 L 441.9 639.2 L 443.7 635.7 L 445.6 632.3 L 447.6 628.9 L 449.6 625.6 L 451.8 622.4 L 454.1 619.2 L 456.5 616.2 Z"/>
+<path class="innenholz" d="M 454.8 614.8 L 452.6 614.2 L 451.9 615.4 L 451.3 616.6 L 452.8 618.3 L 452.8 618.3 L 455.1 618.8 L 455.8 617.6 L 456.4 616.4 L 454.8 614.8 Z"/>
+<path class="innenholz" d="M 436.9 641.5 L 435.5 643.4 L 434.2 645.2 L 433 647.1 L 431.9 649.1 L 430.9 651 L 429.9 653 L 428.9 655 L 428 657 L 427 659 L 426.1 661 L 425.2 662.9 L 424.3 664.9 L 423.3 666.9 L 422.3 668.8 L 421.3 670.7 L 420.2 672.6 L 419 674.4 L 417.8 676.2 L 420 677.9 L 421.4 676 L 422.7 674.2 L 423.9 672.3 L 425.1 670.3 L 426.2 668.4 L 427.3 666.4 L 428.3 664.5 L 429.3 662.5 L 430.3 660.5 L 431.3 658.6 L 432.3 656.7 L 433.3 654.8 L 434.3 652.9 L 435.4 651.1 L 436.5 649.4 L 437.7 647.6 L 439 646 L 440.3 644.4 Z"/>
 <circle class="innenholz" cx="418.9" cy="677" r="2.4"/>
 <path class="innenholz" d="M 420.1 676.7 L 419.1 673.6 L 418 670.7 L 416.8 667.8 L 415.6 665 L 414.2 662.3 L 412.8 659.7 L 411.3 657.2 L 409.8 654.8 L 408.2 652.6 L 406.6 650.4 L 404.9 648.3 L 403.1 646.3 L 401.4 644.4 L 399.6 642.6 L 399.3 643 L 398.9 643.3 L 400.6 645.1 L 402.2 647.1 L 403.9 649.1 L 405.4 651.2 L 407 653.4 L 408.4 655.7 L 409.9 658.1 L 411.2 660.6 L 412.5 663.2 L 413.7 665.8 L 414.9 668.6 L 415.9 671.4 L 416.9 674.4 L 417.8 677.4 Z"/>
 <path class="innenholz" d="M 419.8 676.2 L 417.4 674 L 414.9 672 L 412.5 670.1 L 410 668.3 L 407.5 666.6 L 405 665.1 L 402.5 663.7 L 399.9 662.4 L 397.4 661.2 L 394.9 660.1 L 392.4 659.1 L 389.9 658.3 L 387.4 657.5 L 385 656.9 L 384.8 657.4 L 384.7 657.8 L 387.1 658.6 L 389.5 659.4 L 391.9 660.4 L 394.3 661.4 L 396.8 662.6 L 399.2 663.8 L 401.6 665.2 L 404 666.6 L 406.4 668.2 L 408.8 669.9 L 411.2 671.7 L 413.5 673.7 L 415.8 675.7 L 418.1 677.9 Z"/>
@@ -1065,20 +1072,21 @@
   <text class="art-ziffer" x="418.9" y="624.9" text-anchor="middle">XII</text>
 </a>
 </g>
-<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="418.9" cy="667.9" rx="23.7" ry="4.7"/><ellipse class="etikett-schleier" cx="418.9" cy="682.4" rx="31.7" ry="2.4"/><ellipse class="etikett-schleier" cx="418.9" cy="690.5" rx="10.8" ry="2.3"/><text class="mitte-name" x="418.9" y="670" text-anchor="middle">Pneumatismus</text><text class="mitte-substanz" x="418.9" y="683.5" text-anchor="middle">das Pneuma (der bestimmende Sinn)</text><a href="weltanschauungen/pneumatismus.html" class="mitte-seite"><text x="418.9" y="691.5" text-anchor="middle">0 Artikel →</text></a></g>
+<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="418.9" cy="667.9" rx="24.8" ry="4.7"/><ellipse class="etikett-schleier" cx="418.9" cy="682.4" rx="33.3" ry="2.4"/><ellipse class="etikett-schleier" cx="418.9" cy="690.5" rx="11.3" ry="2.3"/><text class="mitte-name" x="418.9" y="670" text-anchor="middle">Pneumatismus</text><text class="mitte-substanz" x="418.9" y="683.5" text-anchor="middle">das Pneuma (der bestimmende Sinn)</text><a href="weltanschauungen/pneumatismus.html" class="mitte-seite"><text x="418.9" y="691.5" text-anchor="middle">0 Artikel →</text></a></g>
 </g>
-<a href="weltanschauungen/pneumatismus.html" class="kreis-link" aria-label="Pneumatismus – hineinzoomen">
-  <title>Pneumatismus – Ein einheitlicher, schaffender Weltengeist durchwaltet das All.</title>
-  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="418.9" cy="654.1" rx="10.1" ry="10.8"/><ellipse class="etikett-schleier" cx="418.9" cy="671.1" rx="54.6" ry="10.8"/><ellipse class="etikett-schleier" cx="418.9" cy="689.9" rx="49.9" ry="9"/><text class="kreis-nummer" x="418.9" y="659" text-anchor="middle">V</text><text class="kreis-name" x="418.9" y="676" text-anchor="middle">Pneumatismus</text><text class="kreis-zeichen" x="418.9" y="694" text-anchor="middle">♒︎ Wassermann</text></g>
+<a href="weltanschauungen/pneumatismus.html" class="kreis-link" aria-label="Pneumatismus - hineinzoomen">
+  <title>Pneumatismus - Ein einheitlicher, schaffender Weltengeist durchwaltet das All.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="418.9" cy="654.1" rx="10.3" ry="10.8"/><ellipse class="etikett-schleier" cx="418.9" cy="671.1" rx="57.3" ry="10.8"/><ellipse class="etikett-schleier" cx="418.9" cy="689.9" rx="52.3" ry="9"/><text class="kreis-nummer" x="418.9" y="659" text-anchor="middle">V</text><text class="kreis-name" x="418.9" y="676" text-anchor="middle">Pneumatismus</text><text class="kreis-zeichen" x="418.9" y="694" text-anchor="middle">♒︎ Wassermann</text></g>
 </a>
 </g>
 <g class="kreis kreis-wurzel" data-slug="psychismus">
 <a href="weltanschauungen/psychismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
-  <title>Psychismus – Das Weltprinzip wird seelisch erfahren: Die Welt ist beseelt.</title>
+  <title>Psychismus - Das Weltprinzip wird seelisch erfahren: Die Welt ist beseelt.</title>
   <circle class="kreisflaeche" cx="323" cy="581.1" r="67.8"/>
 </a>
 <g class="innenwelt">
-<path class="innenholz" d="M 384.4 543.1 L 380.6 544.7 L 377 546.4 L 373.4 548.2 L 369.9 550.2 L 366.4 552.3 L 363 554.4 L 359.7 556.6 L 356.4 558.9 L 353.1 561.2 L 349.8 563.4 L 346.6 565.7 L 343.3 568 L 339.9 570.1 L 336.6 572.3 L 333.1 574.3 L 329.6 576.3 L 326.1 578.1 L 322.4 579.8 L 323.5 582.4 L 327.3 580.7 L 331 578.9 L 334.6 577 L 338.2 575 L 341.7 572.9 L 345.1 570.7 L 348.5 568.6 L 351.8 566.4 L 355.1 564.1 L 358.5 561.9 L 361.8 559.8 L 365.1 557.7 L 368.5 555.7 L 371.9 553.7 L 375.3 551.9 L 378.8 550.2 L 382.3 548.6 L 386 547.2 Z"/>
+<path class="innenholz" d="M 385.2 545.2 L 383.6 543.6 L 382.4 544.2 L 381.2 544.9 L 381.7 547.2 L 381.7 547.2 L 383.4 548.7 L 384.6 548.1 L 385.8 547.4 L 385.2 545.2 Z"/>
+<path class="innenholz" d="M 356.3 559.3 L 354.2 560.2 L 352.1 561.2 L 350.1 562.3 L 348.2 563.4 L 346.3 564.5 L 344.4 565.7 L 342.6 567 L 340.8 568.2 L 339 569.5 L 337.2 570.8 L 335.5 572 L 333.7 573.3 L 331.9 574.5 L 330 575.6 L 328.2 576.8 L 326.3 577.8 L 324.4 578.9 L 322.4 579.8 L 323.5 582.4 L 325.6 581.5 L 327.7 580.5 L 329.7 579.4 L 331.7 578.4 L 333.6 577.2 L 335.5 576.1 L 337.4 574.9 L 339.2 573.7 L 341 572.5 L 342.9 571.3 L 344.7 570.1 L 346.5 569 L 348.4 567.9 L 350.2 566.9 L 352.1 565.9 L 353.9 565 L 355.9 564.2 L 357.8 563.5 Z"/>
 <circle class="innenholz" cx="323" cy="581.1" r="2.4"/>
 <path class="innenholz" d="M 324.1 580.7 L 323.1 577.7 L 322 574.7 L 320.9 571.8 L 319.6 569.1 L 318.3 566.4 L 316.9 563.8 L 315.4 561.3 L 313.8 558.9 L 312.2 556.6 L 310.6 554.4 L 308.9 552.3 L 307.2 550.3 L 305.4 548.4 L 303.7 546.6 L 303.3 547 L 302.9 547.4 L 304.6 549.2 L 306.3 551.1 L 307.9 553.1 L 309.5 555.2 L 311 557.5 L 312.5 559.8 L 313.9 562.2 L 315.3 564.6 L 316.6 567.2 L 317.8 569.9 L 318.9 572.6 L 320 575.5 L 320.9 578.4 L 321.8 581.4 Z"/>
 <path class="innenholz" d="M 323.8 580.2 L 321.4 578.1 L 319 576 L 316.5 574.1 L 314 572.3 L 311.5 570.7 L 309 569.2 L 306.5 567.7 L 304 566.4 L 301.4 565.2 L 298.9 564.2 L 296.4 563.2 L 293.9 562.3 L 291.5 561.6 L 289 560.9 L 288.9 561.4 L 288.8 561.9 L 291.1 562.6 L 293.5 563.5 L 295.9 564.4 L 298.4 565.4 L 300.8 566.6 L 303.2 567.9 L 305.7 569.2 L 308.1 570.7 L 310.5 572.3 L 312.9 574 L 315.2 575.8 L 317.6 577.7 L 319.9 579.8 L 322.1 581.9 Z"/>
@@ -1188,20 +1196,19 @@
   <text class="art-ziffer" x="323" y="529" text-anchor="middle">XII</text>
 </a>
 </g>
-<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="323" cy="571.9" rx="20.2" ry="4.7"/><ellipse class="etikett-schleier" cx="323" cy="586.5" rx="22.5" ry="2.4"/><ellipse class="etikett-schleier" cx="323" cy="594.5" rx="10.8" ry="2.3"/><text class="mitte-name" x="323" y="574.1" text-anchor="middle">Psychismus</text><text class="mitte-substanz" x="323" y="587.6" text-anchor="middle">die Psyche (das Selbst)</text><a href="weltanschauungen/psychismus.html" class="mitte-seite"><text x="323" y="595.6" text-anchor="middle">0 Artikel →</text></a></g>
+<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="323" cy="571.9" rx="21.1" ry="4.7"/><ellipse class="etikett-schleier" cx="323" cy="586.5" rx="23.6" ry="2.4"/><ellipse class="etikett-schleier" cx="323" cy="594.5" rx="11.3" ry="2.3"/><text class="mitte-name" x="323" y="574.1" text-anchor="middle">Psychismus</text><text class="mitte-substanz" x="323" y="587.6" text-anchor="middle">die Psyche (das Selbst)</text><a href="weltanschauungen/psychismus.html" class="mitte-seite"><text x="323" y="595.6" text-anchor="middle">0 Artikel →</text></a></g>
 </g>
-<a href="weltanschauungen/psychismus.html" class="kreis-link" aria-label="Psychismus – hineinzoomen">
-  <title>Psychismus – Das Weltprinzip wird seelisch erfahren: Die Welt ist beseelt.</title>
-  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="323" cy="558.1" rx="14.1" ry="10.8"/><ellipse class="etikett-schleier" cx="323" cy="575.1" rx="46.5" ry="10.8"/><ellipse class="etikett-schleier" cx="323" cy="594" rx="36.4" ry="9"/><text class="kreis-nummer" x="323" y="563.1" text-anchor="middle">IV</text><text class="kreis-name" x="323" y="580.1" text-anchor="middle">Psychismus</text><text class="kreis-zeichen" x="323" y="598.1" text-anchor="middle">♓︎ Fische</text></g>
+<a href="weltanschauungen/psychismus.html" class="kreis-link" aria-label="Psychismus - hineinzoomen">
+  <title>Psychismus - Das Weltprinzip wird seelisch erfahren: Die Welt ist beseelt.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="323" cy="558.1" rx="14.5" ry="10.8"/><ellipse class="etikett-schleier" cx="323" cy="575.1" rx="48.7" ry="10.8"/><ellipse class="etikett-schleier" cx="323" cy="594" rx="38.1" ry="9"/><text class="kreis-nummer" x="323" y="563.1" text-anchor="middle">IV</text><text class="kreis-name" x="323" y="580.1" text-anchor="middle">Psychismus</text><text class="kreis-zeichen" x="323" y="598.1" text-anchor="middle">♓︎ Fische</text></g>
 </a>
 </g>
 <g class="kreis kreis-boden" data-slug="idealismus">
 <a href="weltanschauungen/idealismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
-  <title>Idealismus – Ideen tragen die Welt; im Ideellen liegen ihr Sinn und ihre Ordnung.</title>
+  <title>Idealismus - Ideen tragen die Welt; im Ideellen liegen ihr Sinn und ihre Ordnung.</title>
   <circle class="kreisflaeche" cx="287.8" cy="450" r="67.8"/>
 </a>
 <g class="innenwelt">
-<path class="innenholz" d="M 360.1 447.8 L 356 447.3 L 352 446.9 L 347.9 446.8 L 343.9 446.7 L 339.9 446.8 L 335.9 447 L 331.9 447.2 L 327.9 447.5 L 323.9 447.8 L 319.9 448.2 L 316 448.5 L 312 448.8 L 308 449 L 304 449.2 L 300 449.2 L 296 449.2 L 292 449 L 288 448.6 L 287.7 451.4 L 291.8 451.9 L 295.9 452.1 L 300 452.3 L 304.1 452.3 L 308.1 452.3 L 312.2 452.1 L 316.2 451.9 L 320.2 451.7 L 324.2 451.4 L 328.1 451.2 L 332.1 451 L 336 450.8 L 340 450.7 L 343.9 450.8 L 347.8 450.9 L 351.6 451.2 L 355.5 451.6 L 359.3 452.2 Z"/>
 <circle class="innenholz" cx="287.8" cy="450" r="2.4"/>
 <path class="innenholz" d="M 289 449.7 L 288 446.6 L 286.9 443.6 L 285.7 440.8 L 284.5 438 L 283.1 435.3 L 281.7 432.7 L 280.3 430.2 L 278.7 427.8 L 277.1 425.5 L 275.5 423.3 L 273.8 421.2 L 272.1 419.2 L 270.3 417.4 L 268.5 415.6 L 268.2 415.9 L 267.8 416.3 L 269.5 418.1 L 271.2 420 L 272.8 422.1 L 274.4 424.2 L 275.9 426.4 L 277.4 428.7 L 278.8 431.1 L 280.2 433.6 L 281.4 436.1 L 282.7 438.8 L 283.8 441.6 L 284.9 444.4 L 285.8 447.3 L 286.7 450.3 Z"/>
 <path class="innenholz" d="M 288.7 449.1 L 286.3 447 L 283.9 445 L 281.4 443 L 278.9 441.3 L 276.4 439.6 L 273.9 438.1 L 271.4 436.7 L 268.8 435.4 L 266.3 434.2 L 263.8 433.1 L 261.3 432.1 L 258.8 431.3 L 256.3 430.5 L 253.9 429.8 L 253.8 430.3 L 253.6 430.8 L 256 431.5 L 258.4 432.4 L 260.8 433.3 L 263.2 434.4 L 265.7 435.5 L 268.1 436.8 L 270.5 438.1 L 273 439.6 L 275.4 441.2 L 277.8 442.9 L 280.1 444.7 L 282.5 446.6 L 284.8 448.7 L 287 450.9 Z"/>
@@ -1311,20 +1318,21 @@
   <text class="art-ziffer" x="287.8" y="397.9" text-anchor="middle">XII</text>
 </a>
 </g>
-<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="287.8" cy="440.9" rx="20.2" ry="4.7"/><ellipse class="etikett-schleier" cx="287.8" cy="455.4" rx="21.6" ry="2.4"/><ellipse class="etikett-schleier" cx="287.8" cy="463.4" rx="10.8" ry="2.3"/><text class="mitte-name" x="287.8" y="443" text-anchor="middle">Idealismus</text><text class="mitte-substanz" x="287.8" y="456.5" text-anchor="middle">das Ideelle (die Idee)</text><a href="weltanschauungen/idealismus.html" class="mitte-seite"><text x="287.8" y="464.5" text-anchor="middle">0 Artikel →</text></a></g>
+<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="287.8" cy="440.9" rx="21.1" ry="4.7"/><ellipse class="etikett-schleier" cx="287.8" cy="455.4" rx="22.7" ry="2.4"/><ellipse class="etikett-schleier" cx="287.8" cy="463.4" rx="11.3" ry="2.3"/><text class="mitte-name" x="287.8" y="443" text-anchor="middle">Idealismus</text><text class="mitte-substanz" x="287.8" y="456.5" text-anchor="middle">das Ideelle (die Idee)</text><a href="weltanschauungen/idealismus.html" class="mitte-seite"><text x="287.8" y="464.5" text-anchor="middle">0 Artikel →</text></a></g>
 </g>
-<a href="weltanschauungen/idealismus.html" class="kreis-link" aria-label="Idealismus – hineinzoomen">
-  <title>Idealismus – Ideen tragen die Welt; im Ideellen liegen ihr Sinn und ihre Ordnung.</title>
-  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="287.8" cy="427" rx="18.1" ry="10.8"/><ellipse class="etikett-schleier" cx="287.8" cy="444" rx="46.5" ry="10.8"/><ellipse class="etikett-schleier" cx="287.8" cy="462.9" rx="36.4" ry="9"/><text class="kreis-nummer" x="287.8" y="432" text-anchor="middle">III</text><text class="kreis-name" x="287.8" y="449" text-anchor="middle">Idealismus</text><text class="kreis-zeichen" x="287.8" y="467" text-anchor="middle">♈︎ Widder</text></g>
+<a href="weltanschauungen/idealismus.html" class="kreis-link" aria-label="Idealismus - hineinzoomen">
+  <title>Idealismus - Ideen tragen die Welt; im Ideellen liegen ihr Sinn und ihre Ordnung.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="287.8" cy="427" rx="18.8" ry="10.8"/><ellipse class="etikett-schleier" cx="287.8" cy="444" rx="48.7" ry="10.8"/><ellipse class="etikett-schleier" cx="287.8" cy="462.9" rx="38.1" ry="9"/><text class="kreis-nummer" x="287.8" y="432" text-anchor="middle">III</text><text class="kreis-name" x="287.8" y="449" text-anchor="middle">Idealismus</text><text class="kreis-zeichen" x="287.8" y="467" text-anchor="middle">♈︎ Widder</text></g>
 </a>
 </g>
 <g class="kreis kreis-krone" data-slug="rationalismus">
 <a href="weltanschauungen/rationalismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
-  <title>Rationalismus – Die Vernunft findet die Ideen in der Wirklichkeit, soweit sie sich an der Erfahrung ausweisen.</title>
+  <title>Rationalismus - Die Vernunft findet die Ideen in der Wirklichkeit, soweit sie sich an der Erfahrung ausweisen.</title>
   <circle class="kreisflaeche" cx="323" cy="318.9" r="67.8"/>
 </a>
 <g class="innenwelt">
-<path class="innenholz" d="M 386.5 353.2 L 383.3 350.7 L 380 348.4 L 376.6 346.2 L 373.1 344.2 L 369.6 342.2 L 366 340.4 L 362.5 338.6 L 358.9 336.9 L 355.2 335.2 L 351.6 333.5 L 348 331.8 L 344.4 330 L 340.9 328.2 L 337.3 326.4 L 333.8 324.4 L 330.4 322.4 L 327 320.2 L 323.8 317.9 L 322.2 320 L 325.5 322.4 L 328.9 324.7 L 332.4 326.9 L 335.9 329 L 339.4 330.9 L 343 332.8 L 346.6 334.7 L 350.2 336.4 L 353.8 338.2 L 357.3 340 L 360.9 341.8 L 364.3 343.6 L 367.8 345.5 L 371.2 347.5 L 374.5 349.6 L 377.7 351.7 L 380.8 354 L 383.9 356.5 Z"/>
+<path class="innenholz" d="M 385.2 354.8 L 385.7 352.7 L 384.5 352 L 383.3 351.3 L 381.7 352.8 L 381.7 352.8 L 381.2 355 L 382.4 355.7 L 383.6 356.4 L 385.2 354.8 Z"/>
+<path class="innenholz" d="M 358.4 337 L 356.6 335.6 L 354.7 334.3 L 352.8 333.1 L 350.9 332 L 348.9 330.9 L 346.9 329.9 L 345 329 L 343 328 L 341 327.1 L 339 326.2 L 337 325.3 L 335 324.4 L 333.1 323.4 L 331.2 322.4 L 329.3 321.4 L 327.4 320.3 L 325.5 319.1 L 323.8 317.9 L 322.2 320 L 324 321.3 L 325.9 322.6 L 327.8 323.9 L 329.7 325 L 331.7 326.1 L 333.6 327.2 L 335.6 328.2 L 337.5 329.2 L 339.5 330.2 L 341.4 331.2 L 343.4 332.2 L 345.2 333.2 L 347.1 334.2 L 348.9 335.3 L 350.7 336.5 L 352.4 337.6 L 354.1 338.9 L 355.7 340.2 Z"/>
 <circle class="innenholz" cx="323" cy="318.9" r="2.4"/>
 <path class="innenholz" d="M 324.1 318.6 L 323.1 315.5 L 322 312.6 L 320.9 309.7 L 319.6 306.9 L 318.3 304.2 L 316.9 301.6 L 315.4 299.1 L 313.8 296.7 L 312.2 294.4 L 310.6 292.3 L 308.9 290.2 L 307.2 288.2 L 305.4 286.3 L 303.7 284.5 L 303.3 284.8 L 302.9 285.2 L 304.6 287 L 306.3 289 L 307.9 291 L 309.5 293.1 L 311 295.3 L 312.5 297.6 L 313.9 300 L 315.3 302.5 L 316.6 305.1 L 317.8 307.7 L 318.9 310.5 L 320 313.3 L 320.9 316.2 L 321.8 319.3 Z"/>
 <path class="innenholz" d="M 323.8 318.1 L 321.4 315.9 L 319 313.9 L 316.5 312 L 314 310.2 L 311.5 308.5 L 309 307 L 306.5 305.6 L 304 304.3 L 301.4 303.1 L 298.9 302 L 296.4 301 L 293.9 300.2 L 291.5 299.4 L 289 298.8 L 288.9 299.3 L 288.8 299.7 L 291.1 300.5 L 293.5 301.3 L 295.9 302.3 L 298.4 303.3 L 300.8 304.4 L 303.2 305.7 L 305.7 307.1 L 308.1 308.5 L 310.5 310.1 L 312.9 311.8 L 315.2 313.6 L 317.6 315.6 L 319.9 317.6 L 322.1 319.8 Z"/>
@@ -1434,20 +1442,21 @@
   <text class="art-ziffer" x="323" y="266.8" text-anchor="middle">XII</text>
 </a>
 </g>
-<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="323" cy="309.8" rx="25.4" ry="4.7"/><ellipse class="etikett-schleier" cx="323" cy="324.3" rx="23.4" ry="2.4"/><ellipse class="etikett-schleier" cx="323" cy="332.4" rx="10.8" ry="2.3"/><text class="mitte-name" x="323" y="311.9" text-anchor="middle">Rationalismus</text><text class="mitte-substanz" x="323" y="325.4" text-anchor="middle">die Ratio (der Verstand)</text><a href="weltanschauungen/rationalismus.html" class="mitte-seite"><text x="323" y="333.4" text-anchor="middle">0 Artikel →</text></a></g>
+<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="323" cy="309.8" rx="26.7" ry="4.7"/><ellipse class="etikett-schleier" cx="323" cy="324.3" rx="24.6" ry="2.4"/><ellipse class="etikett-schleier" cx="323" cy="332.4" rx="11.3" ry="2.3"/><text class="mitte-name" x="323" y="311.9" text-anchor="middle">Rationalismus</text><text class="mitte-substanz" x="323" y="325.4" text-anchor="middle">die Ratio (der Verstand)</text><a href="weltanschauungen/rationalismus.html" class="mitte-seite"><text x="323" y="333.4" text-anchor="middle">0 Artikel →</text></a></g>
 </g>
-<a href="weltanschauungen/rationalismus.html" class="kreis-link" aria-label="Rationalismus – hineinzoomen">
-  <title>Rationalismus – Die Vernunft findet die Ideen in der Wirklichkeit, soweit sie sich an der Erfahrung ausweisen.</title>
-  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="323" cy="296" rx="14.1" ry="10.8"/><ellipse class="etikett-schleier" cx="323" cy="313" rx="58.7" ry="10.8"/><ellipse class="etikett-schleier" cx="323" cy="331.8" rx="33" ry="9"/><text class="kreis-nummer" x="323" y="300.9" text-anchor="middle">II</text><text class="kreis-name" x="323" y="317.9" text-anchor="middle">Rationalismus</text><text class="kreis-zeichen" x="323" y="335.9" text-anchor="middle">♉︎ Stier</text></g>
+<a href="weltanschauungen/rationalismus.html" class="kreis-link" aria-label="Rationalismus - hineinzoomen">
+  <title>Rationalismus - Die Vernunft findet die Ideen in der Wirklichkeit, soweit sie sich an der Erfahrung ausweisen.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="323" cy="296" rx="14.5" ry="10.8"/><ellipse class="etikett-schleier" cx="323" cy="313" rx="61.6" ry="10.8"/><ellipse class="etikett-schleier" cx="323" cy="331.8" rx="34.5" ry="9"/><text class="kreis-nummer" x="323" y="300.9" text-anchor="middle">II</text><text class="kreis-name" x="323" y="317.9" text-anchor="middle">Rationalismus</text><text class="kreis-zeichen" x="323" y="335.9" text-anchor="middle">♉︎ Stier</text></g>
 </a>
 </g>
 <g class="kreis kreis-krone" data-slug="mathematismus">
 <a href="weltanschauungen/mathematismus.html" class="kreis-link" tabindex="-1" aria-hidden="true">
-  <title>Mathematismus – Die Welt ist ein grosses Rechenwerk: Wirklich ist, was sich in Zahl und Mass fassen lässt.</title>
+  <title>Mathematismus - Die Welt ist ein grosses Rechenwerk: Wirklich ist, was sich in Zahl und Mass fassen lässt.</title>
   <circle class="kreisflaeche" cx="418.9" cy="223" r="67.8"/>
 </a>
 <g class="innenwelt">
-<path class="innenholz" d="M 456.8 284.5 L 455.3 280.7 L 453.5 277 L 451.7 273.4 L 449.7 269.9 L 447.6 266.5 L 445.5 263.1 L 443.3 259.8 L 441 256.5 L 438.8 253.2 L 436.5 249.9 L 434.2 246.6 L 432 243.3 L 429.8 240 L 427.6 236.6 L 425.6 233.2 L 423.6 229.7 L 421.8 226.1 L 420.1 222.5 L 417.7 223.5 L 419.4 227.3 L 421.2 231 L 423.1 234.6 L 425.1 238.1 L 427.2 241.6 L 429.3 245 L 431.5 248.4 L 433.7 251.8 L 435.9 255.1 L 438.1 258.4 L 440.3 261.7 L 442.4 265.1 L 444.4 268.4 L 446.4 271.8 L 448.2 275.3 L 449.9 278.7 L 451.5 282.3 L 452.9 285.9 Z"/>
+<path class="innenholz" d="M 454.8 285.2 L 456.4 283.6 L 455.7 282.4 L 455 281.2 L 452.8 281.7 L 452.8 281.7 L 451.3 283.3 L 452 284.5 L 452.7 285.7 L 454.8 285.2 Z"/>
+<path class="innenholz" d="M 440.6 256.3 L 439.7 254.2 L 438.7 252.2 L 437.7 250.2 L 436.5 248.2 L 435.4 246.4 L 434.2 244.5 L 432.9 242.7 L 431.7 240.9 L 430.4 239.1 L 429.2 237.3 L 427.9 235.5 L 426.7 233.7 L 425.4 231.9 L 424.3 230.1 L 423.1 228.2 L 422.1 226.4 L 421.1 224.4 L 420.1 222.5 L 417.7 223.5 L 418.6 225.6 L 419.6 227.6 L 420.6 229.7 L 421.7 231.6 L 422.9 233.5 L 424 235.4 L 425.2 237.3 L 426.4 239.2 L 427.6 241 L 428.8 242.8 L 430 244.6 L 431.1 246.5 L 432.2 248.3 L 433.2 250.1 L 434.2 252 L 435.1 253.9 L 435.9 255.8 L 436.6 257.8 Z"/>
 <circle class="innenholz" cx="418.9" cy="223" r="2.4"/>
 <path class="innenholz" d="M 420.1 222.6 L 419.1 219.6 L 418 216.6 L 416.8 213.7 L 415.6 210.9 L 414.2 208.3 L 412.8 205.7 L 411.3 203.2 L 409.8 200.8 L 408.2 198.5 L 406.6 196.3 L 404.9 194.2 L 403.1 192.2 L 401.4 190.3 L 399.6 188.5 L 399.3 188.9 L 398.9 189.2 L 400.6 191.1 L 402.2 193 L 403.9 195 L 405.4 197.1 L 407 199.3 L 408.4 201.7 L 409.9 204 L 411.2 206.5 L 412.5 209.1 L 413.7 211.8 L 414.9 214.5 L 415.9 217.4 L 416.9 220.3 L 417.8 223.3 Z"/>
 <path class="innenholz" d="M 419.8 222.1 L 417.4 220 L 414.9 217.9 L 412.5 216 L 410 214.2 L 407.5 212.6 L 405 211 L 402.5 209.6 L 399.9 208.3 L 397.4 207.1 L 394.9 206.1 L 392.4 205.1 L 389.9 204.2 L 387.4 203.5 L 385 202.8 L 384.8 203.3 L 384.7 203.8 L 387.1 204.5 L 389.5 205.4 L 391.9 206.3 L 394.3 207.3 L 396.8 208.5 L 399.2 209.7 L 401.6 211.1 L 404 212.6 L 406.4 214.2 L 408.8 215.9 L 411.2 217.7 L 413.5 219.6 L 415.8 221.7 L 418.1 223.8 Z"/>
@@ -1557,11 +1566,11 @@
   <text class="art-ziffer" x="418.9" y="170.9" text-anchor="middle">XII</text>
 </a>
 </g>
-<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="418.9" cy="213.8" rx="25.4" ry="4.7"/><ellipse class="etikett-schleier" cx="418.9" cy="228.3" rx="21.6" ry="2.4"/><ellipse class="etikett-schleier" cx="418.9" cy="236.4" rx="10.8" ry="2.3"/><text class="mitte-name" x="418.9" y="216" text-anchor="middle">Mathematismus</text><text class="mitte-substanz" x="418.9" y="229.5" text-anchor="middle">das Mathema (die Form)</text><a href="weltanschauungen/mathematismus.html" class="mitte-seite"><text x="418.9" y="237.5" text-anchor="middle">0 Artikel →</text></a></g>
+<g class="kreis-mitte"><ellipse class="etikett-schleier" cx="418.9" cy="213.8" rx="26.7" ry="4.7"/><ellipse class="etikett-schleier" cx="418.9" cy="228.3" rx="22.7" ry="2.4"/><ellipse class="etikett-schleier" cx="418.9" cy="236.4" rx="11.3" ry="2.3"/><text class="mitte-name" x="418.9" y="216" text-anchor="middle">Mathematismus</text><text class="mitte-substanz" x="418.9" y="229.5" text-anchor="middle">das Mathema (die Form)</text><a href="weltanschauungen/mathematismus.html" class="mitte-seite"><text x="418.9" y="237.5" text-anchor="middle">0 Artikel →</text></a></g>
 </g>
-<a href="weltanschauungen/mathematismus.html" class="kreis-link" aria-label="Mathematismus – hineinzoomen">
-  <title>Mathematismus – Die Welt ist ein grosses Rechenwerk: Wirklich ist, was sich in Zahl und Mass fassen lässt.</title>
-  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="418.9" cy="200" rx="10.1" ry="10.8"/><ellipse class="etikett-schleier" cx="418.9" cy="217" rx="58.7" ry="10.8"/><ellipse class="etikett-schleier" cx="418.9" cy="235.8" rx="46.5" ry="9"/><text class="kreis-nummer" x="418.9" y="205" text-anchor="middle">I</text><text class="kreis-name" x="418.9" y="222" text-anchor="middle">Mathematismus</text><text class="kreis-zeichen" x="418.9" y="240" text-anchor="middle">♊︎ Zwillinge</text></g>
+<a href="weltanschauungen/mathematismus.html" class="kreis-link" aria-label="Mathematismus - hineinzoomen">
+  <title>Mathematismus - Die Welt ist ein grosses Rechenwerk: Wirklich ist, was sich in Zahl und Mass fassen lässt.</title>
+  <g class="kreis-etikett"><ellipse class="etikett-schleier" cx="418.9" cy="200" rx="10.3" ry="10.8"/><ellipse class="etikett-schleier" cx="418.9" cy="217" rx="61.6" ry="10.8"/><ellipse class="etikett-schleier" cx="418.9" cy="235.8" rx="48.7" ry="9"/><text class="kreis-nummer" x="418.9" y="205" text-anchor="middle">I</text><text class="kreis-name" x="418.9" y="222" text-anchor="middle">Mathematismus</text><text class="kreis-zeichen" x="418.9" y="240" text-anchor="middle">♊︎ Zwillinge</text></g>
 </a>
 </g>
 </svg>
@@ -1587,33 +1596,33 @@
   <h2>Neu im Baum</h2>
   <ol class="artikel-liste">
     <li>
-      <a href="artikel/dreigliederung-organismus.html"><span class="titel">Der dreigliedrige soziale Organismus</span><span class="datum">12. Juli 2026</span></a>
-      <p class="ausz">Staat, Wirtschaft und Geistesleben werden gewöhnlich in einen Topf geworfen und einem Herrn unterstellt – der Kirche, der Partei, dem Markt. Rudolf Steiner trennt 1919 sauber: drei Glieder eines sozialen Organismus, jedes nach eigenem Gesetz, keines dem andern gehorchend.</p>
+      <a href="artikel/dreigliederung-organismus.html"><span class="titel">01 - Der dreigliedrige soziale Organismus</span><span class="datum">12. Juli 2026</span></a>
+      <p class="ausz">Staat, Wirtschaft und Geistesleben werden gewöhnlich in einen Topf geworfen und einem Herrn unterstellt - der Kirche, der Partei, dem Markt. Rudolf Steiner trennt 1919 sauber: drei Glieder eines sozialen Organismus, jedes nach eigenem Gesetz, keines dem andern gehorchend.</p>
       <p class="neu-ort"><a href="weltanschauungen/realismus/art-1.html">Realismus · Art I Dreigliederung</a></p>
     </li>
     <li>
-      <a href="artikel/gaede-stahlmann.html"><span class="titel">Der Stahlmann-Materialismus</span><span class="datum">9. Juli 2026</span></a>
-      <p class="ausz">Die Summe der Reihe über Bill Gaede: seine Frage nach dem Ding ist unentbehrlich, seine Antworten stehen am Rand — und was standhält, ist ein Materialismus, der die anschauliche Gestalt nicht länger zur Bedingung des Wirklichen macht.</p>
+      <a href="artikel/gaede-stahlmann.html"><span class="titel">08 - Der Stahlmann-Materialismus</span><span class="datum">9. Juli 2026</span></a>
+      <p class="ausz">Die Summe der Reihe über Bill Gaede: seine Frage nach dem Ding ist unentbehrlich, seine Antworten stehen am Rand - und was standhält, ist ein Materialismus, der die anschauliche Gestalt nicht länger zur Bedingung des Wirklichen macht.</p>
       <p class="neu-ort"><a href="weltanschauungen/materialismus/art-1.html">Materialismus · Art I Gaede</a></p>
     </li>
     <li>
-      <a href="artikel/dreigliederung-kommunismus.html"><span class="titel">Ein Büro und eine Fabrik</span><span class="datum">12. Juli 2026</span></a>
-      <p class="ausz">Der dritte Gang: der Staat, der die Gebrechen vieler Herren mit einem einzigen heilt und Wirtschaft wie Geistesleben in die eine Hand nimmt. Marx, Engels und Lenin in stärkster Form – und dann, was aus der „Verwaltung von Sachen&quot; wurde, als sie auch die Seelen verwaltete (Lyssenko, die Ingenieure der Seele, die Partei über den Glauben).</p>
+      <a href="artikel/dreigliederung-kommunismus.html"><span class="titel">03 - Ein Büro und eine Fabrik</span><span class="datum">12. Juli 2026</span></a>
+      <p class="ausz">Der dritte Gang: der Staat, der die Gebrechen vieler Herren mit einem einzigen heilt und Wirtschaft wie Geistesleben in die eine Hand nimmt. Marx, Engels und Lenin in stärkster Form - und dann, was aus der &quot;Verwaltung von Sachen&quot; wurde, als sie auch die Seelen verwaltete (Lyssenko, die Ingenieure der Seele, die Partei über den Glauben).</p>
       <p class="neu-ort"><a href="weltanschauungen/realismus/art-1.html">Realismus · Art I Dreigliederung</a></p>
     </li>
     <li>
-      <a href="artikel/dreigliederung-kapitalismus.html"><span class="titel">Der Preis von allem</span><span class="datum">12. Juli 2026</span></a>
-      <p class="ausz">Der vierte Gang und der Schluss der Reihe: das Wirtschaften, das über seine Ufer tritt und alles andere zur Ware macht. Smith, Hayek, Friedman und Becker in stärkster Form – Ausdehnung als Freiheit, nicht Herrschaft –, dann die Kolonisierung von Bildung, Wissenschaft und Glauben (Polanyi, Sandel, die käufliche Universität), und was die drei Gänge gemeinsam zeigen.</p>
+      <a href="artikel/dreigliederung-kapitalismus.html"><span class="titel">04 - Der Preis von allem</span><span class="datum">12. Juli 2026</span></a>
+      <p class="ausz">Der vierte Gang und der Schluss der Reihe: das Wirtschaften, das über seine Ufer tritt und alles andere zur Ware macht. Smith, Hayek, Friedman und Becker in stärkster Form - Ausdehnung als Freiheit, nicht Herrschaft -, dann die Kolonisierung von Bildung, Wissenschaft und Glauben (Polanyi, Sandel, die käufliche Universität), und was die drei Gänge gemeinsam zeigen.</p>
       <p class="neu-ort"><a href="weltanschauungen/realismus/art-1.html">Realismus · Art I Dreigliederung</a></p>
     </li>
     <li>
-      <a href="artikel/dreigliederung-herrschaft-der-wissenden.html"><span class="titel">Die Herrschaft der Wissenden</span><span class="datum">12. Juli 2026</span></a>
-      <p class="ausz">Der zweite Gang: die Meinung, das Höhere – Religion, der Philosophenkönig, die Wissenschaft – solle den Staat lenken. Platons Schiff, die zwei Schwerter der Kirche, die vor-aufklärerische Verschmelzung von Kirche, Recht und Wirtschaft, und die Grenze, die Locke, Jefferson und die laïcité zogen.</p>
+      <a href="artikel/dreigliederung-herrschaft-der-wissenden.html"><span class="titel">02 - Die Herrschaft der Wissenden</span><span class="datum">12. Juli 2026</span></a>
+      <p class="ausz">Der zweite Gang: die Meinung, das Höhere - Religion, der Philosophenkönig, die Wissenschaft - solle den Staat lenken. Platons Schiff, die zwei Schwerter der Kirche, die vor-aufklärerische Verschmelzung von Kirche, Recht und Wirtschaft, und die Grenze, die Locke, Jefferson und die laïcité zogen.</p>
       <p class="neu-ort"><a href="weltanschauungen/realismus/art-1.html">Realismus · Art I Dreigliederung</a></p>
     </li>
     <li>
-      <a href="artikel/gaede-singularitaet.html"><span class="titel">Die Singularität</span><span class="datum">9. Juli 2026</span></a>
-      <p class="ausz">Gaedes Vorwurf, die Kosmologie mache aus mathematischen Grössen Dinge — und die Physik, die an denselben Begriffen selbst zweifelt: Singularität, dunkle Materie, MOND, Hubble-Spannung.</p>
+      <a href="artikel/gaede-singularitaet.html"><span class="titel">06 - Die Singularität</span><span class="datum">9. Juli 2026</span></a>
+      <p class="ausz">Gaedes Vorwurf, die Kosmologie mache aus mathematischen Grössen Dinge - und die Physik, die an denselben Begriffen selbst zweifelt: Singularität, dunkle Materie, MOND, Hubble-Spannung.</p>
       <p class="neu-ort"><a href="weltanschauungen/materialismus/art-1.html">Materialismus · Art I Gaede</a></p>
     </li>
   </ol>
@@ -1622,13 +1631,13 @@
 
 <!-- HIERARCHIE:ANFANG -->
 <section class="hierarchie" aria-label="Die vier Ebenen des Baums">
-  <h2>Ein Baum unter zwölfen – und seine vier Ebenen</h2>
-  <p class="hierarchie-text">Dieser Baum ist nicht <em>der</em> Baum, sondern <em>ein</em> Baum: eine Klasse unter zwölfen. Er ist <strong>Klasse&nbsp;III, der Idealismus-Baum</strong> – darum geht es hier vorwiegend um Ideen; elf weitere Bäume stehen daneben, jeder mit eigenem Grundzug, doch auf diesen Seiten findet sich allein dieser eine. Vom Grössten zum Kleinsten führt der Weg hinein: von der Klasse zur Gattung, zur Art, zum einzelnen Artikel.</p>
+  <h2>Ein Baum unter zwölfen - und seine vier Ebenen</h2>
+  <p class="hierarchie-text">Dieser Baum ist nicht <em>der</em> Baum, sondern <em>ein</em> Baum: eine Klasse unter zwölfen. Er ist <strong>Klasse&nbsp;III, der Idealismus-Baum</strong> - darum geht es hier vorwiegend um Ideen; elf weitere Bäume stehen daneben, jeder mit eigenem Grundzug, doch auf diesen Seiten findet sich allein dieser eine. Vom Grössten zum Kleinsten führt der Weg hinein: von der Klasse zur Gattung, zur Art, zum einzelnen Artikel.</p>
   <div class="ebenen">
     <div class="ebenen-buehne">
         <div class="eb-stufe">
-          <div class="eb-bild"><svg class="eb-svg" viewBox="0 0 150 150" role="img" aria-label="Der ganze Baum – eine Klasse mit zwölf Gattungen"><circle class="eb-kugel" cx="75.0" cy="75.0" r="60.0"/><line class="eb-horizont" x1="17.0" y1="75.0" x2="133.0" y2="75.0"/><line class="eb-ast" x1="75.0" y1="75.0" x2="75.0" y2="26.5"/><line class="eb-ast" x1="75.0" y1="75.0" x2="99.2" y2="33.0"/><line class="eb-ast" x1="75.0" y1="75.0" x2="117.0" y2="50.8"/><line class="eb-ast" x1="75.0" y1="75.0" x2="117.0" y2="99.3"/><line class="eb-ast" x1="75.0" y1="75.0" x2="99.2" y2="117.0"/><line class="eb-ast" x1="75.0" y1="75.0" x2="75.0" y2="123.5"/><line class="eb-ast" x1="75.0" y1="75.0" x2="50.7" y2="117.0"/><line class="eb-ast" x1="75.0" y1="75.0" x2="33.0" y2="99.2"/><line class="eb-ast" x1="75.0" y1="75.0" x2="33.0" y2="50.8"/><line class="eb-ast" x1="75.0" y1="75.0" x2="50.8" y2="33.0"/><circle class="eb-knoten eb-krone" cx="75.0" cy="26.5" r="11.5"/><circle class="eb-knoten eb-krone" cx="99.2" cy="33.0" r="11.5"/><circle class="eb-knoten eb-krone" cx="117.0" cy="50.8" r="11.5"/><circle class="eb-knoten eb-boden" cx="123.5" cy="75.0" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="117.0" cy="99.3" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="99.2" cy="117.0" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="75.0" cy="123.5" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="50.7" cy="117.0" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="33.0" cy="99.2" r="11.5"/><circle class="eb-knoten eb-boden" cx="26.5" cy="75.0" r="11.5"/><circle class="eb-knoten eb-krone eb-aktiv" cx="33.0" cy="50.8" r="11.5"/><circle class="eb-knoten eb-krone" cx="50.8" cy="33.0" r="11.5"/><text class="eb-mini-ziffer" x="33.0" y="54.1" text-anchor="middle">II</text></svg></div>
-          <div class="eb-titel"><span class="ebene-name">Klasse</span><span class="ebene-desc">Der ganze Baum. Hier: Klasse&nbsp;III – der Idealismus-Baum, in dem es vorwiegend um Ideen geht.</span></div>
+          <div class="eb-bild"><svg class="eb-svg" viewBox="0 0 150 150" role="img" aria-label="Der ganze Baum - eine Klasse mit zwölf Gattungen"><circle class="eb-kugel" cx="75.0" cy="75.0" r="60.0"/><line class="eb-horizont" x1="17.0" y1="75.0" x2="133.0" y2="75.0"/><line class="eb-ast" x1="75.0" y1="75.0" x2="75.0" y2="26.5"/><line class="eb-ast" x1="75.0" y1="75.0" x2="99.2" y2="33.0"/><line class="eb-ast" x1="75.0" y1="75.0" x2="117.0" y2="50.8"/><line class="eb-ast" x1="75.0" y1="75.0" x2="117.0" y2="99.3"/><line class="eb-ast" x1="75.0" y1="75.0" x2="99.2" y2="117.0"/><line class="eb-ast" x1="75.0" y1="75.0" x2="75.0" y2="123.5"/><line class="eb-ast" x1="75.0" y1="75.0" x2="50.7" y2="117.0"/><line class="eb-ast" x1="75.0" y1="75.0" x2="33.0" y2="99.2"/><line class="eb-ast" x1="75.0" y1="75.0" x2="33.0" y2="50.8"/><line class="eb-ast" x1="75.0" y1="75.0" x2="50.8" y2="33.0"/><circle class="eb-knoten eb-krone" cx="75.0" cy="26.5" r="11.5"/><circle class="eb-knoten eb-krone" cx="99.2" cy="33.0" r="11.5"/><circle class="eb-knoten eb-krone" cx="117.0" cy="50.8" r="11.5"/><circle class="eb-knoten eb-boden" cx="123.5" cy="75.0" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="117.0" cy="99.3" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="99.2" cy="117.0" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="75.0" cy="123.5" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="50.7" cy="117.0" r="11.5"/><circle class="eb-knoten eb-wurzel" cx="33.0" cy="99.2" r="11.5"/><circle class="eb-knoten eb-boden" cx="26.5" cy="75.0" r="11.5"/><circle class="eb-knoten eb-krone eb-aktiv" cx="33.0" cy="50.8" r="11.5"/><circle class="eb-knoten eb-krone" cx="50.8" cy="33.0" r="11.5"/><text class="eb-mini-ziffer" x="33.0" y="54.1" text-anchor="middle">II</text></svg></div>
+          <div class="eb-titel"><span class="ebene-name">Klasse</span><span class="ebene-desc">Der ganze Baum. Hier: Klasse&nbsp;III - der Idealismus-Baum, in dem es vorwiegend um Ideen geht.</span></div>
         </div>
         <span class="eb-verbinder" aria-hidden="true"><svg class="eb-trichter" viewBox="0 0 40 100" preserveAspectRatio="none"><path class="trichter-flaeche" d="M 0 40 L 40 3 L 40 97 L 0 60 Z"/><path class="trichter-kante" d="M 0 40 L 40 3 M 0 60 L 40 97"/></svg><svg class="eb-lupe" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><line x1="14.7" y1="14.7" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         <div class="eb-stufe">
@@ -1637,8 +1646,8 @@
         </div>
         <span class="eb-verbinder" aria-hidden="true"><svg class="eb-trichter" viewBox="0 0 40 100" preserveAspectRatio="none"><path class="trichter-flaeche" d="M 0 40 L 40 3 L 40 97 L 0 60 Z"/><path class="trichter-kante" d="M 0 40 L 40 3 M 0 60 L 40 97"/></svg><svg class="eb-lupe" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><line x1="14.7" y1="14.7" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         <div class="eb-stufe">
-          <div class="eb-bild"><svg class="eb-svg" viewBox="0 0 150 150" role="img" aria-label="Eine Art – hier Rationalismus I, Philosophie"><circle class="eb-artgross eb-krone" cx="75.0" cy="75.0" r="47.0"/><text class="eb-ziffer" x="75.0" y="68.0" text-anchor="middle">I</text><text class="eb-wort" x="75.0" y="93.0" text-anchor="middle">Philosophie</text></svg></div>
-          <div class="eb-titel"><span class="ebene-name">Art</span><span class="ebene-desc">Eine Art in der Gattung – hier Rationalismus&nbsp;I, „Philosophie“.</span></div>
+          <div class="eb-bild"><svg class="eb-svg" viewBox="0 0 150 150" role="img" aria-label="Eine Art - hier Rationalismus I, Philosophie"><circle class="eb-artgross eb-krone" cx="75.0" cy="75.0" r="47.0"/><text class="eb-ziffer" x="75.0" y="68.0" text-anchor="middle">I</text><text class="eb-wort" x="75.0" y="93.0" text-anchor="middle">Philosophie</text></svg></div>
+          <div class="eb-titel"><span class="ebene-name">Art</span><span class="ebene-desc">Eine Art in der Gattung - hier Rationalismus&nbsp;I, "Philosophie".</span></div>
         </div>
         <span class="eb-verbinder" aria-hidden="true"><svg class="eb-trichter" viewBox="0 0 40 100" preserveAspectRatio="none"><path class="trichter-flaeche" d="M 0 40 L 40 3 L 40 97 L 0 60 Z"/><path class="trichter-kante" d="M 0 40 L 40 3 M 0 60 L 40 97"/></svg><svg class="eb-lupe" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><line x1="14.7" y1="14.7" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
         <div class="eb-stufe">
@@ -1668,7 +1677,7 @@
       </a></li>
       <li><a href="weltanschauungen/materialismus.html">
         <span class="zeile"><strong>Materialismus</strong><span class="zeichen">♋︎ Krebs</span></span>
-        <span class="kurz">Die Welt ist Stoff: Alles Wirkliche – auch das Denken – wird aus materiellen Vorgängen begriffen.</span>
+        <span class="kurz">Die Welt ist Stoff: Alles Wirkliche - auch das Denken - wird aus materiellen Vorgängen begriffen.</span>
         <span class="anzahl">8 Artikel</span>
       </a></li>
       <li><a href="weltanschauungen/sensualismus.html">
@@ -1718,7 +1727,7 @@
     <ul>
       <li><a href="weltanschauungen/realismus.html">
         <span class="zeile"><strong>Realismus</strong><span class="zeichen">♎︎ Waage</span></span>
-        <span class="kurz">Die äussere Welt ist wirklich, so wie sie sich dem wachen Blick zeigt – unabhängig von uns.</span>
+        <span class="kurz">Die äussere Welt ist wirklich, so wie sie sich dem wachen Blick zeigt - unabhängig von uns.</span>
         <span class="anzahl">4 Artikel</span>
       </a></li>
       <li><a href="weltanschauungen/idealismus.html">
@@ -1736,7 +1745,7 @@
 <!-- FUSS:ANFANG -->
 <footer class="fuss">
   <p>© 2026 Eric Naville · nach dem Bild der zwölf Weltanschauungen
-  <span class="quelle">(Rudolf Steiner, „Der menschliche und der kosmische Gedanke“, GA&nbsp;151)</span></p>
+  <span class="quelle">(Rudolf Steiner, "Der menschliche und der kosmische Gedanke", GA&nbsp;151)</span></p>
 </footer>
 <!-- FUSS:ENDE -->
 

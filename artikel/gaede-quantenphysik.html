@@ -11,11 +11,11 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Die Quantenphysik – Eric Naville</title>
+<title>07 - Die Quantenphysik - Eric Naville</title>
 <meta name="description" content="Ist die Welle ein Verb und die Wellenfunktion ein Rechenmittel? Gaedes Schnitt an den Quantenbegriffen, die zwölfstellige Genauigkeit der QED, das offene Messproblem und zwei einseitige Antworten darauf.">
 <link rel="canonical" href="https://eric-naville.ch/artikel/gaede-quantenphysik.html">
 <meta property="og:url" content="https://eric-naville.ch/artikel/gaede-quantenphysik.html">
-<meta property="og:title" content="Die Quantenphysik">
+<meta property="og:title" content="07 - Die Quantenphysik">
 <meta property="og:description" content="Ist die Welle ein Verb und die Wellenfunktion ein Rechenmittel? Gaedes Schnitt an den Quantenbegriffen, die zwölfstellige Genauigkeit der QED, das offene Messproblem und zwei einseitige Antworten darauf.">
 <meta property="og:type" content="article">
 <link rel="stylesheet" href="../css/style.css">
@@ -23,15 +23,15 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
 <script>
 (function(){
   var w=document.documentElement;
-  try{var g=localStorage.getItem("thema"); if(g==="hell"||g==="dunkel") w.setAttribute("data-theme",g);}catch(e){}
-  function eff(){var t=w.getAttribute("data-theme"); if(t) return t;
-    return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dunkel":"hell";}
+  var B=["terminal","hell","dunkel"], N={terminal:"Terminal",hell:"Hell",dunkel:"Nacht"};
+  try{var g=localStorage.getItem("thema"); if(B.indexOf(g)>=0) w.setAttribute("data-theme",g);}catch(e){}
+  function eff(){var t=w.getAttribute("data-theme"); return B.indexOf(t)>=0?t:"terminal";}
+  function naechst(){ return B[(B.indexOf(eff())+1)%B.length]; }
   function wire(){
     var b=document.querySelector(".thema-schalter"); if(!b) return;
-    function zeige(){var d=eff()==="dunkel"; b.setAttribute("aria-pressed",d?"true":"false");
-      var l=d?"Zum hellen Erscheinungsbild wechseln":"Zum dunklen Erscheinungsbild wechseln";
+    function zeige(){var l="Erscheinungsbild: "+N[eff()]+" - weiter zu "+N[naechst()];
       b.setAttribute("aria-label",l); b.title=l;}
-    b.addEventListener("click",function(){var n=eff()==="dunkel"?"hell":"dunkel";
+    b.addEventListener("click",function(){var n=naechst();
       w.setAttribute("data-theme",n); try{localStorage.setItem("thema",n);}catch(e){} zeige();});
     zeige();
   }
@@ -43,6 +43,7 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
 
 <header class="kopf">
   <button type="button" class="thema-schalter" aria-label="Erscheinungsbild wechseln" title="Erscheinungsbild wechseln">
+    <svg class="terminal" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.2" width="18.8" height="15.6" rx="2.2"/><path d="M7 9.4l2.8 2.6L7 14.6M12.8 15h4.2"/></svg>
     <svg class="sonne" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.3"/><path d="M12 2.2v2.6M12 19.2v2.6M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2.2 12h2.6M19.2 12h2.6M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9"/></svg>
     <svg class="mond" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.8A8.3 8.3 0 0 1 9.2 3.5a6.6 6.6 0 1 0 11.3 11.3z"/></svg>
   </button>
@@ -60,15 +61,15 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
   </nav>
 
   <article class="artikel" id="gaede-quantenphysik">
-  <h1>Die Quantenphysik</h1>
+  <h1>07 - Die Quantenphysik</h1>
   <p class="datum">9. Juli 2026</p>
 
   <p>Es gibt eine Stelle, an der die Physik am genauesten rechnet und am wenigsten zu sagen
   weiss, wovon sie redet: die Quantenphysik. Sie trifft ihre Vorhersagen auf zwölf
-  Nachkommastellen — und über die Frage, was ihre Wellenfunktion eigentlich sei, ein Ding
+  Nachkommastellen - und über die Frage, was ihre Wellenfunktion eigentlich sei, ein Ding
   oder ein Rechenmittel, streiten ihre besten Köpfe seit hundert Jahren ohne Entscheid.
   Genau an diese Stelle legt Bill Gaede seinen alten Schnitt: Ein Ding zeigt man, einen
-  Begriff definiert man — und die Grundworte der Quantenwelt, Welle und Photon,
+  Begriff definiert man - und die Grundworte der Quantenwelt, Welle und Photon,
   zeigen auf nichts. Der Ort im Kreis bleibt die Art&nbsp;I des
   Materialismus; zur Prüfung steht diesmal ein Feld, in dem der Vorwurf, das Wort habe sein
   Ding verloren, nicht bloss von einem Kritiker der Physik kommt, sondern aus der Physik selbst
@@ -78,7 +79,7 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
   <h2>Welle ist ein Tätigkeitswort</h2>
 
   <p>Gaedes Angriff auf die Quantenphysik ist derselbe wie überall, nur schärfer, weil das
-  Gebiet ihm mehr Fläche bietet. Sein erster Streich gilt dem Wort „Welle“. Eine Welle, sagt
+  Gebiet ihm mehr Fläche bietet. Sein erster Streich gilt dem Wort "Welle". Eine Welle, sagt
   er, sei kein Ding, sondern etwas, das ein Ding tut:</p>
 
   <blockquote>
@@ -88,27 +89,27 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
   </blockquote>
 
   <p>Man kann das Meer wogen sehen, aber man kann die Woge nicht herausheben und danebenlegen;
-  die Woge ist, was das Wasser tut. Wer „Welle“ zum Hauptwort macht und mit ihr rechnet, als
-  wäre sie ein Körper, hat für Gaede den ersten Fehler schon begangen — ein Verb zum
+  die Woge ist, was das Wasser tut. Wer "Welle" zum Hauptwort macht und mit ihr rechnet, als
+  wäre sie ein Körper, hat für Gaede den ersten Fehler schon begangen - ein Verb zum
   Substantiv erklärt.<sup><a href="#q1">1</a></sup></p>
 
   <p>Beim Photon wird es ärger. Es soll ein Elementarteilchen sein und ist zugleich, mit
-  Gaedes Worten, „a dimensionless and massless ‚entity‘“ — ein Etwas ohne Ausdehnung und ohne
+  Gaedes Worten, "a dimensionless and massless 'entity'" - ein Etwas ohne Ausdehnung und ohne
   Masse, also nichts, worauf sich zeigen liesse. Und die Teilchen selbst, auf denen die ganze
   Quantenphysik ruht, hat nach Gaede niemand je gesehen. Sie werden erschlossen, nicht
-  vorgezeigt — die Teilchen-Hypothese sei eine Annahme, nie habe ein Forscher je ein subatomares
-  Teilchen gesehen, alle seien erschlossen: „The particle hypothesis is an ASSUMPTION.“ — „NEVER
+  vorgezeigt - die Teilchen-Hypothese sei eine Annahme, nie habe ein Forscher je ein subatomares
+  Teilchen gesehen, alle seien erschlossen: "The particle hypothesis is an ASSUMPTION." - "NEVER
   have researchers EVER seen a subatomic particle. ALL subatomic particles … have been
-  INFERRED.“ Wo man aber mit einem
+  INFERRED." Wo man aber mit einem
   Verb und einem gestaltlosen Punkt rechnet und beides für Körper ausgibt, da treibt man, so
-  sein hartes Wort, „‚physics‘ with spirits and ghosts“ — Physik mit Geistern und
+  sein hartes Wort, "'physics' with spirits and ghosts" - Physik mit Geistern und
   Gespenstern.<sup><a href="#q2">2</a></sup></p>
 
   <h2>Was denn wogt</h2>
 
   <p>An dem grammatischen Befund ist etwas Wahres, und es lohnt, es zuzugeben, ehe man
-  weitergeht. „Welle“ ist tatsächlich ein Tätigkeitswort; etwas wogt. Der Streit ist also
-  nicht, <em>ob</em> „Welle“ ein Verb sein kann — das kann es —, sondern <em>was</em> denn
+  weitergeht. "Welle" ist tatsächlich ein Tätigkeitswort; etwas wogt. Der Streit ist also
+  nicht, <em>ob</em> "Welle" ein Verb sein kann - das kann es -, sondern <em>was</em> denn
   wogt. Und hier stehen sich nur zwei Antworten gegenüber, nicht mehr. Die Physik sagt: eine
   Feldamplitude, die Wellenfunktion, die wogt. Gaede sagt: gar kein Wogen, sondern ein Seil,
   das sich verdrillt. Beide setzen ein Ding unter die Erscheinung; nur nennt der eine die
@@ -118,7 +119,7 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
 
   <p>Denn dass hier überhaupt von einer Welle die Rede ist, ist keine Nachlässigkeit der
   Sprache, sondern ein Messbefund. Dasselbe Elektron zeigt am Doppelspalt ein
-  Interferenzmuster — es verhält sich wellig — und schlägt doch als einzelner, körniger Punkt
+  Interferenzmuster - es verhält sich wellig - und schlägt doch als einzelner, körniger Punkt
   auf dem Schirm ein. Louis de Broglie sagte 1924 jeder Materie eine Wellenlänge zu, streng
   gefasst in der kleinen Gleichung λ&nbsp;=&nbsp;h/p; drei Jahre später beugten Davisson und
   Germer einen Elektronenstrahl am Kristall und fanden genau die vorhergesagten Ringe. Die
@@ -129,11 +130,11 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
   aushalten, nicht vorschnell nach einer Seite auflösen.<sup><a href="#q3">3</a></sup></p>
 
   <p>Gaedes eigene Antwort auf die Frage, was wogt, ist das Seil. Licht sei weder Welle noch
-  Teilchen, sondern eine Drehung entlang eines physischen Doppelfadens — wo die Welle sich
-  zweidimensional auf und ab bewege, verdrille sich das Seil dreidimensional: „Whereas the wave
-  waves up and down, two-dimensionally, the rope torques three-dimensionally“; und die
-  vertraute Gleichung c&nbsp;=&nbsp;ƒλ sei „die Gleichung eines Seils“ („the equation of a rope“). Diese „Rope Hypothesis“
-  ist die seine — im Selbstverlag und auf offenen Preprint-Ablagen veröffentlicht, in keiner
+  Teilchen, sondern eine Drehung entlang eines physischen Doppelfadens - wo die Welle sich
+  zweidimensional auf und ab bewege, verdrille sich das Seil dreidimensional: "Whereas the wave
+  waves up and down, two-dimensionally, the rope torques three-dimensionally"; und die
+  vertraute Gleichung c&nbsp;=&nbsp;ƒλ sei "die Gleichung eines Seils" ("the equation of a rope"). Diese "Rope Hypothesis"
+  ist die seine - im Selbstverlag und auf offenen Preprint-Ablagen veröffentlicht, in keiner
   begutachteten Zeitschrift, von der Fachphysik weder geprüft noch widerlegt, sondern
   übergangen. Sie steht hier als sein Lösungsversuch, nicht als Widerlegung dessen, was die
   Quantenphysik kann; und übernommen wird sie nicht.<sup><a href="#q4">4</a></sup></p>
@@ -142,7 +143,7 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
 
   <p>An zwei Stellen kommt die Physik ihm weiter entgegen, als man erwarten würde. Die erste
   betrifft den Ort der Wellenfunktion. Man stellt sie sich gern als eine Art Nebel im Raum
-  vor, der sich um ein Teilchen legt — doch das ist schon falsch. Für ein einzelnes Teilchen
+  vor, der sich um ein Teilchen legt - doch das ist schon falsch. Für ein einzelnes Teilchen
   mag das Bild noch tragen; für zwei Teilchen lebt die Wellenfunktion bereits in einem
   sechsdimensionalen Raum, für N Teilchen in einem 3N-dimensionalen Konfigurationsraum, nicht
   in dem Zimmer, durch das wir gehen. Selbst wer sie für durchaus real hält, wie der
@@ -152,17 +153,17 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
   Stelle: ein Objekt, auf das sich zeigen liesse, ist die Wellenfunktion für niemanden, auch
   für ihre Freunde nicht.<sup><a href="#q5">5</a></sup></p>
 
-  <p>Die zweite Stelle liegt am Anfang der ganzen Quantenphysik. Das „Energiequant“ selbst,
+  <p>Die zweite Stelle liegt am Anfang der ganzen Quantenphysik. Das "Energiequant" selbst,
   ihr Urbegriff, war zuerst nichts als eine Rechengrösse. Max Planck führte 1900
-  „Energieelemente“ ein, um seine Strahlungsformel überhaupt herzuleiten; den sprunghaften,
+  "Energieelemente" ein, um seine Strahlungsformel überhaupt herzuleiten; den sprunghaften,
   unstetigen Charakter schrieb er aber nicht dem Licht zu, sondern nur den Vorgängen des
-  Aussendens und Aufnehmens in der Wand des glühenden Körpers — ein formaler Kunstgriff, an
+  Aussendens und Aufnehmens in der Wand des glühenden Körpers - ein formaler Kunstgriff, an
   dessen physische Wirklichkeit er selbst kaum glaubte. Erst Albert Einstein wagte 1905, in
-  seiner Arbeit über einen „heuristischen Gesichtspunkt“ zum Licht, den Sprung: das
+  seiner Arbeit über einen "heuristischen Gesichtspunkt" zum Licht, den Sprung: das
   Strahlungsfeld selbst bestehe aus einzelnen Lichtquanten. Hier hat die Physik einen
   Grundbegriff, den sein eigener Urheber für einen Rechentrick hielt und erst ein zweiter zum
   Ding erklärte. Die Naht zwischen Rechengrösse und Körper sitzt genau dort, wo die Rechnung
-  unerwartet zutrifft — beim Lichtquant war es der photoelektrische Effekt, der sie
+  unerwartet zutrifft - beim Lichtquant war es der photoelektrische Effekt, der sie
   vernähte.<sup><a href="#q6">6</a></sup></p>
 
   <h2>Die genaueste Vorhersage der Wissenschaft</h2>
@@ -171,21 +172,21 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
   Quantenelektrodynamik trifft das magnetische Moment des Elektrons, die Grösse g, bis in die
   zwölfte Stelle: Gemessen wurde 2023 im Labor von Gerald Gabrielse ein Wert von
   g/2&nbsp;=&nbsp;1,001 159 652 180 59, mit einer Unsicherheit erst in der dreizehnten Stelle;
-  die Rechnung, die dafür Tausende von Feynman-Diagrammen aufsummiert, trifft ihn — Theorie und
+  die Rechnung, die dafür Tausende von Feynman-Diagrammen aufsummiert, trifft ihn - Theorie und
   Experiment stimmen auf etwa ein Teil in einer Billion überein. Das ist, als sagte man die
   Entfernung von Zürich nach New York voraus und träfe sie bis auf die Breite eines
   Haares.<sup><a href="#q7">7</a></sup></p>
 
   <p>Man kann darin die schärfste Antwort auf den Verdacht hören, das alles sei nur Rechnerei
-  ohne Kontakt zum Stoff — und doch schmälert der Erfolg das Rätsel nicht, er begrenzt es nur.
+  ohne Kontakt zum Stoff - und doch schmälert der Erfolg das Rätsel nicht, er begrenzt es nur.
   Er beweist, dass die Rechenregel vorzüglich funktioniert; er beweist nicht, dass die
-  Wellenfunktion oder das Quantenfeld <em>Dinge</em> sind. Zwischen „es rechnet fehlerlos“ und
-  „wir wissen, was da ist“ klafft eine Lücke, und diese Lücke hat einen Namen.</p>
+  Wellenfunktion oder das Quantenfeld <em>Dinge</em> sind. Zwischen "es rechnet fehlerlos" und
+  "wir wissen, was da ist" klafft eine Lücke, und diese Lücke hat einen Namen.</p>
 
   <h2>Ein offenes Problem der Physik selbst</h2>
 
   <p>Sie heisst das Messproblem, und sie ist kein Einwand der Kritiker, sondern eine offene
-  Wunde der Physik selbst. John&nbsp;Stewart Bell hat sie in einen Satz gefasst — entweder sei
+  Wunde der Physik selbst. John&nbsp;Stewart Bell hat sie in einen Satz gefasst - entweder sei
   die Wellenfunktion, wie die Schrödinger-Gleichung sie gebe, nicht alles, oder sie sei nicht
   richtig:</p>
 
@@ -195,27 +196,27 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
     <p class="zitat-quelle">– John Stewart Bell</p>
   </blockquote>
 
-  <p>An dieser Gabel scheiden sich alle Deutungen — und das ist das Erstaunliche: Fünf
+  <p>An dieser Gabel scheiden sich alle Deutungen - und das ist das Erstaunliche: Fünf
   ernstzunehmende Physiker können dieselbe, auf zwölf Stellen bestätigte Rechnung ansehen und
   über die eine Frage, ob die Wellenfunktion ein Ding sei, bis zur Unvereinbarkeit
   auseinanderliegen. Für die <em>Kopenhagener</em> Deutung ist sie kein Bild von etwas: Bohr
   habe, so referiert es die Stanford-Enzyklopädie, die ψ-Funktion für rein symbolisch
-  gehalten, sie stelle „nichts Wirkliches dar“ („does not represent anything real“); rechne mit ihr, frag nicht nach dem
+  gehalten, sie stelle "nichts Wirkliches dar" ("does not represent anything real"); rechne mit ihr, frag nicht nach dem
   Dahinter. Die <em>bohmsche</em> Mechanik dagegen macht die Welle real: sie ist eine
-  Führungswelle, die echte Teilchen mit stets bestimmtem Ort durch den Doppelspalt schiebt —
+  Führungswelle, die echte Teilchen mit stets bestimmtem Ort durch den Doppelspalt schiebt -
   der Zufall verschwindet, das Teilchen ist wieder ein Ding. Everetts <em>Viele-Welten</em>
   streichen den Kollaps ganz: die Wellenfunktion entwickelt sich immer glatt weiter, und bei
-  jeder Messung treten alle möglichen Ausgänge ein, jeder in einer neu abzweigenden Welt — die
+  jeder Messung treten alle möglichen Ausgänge ein, jeder in einer neu abzweigenden Welt - die
   Wellenfunktion ist dann das einzig Reale. Die <em>Kollaps-Theorien</em> von Ghirardi, Rimini
   und Weber fügen der Gleichung einen echten, physischen Zusammenbruch hinzu. Und der
   <em>QBismus</em> erklärt die Wellenfunktion zum blossen Glaubensgrad eines Beobachters: die
-  Quantenmechanik sei „a users‘ manual that any agent can pick up and use to help make wiser
-  decisions“ — ein Benutzerhandbuch, kein Weltbild. Dieselbe Mathematik trägt fünf
+  Quantenmechanik sei "a users' manual that any agent can pick up and use to help make wiser
+  decisions" - ein Benutzerhandbuch, kein Weltbild. Dieselbe Mathematik trägt fünf
   unvereinbare Welten, und keine ist widerlegt.<sup><a href="#q8">8</a></sup></p>
 
   <p>Wer hoffte, ein Theorem werde die Sache entscheiden, wird enttäuscht. Der Satz von Pusey,
   Barrett und Rudolph von 2012 zeigt zwar, unter ausdrücklichen Annahmen, dass die
-  Wellenfunktion sich nicht rein als Ausdruck unseres Nichtwissens wegdeuten lässt — sie muss
+  Wellenfunktion sich nicht rein als Ausdruck unseres Nichtwissens wegdeuten lässt - sie muss
   dem einzelnen System als Eigenschaft anhaften. Aber er schliesst nur bestimmte Deutungen
   aus; er beendet den Streit nicht, er verschärft ihn.<sup><a href="#q9">9</a></sup> Und die
   Beunruhigung kam nicht von aussen: Die Väter der Theorie selbst haben ihr misstraut. Einstein schrieb 1926 an Max Born den Satz, aus dem das geflügelte
@@ -230,12 +231,12 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
   </blockquote>
 
   <p>Er hielt die Theorie für unvollständig; es müsse ein tieferes, bestimmtes Sein hinter dem
-  Würfeln geben. Bohr hielt sie für vollständig. Ihr Streit ist nie entschieden worden — er
+  Würfeln geben. Bohr hielt sie für vollständig. Ihr Streit ist nie entschieden worden - er
   <em>ist</em> das Messproblem in Personen.<sup><a href="#q10">10</a></sup> Und Erwin
   Schrödinger, dessen Gleichung im Zentrum steht, ersann seine berühmte Katze eigens, um die
   Verdinglichung der Überlagerung ins Absurde zu treiben: Ist ein Atom in der Schwebe zwischen
   Zerfall und Nichtzerfall und hängt das Leben der Katze daran, so stünde die lebende und die
-  tote Katze zu gleichen Teilen in einer einzigen Wellenfunktion —</p>
+  tote Katze zu gleichen Teilen in einer einzigen Wellenfunktion -</p>
 
   <blockquote>
     <p>„Die Psi-Funktion des ganzen Systems würde das so zum Ausdruck bringen, daß in ihr die
@@ -245,36 +246,36 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
   </blockquote>
 
   <p>Die verschmierte Katze ist als Ungereimtheit gemeint, nicht als Behauptung; Schrödinger
-  richtet sie gegen die naive Verdinglichung der Wellenfunktion — dieselbe Stossrichtung wie
+  richtet sie gegen die naive Verdinglichung der Wellenfunktion - dieselbe Stossrichtung wie
   Gaede. Im selben Aufsatz prägt er für die eigentümliche Verbindung zweier Quantensysteme das
-  Wort „Verschränkung“ und nennt sie den kennzeichnenden Zug der Quantenmechanik
+  Wort "Verschränkung" und nennt sie den kennzeichnenden Zug der Quantenmechanik
   überhaupt.<sup><a href="#q11">11</a></sup> Nur zieht Schrödinger, wie Einstein, aus der
   Ratlosigkeit keinen Materialismus, sondern die Warnung, dass an der Deutung etwas nicht
-  stimme. Genau hier trennt sich Gaede von ihnen: Wo die Physik sagt „wir wissen es noch
-  nicht“, sagt er „ihr wisst nicht, wovon ihr redet“.</p>
+  stimme. Genau hier trennt sich Gaede von ihnen: Wo die Physik sagt "wir wissen es noch
+  nicht", sagt er "ihr wisst nicht, wovon ihr redet".</p>
 
   <h2>Zwei Fluchten aus derselben Ratlosigkeit</h2>
 
   <p>Hier ist eine Deutung angelegt, die dieser Seite gehört, nicht Gaedes Wort und nicht
-  Lehrsatz. Gaede hat eine echte Ratlosigkeit vor sich — die legen die Väter der Theorie selbst
+  Lehrsatz. Gaede hat eine echte Ratlosigkeit vor sich - die legen die Väter der Theorie selbst
   offen. Seine Frage nach dem Ding ist unentbehrlich: Was zeigt ihr,
-  wenn ihr „Welle“ und „Photon“ sagt? Seine Antwort aber — die Flucht in
-  <em>ein</em> Ding, das Seil — behandelt die Frage als erledigt, wo sie es nicht ist. Und dass es
-  eine Flucht ist, zeigt ihr genaues Spiegelbild. Denn dieselbe Fuge — die Dualität von
-  Welle und Teilchen — bricht noch eine zweite, von Gaede unabhängige Denkschule auf,
+  wenn ihr "Welle" und "Photon" sagt? Seine Antwort aber - die Flucht in
+  <em>ein</em> Ding, das Seil - behandelt die Frage als erledigt, wo sie es nicht ist. Und dass es
+  eine Flucht ist, zeigt ihr genaues Spiegelbild. Denn dieselbe Fuge - die Dualität von
+  Welle und Teilchen - bricht noch eine zweite, von Gaede unabhängige Denkschule auf,
   nur von der entgegengesetzten Seite. Milo Wolff und der Kanadier Gabriel LaFreniere deuten
-  in ihrer „Wave Structure of Matter“ das Elektron als eine kugelförmige stehende Welle; für
+  in ihrer "Wave Structure of Matter" das Elektron als eine kugelförmige stehende Welle; für
   sie gibt es nur Welle, und das Teilchen ist die Täuschung. Wo Gaede allein das Ding behält
   und das Wogen verwirft, behalten sie allein das Wogen und verwerfen das Ding. Zwei
   unabhängige Denker brechen dieselbe Naht an derselben Stelle und fliehen in
-  entgegengesetzte Welten — das ist selbst ein Zeugnis, wie ungeklärt die Sache im Kern
+  entgegengesetzte Welten - das ist selbst ein Zeugnis, wie ungeklärt die Sache im Kern
   ist.<sup><a href="#q12">12</a></sup></p>
 
-  <p>Im Bild dieser Seite trägt der Materialismus den Körper — das Greifbare, das Gestaltete,
+  <p>Im Bild dieser Seite trägt der Materialismus den Körper - das Greifbare, das Gestaltete,
   auf das sich deuten lässt. Der ehrliche Materialismus hielte beides in <em>einer</em> Hand:
   das körnige Ding, das auf dem Schirm einschlägt, <em>und</em> das wellige Verhalten, das die
   Interferenz erzeugt, und ertrüge, dass beide sich nicht zu einem Bild fügen. Beide
-  Flüchtlinge greifen sich dagegen nur eine Hälfte und lassen die andere fallen — der eine den
+  Flüchtlinge greifen sich dagegen nur eine Hälfte und lassen die andere fallen - der eine den
   Körper ohne das Wogen, der andere das Wogen ohne den Körper. Die Substanz zerreisst in der
   Hand dessen, der sie zu retten glaubt, wo er den einen Widerspruch nicht stehen lässt, den die
   Physik seit hundert Jahren trägt.</p>
@@ -283,7 +284,7 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
   Gestalt zurückgibt. Die Quantenphysik ist das äusserste Gebiet dieser Reihe: hier ist die
   Rechnung am genauesten und das Ding am fernsten, und beide Befunde sind wahr. Was aus dem
   einen Materialismus wird, der gelernt hat, dass er auf seinen eigenen Grund nicht mehr zeigen
-  kann — ob er daran zerbricht oder darin erst zu sich kommt —, das lässt sich an keinem
+  kann - ob er daran zerbricht oder darin erst zu sich kommt -, das lässt sich an keinem
   einzelnen Gebiet mehr entscheiden. Es ist die Frage, mit der die Reihe ihr letztes Wort
   vorbereitet.</p>
 
@@ -375,16 +376,16 @@ schlagworte: Bill Gaede, Quantenphysik, Wellenfunktion, Welle-Teilchen, Messprob
 </article>
 
   <nav class="artikel-nav" aria-label="Weitere Artikel dieser Art">
-    <a class="vor" href="gaede-singularitaet.html"><span>← Früher</span>Die Singularität</a>
+    <a class="vor" href="gaede-singularitaet.html"><span>← Früher</span>06 - Die Singularität</a>
     <a class="zur-art" href="../weltanschauungen/materialismus/art-1.html">Alle in Art I Gaede</a>
-    <a class="nach" href="gaede-stahlmann.html">Der Stahlmann-Materialismus<span>Später →</span></a>
+    <a class="nach" href="gaede-stahlmann.html">08 - Der Stahlmann-Materialismus<span>Später →</span></a>
   </nav>
 
 </main>
 
 <footer class="fuss">
   <p>© 2026 Eric Naville · nach dem Bild der zwölf Weltanschauungen
-  <span class="quelle">(Rudolf Steiner, „Der menschliche und der kosmische Gedanke“, GA&nbsp;151)</span></p>
+  <span class="quelle">(Rudolf Steiner, "Der menschliche und der kosmische Gedanke", GA&nbsp;151)</span></p>
 </footer>
 
 </body>

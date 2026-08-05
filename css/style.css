@@ -1,11 +1,59 @@
 /* ============================================================
    Eric Naville – Stilblatt
-   Formsprache: Papier und Tinte; oben Licht, unten Erdreich.
-   Farben laufen über Variablen, damit helles und dunkles
-   Erscheinungsbild dieselbe Zeichnung tragen.
+   Formsprache: oben Licht, unten Erdreich.
+   Farben laufen über Variablen, damit alle drei Erscheinungsbilder
+   dieselbe Zeichnung tragen.
+
+   Drei Erscheinungsbilder, eines davon der Grundzustand:
+
+     (ohne Attribut)        Terminal - dunkles Aubergine, Schrift in
+     data-theme="terminal"  reinem Weiss. Das Hauptbild der Seite.
+     data-theme="hell"      Papier und Tinte.
+     data-theme="dunkel"    Nacht, warmes Braun.
+
+   Der Schalter oben rechts geht der Reihe nach durch die drei. Die
+   Systemvorgabe (prefers-color-scheme) entscheidet nichts mehr: das
+   Terminal-Bild gilt, bis der Leser etwas anderes wählt. Das ist auch
+   der Grund, warum die dunkle Palette nicht mehr doppelt im Blatt
+   steht - sie braucht keinen Medienblock mehr.
    ============================================================ */
 
-:root{
+:root,
+:root[data-theme="terminal"]{
+  color-scheme:dark;
+  /* Ubuntu-Terminal: #300a24 als Grund, reines Weiss darauf. Die Linien
+     nehmen Ubuntus mittleres Aubergine, die Akzente Ubuntus Orange -
+     eine Spur aufgehellt (#e95420 -> #f26a35), damit auch die kleinen
+     Schriftgrade darin die Kontrastschwelle nehmen. */
+  --papier:#300a24;
+  --flaeche:#3d1430;
+  --tinte:#ffffff;
+  --gedaempft:#c3a6bb;
+  --linie:#5e2750;
+  --horizont:#a8809c;
+  --himmel:#2a1030;
+  --erde:#3a1420;
+  --holz:#b98a72;
+  --wurzelholz:#9c7060;
+  --akzent-krone:#f26a35;
+  --akzent-krone-hell:#ff8f5e;
+  --zitat:#f0b27a;
+  --referenz:#dcc4d4;
+  --akzent-wurzel:#c191bd;
+  --akzent-wurzel-hell:#d6aed2;
+  --kreis-krone-f:#3a1028;
+  --kreis-wurzel-f:#361430;
+  --akzent-boden:#9ddc6e;
+  --kreis-boden-f:#2a1526;
+  /* Eine klare Grotesk im Zuschnitt des Ubuntu-Terminals. Nichts wird
+     nachgeladen: liegt Ubuntu auf dem Rechner, kommt Ubuntu; sonst die
+     nächstbeste Systemschrift. */
+  --schrift:Ubuntu,"Ubuntu Sans","Noto Sans","DejaVu Sans",Cantarell,
+            system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+/* Papier und Tinte - nur über den Schalter erreichbar. */
+:root[data-theme="hell"]{
   color-scheme:light;
   --papier:#f6f1e6;
   --flaeche:#fcf9f1;
@@ -23,45 +71,17 @@
   --referenz:#514738;
   --akzent-wurzel:#5f5190;
   --akzent-wurzel-hell:#7e6fb4;
-  /* Tagmodus: die Gattungskreise durchsichtig – Himmel und Erde scheinen durch;
-     Idealismus/Realismus auf dem Horizont zeigen so oben Himmel, unten Erde.
-     Nachtmodus (unten) und Druck behalten ihre eigenen Füllungen. */
+  /* Im hellen Bild die Gattungskreise durchsichtig – Himmel und Erde
+     scheinen durch; Idealismus/Realismus auf dem Horizont zeigen so oben
+     Himmel, unten Erde. Die beiden dunklen Bilder und der Druck behalten
+     ihre eigenen Füllungen. */
   --kreis-krone-f:transparent;
   --kreis-wurzel-f:transparent;
   --akzent-boden:#4e6a42;
   --kreis-boden-f:transparent;
 }
 
-/* Dunkles Erscheinungsbild. Zwei Wege führen hinein: die Systemvorgabe
-   (prefers-color-scheme) und die ausdrückliche Wahl über den Schalter oben
-   rechts (data-theme="dunkel" am <html>). Ein ausdrückliches „hell" sticht
-   die Systemvorgabe. Beide Blöcke tragen dieselben Farbwerte – sie müssen
-   deshalb Zeile für Zeile gleich bleiben. */
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="hell"]){
-    color-scheme:dark;
-    --papier:#141110;
-    --flaeche:#1c1815;
-    --tinte:#eae2d2;
-    --gedaempft:#a49781;
-    --linie:#544a38;
-    --horizont:#94836a;
-    --himmel:#18242e;
-    --erde:#281f12;
-    --holz:#93785a;
-    --wurzelholz:#77634e;
-    --akzent-krone:#d4aa4e;
-    --akzent-krone-hell:#e7bf63;
-    --zitat:#e2bb62;
-    --referenz:#c6b9a1;
-    --akzent-wurzel:#8d7cc4;
-    --akzent-wurzel-hell:#a695d8;
-    --kreis-krone-f:#201c16;
-    --kreis-wurzel-f:#251e14;
-    --akzent-boden:#8aa878;
-    --kreis-boden-f:#1a1e16;
-  }
-}
+/* Nacht, warmes Braun - das frühere dunkle Bild. */
 :root[data-theme="dunkel"]{
   color-scheme:dark;
   --papier:#141110;
@@ -100,7 +120,7 @@ body{
   margin:0;
   background:var(--papier);
   color:var(--tinte);
-  font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  font-family:var(--schrift);
   font-size:1.0625rem;
   line-height:1.65;
 }
@@ -113,8 +133,9 @@ a:focus-visible{ outline:2px solid var(--akzent-krone); outline-offset:3px; bord
 
 .kopf{ position:relative; text-align:center; padding:2.8rem 1rem .4rem; }
 
-/* Schalter für helles/dunkles Erscheinungsbild, oben rechts. Das Sinnbild
-   zeigt den gegenwärtigen Zustand: die Sonne bei Hell, den Mond bei Dunkel. */
+/* Schalter fürs Erscheinungsbild, oben rechts. Das Sinnbild zeigt den
+   gegenwärtigen Zustand: die Eingabezeile beim Terminal, die Sonne bei
+   Hell, den Mond bei der Nacht. Ein Druck geht zum nächsten der drei. */
 .thema-schalter{
   position:absolute;
   top:1rem; right:1rem;
@@ -130,16 +151,13 @@ a:focus-visible{ outline:2px solid var(--akzent-krone); outline-offset:3px; bord
 }
 .thema-schalter:hover{ color:var(--tinte); border-color:var(--akzent-krone); }
 .thema-schalter:focus-visible{ outline:2px solid var(--akzent-krone); outline-offset:2px; }
-.thema-schalter svg{ display:block; width:1.25rem; height:1.25rem; }
-.thema-schalter .mond{ display:none; }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="hell"]) .thema-schalter .sonne{ display:none; }
-  :root:not([data-theme="hell"]) .thema-schalter .mond{ display:block; }
-}
-:root[data-theme="dunkel"] .thema-schalter .sonne{ display:none; }
+/* Alle drei Sinnbilder liegen im Knopf; sichtbar ist genau das des
+   gegenwärtigen Bildes. Ohne Attribut gilt das Terminal. */
+.thema-schalter svg{ display:none; width:1.25rem; height:1.25rem; }
+:root:not([data-theme]) .thema-schalter .terminal,
+:root[data-theme="terminal"] .thema-schalter .terminal,
+:root[data-theme="hell"] .thema-schalter .sonne,
 :root[data-theme="dunkel"] .thema-schalter .mond{ display:block; }
-:root[data-theme="hell"] .thema-schalter .sonne{ display:block; }
-:root[data-theme="hell"] .thema-schalter .mond{ display:none; }
 .wortmarke{
   margin:0;
   font-size:1.6rem;
@@ -253,6 +271,12 @@ a.kreis-link:focus-visible .kreisflaeche{ stroke-width:3.5; }
   font-size:12.5px; fill:var(--gedaempft); letter-spacing:.04em;
   paint-order:stroke; stroke:var(--papier); stroke-width:1.1px; stroke-linejoin:round;
 }
+/* Versuch (2026-08-03): im hellen Bild die Etiketten der zwölf Gattungen ganz
+   in Schwarz — Ziffer, Name und Tierkreiszeile. Statt Akzent, Tinte und
+   gedämpft. Welchem Reich ein Kreis angehört, sagt weiterhin sein Ring.
+   Eine Regel genügt, seit "hell" nur noch über den Schalter kommt. */
+:root[data-theme="hell"] .kreis-etikett text{ fill:#000; }
+
 a.kreis-link:focus-visible .kreis-name{ text-decoration:underline; }
 
 /* Innenwelt eines Gattungs-Kreises: Fortsatz des Hauptasts, zwölf
@@ -770,12 +794,14 @@ a.mitte-seite:hover text, a.mitte-seite:focus-visible text{
   color:var(--akzent-krone); font-variant-numeric:tabular-nums; }
 
 /* ============================================================
-   Druck: immer helle Palette auf weissem Grund — auch wenn per
-   Schalter »dunkel« gewählt ist (sonst helle Schrift auf Papier).
+   Druck: immer helle Palette auf weissem Grund — auch im Terminal-
+   und im Nachtbild (sonst helle Schrift auf Papier). Der zweite
+   Selektor deckt jede ausdrückliche Wahl ab und wiegt dabei so
+   schwer wie die drei Palettenblöcke oben, steht aber später.
    Navigation und Bedienelemente werden nicht gedruckt.
    ============================================================ */
 @media print{
-  :root, :root:not([data-theme="hell"]), :root[data-theme="dunkel"]{
+  :root, :root[data-theme]{
     color-scheme:light;
     --papier:#fff;
     --flaeche:#fff;
